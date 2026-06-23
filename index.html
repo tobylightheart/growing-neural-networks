@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Growing Neural Networks</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <p class="kicker">Interactive literature review</p>
+        <h1>Constructive and growing neural networks</h1>
+        <p>A static, GitHub Pages-friendly field guide to neural networks that change their own structure: adding units, connections, modules, and representational capacity as learning unfolds.</p>
+        <p>
+          <a class="button" href="pages/papers.html">Browse papers</a>
+          <a class="button secondary" href="pages/modules.html">Explore modules</a>
+        </p>
+      </div>
+      <aside class="panel">
+        <h2>Project shape</h2>
+        <p>This site separates metadata, public reviews, algorithms, concepts, modules, and exercises so it can grow from a literature review into an interactive textbook.</p>
+        <div class="badges">
+          <span class="badge strong">static HTML</span>
+          <span class="badge strong">data-driven</span>
+          <span class="badge strong">GitHub Pages</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <a class="panel card-link" href="pages/papers.html"><h2>Papers</h2><p>Search the structured bibliography and open public review pages.</p></a>
+      <a class="panel card-link" href="pages/timeline.html"><h2>Timeline</h2><p>Trace historical development from early constructive algorithms onward.</p></a>
+      <a class="panel card-link" href="pages/algorithms.html"><h2>Algorithms</h2><p>Compare growth mechanisms, freezing rules, and learning settings.</p></a>
+      <a class="panel card-link" href="pages/modules.html"><h2>Modules</h2><p>Future interactive simulations, diagrams, and playgrounds.</p></a>
+    </section>
+  </main>
+  <script type="module">
+    import { renderShell, pageTitle } from './assets/js/site.js';
+    renderShell('Home');
+    pageTitle('Home');
+  </script>
+</body>
+</html>

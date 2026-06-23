@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papers · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <p class="kicker">Growing Neural Networks</p>
+      <h1>Papers</h1>
+      <p>Browse the seed bibliography. This page is loaded from manifest-driven JSON so the dataset can split into chunks later.</p><div class="controls"><input data-paper-search placeholder="Search title, author, theme..." aria-label="Search papers"><select data-paper-status aria-label="Filter by status"><option value="">All statuses</option><option value="discovered">discovered</option><option value="triaged">triaged</option><option value="queued">queued</option><option value="skimmed">skimmed</option><option value="review-draft">review-draft</option><option value="reviewed">reviewed</option><option value="synthesized">synthesized</option></select><span class="badge strong" data-paper-count></span></div><section class="grid" data-papers></section>
+    </section>
+  </main>
+  <script type="module">
+    import { initPapersPage } from '../assets/js/papers.js'; initPapersPage();
+  </script>
+</body>
+</html>

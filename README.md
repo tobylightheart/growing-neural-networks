@@ -1,52 +1,81 @@
-# Growing Neural Networks Implementation
+# Growing Neural Networks
 
-## Project Overview
+An interactive literature review of constructive and growing neural networks.
 
-Historical neural network implementations using pure Python (no external dependencies):
+The project is pivoting from a pure implementation repository into a static, GitHub Pages-compatible site: structured paper metadata, public Markdown reviews, algorithm/concept pages, and future interactive modules and exercises. Downloadable Python scripts remain welcome, but they support the review rather than defining the whole interface.
 
-1. **Cascade-Correlation** (Fahlman & Lebiere, 1990) - Dynamic node creation
-2. **Dynamic Node Creation** (Ash, 1989) - Incremental learning
+## Current status
 
-## References
+A first static-site skeleton is in place:
 
-### Cascade-Correlation (CasCor)
-- Fahlman, S. E., & Lebiere, C. (1990). *The cascade-correlation architecture*. In Proceedings of the Second International Conference on Neural Information Processing Systems.
-- Fahlman, S. E. (1988). *Chaining together simple modules to create complex functions*. Carnegie Mellon University.
+- `index.html` — landing page.
+- `pages/` — papers, reviews, timeline, algorithms, concepts, modules, exercises, reading queue, and scripts pages.
+- `data/catalog.json` — manifest that lets paper data split into multiple files later.
+- `data/papers.json` — initial seed bibliography.
+- `reviews/` — public Markdown paper reviews rendered through `pages/review.html`.
+- `modules/` — future home for standalone interactive visualizations and playgrounds.
+- `scripts/validate_data.py` — standard-library data integrity checker.
 
-### Dynamic Node Creation
-- Ash, A. (1989). *Dynamic node construction for the backpropagation algorithm*.
+The old exploratory Python attempts are still preserved in `cascade_correlation/`.
 
-## Why Pure Python?
+## Preview locally
 
-These classic algorithms were originally implemented in C/Fortran. Implementing them in pure Python:
-- Makes the code accessible and educational
-- Demonstrates the core ideas without library overhead
-- Serves as a clean reference implementation
-- Easy to extend with features like visualization
-
-## Getting Started
+Because the site uses `fetch()` to load JSON and Markdown files, serve it over a local HTTP server rather than opening files directly:
 
 ```bash
 cd /workspace/growing-neural-networks
-pip install numpy  # Optional, for faster numerical operations
-python cascade_correlation.py
+python3 -m http.server 8000
 ```
 
-## Architecture
+Then open:
 
-See individual module documentation:
-- `cascade_correlation/` - Cascade-Correlation implementation
-- `dynamic_node_creation/` - Dynamic Node Creation implementation
-- `models/` - Abstract model interfaces
-- `datasets/` - Test datasets
-- `visualization/` - Plotting utilities
+```text
+http://localhost:8000/
+```
+
+## Validate data
+
+```bash
+cd /workspace/growing-neural-networks
+python3 scripts/validate_data.py
+```
+
+The validator checks unique paper IDs, review-file links, related-paper IDs, theme references, source provenance, module references, and exercise references.
+
+## Data model
+
+The site loads `data/catalog.json` first. Today it points at one paper file:
+
+```json
+{
+  "papers": ["data/papers.json"]
+}
+```
+
+Later this can become multiple chunks without changing the site UI:
+
+```json
+{
+  "papers": [
+    "data/papers/foundations.json",
+    "data/papers/cascade-correlation.json",
+    "data/papers/dynamic-node-construction.json"
+  ]
+}
+```
+
+Long-form review text lives in Markdown files under `reviews/`, while `data/papers.json` keeps machine-readable metadata for search, timelines, filters, and cross-links.
+
+## Seed references
+
+Initial seed papers:
+
+- Scott E. Fahlman, *Chaining Together Simple Modules to Create Complex Functions* (1988).
+- Timothy Ash, *Dynamic Node Construction for the Backpropagation Algorithm* (1989).
+- Scott E. Fahlman and Christian Lebiere, *The Cascade-Correlation Learning Architecture* (1990).
+
+These are intentionally only a starting point. The next research workflow should verify metadata, add links/DOIs where available, and expand by citation trails and keyword searches.
 
 ## Roadmap
 
-- [ ] Implement Cascade-Correlation from scratch
-- [ ] Implement Dynamic Node Creation
-- [ ] Add more test datasets
-- [ ] Create visualizations
-- [ ] Benchmark against modern deep learning approaches
-- [ ] Add pruning mechanisms
-- [ ] Support for multi-layer growth
+See `LITERATURE_REVIEW_ROADMAP.md` for the broader incremental plan.

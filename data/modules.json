@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cascade-correlation-growth",
+    "title": "Cascade-Correlation Growth Walkthrough",
+    "type": "visualization",
+    "status": "planned",
+    "summary": "A step-through visualization of candidate training, installation, and freezing.",
+    "concepts": [
+      "candidate-unit-training",
+      "residual-error-correlation",
+      "frozen-features"
+    ],
+    "papers": [
+      "fahlman-1990-cascade-correlation"
+    ],
+    "entry": "modules/cascade-correlation-growth/index.html"
+  },
+  {
+    "id": "residual-correlation-playground",
+    "title": "Residual Correlation Playground",
+    "type": "playground",
+    "status": "planned",
+    "summary": "An interactive exercise for comparing candidate activations against remaining error.",
+    "concepts": [
+      "residual-error-correlation"
+    ],
+    "papers": [
+      "fahlman-1990-cascade-correlation"
+    ],
+    "entry": "modules/residual-correlation-playground/index.html"
+  }
+]

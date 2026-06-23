@@ -1,0 +1,15 @@
+[
+  {
+    "id": "residual-correlation-intuition-1",
+    "title": "Which candidate should be installed?",
+    "type": "multiple-choice",
+    "status": "planned",
+    "concepts": [
+      "residual-error-correlation"
+    ],
+    "papers": [
+      "fahlman-1990-cascade-correlation"
+    ],
+    "summary": "A first exercise about absolute correlation magnitude in candidate selection."
+  }
+]

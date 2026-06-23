@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "papers": [
+    "data/papers.json"
+  ],
+  "algorithms": "data/algorithms.json",
+  "themes": "data/themes.json",
+  "sources": "data/sources.json",
+  "modules": "data/modules.json",
+  "exercises": "data/exercises.json"
+}

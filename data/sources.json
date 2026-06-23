@@ -1,0 +1,19 @@
+[
+  {
+    "id": "seed-bibliography",
+    "source": "manual",
+    "date": "2026-06-23",
+    "description": "Initial references carried forward from the original implementation-focused README.",
+    "query": null,
+    "added": [
+      "fahlman-1988-chaining-modules",
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation"
+    ],
+    "needs_triage": [
+      "fahlman-1988-chaining-modules",
+      "ash-1989-dynamic-node-construction"
+    ],
+    "notes": "Bibliographic details and links should be verified during the first systematic literature pass."
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cascade-correlation",
+    "name": "Cascade-Correlation",
+    "family": "constructive supervised learning",
+    "summary": "Starts with no hidden units, trains candidate units to correlate with residual error, adds the best candidate, freezes its input weights, and repeats.",
+    "themes": [
+      "candidate-unit-training",
+      "residual-error-correlation",
+      "frozen-features"
+    ],
+    "papers": [
+      "fahlman-1990-cascade-correlation"
+    ]
+  },
+  {
+    "id": "dynamic-node-construction",
+    "name": "Dynamic Node Construction",
+    "family": "constructive backpropagation",
+    "summary": "Expands a backpropagation network by adding hidden nodes during training when additional capacity is needed.",
+    "themes": [
+      "hidden-unit-growth",
+      "capacity-control",
+      "backpropagation"
+    ],
+    "papers": [
+      "ash-1989-dynamic-node-construction"
+    ]
+  }
+]

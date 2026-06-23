@@ -1,0 +1,52 @@
+[
+  {
+    "id": "constructive-learning",
+    "name": "Constructive learning",
+    "description": "Algorithms that build network structure during learning rather than fixing architecture in advance."
+  },
+  {
+    "id": "candidate-unit-training",
+    "name": "Candidate-unit training",
+    "description": "Training possible additions before deciding which unit should be installed."
+  },
+  {
+    "id": "residual-error-correlation",
+    "name": "Residual-error correlation",
+    "description": "Selecting new units by how strongly their activations correlate with remaining output error."
+  },
+  {
+    "id": "frozen-features",
+    "name": "Frozen features",
+    "description": "Stabilizing learned structure by freezing some weights after installation."
+  },
+  {
+    "id": "hidden-unit-growth",
+    "name": "Hidden-unit growth",
+    "description": "Increasing representational capacity by adding hidden neurons."
+  },
+  {
+    "id": "capacity-control",
+    "name": "Capacity control",
+    "description": "Adjusting model size to match task complexity."
+  },
+  {
+    "id": "backpropagation",
+    "name": "Backpropagation",
+    "description": "Gradient-based credit assignment used either as a base learner or as part of growth."
+  },
+  {
+    "id": "historical-foundations",
+    "name": "Historical foundations",
+    "description": "Early work that set up later constructive neural network methods."
+  },
+  {
+    "id": "modular-composition",
+    "name": "Modular composition",
+    "description": "Building complex functions by composing smaller learned modules."
+  },
+  {
+    "id": "incremental-structure",
+    "name": "Incremental structure",
+    "description": "Architectural growth performed in steps rather than all at once."
+  }
+]

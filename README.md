@@ -80,4 +80,4 @@ These are intentionally only a starting point. The next research workflow should
 
 See `LITERATURE_REVIEW_ROADMAP.md` for the broader incremental plan.
 
-For recurring autonomous work, see `docs/cron-workflow.md`. It proposes a staged Hermes cron pipeline for paper discovery, triage, review drafting, synthesis, module/exercise development, and validation.
+For recurring autonomous work, see `docs/cron-workflow.md` and `docs/compressed-cron-design.md`. The active prompt library for scheduled jobs is the Hermes skill `growing-neural-networks-cron`.

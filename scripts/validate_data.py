@@ -131,6 +131,11 @@ def main() -> int:
     for module in modules:
         context = f"module {module.get('id', '<missing>')}"
         require_keys(module, ["id", "title", "type", "status", "summary"], context)
+        if module.get("status") == "available":
+            require_keys(module, ["entry"], context)
+            entry_path = ROOT / module["entry"]
+            if not entry_path.exists():
+                fail(f"{context} points to missing entry: {module['entry']}")
         for paper_id in module.get("papers", []):
             if paper_id not in paper_ids:
                 fail(f"{context} references unknown paper: {paper_id}")

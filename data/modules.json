@@ -19,14 +19,24 @@
     "id": "residual-correlation-playground",
     "title": "Residual Correlation Playground",
     "type": "playground",
-    "status": "planned",
-    "summary": "An interactive exercise for comparing candidate activations against remaining error.",
+    "status": "available",
+    "summary": "Move a candidate unit's weights and see how its activation pattern correlates with residual error on a toy XOR problem.",
     "concepts": [
-      "residual-error-correlation"
+      "residual-error-correlation",
+      "candidate-unit-training",
+      "hidden-unit-growth"
     ],
     "papers": [
       "fahlman-1990-cascade-correlation"
     ],
-    "entry": "modules/residual-correlation-playground/index.html"
+    "entry": "modules/residual-correlation-playground/index.html",
+    "algorithms": [
+      "cascade-correlation"
+    ],
+    "learning_goals": [
+      "Understand why Cascade-Correlation trains candidate units against residual error.",
+      "See why absolute correlation magnitude matters more than sign.",
+      "Connect a candidate hidden unit's activation pattern to a growth decision."
+    ]
   }
 ]

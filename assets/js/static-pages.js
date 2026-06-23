@@ -34,6 +34,7 @@ export async function initModulesPage() {
     <div class="meta">${module.type} · ${module.status}</div>
     <p>${module.summary}</p>
     <div class="badges">${(module.concepts || []).map(t => `<span class="badge">${t}</span>`).join('')}</div>
+    ${module.entry && module.status === 'available' ? `<p><a class="button secondary" href="../${module.entry}">Open module</a></p>` : '<p class="meta">Planned module</p>'}
   </article>`).join('') : '<div class="empty">Interactive modules will appear here as they are added.</div>';
 }
 

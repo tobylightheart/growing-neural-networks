@@ -160,7 +160,7 @@
       "capacity-control",
       "historical-foundations"
     ],
-    "status": "triaged",
+    "status": "review-draft",
     "importance": "notable",
     "summary": "Analyzes recurrent cascade-correlation, proves topology-driven representational limitations for some finite-state automata, and sketches a constructive fully recurrent alternative that adds neurons during training.",
     "growth_mechanism": "Constructively adds neurons during recurrent-network training while preserving a fully recurrent structure, proposed as an alternative to recurrent cascade-correlation's restrictive topology.",
@@ -173,7 +173,7 @@
       "supervised",
       "sequence-learning"
     ],
-    "review": "",
+    "review": "reviews/giles-1995-recurrent-cascade-correlation-limitations.md",
     "links": {
       "paper": "https://ieeexplore.ieee.org/document/392247/",
       "doi": "10.1109/72.392247",

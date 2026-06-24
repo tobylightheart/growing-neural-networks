@@ -3,8 +3,8 @@
     "id": "cascade-correlation-growth",
     "title": "Cascade-Correlation Growth Walkthrough",
     "type": "visualization",
-    "status": "planned",
-    "summary": "A step-through visualization of candidate training, installation, and freezing.",
+    "status": "available",
+    "summary": "Step through candidate training, installation, and freezing on a tiny constructive network.",
     "concepts": [
       "candidate-unit-training",
       "residual-error-correlation",
@@ -13,7 +13,15 @@
     "papers": [
       "fahlman-1990-cascade-correlation"
     ],
-    "entry": "modules/cascade-correlation-growth/index.html"
+    "entry": "modules/cascade-correlation-growth/index.html",
+    "algorithms": [
+      "cascade-correlation"
+    ],
+    "learning_goals": [
+      "Distinguish output-weight training from candidate-unit training.",
+      "See why the selected hidden unit is frozen after installation.",
+      "Connect residual correlation to incremental network growth."
+    ]
   },
   {
     "id": "residual-correlation-playground",

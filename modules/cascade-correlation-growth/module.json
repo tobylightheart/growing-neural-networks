@@ -1,0 +1,24 @@
+{
+  "id": "cascade-correlation-growth",
+  "title": "Cascade-Correlation Growth Walkthrough",
+  "type": "visualization",
+  "status": "available",
+  "summary": "Step through candidate training, installation, and freezing on a tiny constructive network.",
+  "concepts": [
+    "candidate-unit-training",
+    "residual-error-correlation",
+    "frozen-features"
+  ],
+  "papers": [
+    "fahlman-1990-cascade-correlation"
+  ],
+  "algorithms": [
+    "cascade-correlation"
+  ],
+  "learning_goals": [
+    "Distinguish output-weight training from candidate-unit training.",
+    "See why the selected hidden unit is frozen after installation.",
+    "Connect residual correlation to incremental network growth."
+  ],
+  "entry": "modules/cascade-correlation-growth/index.html"
+}

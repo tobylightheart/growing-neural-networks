@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cascade-Correlation Growth Walkthrough · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar">
+    <a href="../../pages/modules.html">← Modules</a>
+    <a href="../../pages/review.html?id=fahlman-1990-cascade-correlation">Cascade-Correlation review</a>
+  </header>
+
+  <main class="module-page">
+    <section class="module-hero">
+      <div>
+        <p class="kicker">Interactive module</p>
+        <h1>Cascade-Correlation Growth Walkthrough</h1>
+        <p>Advance through one small growth cycle: train the output layer, audition candidate units against the residual, install the strongest candidate, then freeze it as a reusable feature.</p>
+      </div>
+      <aside class="score-card" aria-live="polite">
+        <span>current phase</span>
+        <strong id="phase-number">1 / 4</strong>
+        <small id="phase-summary">Train output weights on the current network.</small>
+      </aside>
+    </section>
+
+    <section class="walkthrough-layout">
+      <div class="panel controls-panel">
+        <h2>Growth controls</h2>
+        <p class="meta">A deliberately tiny XOR-like example with one current output and three candidate hidden units.</p>
+        <div class="button-row">
+          <button id="previous-step" type="button">Previous</button>
+          <button id="next-step" type="button">Next</button>
+        </div>
+        <label>Residual difficulty
+          <output id="difficulty-value">0.62</output>
+          <input id="difficulty" type="range" min="0.35" max="0.9" step="0.01" value="0.62">
+        </label>
+        <ol class="phase-list" id="phase-list"></ol>
+        <div class="explain-box">
+          <h3 id="phase-title">1. Train output layer</h3>
+          <p id="phase-copy">Only output weights are adjusted first. If residual error remains, the algorithm starts looking for a new feature.</p>
+        </div>
+      </div>
+
+      <div class="panel visual-panel">
+        <div class="canvas-wrap">
+          <canvas id="growth-canvas" width="960" height="640" aria-label="Cascade-Correlation growth cycle visualization"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <h2>Candidate audition</h2>
+      <p>Candidate units are trained to correlate with the remaining residual error. The best absolute correlation is installed; its incoming weights then become fixed.</p>
+      <table>
+        <thead><tr><th>candidate</th><th>activation pattern</th><th>correlation with residual</th><th>decision</th></tr></thead>
+        <tbody id="candidate-rows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

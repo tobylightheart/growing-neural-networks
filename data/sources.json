@@ -15,5 +15,18 @@
       "ash-1989-dynamic-node-construction"
     ],
     "notes": "Bibliographic details and links should be verified during the first systematic literature pass."
+  },
+  {
+    "id": "weekly-discovery-2026-06-24",
+    "source": "manual-web-search",
+    "date": "2026-06-24",
+    "description": "Weekly discovery/light triage dry run for constructive and growing neural-network papers.",
+    "query": "\"cascade-correlation\" \"constructive\" neural networks paper; \"Constructive Learning of Recurrent Neural Networks: Limitations\" Giles TNN 1995; \"Constructive learning of recurrent neural networks\" DOI",
+    "added": [
+      "giles-1995-recurrent-cascade-correlation-limitations"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Added the Giles et al. 1995 recurrent cascade-correlation limitations paper because it is directly about constructive recurrent networks and extends the cascade-correlation branch. Rejected/held back this run: Mohamed et al. 2021 CCG-DLNN (relevant but less foundational; defer for a later modern-extensions pass) and generic review/search-result pages without enough focused novelty for this small dry run. Semantic Scholar and arXiv API attempts returned HTTP 429, so bibliographic verification used IEEE Xplore, Penn State Pure, and the author-hosted PDF."
   }
 ]

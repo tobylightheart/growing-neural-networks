@@ -134,5 +134,56 @@
       "ash-1989-dynamic-node-construction"
     ],
     "notes": "Primary initial review target and anchor paper for early site demos."
+  },
+  {
+    "id": "giles-1995-recurrent-cascade-correlation-limitations",
+    "title": "Constructive Learning of Recurrent Neural Networks: Limitations of Recurrent Cascade Correlation and a Simple Solution",
+    "authors": [
+      "C. Lee Giles",
+      "Dong Chen",
+      "Guo-Zheng Sun",
+      "Hsing-Hen Chen",
+      "Yee-Chung Lee",
+      "Mark W. Goudreau"
+    ],
+    "year": 1995,
+    "venue": "IEEE Transactions on Neural Networks 6(4):829-836",
+    "families": [
+      "recurrent-cascade-correlation",
+      "constructive-learning"
+    ],
+    "themes": [
+      "constructive-learning",
+      "hidden-unit-growth",
+      "capacity-control",
+      "historical-foundations"
+    ],
+    "status": "triaged",
+    "importance": "notable",
+    "summary": "Analyzes recurrent cascade-correlation, proves topology-driven representational limitations for some finite-state automata, and sketches a constructive fully recurrent alternative that adds neurons during training.",
+    "growth_mechanism": "Constructively adds neurons during recurrent-network training while preserving a fully recurrent structure, proposed as an alternative to recurrent cascade-correlation's restrictive topology.",
+    "what_grows": [
+      "hidden-units",
+      "recurrent-structure"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "supervised",
+      "sequence-learning"
+    ],
+    "review": "",
+    "links": {
+      "paper": "https://ieeexplore.ieee.org/document/392247/",
+      "doi": "10.1109/72.392247",
+      "semantic_scholar": "",
+      "pdf": "https://clgiles.ist.psu.edu/papers/IEEE.TNN.Constructive.95.pdf"
+    },
+    "discovered_via": [
+      "weekly-discovery-2026-06-24"
+    ],
+    "related": [
+      "fahlman-1990-cascade-correlation"
+    ],
+    "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. Keep title spelling as IEEE/PDF 'Cascade Correlation'; Penn State page title contains a likely 'Casade' typo."
   }
 ]

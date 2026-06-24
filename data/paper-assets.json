@@ -34,5 +34,17 @@
     "source_url": "",
     "last_checked": "",
     "notes": "Anchor paper for the project; local PDF/text assets have not been collected yet."
+  },
+  {
+    "paper_id": "giles-1995-recurrent-cascade-correlation-limitations",
+    "pdf_status": "located",
+    "text_status": "missing",
+    "access": "author-copy",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/giles-1995-recurrent-cascade-correlation-limitations.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/giles-1995-recurrent-cascade-correlation-limitations.md",
+    "source_url": "https://clgiles.ist.psu.edu/papers/IEEE.TNN.Constructive.95.pdf",
+    "last_checked": "2026-06-24",
+    "notes": "Author-hosted PDF located, but no local private PDF/text asset was collected in this dry run."
   }
 ]

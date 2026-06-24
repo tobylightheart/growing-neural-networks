@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Which candidate should be installed? · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="exercise-topbar">
+    <a href="../../pages/exercises.html">← Exercises</a>
+    <a href="../../modules/residual-correlation-playground/index.html">Residual Correlation Playground</a>
+    <a href="../../pages/review.html?id=fahlman-1990-cascade-correlation">Cascade-Correlation review</a>
+  </header>
+
+  <main class="exercise-page">
+    <section class="exercise-hero">
+      <div>
+        <p class="kicker">Interactive exercise</p>
+        <h1>Which candidate should be installed?</h1>
+        <p>Cascade-Correlation auditions candidate units by how strongly their activations correlate with the network's residual error. Inspect the tiny XOR residual table, then choose the candidate with the strongest absolute correlation.</p>
+      </div>
+      <aside class="score-card" aria-live="polite">
+        <span>current answer</span>
+        <strong id="answer-state">Not checked</strong>
+        <small id="answer-note">Pick a candidate below.</small>
+      </aside>
+    </section>
+
+    <section class="exercise-layout">
+      <article class="panel prompt-panel">
+        <h2>Residual pattern</h2>
+        <p>The current output layer is still under-predicting the positive XOR cases and over-predicting the negative cases. A good new hidden unit should vary in a matching or opposite pattern; either sign can be useful because its outgoing output weight can flip sign.</p>
+        <table>
+          <thead>
+            <tr><th>x₁</th><th>x₂</th><th>target</th><th>current output</th><th>residual</th></tr>
+          </thead>
+          <tbody id="residual-rows"></tbody>
+        </table>
+      </article>
+
+      <article class="panel candidates-panel">
+        <h2>Candidate units</h2>
+        <p class="meta">Choose the candidate Cascade-Correlation should install next.</p>
+        <div id="candidate-options" class="candidate-options"></div>
+        <div class="button-row">
+          <button id="check-answer">Check answer</button>
+          <button id="reset-answer" class="secondary">Reset</button>
+        </div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section class="panel visual-panel">
+      <h2>Why absolute correlation wins</h2>
+      <p>A candidate with correlation near +1 tracks the residuals directly. A candidate with correlation near -1 tracks them with reversed sign. Both can be valuable because the trained output connection can be positive or negative. The weak candidate below is less useful because its activation pattern barely changes with the residuals.</p>
+      <div class="canvas-wrap">
+        <canvas id="exercise-canvas" width="980" height="500" aria-label="Residual correlation comparison for three candidate units"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

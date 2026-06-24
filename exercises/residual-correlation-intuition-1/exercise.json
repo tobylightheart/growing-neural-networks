@@ -1,0 +1,15 @@
+{
+  "id": "residual-correlation-intuition-1",
+  "title": "Which candidate should be installed?",
+  "type": "multiple-choice",
+  "status": "available",
+  "summary": "Compare three candidate units and choose the one Cascade-Correlation would install based on absolute residual correlation.",
+  "concepts": [
+    "residual-error-correlation",
+    "growth-trigger"
+  ],
+  "papers": [
+    "fahlman-1990-cascade-correlation"
+  ],
+  "entry": "exercises/residual-correlation-intuition-1/index.html"
+}

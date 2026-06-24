@@ -46,6 +46,7 @@ export async function initExercisesPage() {
     <h3>${exercise.title}</h3>
     <div class="meta">${exercise.type} · ${exercise.status}</div>
     <p>${exercise.summary || exercise.prompt || ''}</p>
+    ${exercise.entry && exercise.status === 'available' ? `<p><a class="button secondary" href="../${exercise.entry}">Open exercise</a></p>` : '<p class="meta">Planned exercise</p>'}
   </article>`).join('') : '<div class="empty">Exercises will appear here once the first interactive lessons are added.</div>';
 }
 

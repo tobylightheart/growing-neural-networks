@@ -1,0 +1,25 @@
+{
+  "id": "constructive-taxonomy",
+  "title": "Constructive Algorithm Taxonomy",
+  "type": "visual-glossary",
+  "status": "available",
+  "summary": "Explore constructive-algorithm processes: when to modify structure, what to modify, and how to choose new parameters.",
+  "concepts": [
+    "constructive-learning",
+    "growth-trigger",
+    "parameter-calculation",
+    "local-performance-trigger",
+    "spike-timing-dependent-construction",
+    "pruning-and-merging"
+  ],
+  "papers": [
+    "lightheart-2018-constructive-spiking-thesis"
+  ],
+  "algorithms": [],
+  "learning_goals": [
+    "Separate construction, pruning, and merging as structural operations.",
+    "Distinguish global and local performance signals as growth triggers.",
+    "Understand STDC as construction whose control or parameters depend on spike times."
+  ],
+  "entry": "modules/constructive-taxonomy/index.html"
+}

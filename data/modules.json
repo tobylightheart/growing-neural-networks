@@ -52,8 +52,8 @@
     "id": "constructive-taxonomy",
     "title": "Constructive Algorithm Taxonomy",
     "type": "visual-glossary",
-    "status": "planned",
-    "summary": "Planned visual glossary for constructive-algorithm processes: when to modify structure, what to modify, and how to choose new parameters.",
+    "status": "available",
+    "summary": "Explore constructive-algorithm processes: when to modify structure, what to modify, and how to choose new parameters.",
     "concepts": [
       "constructive-learning",
       "growth-trigger",
@@ -70,6 +70,7 @@
       "Separate construction, pruning, and merging as structural operations.",
       "Distinguish global and local performance signals as growth triggers.",
       "Understand STDC as construction whose control or parameters depend on spike times."
-    ]
+    ],
+    "entry": "modules/constructive-taxonomy/index.html"
   }
 ]

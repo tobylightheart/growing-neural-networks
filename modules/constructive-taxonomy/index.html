@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Constructive Algorithm Taxonomy · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar">
+    <a href="../../pages/modules.html">← Modules</a>
+    <a href="../../pages/review.html?id=lightheart-2018-constructive-spiking-thesis">Thesis taxonomy note</a>
+  </header>
+
+  <main class="module-page">
+    <section class="module-hero">
+      <div>
+        <p class="kicker">Interactive taxonomy</p>
+        <h1>Constructive Algorithm Taxonomy</h1>
+        <p>Use the thesis three-process lens to compare constructive learners: <strong>when</strong> structure changes, <strong>what</strong> changes, and <strong>how</strong> new parameters are chosen.</p>
+      </div>
+      <aside class="score-card" aria-live="polite">
+        <span>selected lens</span>
+        <strong id="lens-name">When?</strong>
+        <small id="lens-summary">Performance or event signals that trigger structural change.</small>
+      </aside>
+    </section>
+
+    <section class="taxonomy-layout">
+      <div class="panel control-panel">
+        <h2>Taxonomy controls</h2>
+        <p class="meta">Select a lens and an example algorithm. The map emphasizes process roles rather than exact implementation details.</p>
+        <div class="lens-tabs" role="tablist" aria-label="Taxonomy lens">
+          <button class="lens-tab active" type="button" data-lens="when">When?</button>
+          <button class="lens-tab" type="button" data-lens="what">What?</button>
+          <button class="lens-tab" type="button" data-lens="how">How?</button>
+        </div>
+        <label>Example algorithm
+          <select id="algorithm-select"></select>
+        </label>
+        <div class="explain-box">
+          <h3 id="algorithm-title">Dynamic Node Creation</h3>
+          <p id="algorithm-copy"></p>
+        </div>
+        <div class="legend">
+          <span><i class="dot global"></i> global signal</span>
+          <span><i class="dot local"></i> local signal</span>
+          <span><i class="dot timing"></i> spike timing / event signal</span>
+        </div>
+      </div>
+
+      <div class="panel visual-panel">
+        <div class="canvas-wrap">
+          <canvas id="taxonomy-canvas" width="1040" height="680" aria-label="Three-process constructive algorithm taxonomy diagram"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel comparison-panel">
+      <h2>Compare algorithms by process</h2>
+      <p>Each row rephrases an algorithm in the same three questions. This is deliberately coarse: it is a map for reading the literature, not a substitute for each paper's details.</p>
+      <table>
+        <thead><tr><th>algorithm</th><th>when?</th><th>what?</th><th>how?</th></tr></thead>
+        <tbody id="comparison-rows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

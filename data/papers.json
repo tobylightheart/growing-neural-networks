@@ -45,12 +45,12 @@
   },
   {
     "id": "ash-1989-dynamic-node-construction",
-    "title": "Dynamic Node Construction for the Backpropagation Algorithm",
+    "title": "Dynamic Node Creation in Backpropagation Networks",
     "authors": [
-      "Timothy Ash"
+      "Timur Ash"
     ],
     "year": 1989,
-    "venue": "Connection Science",
+    "venue": "Connection Science 1(4):365-375",
     "families": [
       "dynamic-node-construction",
       "constructive-learning"
@@ -60,10 +60,10 @@
       "backpropagation",
       "capacity-control"
     ],
-    "status": "queued",
+    "status": "review-draft",
     "importance": "canonical",
-    "summary": "Introduces a constructive approach in which a backpropagation network can add hidden units as training demands more representational capacity.",
-    "growth_mechanism": "Adds nodes during backpropagation training when existing capacity appears insufficient.",
+    "summary": "Introduces Dynamic Node Creation, a constructive approach in which a backpropagation network can add hidden units during training instead of fixing hidden-layer size in advance.",
+    "growth_mechanism": "Adds hidden nodes during backpropagation training when existing capacity appears insufficient.",
     "what_grows": [
       "hidden-units"
     ],
@@ -73,9 +73,9 @@
     ],
     "review": "reviews/ash-1989-dynamic-node-construction.md",
     "links": {
-      "paper": "",
-      "doi": "",
-      "semantic_scholar": "",
+      "paper": "https://doi.org/10.1080/09540098908915647",
+      "doi": "10.1080/09540098908915647",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/Dynamic-node-creation-in-backpropagation-networks-Ash/355dfdd45b4b644853250f531f66e72d917432b1",
       "pdf": ""
     },
     "discovered_via": [
@@ -84,7 +84,7 @@
     "related": [
       "fahlman-1990-cascade-correlation"
     ],
-    "notes": "Seed bibliography item from the original project README. Needs detailed review."
+    "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft still needs human full-text verification."
   },
   {
     "id": "fahlman-1990-cascade-correlation",

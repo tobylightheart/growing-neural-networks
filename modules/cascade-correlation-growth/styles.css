@@ -4,7 +4,7 @@
   gap: 1rem;
   padding: 0.8rem 1rem;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 253, 248, 0.92);
+  background: rgba(var(--panel-rgb), 0.92);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -47,10 +47,10 @@
 .phase-list li.done { color: var(--accent); }
 .explain-box { background: var(--accent-soft); border-radius: 18px; padding: 0.9rem; margin-top: 1rem; }
 .explain-box h3 { margin: 0 0 0.4rem; }
-.explain-box p { margin: 0; color: #35534a; }
+.explain-box p { margin: 0; color: var(--accent); }
 
 .visual-panel { padding: 0.75rem; }
-.canvas-wrap { width: 100%; overflow: hidden; border-radius: 18px; background: #fffaf1; border: 1px solid var(--line); }
+.canvas-wrap { width: 100%; overflow: hidden; border-radius: 18px; background: color-mix(in srgb, var(--panel) 92%, var(--bg)); border: 1px solid var(--line); }
 canvas { display: block; width: 100%; height: auto; }
 
 table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 16px; }

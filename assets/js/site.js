@@ -1,4 +1,6 @@
 
+import { initThemeToggle } from './theme.js';
+
 export const navItems = [
   { href: 'index.html', label: 'Home' },
   { href: 'pages/papers.html', label: 'Papers' },
@@ -38,8 +40,10 @@ export function renderShell(activeLabel) {
           return `<a href="${href}"${current}>${item.label}</a>`;
         }).join('')}
       </nav>
+      <div class="nav-actions" data-nav-actions></div>
     </div>`;
   document.body.prepend(header);
+  initThemeToggle(header.querySelector('[data-nav-actions]'));
 
   const footer = document.createElement('footer');
   footer.className = 'site-footer';

@@ -3,11 +3,12 @@
     "id": "cascade-correlation",
     "name": "Cascade-Correlation",
     "family": "constructive supervised learning",
-    "summary": "Starts with no hidden units, trains candidate units to correlate with residual error, adds the best candidate, freezes its input weights, and repeats.",
+    "summary": "Starts with no hidden units, trains candidate units to correlate with residual error, adds the best candidate when residual-correlation search finds a useful feature, freezes its input weights, and repeats.",
     "themes": [
       "candidate-unit-training",
       "residual-error-correlation",
-      "frozen-features"
+      "frozen-features",
+      "growth-trigger"
     ],
     "papers": [
       "fahlman-1990-cascade-correlation"
@@ -21,7 +22,8 @@
     "themes": [
       "hidden-unit-growth",
       "capacity-control",
-      "backpropagation"
+      "backpropagation",
+      "growth-trigger"
     ],
     "papers": [
       "ash-1989-dynamic-node-construction"

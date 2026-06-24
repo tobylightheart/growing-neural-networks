@@ -48,5 +48,10 @@
     "id": "incremental-structure",
     "name": "Incremental structure",
     "description": "Architectural growth performed in steps rather than all at once."
+  },
+  {
+    "id": "growth-trigger",
+    "name": "Growth trigger",
+    "description": "The signal or criterion that decides when a constructive learner should add new capacity."
   }
 ]

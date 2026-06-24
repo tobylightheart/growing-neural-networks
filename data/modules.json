@@ -24,7 +24,8 @@
     "concepts": [
       "residual-error-correlation",
       "candidate-unit-training",
-      "hidden-unit-growth"
+      "hidden-unit-growth",
+      "growth-trigger"
     ],
     "papers": [
       "fahlman-1990-cascade-correlation"

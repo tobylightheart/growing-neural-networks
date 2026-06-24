@@ -5,11 +5,12 @@
     "type": "multiple-choice",
     "status": "planned",
     "concepts": [
-      "residual-error-correlation"
+      "residual-error-correlation",
+      "growth-trigger"
     ],
     "papers": [
       "fahlman-1990-cascade-correlation"
     ],
-    "summary": "A first exercise about absolute correlation magnitude in candidate selection."
+    "summary": "A first exercise about using absolute correlation magnitude as a growth trigger in candidate selection."
   }
 ]

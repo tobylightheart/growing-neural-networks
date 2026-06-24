@@ -58,7 +58,8 @@
     "themes": [
       "hidden-unit-growth",
       "backpropagation",
-      "capacity-control"
+      "capacity-control",
+      "growth-trigger"
     ],
     "status": "review-draft",
     "importance": "canonical",
@@ -103,7 +104,8 @@
       "candidate-unit-training",
       "residual-error-correlation",
       "frozen-features",
-      "hidden-unit-growth"
+      "hidden-unit-growth",
+      "growth-trigger"
     ],
     "status": "review-draft",
     "importance": "canonical",

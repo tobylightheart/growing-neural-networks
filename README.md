@@ -12,6 +12,7 @@ A first static-site skeleton is in place:
 - `pages/` — papers, reviews, timeline, algorithms, concepts, modules, exercises, reading queue, and scripts pages.
 - `data/catalog.json` — manifest that lets paper data split into multiple files later.
 - `data/papers.json` — initial seed bibliography.
+- `data/paper-assets.json` — tracked inventory of local/private PDF and extracted-text status.
 - `reviews/` — public Markdown paper reviews rendered through `pages/review.html`.
 - `modules/` — future home for standalone interactive visualizations and playgrounds.
 - `scripts/validate_data.py` — standard-library data integrity checker.
@@ -65,6 +66,16 @@ Later this can become multiple chunks without changing the site UI:
 ```
 
 Long-form review text lives in Markdown files under `reviews/`, while `data/papers.json` keeps machine-readable metadata for search, timelines, filters, and cross-links.
+
+## Local paper library
+
+PDFs and extracted full-text files should stay outside Git by default. The recommended local/private asset store is a sibling directory:
+
+```text
+/workspace/growing-neural-networks-library/
+```
+
+The tracked inventory is `data/paper-assets.json`; see `docs/paper-library.md` for the convention, status fields, and cloud-sync notes.
 
 ## Seed references
 

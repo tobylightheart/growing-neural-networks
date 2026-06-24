@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "fahlman-1988-chaining-modules",
+    "pdf_status": "missing",
+    "text_status": "missing",
+    "access": "unknown",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/fahlman-1988-chaining-modules.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/fahlman-1988-chaining-modules.md",
+    "source_url": "",
+    "last_checked": "",
+    "notes": "Seed paper; local PDF/text assets have not been collected yet."
+  },
+  {
+    "paper_id": "ash-1989-dynamic-node-construction",
+    "pdf_status": "missing",
+    "text_status": "missing",
+    "access": "publisher-gated",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/ash-1989-dynamic-node-construction.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/ash-1989-dynamic-node-construction.md",
+    "source_url": "https://doi.org/10.1080/09540098908915647",
+    "last_checked": "",
+    "notes": "Bibliographic metadata is verified, but no local PDF/text asset is recorded. Use caution around publisher access."
+  },
+  {
+    "paper_id": "fahlman-1990-cascade-correlation",
+    "pdf_status": "missing",
+    "text_status": "missing",
+    "access": "unknown",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/fahlman-1990-cascade-correlation.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/fahlman-1990-cascade-correlation.md",
+    "source_url": "",
+    "last_checked": "",
+    "notes": "Anchor paper for the project; local PDF/text assets have not been collected yet."
+  }
+]

@@ -16,6 +16,10 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
+PDF_STATUSES = {"missing", "located", "collected", "blocked", "not-needed"}
+TEXT_STATUSES = {"missing", "extracted", "extraction-failed", "needs-ocr", "not-needed"}
+ACCESS_STATUSES = {"open", "publisher-gated", "author-copy", "unknown"}
+
 
 def load_json(path: Path) -> Any:
     try:
@@ -62,6 +66,29 @@ def load_papers(catalog: dict[str, Any]) -> list[dict[str, Any]]:
     return papers
 
 
+def load_local_library_root() -> Path:
+    """Return the configured private paper-library root.
+
+    The real local config is intentionally ignored by Git. If absent, use the
+    checked-in example/default sibling-directory convention.
+    """
+    config_path = DATA / "local-library.json"
+    if config_path.exists():
+        config = load_json(config_path)
+    else:
+        config = load_json(DATA / "local-library.example.json")
+    library_root = config.get("library_root", "../growing-neural-networks-library")
+    return (ROOT / library_root).resolve()
+
+
+def is_relative_to(path: Path, parent: Path) -> bool:
+    try:
+        path.resolve().relative_to(parent.resolve())
+        return True
+    except ValueError:
+        return False
+
+
 def check_unique(records: list[dict[str, Any]], field: str, context: str) -> set[str]:
     raw_values = [record.get(field) for record in records]
     missing = [i for i, value in enumerate(raw_values) if not value]
@@ -83,6 +110,8 @@ def main() -> int:
     sources = load_json(ROOT / catalog["sources"])
     modules = load_json(ROOT / catalog.get("modules", "data/modules.json"))
     exercises = load_json(ROOT / catalog.get("exercises", "data/exercises.json"))
+    paper_assets = load_json(ROOT / catalog.get("paper_assets", "data/paper-assets.json"))
+    library_root = load_local_library_root()
 
     paper_ids = check_unique(papers, "id", "papers")
     algorithm_ids = check_unique(algorithms, "id", "algorithms")
@@ -90,6 +119,14 @@ def main() -> int:
     source_ids = check_unique(sources, "id", "sources")
     module_ids = check_unique(modules, "id", "modules") if modules else set()
     exercise_ids = check_unique(exercises, "id", "exercises") if exercises else set()
+    asset_paper_ids = check_unique(paper_assets, "paper_id", "paper assets") if paper_assets else set()
+
+    missing_asset_records = sorted(paper_ids - asset_paper_ids)
+    extra_asset_records = sorted(asset_paper_ids - paper_ids)
+    if missing_asset_records:
+        fail(f"missing paper asset records for: {', '.join(missing_asset_records)}")
+    if extra_asset_records:
+        fail(f"paper asset records reference unknown papers: {', '.join(extra_asset_records)}")
 
     seen_external_ids: dict[str, str] = {}
 
@@ -158,6 +195,46 @@ def main() -> int:
             if paper_id not in paper_ids:
                 fail(f"source {source['id']} references unknown paper: {paper_id}")
 
+    for asset in paper_assets:
+        context = f"paper asset {asset.get('paper_id', '<missing>')}"
+        require_keys(asset, ["paper_id", "pdf_status", "text_status", "access", "local_private_only"], context)
+        if asset["pdf_status"] not in PDF_STATUSES:
+            fail(f"{context} has invalid pdf_status: {asset['pdf_status']}")
+        if asset["text_status"] not in TEXT_STATUSES:
+            fail(f"{context} has invalid text_status: {asset['text_status']}")
+        if asset["access"] not in ACCESS_STATUSES:
+            fail(f"{context} has invalid access: {asset['access']}")
+        if asset.get("local_private_only") is not True:
+            warn(f"{context} is not marked local_private_only=true; confirm this is intentional")
+
+        pdf_path_value = asset.get("pdf_local_path")
+        text_path_value = asset.get("text_local_path")
+        if asset["pdf_status"] == "collected":
+            if not pdf_path_value:
+                fail(f"{context} is collected but missing pdf_local_path")
+            pdf_path = (ROOT / pdf_path_value).resolve()
+            if not is_relative_to(pdf_path, library_root):
+                fail(f"{context} pdf path is outside local library root: {pdf_path_value}")
+            if not pdf_path.exists():
+                fail(f"{context} pdf_status is collected but file is missing: {pdf_path_value}")
+        elif pdf_path_value:
+            pdf_path = (ROOT / pdf_path_value).resolve()
+            if not is_relative_to(pdf_path, library_root):
+                fail(f"{context} pdf path is outside local library root: {pdf_path_value}")
+
+        if asset["text_status"] == "extracted":
+            if not text_path_value:
+                fail(f"{context} is extracted but missing text_local_path")
+            text_path = (ROOT / text_path_value).resolve()
+            if not is_relative_to(text_path, library_root):
+                fail(f"{context} text path is outside local library root: {text_path_value}")
+            if not text_path.exists():
+                fail(f"{context} text_status is extracted but file is missing: {text_path_value}")
+        elif text_path_value:
+            text_path = (ROOT / text_path_value).resolve()
+            if not is_relative_to(text_path, library_root):
+                fail(f"{context} text path is outside local library root: {text_path_value}")
+
     print("Data validation passed:")
     print(f"  papers:     {len(papers)}")
     print(f"  algorithms: {len(algorithms)}")
@@ -165,6 +242,8 @@ def main() -> int:
     print(f"  sources:    {len(sources)}")
     print(f"  modules:    {len(module_ids)}")
     print(f"  exercises:  {len(exercise_ids)}")
+    print(f"  assets:     {len(asset_paper_ids)}")
+    print(f"  library:    {library_root}")
     return 0
 
 

@@ -7,5 +7,6 @@
   "themes": "data/themes.json",
   "sources": "data/sources.json",
   "modules": "data/modules.json",
-  "exercises": "data/exercises.json"
+  "exercises": "data/exercises.json",
+  "paper_assets": "data/paper-assets.json"
 }

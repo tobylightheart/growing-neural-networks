@@ -1,0 +1,7 @@
+{
+  "library_root": "../growing-neural-networks-library",
+  "pdf_dir": "pdfs",
+  "text_dir": "text",
+  "metadata_dir": "metadata",
+  "notes": "Copy this to data/local-library.json if your local/cloud-synced library lives somewhere else. data/local-library.json is ignored by Git."
+}

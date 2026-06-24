@@ -26,3 +26,10 @@ build/
 # Local generated outputs
 .tmp/
 reports/
+
+# Private paper assets; track data/paper-assets.json instead
+.paper-library/
+paper-library/
+growing-neural-networks-library/
+data/local-library.json
+*.pdf

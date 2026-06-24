@@ -53,5 +53,40 @@
     "id": "growth-trigger",
     "name": "Growth trigger",
     "description": "The signal or criterion that decides when a constructive learner should add new capacity."
+  },
+  {
+    "id": "spiking-neural-networks",
+    "name": "Spiking neural networks",
+    "description": "Neural-network models where spikes and their timing are first-class signals rather than hidden implementation details."
+  },
+  {
+    "id": "spike-timing-dependent-construction",
+    "name": "Spike-timing-dependent construction",
+    "description": "Constructive algorithms whose growth, pruning, or parameter-selection processes depend on spike times."
+  },
+  {
+    "id": "parameter-calculation",
+    "name": "Parameter calculation",
+    "description": "Processes that assign useful initial parameters to newly constructed neurons or synapses."
+  },
+  {
+    "id": "local-performance-trigger",
+    "name": "Local performance trigger",
+    "description": "Growth or pruning decisions driven by the assessed performance of individual components rather than only global error."
+  },
+  {
+    "id": "simulation-expansion",
+    "name": "Simulation expansion",
+    "description": "Interpreting construction as moving neurons or synapses from an unsimulated surrounding system into the simulated set."
+  },
+  {
+    "id": "structural-plasticity",
+    "name": "Structural plasticity",
+    "description": "Creation, deletion, or reconfiguration of neurons and synapses during learning or simulation."
+  },
+  {
+    "id": "pruning-and-merging",
+    "name": "Pruning and merging",
+    "description": "Capacity-control operations that remove components or combine similar components rather than only adding new ones."
   }
 ]

@@ -28,5 +28,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Added the Giles et al. 1995 recurrent cascade-correlation limitations paper because it is directly about constructive recurrent networks and extends the cascade-correlation branch. Rejected/held back this run: Mohamed et al. 2021 CCG-DLNN (relevant but less foundational; defer for a later modern-extensions pass) and generic review/search-result pages without enough focused novelty for this small dry run. Semantic Scholar and arXiv API attempts returned HTTP 429, so bibliographic verification used IEEE Xplore, Penn State Pure, and the author-hosted PDF."
+  },
+  {
+    "id": "lightheart-constructive-spiking-thesis",
+    "source": "public-thesis-repository",
+    "date": "2026-06-24",
+    "description": "Toby Asher Lightheart's PhD thesis source, used as a selective synthesis source for the spiking constructive-learning branch of the web book.",
+    "query": null,
+    "added": [
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Source repository: /workspace/thesis-constructive-spiking/; public GitHub repository https://github.com/tobylightheart/thesis-constructive-spiking. Integrate selectively as public synthesis notes, themes, paper records, and modules rather than wholesale chapter conversion."
   }
 ]

@@ -187,5 +187,62 @@
       "fahlman-1990-cascade-correlation"
     ],
     "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. Keep title spelling as IEEE/PDF 'Cascade Correlation'; Penn State page title contains a likely 'Casade' typo."
+  },
+  {
+    "id": "lightheart-2018-constructive-spiking-thesis",
+    "title": "Constructive Spiking Neural Networks for Simulations of Neuroplasticity",
+    "authors": [
+      "Toby Asher Lightheart"
+    ],
+    "year": 2018,
+    "venue": "PhD thesis, The University of Adelaide",
+    "families": [
+      "constructive-learning",
+      "spiking-constructive-learning",
+      "thesis"
+    ],
+    "themes": [
+      "constructive-learning",
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "parameter-calculation",
+      "local-performance-trigger",
+      "simulation-expansion",
+      "structural-plasticity",
+      "pruning-and-merging",
+      "growth-trigger"
+    ],
+    "status": "review-draft",
+    "importance": "thesis-source",
+    "summary": "Develops a taxonomy for constructive neural networks and extends it into spiking simulations, proposing spike-timing-dependent construction and constructive algorithms for neuroplasticity-oriented simulations.",
+    "growth_mechanism": "Treats growth as construction of neurons or synapses driven by constructive-algorithm processes; in the spiking branch these processes may depend on spike timing, local component performance, proxy-neuron events, or simulation expansion/contraction.",
+    "what_grows": [
+      "neurons",
+      "synapses",
+      "simulated-set-membership"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "spiking-neural-networks",
+      "simulation",
+      "continual-learning",
+      "one-shot-learning"
+    ],
+    "review": "reviews/lightheart-thesis-constructive-taxonomy.md",
+    "links": {
+      "paper": "https://github.com/tobylightheart/thesis-constructive-spiking",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://github.com/tobylightheart/thesis-constructive-spiking/blob/main/thesis.pdf"
+    },
+    "discovered_via": [
+      "lightheart-constructive-spiking-thesis"
+    ],
+    "related": [
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation",
+      "giles-1995-recurrent-cascade-correlation-limitations"
+    ],
+    "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion."
   }
 ]

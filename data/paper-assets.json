@@ -46,5 +46,17 @@
     "source_url": "https://clgiles.ist.psu.edu/papers/IEEE.TNN.Constructive.95.pdf",
     "last_checked": "2026-06-24",
     "notes": "Author-hosted PDF located, but no local private PDF/text asset was collected in this dry run."
+  },
+  {
+    "paper_id": "lightheart-2018-constructive-spiking-thesis",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "pdf_local_path": "",
+    "text_local_path": "",
+    "source_url": "https://github.com/tobylightheart/thesis-constructive-spiking",
+    "last_checked": "2026-06-24",
+    "notes": "Thesis PDF and LaTeX source are maintained in the sibling public repository /workspace/thesis-constructive-spiking, so this web-book paper record does not require a private PDF/text copy."
   }
 ]

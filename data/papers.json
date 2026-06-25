@@ -123,10 +123,10 @@
     ],
     "review": "reviews/fahlman-1990-cascade-correlation.md",
     "links": {
-      "paper": "",
+      "paper": "https://kilthub.cmu.edu/articles/journal_contribution/The_Cascade-Correlation_learning_architecture/6610403",
       "doi": "",
-      "semantic_scholar": "",
-      "pdf": ""
+      "semantic_scholar": "https://www.semanticscholar.org/paper/The-Cascade-Correlation-Learning-Architecture-Fahlman-Lebiere/995a3b11cc8a4751d8e167abc4aa937abc934df0",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/1989/file/69adc1e107f7f7d035d7baf04342e1ca-Paper.pdf"
     },
     "discovered_via": [
       "seed-bibliography"
@@ -135,7 +135,7 @@
       "fahlman-1988-chaining-modules",
       "ash-1989-dynamic-node-construction"
     ],
-    "notes": "Primary initial review target and anchor paper for early site demos."
+    "notes": "Primary anchor paper for early site demos. Proceedings/Semantic Scholar index it under NeurIPS 1989, while this repository keeps the established 1990 ID pending a human bibliographic cleanup pass."
   },
   {
     "id": "giles-1995-recurrent-cascade-correlation-limitations",

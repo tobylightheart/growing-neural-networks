@@ -25,15 +25,15 @@
   },
   {
     "paper_id": "fahlman-1990-cascade-correlation",
-    "pdf_status": "missing",
+    "pdf_status": "located",
     "text_status": "missing",
-    "access": "unknown",
+    "access": "open",
     "local_private_only": true,
     "pdf_local_path": "../growing-neural-networks-library/pdfs/fahlman-1990-cascade-correlation.pdf",
     "text_local_path": "../growing-neural-networks-library/text/fahlman-1990-cascade-correlation.md",
-    "source_url": "",
-    "last_checked": "",
-    "notes": "Anchor paper for the project; local PDF/text assets have not been collected yet."
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/1989/file/69adc1e107f7f7d035d7baf04342e1ca-Paper.pdf",
+    "last_checked": "2026-06-25",
+    "notes": "Open NeurIPS proceedings PDF located during automated review improvement; no local private PDF/text asset was collected."
   },
   {
     "paper_id": "giles-1995-recurrent-cascade-correlation-limitations",

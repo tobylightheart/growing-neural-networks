@@ -1,64 +1,88 @@
 # The Cascade-Correlation Learning Architecture
 
+> Status: Automated draft, not yet human-reviewed.
+
+## Review status
+
+Improved automated draft based on the NeurIPS proceedings PDF, the CMU KiltHub record, and Semantic Scholar metadata. The paper is sufficiently well documented to summarize the algorithmic pattern, but a human pass should still verify the experimental details and final bibliographic convention for the year/venue label.
+
 ## One-sentence summary
 
-Cascade-Correlation is a constructive supervised learning algorithm that begins with a minimal network and adds hidden units one at a time, choosing candidates that best correlate with the network's remaining error.
+Cascade-Correlation is a constructive supervised learning architecture that begins with a minimal input-output network, trains candidate hidden units to correlate with the current residual error, installs the best candidate, freezes its incoming weights, and repeats until the task is solved or growth stops being useful.
 
 ## Why it matters
 
-Fahlman and Lebiere's Cascade-Correlation paper is one of the canonical examples of a neural network that grows its own structure. It is historically important because it directly attacks two limitations of ordinary backpropagation practice: choosing the architecture before training, and repeatedly perturbing already-useful hidden features while trying to learn new ones.
+Fahlman and Lebiere's paper is one of the canonical examples of a neural network that grows its own structure during learning. Instead of treating architecture selection as a separate model-selection loop, Cascade-Correlation makes structure construction part of training: the network starts small, measures what it still cannot explain, and adds a new learned feature aimed at that remaining error.
 
-The algorithm offers a clear design pattern for constructive learning:
+The paper is historically important because it directly addresses two practical weaknesses of ordinary fixed-topology backpropagation practice:
 
-- start with the smallest useful architecture;
-- train the current output weights;
-- search for a new hidden unit that explains residual error;
-- install that unit;
-- freeze part of the learned structure;
-- repeat until the task is solved or growth stops helping.
+- the practitioner must choose the number of hidden units before training; and
+- all hidden weights move together, so each hidden unit is trying to learn while the rest of the hidden representation is also changing.
+
+The authors call the second issue the "moving target" problem. Cascade-Correlation's response is to train a new feature, install it, and then freeze its input-side weights so future learning can build on a stable representation.
 
 ## Core idea
 
-Instead of deciding in advance how many hidden units a network should have, Cascade-Correlation grows the hidden layer. Candidate units are trained separately. The winning candidate is the one whose activation is most correlated with the residual error at the outputs. Once installed, its incoming weights are frozen. Future units can connect to previous units, forming a cascade.
+Cascade-Correlation is both an architecture and a training procedure. Architecturally, the network begins with input units, output units, and direct input-to-output connections. It has no hidden units at the start. Training alternates between two phases:
+
+1. **Output-weight training:** train the currently active network's connections into the output units.
+2. **Candidate-unit training:** if error remains, train candidate hidden units outside the active network to maximize their correlation with the residual output error.
+
+The best candidate is then added to the active network. It receives connections from the original inputs and from previously installed hidden units. Those incoming weights are frozen permanently, turning the installed unit into a stable feature detector. Its outgoing connections to the output units are then trained with the rest of the output side of the network.
 
 ## Algorithm sketch
 
-1. Begin with direct input-to-output connections and no hidden units.
-2. Train the output weights to reduce task error.
-3. Create a pool of candidate hidden units.
-4. Train candidate input weights to maximize correlation with residual output error.
-5. Select the best candidate.
-6. Add it permanently to the network.
-7. Freeze its incoming weights.
-8. Train output-side weights again.
-9. Repeat until an error threshold, unit limit, or stopping criterion is reached.
+1. Start with no hidden units and direct trainable input-to-output connections.
+2. Train the output weights until improvement stalls or a task-specific criterion is met.
+3. If performance is adequate, stop.
+4. Otherwise, create a pool of candidate hidden units.
+5. Train each candidate's incoming weights so its activation is strongly correlated with the current residual error at the output units.
+6. Select the best candidate according to the correlation objective.
+7. Install that candidate as a permanent hidden unit.
+8. Freeze the installed unit's incoming weights.
+9. Add/train its outgoing weights to the output units.
+10. Repeat the output-training and candidate-training cycle.
 
 ## What grows
 
-The network grows hidden units and connections. Later hidden units can receive connections from both original inputs and previously installed hidden units, which creates the characteristic cascade topology.
+The network grows hidden units and their associated connections. Each new hidden unit can receive input from both the original inputs and all previously installed hidden units, so later units can represent higher-order features built from earlier features. This produces the characteristic cascade topology: every added unit becomes available as an input to future units.
 
 ## What freezes
 
-The incoming weights of installed hidden units are frozen. This turns each installed unit into a stable feature detector. Output weights remain trainable so the network can reuse all accumulated features.
+The incoming weights of installed hidden units freeze. Output-side weights remain trainable, so the model can continue to recombine all accumulated features when fitting the current task. In this review's taxonomy, Cascade-Correlation is therefore not just a hidden-unit-growth method; it is specifically a **frozen-feature construction** method.
 
-## Interpretation
+## Selection criterion: residual correlation
 
-One useful way to read Cascade-Correlation is as a feature-construction method. Each new unit is a learned feature aimed at the current residual. The network is not merely adding capacity; it is adding a feature whose job is to explain what the previous structure could not.
+The central constructive signal is correlation with residual error. A candidate unit is valuable if its activation varies in a way that explains what the current network still gets wrong. This makes Cascade-Correlation easy to relate to later residual-style intuitions, but it should not be collapsed into modern residual networks: Cascade-Correlation grows discrete units through a candidate search and freezes installed input weights, while residual networks usually train a fixed-depth differentiable architecture end-to-end.
 
-This makes the paper interesting alongside later ideas such as residual learning, boosting, and progressive architectures, although those connections need to be made carefully rather than treated as direct equivalences.
+## Implementation implications for this project
 
-## Implementation notes
+For the site's from-scratch demos, the paper suggests a clean separation of concerns:
 
-The existing exploratory Python code in this repository is useful as a record of the pitfalls involved in implementing the method from scratch. In particular:
+- keep output-weight training separate from candidate-unit training;
+- expose the residual-error vector so learners can see what each candidate is trying to match;
+- visualize candidate scores as correlations, not just as loss values;
+- make freezing visible in the UI so users can see that installed input weights stop changing;
+- avoid presenting Cascade-Correlation as ordinary backpropagation with occasional unit insertion.
 
-- backpropagation sign conventions are easy to get wrong;
-- sigmoid derivatives should not be applied repeatedly to the same error term;
-- learning rate and initialization choices strongly affect toy problems such as XOR;
-- a faithful Cascade-Correlation implementation needs to separate output training from candidate-unit training.
+The existing `modules/cascade-correlation-growth/` and `modules/residual-correlation-playground/` demos map well to this reading: one can show the growth loop at a high level, while the other isolates the intuition behind residual correlation.
 
-## Open questions for the review
+## Relationship to neighboring papers
 
-- How should Cascade-Correlation be compared with Dynamic Node Construction?
-- Which later constructive algorithms directly inherit the candidate-unit idea?
-- How often is freezing essential, and when do later methods relax it?
-- Can the residual-correlation criterion be visualized with a simple toy dataset?
+- **Fahlman 1988, Chaining Together Simple Modules:** likely belongs in the prehistory of modular composition and feature reuse, but its bibliographic details and full text still need verification before this review should make strong claims about continuity.
+- **Ash 1989, Dynamic Node Creation:** also grows hidden nodes during training, but is framed as dynamic extension of backpropagation rather than candidate competition plus permanent frozen feature detectors.
+- **Recurrent Cascade-Correlation and later variants:** later work extends or criticizes the cascade idea in recurrent settings and in variants that try to reduce depth or improve generalization.
+
+## Bibliographic notes
+
+The NeurIPS proceedings PDF and Semantic Scholar metadata index the paper as *The Cascade-Correlation Learning Architecture* by Scott E. Fahlman and Christian Lebiere in Neural Information Processing Systems, with the proceedings PDF under the 1989 NeurIPS record. The existing project ID and paper metadata use the common `fahlman-1990-cascade-correlation` label. Until a human bibliographic cleanup pass decides whether to rename the ID, this review keeps the established site identifier and records the proceedings links in metadata.
+
+CMU KiltHub also hosts a record for the work, posted in 1993, with an abstract emphasizing four claimed advantages: fast learning, automatic determination of size/topology, retention of learned structures when the training set changes, and no need to back-propagate error signals through the network's existing hidden connections.
+
+## Open questions for human review
+
+- Which exact year/venue label should the public site standardize on: NeurIPS 1989 proceedings, 1990 citation convention, or both in separate fields?
+- Which experiments in the paper best demonstrate the claimed speed advantage over backpropagation?
+- How sensitive are the reported results to the candidate pool size, candidate training criterion, and output-training optimizer?
+- When does the cascade topology become too deep or high-fan-in, and which later variants address this most directly?
+- How should the site distinguish mathematically precise residual-correlation claims from intuitive residual-learning analogies?

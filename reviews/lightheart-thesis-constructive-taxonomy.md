@@ -94,9 +94,24 @@ performance evaluation  ->  structural operation  ->  parameter calculation
 
 Later modules can specialize this frame for simulation expansion, STDP windows, proxy-neuron construction, and competitive spike-pattern growth.
 
+## Stage 4 integration: simulation expansion/contraction
+
+Chapter 3 adds a useful distinction for constructive spiking simulations: a structural change in a computer model does not always have to be narrated as a biological neuron being instantly born or deleted. The thesis separates the **memory representation** of components from the **simulated set** of components participating in network operation.
+
+In that view:
+
+- construction adds a neuron or synapse representation to computer memory;
+- pruning removes a representation from computer memory;
+- expansion transfers a member from a surrounding, non-simulated set into the simulated neuron/synapse set;
+- contraction transfers a simulated member back out to the surrounding set.
+
+The distinction is valuable for this review because it turns a pure capacity-control question into a modelling question. A constructive algorithm can be evaluated not only by whether it reduces error or detects a pattern, but also by whether the added or removed component would produce a plausible change in the simulated activity. Chapter 3's "plausible effects" idea is a practical bridge to later spiking modules: low-activity, weakly connected, or otherwise low-disruption additions are easier to interpret as expansion from a surrounding neural system than additions that cause sudden persistent shifts in spike rates or latencies.
+
+This creates a planned visual module, **Simulation Expansion and Contraction**, that should show three sets side by side: simulated components, surrounding components, and components represented in memory. The first implementation should stay conceptual and avoid copying thesis figures wholesale; if a later pass uses source SVGs, it should copy only the specific asset needed and preserve provenance.
+
 ## Open verification notes
 
-This draft is based primarily on the thesis abstract and Chapter 2 source. It is intended as a synthesis scaffold for the web book, not a human-reviewed final interpretation. Before marking it reviewed, check:
+This draft is based primarily on the thesis abstract plus Chapter 2 and Chapter 3 source. It is intended as a synthesis scaffold for the web book, not a human-reviewed final interpretation. Before marking it reviewed, check:
 
 - the exact wording of the thesis definitions against Chapter 2;
 - whether the public web-book paraphrases preserve the intended distinctions;

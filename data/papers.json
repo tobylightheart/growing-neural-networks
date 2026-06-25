@@ -214,6 +214,7 @@
       "parameter-calculation",
       "local-performance-trigger",
       "simulation-expansion",
+      "biological-plausibility",
       "structural-plasticity",
       "pruning-and-merging",
       "growth-trigger",
@@ -251,6 +252,6 @@
       "fahlman-1990-cascade-correlation",
       "giles-1995-recurrent-cascade-correlation-limitations"
     ],
-    "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion."
+    "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion. Includes a selective Stage 4 integration note on simulation expansion/contraction and plausible-effects constraints."
   }
 ]

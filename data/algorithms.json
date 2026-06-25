@@ -78,5 +78,21 @@
     "papers": [
       "lightheart-2018-constructive-spiking-thesis"
     ]
+  },
+  {
+    "id": "simulation-expansion-contraction",
+    "name": "Simulation expansion and contraction",
+    "family": "constructive spiking simulation",
+    "summary": "Interprets construction and pruning as transfers between simulated and surrounding neuron/synapse sets, with biological-plausibility constraints on how much activity a structural change may disrupt.",
+    "themes": [
+      "simulation-expansion",
+      "structural-plasticity",
+      "pruning-and-merging",
+      "biological-plausibility",
+      "spike-timing-dependent-construction"
+    ],
+    "papers": [
+      "lightheart-2018-constructive-spiking-thesis"
+    ]
   }
 ]

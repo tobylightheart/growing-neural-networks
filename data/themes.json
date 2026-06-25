@@ -98,5 +98,10 @@
     "id": "recurrent-structure",
     "name": "Recurrent structure",
     "description": "Constructive methods for sequence models where recurrence, memory dynamics, or finite-state behaviour shape the growth rule."
+  },
+  {
+    "id": "biological-plausibility",
+    "name": "Biological plausibility",
+    "description": "Constraints on constructive changes so adding, pruning, or transferring simulated components does not create implausible disruptions in neural activity."
   }
 ]

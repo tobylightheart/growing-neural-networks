@@ -185,6 +185,15 @@ main {
 
 .panel { padding: 1.25rem; }
 .panel h2, .panel h3 { margin-top: 0; }
+.callout {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--notice-bg);
+}
+.callout h2 { margin: 0 0 0.5rem; }
+.callout p:last-child { margin-bottom: 0; }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .two-col { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(260px, 0.3fr); gap: 1rem; align-items: start; }

@@ -105,7 +105,8 @@
       "residual-error-correlation",
       "frozen-features",
       "hidden-unit-growth",
-      "growth-trigger"
+      "growth-trigger",
+      "topology-constraints"
     ],
     "status": "review-draft",
     "importance": "canonical",
@@ -133,7 +134,8 @@
     ],
     "related": [
       "fahlman-1988-chaining-modules",
-      "ash-1989-dynamic-node-construction"
+      "ash-1989-dynamic-node-construction",
+      "giles-1995-recurrent-cascade-correlation-limitations"
     ],
     "notes": "Primary anchor paper for early site demos. Proceedings/Semantic Scholar index it under NeurIPS 1989, while this repository keeps the established 1990 ID pending a human bibliographic cleanup pass."
   },
@@ -158,7 +160,9 @@
       "constructive-learning",
       "hidden-unit-growth",
       "capacity-control",
-      "historical-foundations"
+      "historical-foundations",
+      "topology-constraints",
+      "recurrent-structure"
     ],
     "status": "review-draft",
     "importance": "notable",
@@ -184,9 +188,11 @@
       "weekly-discovery-2026-06-24"
     ],
     "related": [
-      "fahlman-1990-cascade-correlation"
+      "fahlman-1990-cascade-correlation",
+      "lightheart-2018-constructive-spiking-thesis",
+      "ash-1989-dynamic-node-construction"
     ],
-    "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. Keep title spelling as IEEE/PDF 'Cascade Correlation'; Penn State page title contains a likely 'Casade' typo."
+    "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. The review draft is used here as a cautious synthesis bridge: it highlights that constructive growth rules can still impose restrictive topologies, especially in recurrent sequence-learning settings."
   },
   {
     "id": "lightheart-2018-constructive-spiking-thesis",
@@ -210,7 +216,9 @@
       "simulation-expansion",
       "structural-plasticity",
       "pruning-and-merging",
-      "growth-trigger"
+      "growth-trigger",
+      "topology-constraints",
+      "recurrent-structure"
     ],
     "status": "review-draft",
     "importance": "thesis-source",

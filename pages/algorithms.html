@@ -11,7 +11,13 @@
     <section class="panel">
       <p class="kicker">Growing Neural Networks</p>
       <h1>Algorithms</h1>
-      <p>Algorithm families and mechanisms. This will become the comparison matrix for constructive learning approaches.</p><section class="grid" data-algorithms></section>
+      <p>Algorithm families and mechanisms. This will become the comparison matrix for constructive learning approaches.</p>
+      <section class="callout">
+        <h2>Synthesis lens: growth rule versus topology commitment</h2>
+        <p>Across the current draft reviews, one cautious pattern is now worth tracking explicitly: adding units is not the same as escaping architectural assumptions. Cascade-Correlation uses residual-error correlation to install and freeze useful hidden features, while the recurrent Cascade-Correlation limitations paper warns that a growth rule can still commit the learner to a topology that is too restrictive for some sequence tasks. The thesis-derived taxonomy broadens this into three questions for every constructive method: when does structure change, what changes, and how are new parameters chosen?</p>
+        <p class="meta">Grounded in the automated draft reviews for Fahlman &amp; Lebiere (Cascade-Correlation), Giles et al. (recurrent Cascade-Correlation limitations), and Lightheart (constructive spiking taxonomy). Keep claims conservative until human full-text review is complete.</p>
+      </section>
+      <section class="grid" data-algorithms></section>
     </section>
   </main>
   <script type="module">

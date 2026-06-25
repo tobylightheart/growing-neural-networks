@@ -179,6 +179,9 @@ def main() -> int:
         for concept in module.get("concepts", []):
             if concept not in theme_ids:
                 fail(f"{context} references unknown concept/theme: {concept}")
+        for algorithm_id in module.get("algorithms", []):
+            if algorithm_id not in algorithm_ids:
+                fail(f"{context} references unknown algorithm: {algorithm_id}")
 
     for exercise in exercises:
         context = f"exercise {exercise.get('id', '<missing>')}"

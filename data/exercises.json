@@ -6,7 +6,8 @@
     "status": "available",
     "concepts": [
       "residual-error-correlation",
-      "growth-trigger"
+      "growth-trigger",
+      "candidate-unit-training"
     ],
     "papers": [
       "fahlman-1990-cascade-correlation"

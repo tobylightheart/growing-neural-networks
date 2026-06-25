@@ -63,9 +63,13 @@
       "pruning-and-merging"
     ],
     "papers": [
-      "lightheart-2018-constructive-spiking-thesis"
+      "lightheart-2018-constructive-spiking-thesis",
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation"
     ],
-    "algorithms": [],
+    "algorithms": [
+      "constructive-spiking-taxonomy"
+    ],
     "learning_goals": [
       "Separate construction, pruning, and merging as structural operations.",
       "Distinguish global and local performance signals as growth triggers.",

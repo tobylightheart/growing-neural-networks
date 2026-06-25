@@ -28,5 +28,55 @@
     "papers": [
       "ash-1989-dynamic-node-construction"
     ]
+  },
+  {
+    "id": "recurrent-cascade-correlation",
+    "name": "Recurrent Cascade-Correlation",
+    "family": "constructive recurrent learning",
+    "summary": "Extends the cascade-correlation growth pattern into recurrent sequence-learning settings, but the reviewed 1995 analysis cautions that the resulting cascade topology can be representationally restrictive for some finite-state automata.",
+    "themes": [
+      "hidden-unit-growth",
+      "frozen-features",
+      "recurrent-structure",
+      "topology-constraints"
+    ],
+    "papers": [
+      "fahlman-1990-cascade-correlation",
+      "giles-1995-recurrent-cascade-correlation-limitations"
+    ]
+  },
+  {
+    "id": "constructive-recurrent-network-growth",
+    "name": "Constructive fully recurrent growth",
+    "family": "constructive recurrent learning",
+    "summary": "A cautious family label for approaches that add neurons during recurrent-network training while trying to preserve a fully recurrent topology rather than inheriting the one-directional cascade constraint.",
+    "themes": [
+      "constructive-learning",
+      "hidden-unit-growth",
+      "recurrent-structure",
+      "topology-constraints",
+      "capacity-control"
+    ],
+    "papers": [
+      "giles-1995-recurrent-cascade-correlation-limitations"
+    ]
+  },
+  {
+    "id": "constructive-spiking-taxonomy",
+    "name": "Constructive spiking taxonomy",
+    "family": "constructive spiking learning",
+    "summary": "Uses the thesis-derived three-process lens—when structure changes, what changes, and how parameters are chosen—to compare construction, pruning, and merging in spiking and non-spiking systems.",
+    "themes": [
+      "constructive-learning",
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "parameter-calculation",
+      "local-performance-trigger",
+      "structural-plasticity",
+      "pruning-and-merging"
+    ],
+    "papers": [
+      "lightheart-2018-constructive-spiking-thesis"
+    ]
   }
 ]

@@ -88,5 +88,15 @@
     "id": "pruning-and-merging",
     "name": "Pruning and merging",
     "description": "Capacity-control operations that remove components or combine similar components rather than only adding new ones."
+  },
+  {
+    "id": "topology-constraints",
+    "name": "Topology constraints",
+    "description": "Cases where the structure produced by a growth rule limits what the resulting network can represent or learn."
+  },
+  {
+    "id": "recurrent-structure",
+    "name": "Recurrent structure",
+    "description": "Constructive methods for sequence models where recurrence, memory dynamics, or finite-state behaviour shape the growth rule."
   }
 ]

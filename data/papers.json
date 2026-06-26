@@ -16,7 +16,7 @@
       "incremental-structure",
       "historical-foundations"
     ],
-    "status": "queued",
+    "status": "review-draft",
     "importance": "foundation",
     "summary": "An early step toward constructive architectures that compose simple trainable modules into more complex functions.",
     "growth_mechanism": "Incremental composition of simpler learned modules into a larger function approximator.",
@@ -41,7 +41,7 @@
     "related": [
       "fahlman-1990-cascade-correlation"
     ],
-    "notes": "Seed bibliography item from the original project README. Needs full bibliographic verification."
+    "notes": "Seed bibliography item from the original project README. Needs full bibliographic verification; targeted web search and Crossref lookup during automated review drafting did not locate an exact public record."
   },
   {
     "id": "ash-1989-dynamic-node-construction",

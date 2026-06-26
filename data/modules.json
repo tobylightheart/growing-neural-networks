@@ -80,9 +80,9 @@
   {
     "id": "simulation-expansion-contraction",
     "title": "Simulation Expansion and Contraction",
-    "type": "planned-visualization",
-    "status": "planned",
-    "summary": "Planned thesis-derived explainer showing simulated, surrounding, and memory sets, and how constructive expansion differs from literal creation of brand-new biological neurons.",
+    "type": "visualization",
+    "status": "available",
+    "summary": "Move low- or high-disruption components between surrounding and simulated sets to see why thesis-derived constructive spiking algorithms treat growth as careful simulation expansion.",
     "concepts": [
       "simulation-expansion",
       "structural-plasticity",
@@ -100,6 +100,7 @@
       "Distinguish construction/pruning in memory from expansion/contraction of the simulated set.",
       "Explain why low-disruption additions are more biologically plausible in spiking simulations.",
       "Connect simulation expansion to later STDP-based parameter calculation for constructed synapses."
-    ]
+    ],
+    "entry": "modules/simulation-expansion-contraction/index.html"
   }
 ]

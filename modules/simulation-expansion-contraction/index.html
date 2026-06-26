@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulation Expansion and Contraction · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar">
+    <a href="../../pages/modules.html">← Modules</a>
+    <a href="../../pages/review.html?id=lightheart-2018-constructive-spiking-thesis">Thesis record</a>
+  </header>
+
+  <main class="module-page">
+    <section class="module-hero">
+      <div>
+        <p class="kicker">Interactive module</p>
+        <h1>Simulation Expansion and Contraction</h1>
+        <p>In thesis-derived constructive spiking networks, adding a neuron can be interpreted as transferring a quiet, plausible surrounding component into the simulated set. Try expanding or contracting the simulation and watch the disruption estimate.</p>
+      </div>
+      <aside class="score-card" aria-live="polite">
+        <span>plausibility reading</span>
+        <strong id="plausibility-label">Low disruption</strong>
+        <small id="plausibility-detail">Select a component to inspect.</small>
+      </aside>
+    </section>
+
+    <section class="playground-layout">
+      <div class="panel controls-panel">
+        <h2>Structural operation</h2>
+        <p class="meta">Expansion transfers a member into <strong>N<sub>sim</sub></strong>; contraction transfers it back to <strong>N<sub>sur</sub></strong>.</p>
+
+        <fieldset>
+          <legend>Operation</legend>
+          <label><input type="radio" name="operation" value="expand" checked> Expand simulation</label>
+          <label><input type="radio" name="operation" value="contract"> Contract simulation</label>
+        </fieldset>
+
+        <label>Disruption tolerance <output id="tolerance-value"></output>
+          <input id="tolerance" type="range" min="0" max="1" step="0.05" value="0.35">
+        </label>
+
+        <label>Candidate component
+          <select id="candidate"></select>
+        </label>
+
+        <div class="button-row">
+          <button id="apply-operation">Apply transfer</button>
+          <button id="reset-demo" type="button">Reset</button>
+        </div>
+
+        <div class="explain-box">
+          <h3>Rule of thumb</h3>
+          <p>Low activity and sparse connectivity are better candidates for biologically plausible expansion or contraction because their transfer causes a smaller simulated activity shift.</p>
+        </div>
+      </div>
+
+      <div class="panel visual-panel">
+        <div class="canvas-wrap">
+          <canvas id="sets-canvas" width="980" height="620" aria-label="Simulation expansion and contraction set visualization"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <h2>Component ledger</h2>
+      <p>The numbers are deliberately toy estimates: disruption = activity × connection density. The point is the qualitative design constraint, not a biological measurement.</p>
+      <table>
+        <thead><tr><th>component</th><th>set</th><th>activity</th><th>connections</th><th>disruption</th><th>reading</th></tr></thead>
+        <tbody id="ledger"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.module-topbar'));
+  </script>
+</body>
+</html>

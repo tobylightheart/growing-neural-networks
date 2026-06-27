@@ -4,47 +4,77 @@
 
 ## Review status
 
-Automated review draft based on bibliographic metadata from Crossref and summary metadata from Semantic Scholar. The full paper should still be checked by a human reviewer.
+Improved automated review draft based on Crossref metadata for the journal article, the DOI/Taylor & Francis landing page, and Semantic Scholar metadata for the IJCNN-indexed version. I did **not** obtain a verified full-text copy during this pass, so mechanism details that require the paper body remain framed as questions for human review.
 
 ## One-sentence summary
 
-Dynamic Node Creation (DNC) is a constructive backpropagation method that grows a feed-forward network by adding hidden nodes during training instead of requiring the hidden-layer size to be fixed before learning begins.
+Dynamic Node Creation (DNC) is an early constructive backpropagation method that makes hidden-layer size adaptive: a feed-forward network can begin small and add hidden nodes during training instead of requiring the designer to fix the hidden-unit count in advance.
 
 ## Why it matters
 
-Ash's paper is an early canonical example of constructive neural-network design. It addresses a practical problem that remains recognizable: ordinary backpropagation requires the practitioner to choose a hidden-layer size before training, but too small a network may underfit while too large a network can be harder to train and tune.
+Ash's paper is one of the canonical pre-Cascade-Correlation examples of constructive neural-network design. It targets a practical problem that still appears in modern architecture search and model-sizing work: ordinary backpropagation can train a chosen multilayer perceptron, but it does not by itself answer how many hidden units the network should contain.
 
-DNC makes network size part of the learning process. Rather than repeatedly retraining separate networks with different numbers of hidden units, the method starts from a smaller architecture and creates additional nodes when more representational capacity is needed. In this literature review, it is an important comparison point for Cascade-Correlation because both methods grow hidden structure, but they organize growth differently.
+DNC moves part of that architecture choice into the learning process. Rather than training many separate fixed-size networks, the method is indexed and cited as a way to grow a backpropagation network when its current capacity is inadequate. For this literature review, that makes it a useful contrast case for Cascade-Correlation: both methods grow hidden structure, but DNC is rooted in extending a backpropagation network, while Cascade-Correlation uses a separate candidate-unit competition and then freezes installed input weights.
 
 ## Core idea
 
-The available metadata and abstracts describe DNC as a method that "automatically grows" a backpropagation network. The key constructive commitment is to treat hidden-node count as adaptive: if the current network cannot solve the problem adequately, training can add another node and continue.
+The stable claim supported by the title, Crossref record, and Semantic Scholar summary is that DNC introduces dynamic addition of hidden nodes in backpropagation networks. Semantic Scholar's summary frames the contribution as a method that addresses two related burdens: training large networks and testing networks with different numbers of hidden-layer units.
 
-This differs from Cascade-Correlation's candidate-unit competition and freezing pattern. DNC is framed around extending a backpropagation network, while Cascade-Correlation separately trains candidate units to correlate with residual error, installs the best candidate, and freezes incoming weights. That contrast makes DNC useful for separating several design choices that are sometimes bundled together under "constructive learning": when to add units, how to train new units, and whether installed structure is frozen.
+That framing separates at least four design decisions that a full-text human review should verify:
+
+1. **Starting architecture:** whether DNC starts from a very small hidden layer, a single hidden node, or another default structure.
+2. **Growth trigger:** what error, plateau, success, or heuristic condition causes a new node to be created.
+3. **Post-growth training:** whether all weights continue ordinary backpropagation after insertion, whether some weights are initialized specially, and whether any previous weights are protected.
+4. **Stopping rule:** whether training stops on an error threshold, stability criterion, maximum node count, benchmark-specific success condition, or manual decision.
+
+The current public draft should therefore describe DNC as hidden-node growth for backpropagation, but it should not yet assert a precise trigger formula or training schedule.
 
 ## What grows
 
-The method grows hidden nodes in a backpropagation network. The paper's title and indexing metadata emphasize dynamic node creation rather than pruning or post-hoc architecture selection.
+The method grows hidden nodes in a backpropagation network. Crossref records the journal article in *Connection Science* and Semantic Scholar indexes an IJCNN version, both under the same title. The repeated title emphasis on "node creation" supports treating hidden-unit addition as the central constructive act.
 
 ## What freezes
 
-No freezing mechanism is verified from the metadata consulted in this automated draft. Until the full text is reviewed, this entry should not claim that DNC freezes existing weights, resets parts of the model, or preserves all previous parameters unchanged.
+No freezing mechanism is verified from the metadata consulted in this automated draft. This is an important contrast with Cascade-Correlation, where freezing installed input weights is central. Until the full DNC text is reviewed, this entry should avoid claiming that DNC freezes existing weights, retrains everything, resets parts of the model, or preserves all previous parameters unchanged.
 
 ## Relationship to this site's themes
 
 - **Hidden-unit growth:** DNC directly belongs to the family of algorithms that add hidden capacity during training.
-- **Capacity control:** The method tries to reduce the need to guess hidden-layer size in advance.
-- **Backpropagation:** Unlike methods that replace backpropagation with a separate constructive search, DNC is explicitly attached to backpropagation networks.
-- **Historical foundations:** Published in 1989, it sits immediately before the 1990 Cascade-Correlation paper and helps define the early constructive-learning context.
+- **Capacity control:** It reduces dependence on a hand-selected hidden-layer size by making node count adaptive.
+- **Backpropagation:** Unlike constructive methods that replace backpropagation with a separate feature search, DNC is explicitly attached to backpropagation networks.
+- **Growth trigger:** The paper is relevant to trigger design, but the exact trigger should be filled in only after full-text verification.
+- **Historical foundations:** Published in 1989, it sits just before the Cascade-Correlation paper and helps define the early constructive-learning context.
+
+## Relationship to Cascade-Correlation
+
+DNC and Cascade-Correlation are close enough historically and thematically that they should be compared, but not collapsed into the same algorithm.
+
+- DNC asks how a backpropagation network can create additional hidden nodes while training.
+- Cascade-Correlation asks how to train candidate hidden units against residual error, select the best one, install it, and freeze its incoming weights.
+
+This distinction is useful pedagogically. A learner can use DNC to understand adaptive capacity inside a backpropagation family, then use Cascade-Correlation to see a more specialized constructive loop with explicit residual-correlation scoring and frozen feature detectors.
 
 ## Bibliographic notes
 
-Crossref lists the journal article as Timur Ash, "Dynamic Node Creation in Backpropagation Networks," *Connection Science* 1(4):365-375, 1989, DOI 10.1080/09540098908915647. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. This review entry uses the Connection Science article as the primary bibliographic record while noting that conference metadata also exists.
+Crossref lists the journal article as Timur Ash, "Dynamic Node Creation in Backpropagation Networks," *Connection Science* 1(4):365-375, 1989, DOI `10.1080/09540098908915647`, with publisher Informa UK Limited and a Taylor & Francis resource URL. The Crossref record also lists 20 references, including backpropagation sources and other late-1980s constructive or pruning-related neural-network work.
+
+Semantic Scholar indexes a 1989 IJCNN version under DOI `10.1109/IJCNN.1989.118509` and summarizes the contribution as a novel DNC method for training large networks and avoiding repeated tests of networks with different numbers of hidden-layer units. This site currently treats the *Connection Science* article as the primary record while noting the conference-version metadata.
+
+## Sources checked in this automated pass
+
+- Crossref API record for DOI `10.1080/09540098908915647`.
+- DOI/Taylor & Francis landing page for the journal article.
+- Semantic Scholar page for the IJCNN-indexed record.
+- Targeted web searches for the title and mechanism-related terms.
+
+The sources above support the bibliographic record and the high-level description, but they did not provide enough verified full-text detail to state the exact DNC growth trigger or training schedule.
 
 ## Open questions for human review
 
 - What exact training signal or threshold triggers node creation?
+- What initial network size does Ash recommend?
 - After a node is added, are existing weights left untouched, continued under ordinary backpropagation, or otherwise constrained?
+- How are newly inserted node weights initialized?
 - Which benchmark problems are reported, and what does "solution" mean in the paper's experiments?
-- How directly did later constructive algorithms cite DNC versus the IJCNN version?
+- How directly did later constructive algorithms cite the journal article versus the IJCNN version?
 - Does the journal article differ materially from the IJCNN paper indexed by Semantic Scholar?

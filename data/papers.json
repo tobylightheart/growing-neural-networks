@@ -85,7 +85,7 @@
     "related": [
       "fahlman-1990-cascade-correlation"
     ],
-    "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft still needs human full-text verification."
+    "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft improved with Crossref API, DOI landing page, Semantic Scholar metadata, and targeted web search; still needs human full-text verification for the exact DNC trigger and training schedule."
   },
   {
     "id": "fahlman-1990-cascade-correlation",

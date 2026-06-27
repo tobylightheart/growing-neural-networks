@@ -14,5 +14,30 @@
     ],
     "summary": "Compare three candidate units and choose the one Cascade-Correlation would install based on absolute residual correlation.",
     "entry": "exercises/residual-correlation-intuition-1/index.html"
+  },
+  {
+    "id": "post-growth-stabilization-compare-1",
+    "title": "What should stay stable after growth?",
+    "type": "comparison-prompt",
+    "status": "planned",
+    "concepts": [
+      "post-growth-stabilization",
+      "frozen-features",
+      "topology-constraints",
+      "biological-plausibility"
+    ],
+    "papers": [
+      "fahlman-1990-cascade-correlation",
+      "giles-1995-recurrent-cascade-correlation-limitations",
+      "lightheart-2018-constructive-spiking-thesis",
+      "ash-1989-dynamic-node-construction"
+    ],
+    "algorithms": [
+      "cascade-correlation",
+      "dynamic-node-construction",
+      "recurrent-cascade-correlation",
+      "simulation-expansion-contraction"
+    ],
+    "summary": "A planned synthesis exercise asking learners to compare freezing, continued backpropagation, topology preservation, and low-disruption simulation expansion as different post-growth stabilization choices."
   }
 ]

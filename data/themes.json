@@ -20,6 +20,11 @@
     "description": "Stabilizing learned structure by freezing some weights after installation."
   },
   {
+    "id": "post-growth-stabilization",
+    "name": "Post-growth stabilization",
+    "description": "How a constructive method keeps learning stable after a structural change: freezing parameters, continuing training, preserving topology, or constraining disruptive effects."
+  },
+  {
     "id": "hidden-unit-growth",
     "name": "Hidden-unit growth",
     "description": "Increasing representational capacity by adding hidden neurons."

@@ -8,7 +8,8 @@
     "concepts": [
       "candidate-unit-training",
       "residual-error-correlation",
-      "frozen-features"
+      "frozen-features",
+      "post-growth-stabilization"
     ],
     "papers": [
       "fahlman-1990-cascade-correlation"
@@ -60,7 +61,8 @@
       "parameter-calculation",
       "local-performance-trigger",
       "spike-timing-dependent-construction",
-      "pruning-and-merging"
+      "pruning-and-merging",
+      "post-growth-stabilization"
     ],
     "papers": [
       "lightheart-2018-constructive-spiking-thesis",
@@ -87,7 +89,8 @@
       "simulation-expansion",
       "structural-plasticity",
       "pruning-and-merging",
-      "biological-plausibility"
+      "biological-plausibility",
+      "post-growth-stabilization"
     ],
     "papers": [
       "lightheart-2018-constructive-spiking-thesis"

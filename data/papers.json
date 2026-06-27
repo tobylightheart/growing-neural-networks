@@ -59,7 +59,8 @@
       "hidden-unit-growth",
       "backpropagation",
       "capacity-control",
-      "growth-trigger"
+      "growth-trigger",
+      "post-growth-stabilization"
     ],
     "status": "review-draft",
     "importance": "canonical",
@@ -85,7 +86,7 @@
     "related": [
       "fahlman-1990-cascade-correlation"
     ],
-    "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft improved with Crossref API, DOI landing page, Semantic Scholar metadata, and targeted web search; still needs human full-text verification for the exact DNC trigger and training schedule."
+    "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft improved with Crossref API, DOI landing page, Semantic Scholar metadata, and targeted web search; still needs human full-text verification for the exact DNC trigger and training schedule. Synthesis note: post-growth stabilization is included as an open comparison axis because the automated review has not yet verified whether DNC freezes, continues, or otherwise constrains existing weights after insertion."
   },
   {
     "id": "fahlman-1990-cascade-correlation",
@@ -106,7 +107,8 @@
       "frozen-features",
       "hidden-unit-growth",
       "growth-trigger",
-      "topology-constraints"
+      "topology-constraints",
+      "post-growth-stabilization"
     ],
     "status": "review-draft",
     "importance": "canonical",
@@ -162,7 +164,8 @@
       "capacity-control",
       "historical-foundations",
       "topology-constraints",
-      "recurrent-structure"
+      "recurrent-structure",
+      "post-growth-stabilization"
     ],
     "status": "review-draft",
     "importance": "notable",
@@ -192,7 +195,7 @@
       "lightheart-2018-constructive-spiking-thesis",
       "ash-1989-dynamic-node-construction"
     ],
-    "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. The review draft is used here as a cautious synthesis bridge: it highlights that constructive growth rules can still impose restrictive topologies, especially in recurrent sequence-learning settings."
+    "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. The review draft is used here as a cautious synthesis bridge: it highlights that constructive growth rules can still impose restrictive topologies, especially in recurrent sequence-learning settings. Synthesis note: linked to post-growth stabilization for its caution that constructive recurrent growth must preserve enough recurrent topology, not merely add units."
   },
   {
     "id": "lightheart-2018-constructive-spiking-thesis",
@@ -219,7 +222,8 @@
       "pruning-and-merging",
       "growth-trigger",
       "topology-constraints",
-      "recurrent-structure"
+      "recurrent-structure",
+      "post-growth-stabilization"
     ],
     "status": "review-draft",
     "importance": "thesis-source",
@@ -252,6 +256,6 @@
       "fahlman-1990-cascade-correlation",
       "giles-1995-recurrent-cascade-correlation-limitations"
     ],
-    "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion. Includes a selective Stage 4 integration note on simulation expansion/contraction and plausible-effects constraints."
+    "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion. Includes a selective Stage 4 integration note on simulation expansion/contraction and plausible-effects constraints. Synthesis note: linked to post-growth stabilization through the thesis-derived plausible-effects constraint for simulation expansion/contraction."
   }
 ]

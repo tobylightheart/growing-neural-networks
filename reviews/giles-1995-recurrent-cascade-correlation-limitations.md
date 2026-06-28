@@ -4,7 +4,7 @@
 
 ## Review status
 
-Automated review draft based on the author-hosted PDF and IEEE DOI metadata. The PDF should still be checked by a human reviewer before this entry is treated as a finalized review.
+Automated review draft based on the author-hosted PDF link, Crossref DOI metadata, and Semantic Scholar's indexed abstract for DOI `10.1109/72.392247`. During this pass, the PDF downloaded successfully from the author-hosted URL, but local text extraction produced unreliable character encoding, so detailed claims below are grounded in the DOI/indexed abstract rather than a fresh full-text reading. A human reviewer should still check the PDF before this entry is treated as finalized.
 
 ## One-sentence summary
 
@@ -23,9 +23,19 @@ In other words, constructive learning does not automatically solve architecture 
 
 ## Core idea
 
-The paper analyzes Recurrent Cascade-Correlation (RCC), a recurrent variant of Cascade-Correlation. According to the abstract and PDF summary, the authors prove that RCC cannot represent certain finite-state automata when using hard-threshold or monotone/sigmoid activation functions. The problem is attributed to the recurrent cascade topology rather than simply to insufficient training.
+The paper analyzes Recurrent Cascade-Correlation (RCC), a recurrent variant of Cascade-Correlation. According to the indexed abstract, the authors prove that RCC cannot represent certain finite-state automata when using hard-threshold or monotone/sigmoid activation functions. The problem is attributed to the recurrent cascade topology rather than simply to insufficient training.
 
-As a remedy, the paper sketches a preliminary constructive method for recurrent networks that still adds neurons during training, but keeps the stronger expressive structure of a fully recurrent network. The reported simulations focus on regular-grammar examples that RCC is unable to learn, positioning the proposed method as a topology-preserving constructive alternative rather than merely a larger RCC variant.
+As a remedy, the paper sketches a preliminary constructive method for recurrent networks that still adds neurons during training, but keeps the stronger expressive structure of a fully recurrent network. The abstract says the simulations learn many regular-grammar examples that RCC cannot learn, positioning the proposed method as a topology-preserving constructive alternative rather than merely a larger RCC variant.
+
+## Verified index-level facts
+
+Crossref and Semantic Scholar agree on the core bibliographic record: the article is a 1995 *IEEE Transactions on Neural Networks* paper with DOI `10.1109/72.392247`, volume 6, issue 4, pages 829–836. Semantic Scholar indexes the title, author list, DOI, PubMed identifier, and an abstract that explicitly names the three claims this review should preserve cautiously:
+
+1. network size is hard to choose in advance, motivating constructive and destructive structural methods;
+2. RCC has representation and learning limitations due to topology, including finite-state automata that cannot be represented with monotone/sigmoid or hard-threshold activations;
+3. the proposed workaround is a simple constructive training method that adds neurons while preserving a fully recurrent structure.
+
+These facts are sufficient for a public reading-guide review, but not enough to summarize the formal proof or reproduce the simulation table. Those details should wait for a human full-text pass.
 
 ## What grows
 
@@ -50,7 +60,7 @@ For recurrent problems, however, the memory dynamics are central. This paper arg
 
 ## Bibliographic notes
 
-IEEE lists the article as published in *IEEE Transactions on Neural Networks*, volume 6, issue 4, pages 829–836, with DOI 10.1109/72.392247 and publication date 31 July 1995. The current metadata uses the author-hosted PDF linked from C. Lee Giles's site as an accessible source and the IEEE DOI page for bibliographic verification.
+Crossref lists the article as published in *IEEE Transactions on Neural Networks*, volume 6, issue 4, pages 829–836, with DOI `10.1109/72.392247` and print publication date July 1995. Semantic Scholar resolves the same DOI to paper ID `95028f80968188df6bf673d1cc1547edcc0993b2` and indexes the abstract used for this cautious improvement pass. The current metadata keeps the author-hosted PDF linked from C. Lee Giles's site as an accessible source, but this automated pass did not rely on local PDF text extraction for detailed claims because the extracted text was not readable.
 
 ## Open questions for human review
 

@@ -184,7 +184,7 @@
     "links": {
       "paper": "https://ieeexplore.ieee.org/document/392247/",
       "doi": "10.1109/72.392247",
-      "semantic_scholar": "",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/95028f80968188df6bf673d1cc1547edcc0993b2",
       "pdf": "https://clgiles.ist.psu.edu/papers/IEEE.TNN.Constructive.95.pdf"
     },
     "discovered_via": [
@@ -195,7 +195,7 @@
       "lightheart-2018-constructive-spiking-thesis",
       "ash-1989-dynamic-node-construction"
     ],
-    "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. The review draft is used here as a cautious synthesis bridge: it highlights that constructive growth rules can still impose restrictive topologies, especially in recurrent sequence-learning settings. Synthesis note: linked to post-growth stabilization for its caution that constructive recurrent growth must preserve enough recurrent topology, not merely add units."
+    "notes": "Metadata verified against IEEE Xplore and Penn State Pure pages during the 2026-06-24 weekly discovery dry run. The 2026-06-28 automated review improvement additionally checked Crossref and Semantic Scholar for DOI 10.1109/72.392247; the author-hosted PDF downloaded successfully, but local text extraction was not reliable enough for detailed full-text claims. The review draft is used here as a cautious synthesis bridge: it highlights that constructive growth rules can still impose restrictive topologies, especially in recurrent sequence-learning settings. Synthesis note: linked to post-growth stabilization for its caution that constructive recurrent growth must preserve enough recurrent topology, not merely add units."
   },
   {
     "id": "lightheart-2018-constructive-spiking-thesis",

@@ -33,6 +33,18 @@ data/missing-library-assets.json
 
 Use the wanted list for collection planning across topic bundles, especially thesis-critical papers that should not yet pollute `data/papers.json` with stubs.
 
+To scan the wanted list against the private library filenames, run:
+
+```bash
+python3 scripts/check_missing_library_assets.py
+```
+
+The script reports exact expected-path matches, likely filename matches that need a human check, and entries that still look missing. To update `collection_status` values in the wanted list after adding files, run:
+
+```bash
+python3 scripts/check_missing_library_assets.py --apply
+```
+
 Example:
 
 ```json

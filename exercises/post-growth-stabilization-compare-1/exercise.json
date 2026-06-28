@@ -1,0 +1,26 @@
+{
+  "id": "post-growth-stabilization-compare-1",
+  "title": "What should stay stable after growth?",
+  "type": "comparison-prompt",
+  "status": "available",
+  "summary": "Compare four constructive-learning families by the thing each tries to keep stable after adding structure.",
+  "concepts": [
+    "post-growth-stabilization",
+    "frozen-features",
+    "topology-constraints",
+    "biological-plausibility"
+  ],
+  "papers": [
+    "fahlman-1990-cascade-correlation",
+    "giles-1995-recurrent-cascade-correlation-limitations",
+    "lightheart-2018-constructive-spiking-thesis",
+    "ash-1989-dynamic-node-construction"
+  ],
+  "algorithms": [
+    "cascade-correlation",
+    "dynamic-node-construction",
+    "recurrent-cascade-correlation",
+    "simulation-expansion-contraction"
+  ],
+  "entry": "exercises/post-growth-stabilization-compare-1/index.html"
+}

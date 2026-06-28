@@ -19,7 +19,7 @@
     "id": "post-growth-stabilization-compare-1",
     "title": "What should stay stable after growth?",
     "type": "comparison-prompt",
-    "status": "planned",
+    "status": "available",
     "concepts": [
       "post-growth-stabilization",
       "frozen-features",
@@ -38,6 +38,7 @@
       "recurrent-cascade-correlation",
       "simulation-expansion-contraction"
     ],
-    "summary": "A planned synthesis exercise asking learners to compare freezing, continued backpropagation, topology preservation, and low-disruption simulation expansion as different post-growth stabilization choices."
+    "summary": "Compare four constructive-learning families by the thing each tries to keep stable after adding structure.",
+    "entry": "exercises/post-growth-stabilization-compare-1/index.html"
   }
 ]

@@ -1,0 +1,168 @@
+.exercise-topbar {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  background: var(--ink);
+  color: var(--panel);
+}
+
+.exercise-topbar a {
+  color: var(--panel);
+  text-decoration: none;
+}
+
+.exercise-page {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto 4rem;
+}
+
+.exercise-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin: 2rem 0;
+}
+
+.score-card {
+  display: grid;
+  align-content: center;
+  gap: 0.35rem;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.score-card span,
+.score-card small,
+.meta,
+.paper-line,
+.strategy-list span {
+  color: var(--muted);
+}
+
+.score-card strong {
+  font-size: 1.8rem;
+}
+
+.exercise-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.strategy-list {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.1rem;
+}
+
+.algorithm-cards {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.algorithm-card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel) 94%, var(--bg));
+}
+
+.algorithm-card h3,
+.algorithm-card p {
+  margin-top: 0;
+}
+
+.algorithm-card.correct {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.algorithm-card.incorrect {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 16%, transparent);
+}
+
+.paper-line {
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hint {
+  padding: 0.7rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  background: var(--accent-soft);
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+}
+
+.result-line {
+  min-height: 1.4rem;
+  color: var(--muted);
+}
+
+.feedback {
+  min-height: 3rem;
+  margin-top: 1rem;
+  padding: 0.85rem;
+  border-radius: 14px;
+  background: var(--badge-bg);
+}
+
+.feedback.correct {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.feedback.incorrect {
+  background: var(--warn-soft);
+  color: var(--accent-2);
+}
+
+.canvas-wrap {
+  overflow-x: auto;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel) 92%, var(--bg));
+}
+
+@media (max-width: 880px) {
+  .exercise-hero,
+  .exercise-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-topbar {
+    flex-direction: column;
+  }
+}

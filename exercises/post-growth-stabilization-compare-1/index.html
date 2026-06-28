@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What should stay stable after growth? · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="exercise-topbar">
+    <a href="../../pages/exercises.html">← Exercises</a>
+    <a href="../../pages/modules.html">Modules</a>
+    <a href="../../pages/themes.html">Themes</a>
+  </header>
+
+  <main class="exercise-page">
+    <section class="exercise-hero">
+      <div>
+        <p class="kicker">Interactive exercise</p>
+        <h1>What should stay stable after growth?</h1>
+        <p>Constructive algorithms all add structure, but they do not all protect the same thing afterwards. Match each algorithm family to its main stabilization choice, then compare the trade-offs.</p>
+      </div>
+      <aside class="score-card" aria-live="polite">
+        <span>matches correct</span>
+        <strong id="score">0 / 4</strong>
+        <small id="score-note">Choose a strategy for each card.</small>
+      </aside>
+    </section>
+
+    <section class="exercise-layout">
+      <article class="panel prompt-panel">
+        <h2>Stabilization strategies</h2>
+        <p class="meta">Use each strategy once. The goal is not to rank algorithms; it is to notice which part of the learning system each design tries to protect after a growth event.</p>
+        <ul class="strategy-list" id="strategy-list"></ul>
+        <div class="button-row">
+          <button id="check-answer">Check matches</button>
+          <button id="show-hints" class="secondary">Show hints</button>
+          <button id="reset-answer" class="secondary">Reset</button>
+        </div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="panel cards-panel">
+        <h2>Algorithm families</h2>
+        <div id="algorithm-cards" class="algorithm-cards"></div>
+      </article>
+    </section>
+
+    <section class="panel visual-panel">
+      <h2>Compare the protected quantities</h2>
+      <p>The chart is a qualitative reading aid for the literature-review metadata: darker cells mark what the algorithm most directly tries to preserve after adding structure.</p>
+      <div class="canvas-wrap">
+        <canvas id="stability-canvas" width="1040" height="520" aria-label="Qualitative comparison of post-growth stabilization choices"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.exercise-topbar'));
+  </script>
+</body>
+</html>

@@ -19,6 +19,16 @@ DATA = ROOT / "data"
 PDF_STATUSES = {"missing", "located", "collected", "blocked", "not-needed"}
 TEXT_STATUSES = {"missing", "extracted", "extraction-failed", "needs-ocr", "not-needed"}
 ACCESS_STATUSES = {"open", "publisher-gated", "author-copy", "unknown"}
+REVIEW_BUNDLE_STATUSES = {"active", "planned", "seeded", "paused"}
+REVIEW_BUNDLE_PRIORITIES = {"urgent", "high", "medium", "low"}
+REVIEW_BUNDLE_ASSET_STATUSES = {
+    "existing-paper",
+    "collected-needs-paper-record",
+    "available-in-library",
+    "missing-from-library",
+    "needs-filename-check",
+    "deprioritized",
+}
 
 
 def load_json(path: Path) -> Any:
@@ -111,6 +121,7 @@ def main() -> int:
     modules = load_json(ROOT / catalog.get("modules", "data/modules.json"))
     exercises = load_json(ROOT / catalog.get("exercises", "data/exercises.json"))
     paper_assets = load_json(ROOT / catalog.get("paper_assets", "data/paper-assets.json"))
+    review_bundles_data = load_json(ROOT / catalog.get("review_bundles", "data/review-bundles.json"))
     library_root = load_local_library_root()
 
     paper_ids = check_unique(papers, "id", "papers")
@@ -120,6 +131,13 @@ def main() -> int:
     module_ids = check_unique(modules, "id", "modules") if modules else set()
     exercise_ids = check_unique(exercises, "id", "exercises") if exercises else set()
     asset_paper_ids = check_unique(paper_assets, "paper_id", "paper assets") if paper_assets else set()
+
+    if not isinstance(review_bundles_data, dict):
+        fail("review bundles file must contain an object")
+    review_bundles = review_bundles_data.get("bundles", [])
+    if not isinstance(review_bundles, list):
+        fail("review bundles `bundles` must be a list")
+    review_bundle_ids = check_unique(review_bundles, "id", "review bundles") if review_bundles else set()
 
     missing_asset_records = sorted(paper_ids - asset_paper_ids)
     extra_asset_records = sorted(asset_paper_ids - paper_ids)
@@ -238,6 +256,36 @@ def main() -> int:
             if not is_relative_to(text_path, library_root):
                 fail(f"{context} text path is outside local library root: {text_path_value}")
 
+    for bundle in review_bundles:
+        context = f"review bundle {bundle.get('id', '<missing>')}"
+        require_keys(bundle, ["id", "title", "priority", "status", "rationale"], context)
+        if bundle["priority"] not in REVIEW_BUNDLE_PRIORITIES:
+            fail(f"{context} has invalid priority: {bundle['priority']}")
+        if bundle["status"] not in REVIEW_BUNDLE_STATUSES:
+            fail(f"{context} has invalid status: {bundle['status']}")
+        anchor_papers = bundle.get("anchor_papers", [])
+        if not isinstance(anchor_papers, list):
+            fail(f"{context} anchor_papers must be a list")
+        seen_bundle_papers: set[str] = set()
+        for anchor in anchor_papers:
+            if not isinstance(anchor, dict):
+                fail(f"{context} anchor paper entries must be objects")
+            require_keys(anchor, ["paper_id", "title", "role", "asset_status"], f"{context} anchor paper")
+            paper_id = anchor["paper_id"]
+            if paper_id in seen_bundle_papers:
+                fail(f"{context} repeats anchor paper: {paper_id}")
+            seen_bundle_papers.add(paper_id)
+            if anchor["asset_status"] not in REVIEW_BUNDLE_ASSET_STATUSES:
+                fail(f"{context} anchor {paper_id} has invalid asset_status: {anchor['asset_status']}")
+            if anchor["asset_status"] == "existing-paper" and paper_id not in paper_ids:
+                fail(f"{context} marks unknown paper as existing-paper: {paper_id}")
+        for action in bundle.get("next_actions", []):
+            if not isinstance(action, str) or not action.strip():
+                fail(f"{context} has blank next action")
+        for output in bundle.get("planned_outputs", []):
+            if not isinstance(output, str) or not output.strip():
+                fail(f"{context} has blank planned output")
+
     print("Data validation passed:")
     print(f"  papers:     {len(papers)}")
     print(f"  algorithms: {len(algorithms)}")
@@ -246,6 +294,7 @@ def main() -> int:
     print(f"  modules:    {len(module_ids)}")
     print(f"  exercises:  {len(exercise_ids)}")
     print(f"  assets:     {len(asset_paper_ids)}")
+    print(f"  bundles:    {len(review_bundle_ids)}")
     print(f"  library:    {library_root}")
     return 0
 

@@ -9,5 +9,6 @@
   "modules": "data/modules.json",
   "exercises": "data/exercises.json",
   "paper_assets": "data/paper-assets.json",
-  "missing_library_assets": "data/missing-library-assets.json"
+  "missing_library_assets": "data/missing-library-assets.json",
+  "review_bundles": "data/review-bundles.json"
 }

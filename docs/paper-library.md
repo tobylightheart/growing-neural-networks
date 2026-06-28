@@ -31,7 +31,14 @@ A separate bundle-first wanted list highlights prominent missing PDFs before the
 data/missing-library-assets.json
 ```
 
-Use the wanted list for collection planning across topic bundles, especially thesis-critical papers that should not yet pollute `data/papers.json` with stubs.
+The broader bundle roadmap lives in:
+
+```text
+data/review-bundles.json
+docs/pdf-library-review-plan.md
+```
+
+Use the wanted list for collection planning across topic bundles, especially thesis-critical papers that should not yet pollute `data/papers.json` with stubs. Use the bundle roadmap to decide which collected asset should be promoted next.
 
 To scan the wanted list against the private library filenames, run:
 

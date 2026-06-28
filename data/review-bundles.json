@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "updated": "2026-06-28",
+  "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
+  "status_values": [
+    "active",
+    "planned",
+    "seeded",
+    "paused"
+  ],
+  "priority_values": [
+    "urgent",
+    "high",
+    "medium",
+    "low"
+  ],
+  "bundles": [
+    {
+      "id": "stdp-hidden-pattern-construction",
+      "title": "STDP, hidden spike patterns, and constructive synapse initialization",
+      "priority": "urgent",
+      "status": "active",
+      "thesis_anchors": [
+        "Chapter 3 simulation and STDP context",
+        "Chapter 6 hidden spike-pattern detection",
+        "Chapter 7 competitive spike-pattern learning"
+      ],
+      "rationale": "This bundle is the most thesis-aligned near-term branch. The key Masquelier and STDP background PDFs are now collected in the private Neuroscience library folder, so the review loop can promote grounded papers one at a time.",
+      "anchor_papers": [
+        {
+          "paper_id": "masquelier-2008-repeating-patterns-stdp",
+          "citation_key": "Masquelier2008a",
+          "title": "Spike timing dependent plasticity finds the start of repeating patterns in continuous spike trains",
+          "role": "anchor",
+          "asset_status": "collected-needs-paper-record"
+        },
+        {
+          "paper_id": "masquelier-2009-competitive-stdp-spike-pattern-learning",
+          "citation_key": "Masquelier2008b",
+          "title": "Competitive STDP-Based Spike Pattern Learning",
+          "role": "anchor",
+          "asset_status": "collected-needs-paper-record"
+        },
+        {
+          "paper_id": "song-2000-competitive-hebbian-stdp",
+          "citation_key": "Song2000",
+          "title": "Competitive Hebbian learning through spike-timing-dependent synaptic plasticity",
+          "role": "background-anchor",
+          "asset_status": "collected-needs-paper-record"
+        },
+        {
+          "paper_id": "legenstein-2005-neuron-learn-stdp",
+          "citation_key": "Legenstein2005",
+          "title": "What can a neuron learn with spike-timing-dependent plasticity?",
+          "role": "background-anchor",
+          "asset_status": "collected-needs-paper-record"
+        },
+        {
+          "paper_id": "caporale-2008-stdp-hebbian-learning-rule",
+          "citation_key": "Caporale2008",
+          "title": "Spike timing-dependent plasticity: A Hebbian learning rule",
+          "role": "background",
+          "asset_status": "collected-needs-paper-record"
+        },
+        {
+          "paper_id": "morrison-2008-phenomenological-synaptic-plasticity",
+          "citation_key": "Morrison2008",
+          "title": "Phenomenological models of synaptic plasticity based on spike timing",
+          "role": "background",
+          "asset_status": "collected-needs-paper-record"
+        }
+      ],
+      "next_actions": [
+        "Promote Masquelier2008a into data/papers.json, data/paper-assets.json, and reviews/ as the first bundle paper.",
+        "Then promote Masquelier2008b and Song2000 before drafting a public synthesis note.",
+        "Keep thesis-derived claims cautious until the corresponding paper review exists."
+      ],
+      "planned_outputs": [
+        "paper reviews for six collected STDP assets",
+        "a synthesis note connecting STDP pattern detection to constructive spiking mechanisms",
+        "an interactive timing-window/STDP exercise after at least three reviews exist"
+      ]
+    },
+    {
+      "id": "evolving-spiking-networks",
+      "title": "Evolving spiking networks and spike-timing-dependent construction",
+      "priority": "high",
+      "status": "planned",
+      "thesis_anchors": [
+        "Chapter 2 literature review: spike-timing-dependent construction and evolving SNNs"
+      ],
+      "rationale": "This bundle turns the thesis literature-review spine into public reviews around eSNN/deSNN/STDC methods before broader synthesis.",
+      "anchor_papers": [
+        {
+          "paper_id": "schliebs-2013-evolving-spiking-survey",
+          "citation_key": "Schliebs2013",
+          "title": "Evolving spiking neural network: a survey",
+          "role": "survey-anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "wysoski-2010-evolving-spiking-audiovisual",
+          "citation_key": "Wysoski2010",
+          "title": "Evolving spiking neural networks for audiovisual information processing",
+          "role": "anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "kasabov-2013-dynamic-evolving-spiking",
+          "citation_key": "Kasabov2013",
+          "title": "Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition",
+          "role": "anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "wang-2014-adaptive-structure-snn",
+          "citation_key": "Wang2014",
+          "title": "Online supervised learning for spiking neural networks with adaptive structure",
+          "role": "anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "roy-2017-online-structural-plasticity-snn",
+          "citation_key": "Roy2017",
+          "title": "An online unsupervised structural plasticity algorithm for spiking neural networks",
+          "role": "bridge-to-structural-plasticity",
+          "asset_status": "available-in-library"
+        }
+      ],
+      "next_actions": [
+        "After the first STDP anchor review, promote Schliebs2013 or Wysoski2010 as the survey/lineage anchor.",
+        "Use thesis citation frequency to order the first five reviews."
+      ],
+      "planned_outputs": [
+        "eSNN/STDC lineage synthesis",
+        "paper cards connecting thesis terms to public review records"
+      ]
+    },
+    {
+      "id": "classic-constructive-foundations",
+      "title": "Classic constructive foundations",
+      "priority": "high",
+      "status": "seeded",
+      "thesis_anchors": [
+        "Chapter 2 constructive neural-network taxonomy",
+        "Existing public Cascade-Correlation and Dynamic Node Creation demos"
+      ],
+      "rationale": "This bundle anchors the non-spiking historical foundation. It should now use only verified sources after the unsupported Fahlman seed reference was removed.",
+      "anchor_papers": [
+        {
+          "paper_id": "ash-1989-dynamic-node-construction",
+          "citation_key": "",
+          "title": "Dynamic Node Creation in Backpropagation Networks",
+          "role": "existing-paper",
+          "asset_status": "existing-paper"
+        },
+        {
+          "paper_id": "fahlman-1990-cascade-correlation",
+          "citation_key": "",
+          "title": "The Cascade-Correlation Learning Architecture",
+          "role": "existing-paper",
+          "asset_status": "existing-paper"
+        },
+        {
+          "paper_id": "platt-1991-resource-allocating-network",
+          "citation_key": "",
+          "title": "A resource-allocating network for function interpolation",
+          "role": "candidate-anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "prechelt-1997-cascor-family",
+          "citation_key": "",
+          "title": "Investigation of the CasCor family of learning algorithms",
+          "role": "survey-anchor",
+          "asset_status": "available-in-library"
+        }
+      ],
+      "next_actions": [
+        "Update asset records for already-collected Ash/Cascade-Correlation PDFs when filenames are verified.",
+        "Add Platt1991 or Prechelt1997 after the active STDP bundle has a first anchor review."
+      ],
+      "planned_outputs": [
+        "clean foundation bundle page",
+        "DNC vs Cascade-Correlation comparison exercise"
+      ]
+    },
+    {
+      "id": "growing-topology-and-neural-gas",
+      "title": "Growing topology and neural gas methods",
+      "priority": "medium",
+      "status": "planned",
+      "thesis_anchors": [
+        "Chapter 2 broader constructive/growing taxonomy"
+      ],
+      "rationale": "This bundle separates supervised hidden-unit growth from topology/prototype growth, making the site's taxonomy clearer.",
+      "anchor_papers": [
+        {
+          "paper_id": "fritzke-1995-growing-neural-gas",
+          "citation_key": "Fritzke1995",
+          "title": "A growing neural gas network learns topologies",
+          "role": "anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "marsland-2002-grows-when-required",
+          "citation_key": "",
+          "title": "A self-organising network that grows when required",
+          "role": "anchor",
+          "asset_status": "available-in-library"
+        }
+      ],
+      "next_actions": [
+        "Promote Fritzke1995 when the loop needs a non-spiking topology-growth branch."
+      ],
+      "planned_outputs": [
+        "topology-growth taxonomy note",
+        "small growing-neural-gas visualization"
+      ]
+    },
+    {
+      "id": "structural-plasticity-and-binary-synapses",
+      "title": "Structural plasticity and binary synapses",
+      "priority": "medium",
+      "status": "planned",
+      "thesis_anchors": [
+        "Chapter 2 structural plasticity discussion",
+        "Chapter 7 competitive spike-pattern learning context"
+      ],
+      "rationale": "This bundle connects constructive learning to biological structural adaptation and provides a bridge from eSNN methods to local structural-plasticity rules.",
+      "anchor_papers": [
+        {
+          "paper_id": "roy-2017-online-structural-plasticity-snn",
+          "citation_key": "Roy2017",
+          "title": "An online unsupervised structural plasticity algorithm for spiking neural networks",
+          "role": "anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "roy-2016-structural-plasticity-reservoirs",
+          "citation_key": "Roy2016a",
+          "title": "Online structural plasticity rule for better reservoir computing",
+          "role": "candidate-anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "hussain-2013-morphological-learning-binary-synapses",
+          "citation_key": "",
+          "title": "Morphological learning with binary synapses",
+          "role": "background",
+          "asset_status": "available-in-library"
+        }
+      ],
+      "next_actions": [
+        "Coordinate with the evolving-spiking bundle so Roy2017 is not duplicated as two separate paper records."
+      ],
+      "planned_outputs": [
+        "structural-plasticity bridge synthesis",
+        "binary-synapse capacity-control note"
+      ]
+    },
+    {
+      "id": "pruning-and-capacity-control",
+      "title": "Pruning and capacity control",
+      "priority": "medium",
+      "status": "planned",
+      "thesis_anchors": [
+        "Chapter 2 construction/pruning taxonomy",
+        "Post-growth stabilization themes in the public site"
+      ],
+      "rationale": "Growth needs a paired account of pruning, stabilization, and capacity control so constructive algorithms are not presented as unbounded expansion.",
+      "anchor_papers": [
+        {
+          "paper_id": "reed-1993-pruning-algorithms-survey",
+          "citation_key": "",
+          "title": "Pruning algorithms: a survey",
+          "role": "survey-anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "lecun-1990-optimal-brain-damage",
+          "citation_key": "",
+          "title": "Optimal Brain Damage",
+          "role": "classic-anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "dora-2015-growing-pruning-spiking-network",
+          "citation_key": "Dora2015a",
+          "title": "A two-stage growing-pruning spiking neural network",
+          "role": "spiking-bridge",
+          "asset_status": "available-in-library"
+        }
+      ],
+      "next_actions": [
+        "Use this bundle after at least one growth-focused bundle has enough review material for contrast."
+      ],
+      "planned_outputs": [
+        "growth-pruning comparison note",
+        "capacity-control exercise"
+      ]
+    },
+    {
+      "id": "continual-robot-learning",
+      "title": "Continual, reinforcement, and robot learning with constructive networks",
+      "priority": "low",
+      "status": "planned",
+      "thesis_anchors": [
+        "Chapter 7 continual one-shot learning context",
+        "Discussion/future directions"
+      ],
+      "rationale": "This bundle is relevant but sprawling, so it should wait until the STDP and eSNN anchors make the spiking/constructive core legible.",
+      "anchor_papers": [
+        {
+          "paper_id": "takita-2005-pulse-neural-network-rl",
+          "citation_key": "Takita2005",
+          "title": "A reinforcement learning algorithm using pulse neural networks",
+          "role": "spiking-rl-anchor",
+          "asset_status": "available-in-library"
+        },
+        {
+          "paper_id": "rivest-2003-td-cascade-correlation",
+          "citation_key": "",
+          "title": "Combining TD-learning with Cascade-Correlation networks",
+          "role": "classic-rl-bridge",
+          "asset_status": "available-in-library"
+        }
+      ],
+      "next_actions": [
+        "Defer until the active and high-priority bundles have public synthesis pages."
+      ],
+      "planned_outputs": [
+        "continual constructive learning essay",
+        "changing-task demonstration idea"
+      ]
+    }
+  ]
+}

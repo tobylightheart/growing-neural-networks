@@ -81,11 +81,10 @@ The tracked inventory is `data/paper-assets.json`; see `docs/paper-library.md` f
 
 Initial seed papers:
 
-- Scott E. Fahlman, *Chaining Together Simple Modules to Create Complex Functions* (1988).
 - Timothy Ash, *Dynamic Node Construction for the Backpropagation Algorithm* (1989).
 - Scott E. Fahlman and Christian Lebiere, *The Cascade-Correlation Learning Architecture* (1990).
 
-These are intentionally only a starting point. The next research workflow should verify metadata, add links/DOIs where available, and expand by citation trails and keyword searches.
+These are intentionally only a starting point. The next research workflow should verify metadata, add links/DOIs where available, and expand by citation trails and keyword searches. An earlier unverified seed entry was removed after provenance checks failed to support it as a real technical report.
 
 ## Roadmap
 

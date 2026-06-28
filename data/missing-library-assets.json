@@ -39,8 +39,8 @@
           "doi": "10.1371/journal.pone.0001377",
           "access_hint": "open",
           "priority": "urgent",
-          "collection_status": "missing-from-library",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Masquelier T, Guyonneau R and Thorpe S J (2008) - Spike timing dependent plasticity finds the start of repeating patterns in continuous spike trains.pdf",
+          "collection_status": "collected-needs-paper-record",
+          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Masquelier T, Guyonneau R and Thorpe S (2008) - Spike timing depedent plasticity finds the start of repeating patterns in continuous spike trains.pdf",
           "why_wanted": "Most-cited thesis source in the local scan; it grounds the repeating hidden spike-pattern experiments that the site should eventually explain interactively.",
           "bundle_role": "anchor"
         },
@@ -58,8 +58,8 @@
           "doi": "10.1162/neco.2008.06-08-804",
           "access_hint": "unknown",
           "priority": "urgent",
-          "collection_status": "missing-from-library",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Masquelier T, Guyonneau R and Thorpe S J (2009) - Competitive STDP-Based Spike Pattern Learning.pdf",
+          "collection_status": "collected-needs-paper-record",
+          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Masquelier T, Guyonneau R and Thorpe S J (2009) - Competitive STDP-based spike pattern learning.pdf",
           "why_wanted": "Primary anchor for the thesis' competitive spike-pattern chapter; needed before drafting a confident public synthesis of competitive STDP construction.",
           "bundle_role": "anchor"
         }
@@ -86,8 +86,8 @@
           "doi": "10.1038/78829",
           "access_hint": "publisher-gated",
           "priority": "high",
-          "collection_status": "missing-from-library",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Song S, Miller K D and Abbott L F (2000) - Competitive Hebbian learning through spike-timing-dependent synaptic plasticity.pdf",
+          "collection_status": "collected-needs-paper-record",
+          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Song S, Miller K D and Abbott L F (2000) - Competitive Hebbian learning through spike-timing-dependent synaptic plasticity.pdf",
           "why_wanted": "Canonical STDP/competitive Hebbian background source; useful for explaining what is inherited versus newly constructive in later spiking papers.",
           "bundle_role": "background-anchor"
         },
@@ -105,8 +105,8 @@
           "doi": "10.1162/0899766054796888",
           "access_hint": "unknown",
           "priority": "high",
-          "collection_status": "missing-from-library",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Legenstein R, Naeger C and Maass W (2005) - What can a neuron learn with spike-timing-dependent plasticity.pdf",
+          "collection_status": "collected-needs-paper-record",
+          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Legenstein R, Naeger C and Maass W (2005) - What can a neuron learn with spike-timing-dependent plasticity.pdf",
           "why_wanted": "Provides theoretical limits/capabilities of STDP learning that can frame constructive synapse and neuron-creation claims.",
           "bundle_role": "background-anchor"
         },
@@ -123,8 +123,8 @@
           "doi": "10.1146/annurev.neuro.31.060407.125639",
           "access_hint": "publisher-gated",
           "priority": "medium",
-          "collection_status": "missing-from-library",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Caporale N and Dan Y (2008) - Spike timing-dependent plasticity; A Hebbian learning rule.pdf",
+          "collection_status": "collected-needs-paper-record",
+          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Caporale N and Dan Y (2008) - Spike timing-dependent plasticity; A Hebbian learning rule.pdf",
           "why_wanted": "Review-style background for STDP; helpful for careful explanatory prose before deep dives into constructive spiking algorithms.",
           "bundle_role": "background"
         },
@@ -142,36 +142,10 @@
           "doi": "10.1007/s00422-008-0233-1",
           "access_hint": "unknown",
           "priority": "medium",
-          "collection_status": "missing-from-library",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Morrison A, Diesmann M and Gerstner W (2008) - Phenomenological models of synaptic plasticity based on spike timing.pdf",
+          "collection_status": "collected-needs-paper-record",
+          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Morrison A, Diesmann M and Gerstner W (2008) - Phenomenological models of synaptic plasticity based on spike timing.pdf",
           "why_wanted": "Supports accurate discussion of STDP modelling assumptions, especially where the thesis turns timing rules into construction mechanisms.",
           "bundle_role": "background"
-        }
-      ]
-    },
-    {
-      "id": "classic-constructive-foundations",
-      "title": "Classic constructive foundations",
-      "priority": "medium",
-      "thesis_anchor": "Chapter 2 constructive neural-network taxonomy and the public site's existing Cascade-Correlation/DNC foundation.",
-      "rationale": "Most initial constructive/pruning PDFs are now present locally, but one existing seed review still has no obvious local asset by filename.",
-      "wanted_assets": [
-        {
-          "paper_id_suggestion": "fahlman-1988-chaining-modules",
-          "citation_key": "",
-          "title": "Chaining Together Simple Modules to Create Complex Functions",
-          "authors": [
-            "Scott E. Fahlman"
-          ],
-          "year": 1988,
-          "venue": "Carnegie Mellon University technical report",
-          "doi": "",
-          "access_hint": "unknown",
-          "priority": "medium",
-          "collection_status": "missing-from-library",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/fahlman-1988-chaining-modules.pdf",
-          "why_wanted": "Existing public review draft has weak bibliographic grounding and no obvious local PDF; collect if a reliable CMU report scan or author bibliography copy is available.",
-          "bundle_role": "supporting-foundation"
         }
       ]
     }
@@ -179,6 +153,7 @@
   "notes": [
     "This file is deliberately narrower than data/paper-assets.json: it tracks prominent wanted assets for bundle planning, including papers not yet added to data/papers.json.",
     "When a wanted PDF is collected, keep the PDF outside Git, update this file or remove the wanted entry, and only then decide whether to promote the paper into data/papers.json plus data/paper-assets.json.",
-    "The filename scan on 2026-06-28 found no obvious Masquelier, Morrison, Caporale, or Legenstein PDFs in /workspace/growing-neural-networks-library. Song-author filename hits were unrelated to Song2000."
+    "STDP-related wanted assets were found under pdfs/Neuroscience on 2026-06-28 and marked collected-needs-paper-record; promote them into data/papers.json plus data/paper-assets.json only as each bundle is reviewed.",
+    "An unverified seed reference was removed on 2026-06-28 after exact-title web searches and local provenance checks failed to support it as a real technical report."
   ]
 }

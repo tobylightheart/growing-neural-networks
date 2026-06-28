@@ -3,7 +3,6 @@ Cascade-Correlation Neural Network Implementation
 
 Based on:
 - Fahlman, S. E., & Lebiere, C. (1990). The cascade-correlation architecture.
-- Fahlman, S. E. (1988). Chaining together simple modules to create complex functions.
 
 Key concepts:
 1. Start with a minimal network (input → output only)
@@ -136,26 +135,26 @@ class CascadeCorrelation:
                         hidden_act = [u.activate(input_act) for u in self.hidden_units]
                         
                         # Forward
-                         outputs = []
-                         for out_unit in self.output_units:
-                             out_act = input_act + hidden_act
-                             outputs.append(out_unit.activate(out_act))
+                        outputs = []
+                        for out_unit in self.output_units:
+                            out_act = input_act + hidden_act
+                            outputs.append(out_unit.activate(out_act))
                         
-                         # Backprop to new unit
-                         for i in range(len(outputs)):
-                             o = outputs[i]
-                             t = targets[i]
-                             error = o - t
-                             grad = self.output_units[i].derivative(o) if hasattr(self.output_units[i], 'derivative') else error
+                        # Backprop to new unit
+                        for i in range(len(outputs)):
+                            o = outputs[i]
+                            t = targets[i]
+                            error = o - t
+                            grad = self.output_units[i].derivative(o) if hasattr(self.output_units[i], 'derivative') else error
                             
-                             # Update new unit weights
-                             for j in range(len(input_act)):
-                                 new_unit.weights[j] -= self.learning_rate * grad * input_act[j]
+                            # Update new unit weights
+                            for j in range(len(input_act)):
+                                new_unit.weights[j] -= self.learning_rate * grad * input_act[j]
                         
-                         # Update old hidden units
-                         for k, old_unit in enumerate(old_hidden):
-                             for j in range(len(input_act)):
-                                 old_unit.weights[j] -= self.learning_rate * grad * input_act[j]
+                        # Update old hidden units
+                        for k, old_unit in enumerate(old_hidden):
+                            for j in range(len(input_act)):
+                                old_unit.weights[j] -= self.learning_rate * grad * input_act[j]
                 
                 # Check error
                 error = self.train_epoch(data)

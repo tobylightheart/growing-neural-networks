@@ -69,7 +69,6 @@ The existing `modules/cascade-correlation-growth/` and `modules/residual-correla
 
 ## Relationship to neighboring papers
 
-- **Fahlman 1988, Chaining Together Simple Modules:** likely belongs in the prehistory of modular composition and feature reuse, but its bibliographic details and full text still need verification before this review should make strong claims about continuity.
 - **Ash 1989, Dynamic Node Creation:** also grows hidden nodes during training, but is framed as dynamic extension of backpropagation rather than candidate competition plus permanent frozen feature detectors.
 - **Recurrent Cascade-Correlation and later variants:** later work extends or criticizes the cascade idea in recurrent settings and in variants that try to reduce depth or improve generalization.
 

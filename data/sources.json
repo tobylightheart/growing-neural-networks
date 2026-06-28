@@ -6,15 +6,13 @@
     "description": "Initial references carried forward from the original implementation-focused README.",
     "query": null,
     "added": [
-      "fahlman-1988-chaining-modules",
       "ash-1989-dynamic-node-construction",
       "fahlman-1990-cascade-correlation"
     ],
     "needs_triage": [
-      "fahlman-1988-chaining-modules",
       "ash-1989-dynamic-node-construction"
     ],
-    "notes": "Bibliographic details and links should be verified during the first systematic literature pass."
+    "notes": "The original seed list was cleaned after removing an unverified technical-report entry that provenance checks failed to support; remaining bibliographic details and links should still be verified during systematic literature passes."
   },
   {
     "id": "weekly-discovery-2026-06-24",

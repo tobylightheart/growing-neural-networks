@@ -153,7 +153,6 @@ Tasks:
 1. Create `data/papers.json` with initial seed papers:
    - Ash 1989, Dynamic Node Construction.
    - Fahlman & Lebiere 1990, Cascade-Correlation.
-   - Fahlman 1988, Chaining Together Simple Modules.
    - Related constructive / growing-network papers discovered in a focused literature search.
 2. Render paper cards from JSON in `pages/papers.html`.
 3. Add client-side search and filters by year, family, theme, and growth mechanism.

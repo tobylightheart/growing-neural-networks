@@ -1,17 +1,5 @@
 [
   {
-    "paper_id": "fahlman-1988-chaining-modules",
-    "pdf_status": "missing",
-    "text_status": "missing",
-    "access": "unknown",
-    "local_private_only": true,
-    "pdf_local_path": "../growing-neural-networks-library/pdfs/fahlman-1988-chaining-modules.pdf",
-    "text_local_path": "../growing-neural-networks-library/text/fahlman-1988-chaining-modules.md",
-    "source_url": "",
-    "last_checked": "",
-    "notes": "Seed paper; local PDF/text assets have not been collected yet."
-  },
-  {
     "paper_id": "ash-1989-dynamic-node-construction",
     "pdf_status": "missing",
     "text_status": "missing",

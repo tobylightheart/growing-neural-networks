@@ -17,13 +17,21 @@ This keeps the GitHub Pages repository lightweight and avoids accidentally publi
 
 ## Tracked inventory
 
-The repository tracks asset state in:
+The repository tracks asset state for papers already promoted into the public corpus in:
 
 ```text
 data/paper-assets.json
 ```
 
 Each paper in `data/papers.json` should have exactly one matching asset record.
+
+A separate bundle-first wanted list highlights prominent missing PDFs before they are promoted into formal paper records:
+
+```text
+data/missing-library-assets.json
+```
+
+Use the wanted list for collection planning across topic bundles, especially thesis-critical papers that should not yet pollute `data/papers.json` with stubs.
 
 Example:
 

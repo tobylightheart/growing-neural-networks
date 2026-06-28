@@ -8,5 +8,6 @@
   "sources": "data/sources.json",
   "modules": "data/modules.json",
   "exercises": "data/exercises.json",
-  "paper_assets": "data/paper-assets.json"
+  "paper_assets": "data/paper-assets.json",
+  "missing_library_assets": "data/missing-library-assets.json"
 }

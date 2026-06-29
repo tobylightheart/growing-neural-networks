@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-06-28",
+  "updated": "2026-06-29",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -96,14 +96,14 @@
           "citation_key": "Schliebs2013",
           "title": "Evolving spiking neural network: a survey",
           "role": "survey-anchor",
-          "asset_status": "available-in-library"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "wysoski-2010-evolving-spiking-audiovisual",
           "citation_key": "Wysoski2010",
           "title": "Evolving spiking neural networks for audiovisual information processing",
           "role": "anchor",
-          "asset_status": "available-in-library"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "kasabov-2013-dynamic-evolving-spiking",
@@ -128,8 +128,8 @@
         }
       ],
       "next_actions": [
-        "After the first STDP anchor review, promote Schliebs2013 or Wysoski2010 as the survey/lineage anchor.",
-        "Use thesis citation frequency to order the first five reviews."
+        "Keep the active STDP bundle first; use Schliebs2013 as the first eSNN survey review when the loop branches to evolving spiking networks.",
+        "Use Wysoski2010 as the application anchor after the Schliebs survey review, with Kasabov2013 still deferred as a later eSNN/deSNN detail review."
       ],
       "planned_outputs": [
         "eSNN/STDC lineage synthesis",

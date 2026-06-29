@@ -52,5 +52,19 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Promoted the first active STDP anchor from collected-needs-paper-record status. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, the DOI/PLOS landing page, and Semantic Scholar search result."
+  },
+  {
+    "id": "weekly-bundle-sync-2026-06-29",
+    "source": "bundle-aware-library-sync",
+    "date": "2026-06-29",
+    "description": "Weekly bundle-aware discovery and private-library sync for existing review bundles.",
+    "query": "Ran scripts/check_missing_library_assets.py, then focused local library filename searches for Schliebs, Wysoski, and Kasabov within existing review-bundle anchors.",
+    "added": [
+      "schliebs-2013-evolving-spiking-survey",
+      "wysoski-2010-evolving-spiking-audiovisual"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Added exactly two conservative candidate records for the high-priority evolving-spiking-networks bundle with matching private PDF asset records. Kasabov filename results were useful context but deferred because the run cap was one or two candidates and the STDP bundle remains the active review priority."
   }
 ]

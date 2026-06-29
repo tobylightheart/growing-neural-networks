@@ -261,5 +261,100 @@
       "lightheart-2018-constructive-spiking-thesis"
     ],
     "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using the existing bundle metadata, DOI/PLOS landing-page metadata, Semantic Scholar search result, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
+  },
+  {
+    "id": "schliebs-2013-evolving-spiking-survey",
+    "title": "Evolving Spiking Neural Network — A Survey",
+    "authors": [
+      "Stefan Schliebs",
+      "Nikola Kasabov"
+    ],
+    "year": 2013,
+    "venue": "Evolving Systems",
+    "families": [
+      "spiking-constructive-learning",
+      "evolving-spiking-neural-networks"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "structural-plasticity",
+      "growth-trigger"
+    ],
+    "status": "discovered",
+    "importance": "survey-anchor",
+    "summary": "Survey anchor for the evolving spiking neural-network bundle; local library discovery confirms a collected PDF, but bibliographic details and mechanism claims still need a focused review pass.",
+    "growth_mechanism": "Deferred for review: expected to survey evolving spiking neural-network construction and adaptation mechanisms rather than introduce one verified growth rule in this metadata-only sync.",
+    "what_grows": [
+      "neurons",
+      "synapses",
+      "spiking-network-structure"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "spiking-neural-networks"
+    ],
+    "links": {
+      "paper": "",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "weekly-bundle-sync-2026-06-29"
+    ],
+    "related": [
+      "lightheart-2018-constructive-spiking-thesis",
+      "masquelier-2008-repeating-patterns-stdp"
+    ],
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Needs DOI/venue/page verification and a public automated review before detailed claims are made."
+  },
+  {
+    "id": "wysoski-2010-evolving-spiking-audiovisual",
+    "title": "Evolving spiking neural networks for audiovisual information processing",
+    "authors": [
+      "Szymon G. Wysoski",
+      "Lubica Benuskova",
+      "Nikola Kasabov"
+    ],
+    "year": 2010,
+    "venue": "Neural Networks",
+    "families": [
+      "spiking-constructive-learning",
+      "evolving-spiking-neural-networks"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "structural-plasticity",
+      "growth-trigger"
+    ],
+    "status": "discovered",
+    "importance": "notable",
+    "summary": "Application anchor for the evolving spiking-network bundle; local library discovery confirms a collected PDF for a future focused review on adaptive audiovisual processing.",
+    "growth_mechanism": "Deferred for review: bundle metadata identifies the paper as an eSNN anchor, but this sync records only asset-backed candidate metadata pending bibliographic and full-text verification.",
+    "what_grows": [
+      "spiking-network-structure"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "spiking-neural-networks",
+      "online-learning",
+      "audiovisual-pattern-recognition"
+    ],
+    "links": {
+      "paper": "",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "weekly-bundle-sync-2026-06-29"
+    ],
+    "related": [
+      "schliebs-2013-evolving-spiking-survey",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Needs DOI/issue/page verification and a public automated review before detailed claims are made."
   }
 ]

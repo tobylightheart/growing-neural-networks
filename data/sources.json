@@ -39,5 +39,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Source repository: /workspace/thesis-constructive-spiking/; public GitHub repository https://github.com/tobylightheart/thesis-constructive-spiking. Integrate selectively as public synthesis notes, themes, paper records, and modules rather than wholesale chapter conversion."
+  },
+  {
+    "id": "stdp-hidden-pattern-bundle-2026-06-29",
+    "source": "bundle-first-cron-review",
+    "date": "2026-06-29",
+    "description": "Daily bundle-first review promotion for the active STDP hidden-pattern construction bundle.",
+    "query": "data/review-bundles.json stdp-hidden-pattern-construction; DOI 10.1371/journal.pone.0001377; Semantic Scholar exact-title search",
+    "added": [
+      "masquelier-2008-repeating-patterns-stdp"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Promoted the first active STDP anchor from collected-needs-paper-record status. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, the DOI/PLOS landing page, and Semantic Scholar search result."
   }
 ]

@@ -46,5 +46,17 @@
     "source_url": "https://github.com/tobylightheart/thesis-constructive-spiking",
     "last_checked": "2026-06-24",
     "notes": "Thesis PDF and LaTeX source are maintained in the sibling public repository /workspace/thesis-constructive-spiking, so this web-book paper record does not require a private PDF/text copy."
+  },
+  {
+    "paper_id": "masquelier-2008-repeating-patterns-stdp",
+    "pdf_status": "collected",
+    "text_status": "extraction-failed",
+    "access": "open",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Masquelier T, Guyonneau R and Thorpe S (2008) - Spike timing depedent plasticity finds the start of repeating patterns in continuous spike trains.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/masquelier-2008-repeating-patterns-stdp.md",
+    "source_url": "https://doi.org/10.1371/journal.pone.0001377",
+    "last_checked": "2026-06-29",
+    "notes": "Private local PDF path verified during cron promotion. No pdftotext, pypdf, PyPDF2, pdfminer, or fitz extraction tooling was available in the cron environment, so no extracted text was committed; review draft is grounded in bundle metadata and DOI/PLOS/Semantic Scholar metadata."
   }
 ]

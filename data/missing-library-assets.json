@@ -26,25 +26,6 @@
       "rationale": "The thesis cites Masquelier2008a and Masquelier2008b heavily, but no obvious Masquelier PDFs were found by filename in /workspace/growing-neural-networks-library. These are anchor sources for turning the thesis-derived STDP construction material into grounded public reviews.",
       "wanted_assets": [
         {
-          "paper_id_suggestion": "masquelier-2008-repeating-patterns-stdp",
-          "citation_key": "Masquelier2008a",
-          "title": "Spike timing dependent plasticity finds the start of repeating patterns in continuous spike trains",
-          "authors": [
-            "Timothée Masquelier",
-            "Rudy Guyonneau",
-            "Simon J. Thorpe"
-          ],
-          "year": 2008,
-          "venue": "PLOS ONE",
-          "doi": "10.1371/journal.pone.0001377",
-          "access_hint": "open",
-          "priority": "urgent",
-          "collection_status": "collected-needs-paper-record",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Masquelier T, Guyonneau R and Thorpe S (2008) - Spike timing depedent plasticity finds the start of repeating patterns in continuous spike trains.pdf",
-          "why_wanted": "Most-cited thesis source in the local scan; it grounds the repeating hidden spike-pattern experiments that the site should eventually explain interactively.",
-          "bundle_role": "anchor"
-        },
-        {
           "paper_id_suggestion": "masquelier-2009-competitive-stdp-spike-pattern-learning",
           "citation_key": "Masquelier2008b",
           "title": "Competitive STDP-Based Spike Pattern Learning",
@@ -154,6 +135,7 @@
     "This file is deliberately narrower than data/paper-assets.json: it tracks prominent wanted assets for bundle planning, including papers not yet added to data/papers.json.",
     "When a wanted PDF is collected, keep the PDF outside Git, update this file or remove the wanted entry, and only then decide whether to promote the paper into data/papers.json plus data/paper-assets.json.",
     "STDP-related wanted assets were found under pdfs/Neuroscience on 2026-06-28 and marked collected-needs-paper-record; promote them into data/papers.json plus data/paper-assets.json only as each bundle is reviewed.",
+    "Masquelier2008a was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-29, so it was removed from this pre-promotion wanted list.",
     "An unverified seed reference was removed on 2026-06-28 after exact-title web searches and local provenance checks failed to support it as a real technical report."
   ]
 }

@@ -212,5 +212,54 @@
       "giles-1995-recurrent-cascade-correlation-limitations"
     ],
     "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion. Includes a selective Stage 4 integration note on simulation expansion/contraction and plausible-effects constraints. Synthesis note: linked to post-growth stabilization through the thesis-derived plausible-effects constraint for simulation expansion/contraction."
+  },
+  {
+    "id": "masquelier-2008-repeating-patterns-stdp",
+    "title": "Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains",
+    "authors": [
+      "Timothée Masquelier",
+      "Rudy Guyonneau",
+      "Simon J. Thorpe"
+    ],
+    "year": 2008,
+    "venue": "PLOS ONE 3(1): e1377",
+    "families": [
+      "spiking-neural-networks",
+      "stdp",
+      "temporal-pattern-learning"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "parameter-calculation",
+      "biological-plausibility"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Shows that a single leaky integrate-and-fire neuron with STDP can become selective for the start of a repeating spatio-temporal spike pattern hidden in continuous distractor spike trains without an external time reference or firing-rate cue.",
+    "growth_mechanism": "Does not add neurons directly; it provides a source-grounded STDP mechanism for selecting and strengthening early, predictive afferents, which this project treats as background for spike-timing-dependent construction and synapse-initialization themes.",
+    "what_grows": [
+      "synaptic-selectivity"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "unsupervised",
+      "spiking-neural-networks",
+      "temporal-pattern-learning"
+    ],
+    "review": "reviews/masquelier-2008-repeating-patterns-stdp.md",
+    "links": {
+      "paper": "https://doi.org/10.1371/journal.pone.0001377",
+      "doi": "10.1371/journal.pone.0001377",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/Spike-Timing-Dependent-Plasticity-Finds-the-Start-Masquelier-Guyonneau/3724cdcd0b506384c5e8841acabad1b6ef9ec107",
+      "pdf": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0001377&type=printable"
+    },
+    "discovered_via": [
+      "stdp-hidden-pattern-bundle-2026-06-29"
+    ],
+    "related": [
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using the existing bundle metadata, DOI/PLOS landing-page metadata, Semantic Scholar search result, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
   }
 ]

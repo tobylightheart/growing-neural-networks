@@ -32,7 +32,7 @@
           "citation_key": "Masquelier2008a",
           "title": "Spike timing dependent plasticity finds the start of repeating patterns in continuous spike trains",
           "role": "anchor",
-          "asset_status": "collected-needs-paper-record"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "masquelier-2009-competitive-stdp-spike-pattern-learning",
@@ -71,8 +71,8 @@
         }
       ],
       "next_actions": [
-        "Promote Masquelier2008a into data/papers.json, data/paper-assets.json, and reviews/ as the first bundle paper.",
-        "Then promote Masquelier2008b and Song2000 before drafting a public synthesis note.",
+        "Promote Masquelier2008b into data/papers.json, data/paper-assets.json, and reviews/ as the second bundle paper.",
+        "Then promote Song2000 before drafting a public synthesis note.",
         "Keep thesis-derived claims cautious until the corresponding paper review exists."
       ],
       "planned_outputs": [

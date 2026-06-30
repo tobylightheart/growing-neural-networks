@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-06-29",
+  "updated": "2026-06-30",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -39,7 +39,7 @@
           "citation_key": "Masquelier2008b",
           "title": "Competitive STDP-Based Spike Pattern Learning",
           "role": "anchor",
-          "asset_status": "collected-needs-paper-record"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "song-2000-competitive-hebbian-stdp",
@@ -71,8 +71,8 @@
         }
       ],
       "next_actions": [
-        "Promote Masquelier2008b into data/papers.json, data/paper-assets.json, and reviews/ as the second bundle paper.",
-        "Then promote Song2000 before drafting a public synthesis note.",
+        "Promote Song2000 before drafting a public synthesis note.",
+        "Then promote Legenstein2005 to frame what a single STDP neuron can learn.",
         "Keep thesis-derived claims cautious until the corresponding paper review exists."
       ],
       "planned_outputs": [

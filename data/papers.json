@@ -263,6 +263,58 @@
     "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using the existing bundle metadata, DOI/PLOS landing-page metadata, Semantic Scholar search result, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
   },
   {
+    "id": "masquelier-2009-competitive-stdp-spike-pattern-learning",
+    "title": "Competitive STDP-Based Spike Pattern Learning",
+    "authors": [
+      "Timothée Masquelier",
+      "Rudy Guyonneau",
+      "Simon J. Thorpe"
+    ],
+    "year": 2009,
+    "venue": "Neural Computation 21(5):1259-1276",
+    "families": [
+      "spiking-neural-networks",
+      "stdp",
+      "temporal-pattern-learning"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "parameter-calculation",
+      "biological-plausibility"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Extends hidden repeating-pattern STDP learning from a single detector to multiple competing STDP neurons, using winner-take-all lateral inhibition to discourage redundant specialization across repeated temporal patterns.",
+    "growth_mechanism": "Does not verify neuron growth directly; it provides a source-grounded competitive STDP mechanism by which a fixed pool of spiking units can specialize on different repeated temporal patterns or pattern segments.",
+    "what_grows": [
+      "synaptic-selectivity",
+      "population-code-diversity"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "unsupervised",
+      "spiking-neural-networks",
+      "temporal-pattern-learning",
+      "competitive-learning"
+    ],
+    "review": "reviews/masquelier-2009-competitive-stdp-spike-pattern-learning.md",
+    "links": {
+      "paper": "https://doi.org/10.1162/neco.2008.06-08-804",
+      "doi": "10.1162/neco.2008.06-08-804",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "stdp-hidden-pattern-bundle-2026-06-30"
+    ],
+    "related": [
+      "masquelier-2008-repeating-patterns-stdp",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using existing bundle/wanted-list metadata, MIT Press DOI landing-page metadata, DBLP bibliographic metadata, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
+  },
+  {
     "id": "schliebs-2013-evolving-spiking-survey",
     "title": "Evolving Spiking Neural Network — A Survey",
     "authors": [

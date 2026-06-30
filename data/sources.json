@@ -66,5 +66,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Added exactly two conservative candidate records for the high-priority evolving-spiking-networks bundle with matching private PDF asset records. Kasabov filename results were useful context but deferred because the run cap was one or two candidates and the STDP bundle remains the active review priority."
+  },
+  {
+    "id": "stdp-hidden-pattern-bundle-2026-06-30",
+    "source": "bundle-first-cron-review",
+    "date": "2026-06-30",
+    "description": "Daily bundle-first review promotion for the active STDP hidden-pattern construction bundle.",
+    "query": "data/review-bundles.json stdp-hidden-pattern-construction; DOI 10.1162/neco.2008.06-08-804; DBLP exact-title result; local private PDF filename check",
+    "added": [
+      "masquelier-2009-competitive-stdp-spike-pattern-learning"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Promoted the second active STDP anchor from collected-needs-paper-record status. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, the DOI/MIT Press landing page, and DBLP."
   }
 ]

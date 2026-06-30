@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-06-28",
+  "updated": "2026-06-30",
   "library_root": "../growing-neural-networks-library",
   "purpose": "Bundle-first wanted list for papers that are high-value review targets but do not currently have an obvious matching local PDF in the private library. This file intentionally tracks wanted assets before they become formal paper records in data/papers.json.",
   "status_values": {
@@ -24,27 +24,7 @@
       "priority": "urgent",
       "thesis_anchor": "Chapters 3, 6, and 7 of /workspace/thesis-constructive-spiking; especially hidden spike-pattern detection and competitive STDP pattern learning.",
       "rationale": "The thesis cites Masquelier2008a and Masquelier2008b heavily, but no obvious Masquelier PDFs were found by filename in /workspace/growing-neural-networks-library. These are anchor sources for turning the thesis-derived STDP construction material into grounded public reviews.",
-      "wanted_assets": [
-        {
-          "paper_id_suggestion": "masquelier-2009-competitive-stdp-spike-pattern-learning",
-          "citation_key": "Masquelier2008b",
-          "title": "Competitive STDP-Based Spike Pattern Learning",
-          "authors": [
-            "Timothée Masquelier",
-            "Rudy Guyonneau",
-            "Simon J. Thorpe"
-          ],
-          "year": 2009,
-          "venue": "Neural Computation",
-          "doi": "10.1162/neco.2008.06-08-804",
-          "access_hint": "unknown",
-          "priority": "urgent",
-          "collection_status": "collected-needs-paper-record",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Masquelier T, Guyonneau R and Thorpe S J (2009) - Competitive STDP-based spike pattern learning.pdf",
-          "why_wanted": "Primary anchor for the thesis' competitive spike-pattern chapter; needed before drafting a confident public synthesis of competitive STDP construction.",
-          "bundle_role": "anchor"
-        }
-      ]
+      "wanted_assets": []
     },
     {
       "id": "stdp-background-mechanisms",
@@ -136,6 +116,7 @@
     "When a wanted PDF is collected, keep the PDF outside Git, update this file or remove the wanted entry, and only then decide whether to promote the paper into data/papers.json plus data/paper-assets.json.",
     "STDP-related wanted assets were found under pdfs/Neuroscience on 2026-06-28 and marked collected-needs-paper-record; promote them into data/papers.json plus data/paper-assets.json only as each bundle is reviewed.",
     "Masquelier2008a was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-29, so it was removed from this pre-promotion wanted list.",
-    "An unverified seed reference was removed on 2026-06-28 after exact-title web searches and local provenance checks failed to support it as a real technical report."
+    "An unverified seed reference was removed on 2026-06-28 after exact-title web searches and local provenance checks failed to support it as a real technical report.",
+    "Masquelier2008b was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-30, so it was removed from this pre-promotion wanted list."
   ]
 }

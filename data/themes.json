@@ -108,5 +108,10 @@
     "id": "biological-plausibility",
     "name": "Biological plausibility",
     "description": "Constraints on constructive changes so adding, pruning, or transferring simulated components does not create implausible disruptions in neural activity."
+  },
+  {
+    "id": "synaptic-selectivity",
+    "name": "Synaptic selectivity",
+    "description": "Learning processes that make a neuron or fixed pool of neurons more selective by strengthening predictive afferents, without necessarily adding new neurons."
   }
 ]

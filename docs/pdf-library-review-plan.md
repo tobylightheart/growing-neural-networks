@@ -33,7 +33,9 @@ The first promotion sequence should be:
 5. Caporale and Dan 2008 — STDP as a Hebbian learning rule.
 6. Morrison, Diesmann, and Gerstner 2008 — phenomenological STDP models.
 
-After the first three reviews exist, synthesis can start connecting these sources to constructive spiking mechanisms. After at least three STDP reviews and one synthesis note exist, module/exercise work can consider an interactive timing-window or repeating-pattern exercise.
+The first two Masquelier reviews now support a limited metadata bridge: STDP can be discussed as growing synaptic selectivity for hidden temporal patterns, and the 2009 competitive setup can be discussed as fixed-pool differentiation rather than neuron growth. Promote Song2000 before broadening that bridge into a public synthesis note about competitive Hebbian/STDP background. After at least three STDP reviews and one synthesis note exist, module/exercise work can consider an interactive timing-window or repeating-pattern exercise.
+
+Current cautious synthesis axis: distinguish **constructive growth of structure** from **STDP growth of selectivity**. The active bundle has enough public draft material to link the two Masquelier papers in metadata, but not enough yet to claim a reviewed structural-growth mechanism for STDP hidden-pattern construction.
 
 ## Bundle list
 

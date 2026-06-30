@@ -100,5 +100,22 @@
     "papers": [
       "lightheart-2018-constructive-spiking-thesis"
     ]
+  },
+  {
+    "id": "stdp-hidden-pattern-learning",
+    "name": "STDP hidden-pattern learning",
+    "family": "spiking temporal-pattern learning",
+    "summary": "A cautious bundle-level bridge for the Masquelier hidden-pattern papers: STDP can grow synaptic selectivity for repeated temporal structure, and competition among a fixed pool of listeners can reduce duplicate specialization. This is not recorded as a neuron-growth algorithm until a reviewed source verifies structural growth.",
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "parameter-calculation",
+      "biological-plausibility",
+      "synaptic-selectivity"
+    ],
+    "papers": [
+      "masquelier-2008-repeating-patterns-stdp",
+      "masquelier-2009-competitive-stdp-spike-pattern-learning"
+    ]
   }
 ]

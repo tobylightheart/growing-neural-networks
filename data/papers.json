@@ -232,7 +232,8 @@
       "spiking-neural-networks",
       "spike-timing-dependent-construction",
       "parameter-calculation",
-      "biological-plausibility"
+      "biological-plausibility",
+      "synaptic-selectivity"
     ],
     "status": "review-draft",
     "importance": "canonical",
@@ -258,6 +259,7 @@
       "stdp-hidden-pattern-bundle-2026-06-29"
     ],
     "related": [
+      "masquelier-2009-competitive-stdp-spike-pattern-learning",
       "lightheart-2018-constructive-spiking-thesis"
     ],
     "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using the existing bundle metadata, DOI/PLOS landing-page metadata, Semantic Scholar search result, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
@@ -281,7 +283,8 @@
       "spiking-neural-networks",
       "spike-timing-dependent-construction",
       "parameter-calculation",
-      "biological-plausibility"
+      "biological-plausibility",
+      "synaptic-selectivity"
     ],
     "status": "review-draft",
     "importance": "canonical",

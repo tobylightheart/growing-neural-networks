@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-06-30",
+  "updated": "2026-07-01",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -46,7 +46,7 @@
           "citation_key": "Song2000",
           "title": "Competitive Hebbian learning through spike-timing-dependent synaptic plasticity",
           "role": "background-anchor",
-          "asset_status": "collected-needs-paper-record"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "legenstein-2005-neuron-learn-stdp",
@@ -71,9 +71,9 @@
         }
       ],
       "next_actions": [
-        "Use the Masquelier2008/Masquelier2009 reviews as a limited metadata bridge for synaptic selectivity, while keeping the public synthesis note cautious.",
-        "Promote Song2000 before broadening the synthesis beyond the hidden-pattern detector and fixed-pool competition bridge.",
-        "Then promote Legenstein2005 to frame what a single STDP neuron can learn.",
+        "Use the Masquelier2008/Masquelier2009/Song2000 reviews as a limited metadata bridge for synaptic selectivity and timing-based competition, while keeping public synthesis claims cautious.",
+        "Promote Legenstein2005 next to frame what a single STDP neuron can learn.",
+        "Then promote Caporale2008 or Morrison2008 for broader STDP rule/model background.",
         "Keep thesis-derived claims cautious until the corresponding paper review exists."
       ],
       "planned_outputs": [

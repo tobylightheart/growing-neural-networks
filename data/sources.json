@@ -79,5 +79,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Promoted the second active STDP anchor from collected-needs-paper-record status. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, the DOI/MIT Press landing page, and DBLP."
+  },
+  {
+    "id": "stdp-hidden-pattern-bundle-2026-07-01",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-01",
+    "description": "Daily bundle-first review promotion for the active STDP hidden-pattern construction bundle.",
+    "query": "data/review-bundles.json stdp-hidden-pattern-construction; DOI 10.1038/78829; Crossref API; Nature DOI landing page; Semantic Scholar DOI lookup; local private PDF filename check",
+    "added": [
+      "song-2000-competitive-hebbian-stdp"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Promoted the Song2000 competitive Hebbian/STDP background anchor from collected-needs-paper-record status. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, Crossref, the DOI/Nature landing page, and Semantic Scholar."
   }
 ]

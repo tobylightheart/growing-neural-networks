@@ -411,5 +411,56 @@
       "lightheart-2018-constructive-spiking-thesis"
     ],
     "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Needs DOI/issue/page verification and a public automated review before detailed claims are made."
+  },
+  {
+    "id": "song-2000-competitive-hebbian-stdp",
+    "title": "Competitive Hebbian Learning Through Spike-Timing-Dependent Synaptic Plasticity",
+    "authors": [
+      "Sen Song",
+      "Kenneth D. Miller",
+      "L. F. Abbott"
+    ],
+    "year": 2000,
+    "venue": "Nature Neuroscience 3(9):919-926",
+    "families": [
+      "spiking-neural-networks",
+      "stdp",
+      "competitive-learning"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "biological-plausibility",
+      "synaptic-selectivity"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Shows in modelling studies how spike-timing-dependent plasticity can make synapses compete for control of postsynaptic spike timing, strengthening short-latency or correlated inputs while weakening less effective ones.",
+    "growth_mechanism": "Does not add neurons or synapses directly; it provides a canonical competitive Hebbian/STDP mechanism for synaptic selectivity and timing-based competition that later constructive spiking discussions can use as background.",
+    "what_grows": [
+      "synaptic-selectivity"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "unsupervised",
+      "spiking-neural-networks",
+      "competitive-learning"
+    ],
+    "review": "reviews/song-2000-competitive-hebbian-stdp.md",
+    "links": {
+      "paper": "https://doi.org/10.1038/78829",
+      "doi": "10.1038/78829",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/77c53d8d539f2b48f7b71d4e2f8041a43b0e1800",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "stdp-hidden-pattern-bundle-2026-07-01"
+    ],
+    "related": [
+      "masquelier-2008-repeating-patterns-stdp",
+      "masquelier-2009-competitive-stdp-spike-pattern-learning",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using wanted-list metadata, Crossref metadata for DOI 10.1038/78829, Nature DOI landing-page metadata, Semantic Scholar metadata, and a verified private local PDF path. No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious automated reading guide rather than a human-verified close reading of the PDF."
   }
 ]

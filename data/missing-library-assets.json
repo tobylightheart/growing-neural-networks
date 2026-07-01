@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-06-30",
+  "updated": "2026-07-01",
   "library_root": "../growing-neural-networks-library",
   "purpose": "Bundle-first wanted list for papers that are high-value review targets but do not currently have an obvious matching local PDF in the private library. This file intentionally tracks wanted assets before they become formal paper records in data/papers.json.",
   "status_values": {
@@ -33,25 +33,6 @@
       "thesis_anchor": "Chapter 2 literature review and the STDP-dependent experimental chapters of /workspace/thesis-constructive-spiking.",
       "rationale": "These papers are not necessarily constructive algorithms themselves, but they provide the STDP mechanism background needed to keep spiking construction reviews accurate and well-grounded.",
       "wanted_assets": [
-        {
-          "paper_id_suggestion": "song-2000-competitive-hebbian-stdp",
-          "citation_key": "Song2000",
-          "title": "Competitive Hebbian learning through spike-timing-dependent synaptic plasticity",
-          "authors": [
-            "Sen Song",
-            "Kenneth D. Miller",
-            "L. F. Abbott"
-          ],
-          "year": 2000,
-          "venue": "Nature Neuroscience",
-          "doi": "10.1038/78829",
-          "access_hint": "publisher-gated",
-          "priority": "high",
-          "collection_status": "collected-needs-paper-record",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Song S, Miller K D and Abbott L F (2000) - Competitive Hebbian learning through spike-timing-dependent synaptic plasticity.pdf",
-          "why_wanted": "Canonical STDP/competitive Hebbian background source; useful for explaining what is inherited versus newly constructive in later spiking papers.",
-          "bundle_role": "background-anchor"
-        },
         {
           "paper_id_suggestion": "legenstein-2005-neuron-learn-stdp",
           "citation_key": "Legenstein2005",
@@ -117,6 +98,7 @@
     "STDP-related wanted assets were found under pdfs/Neuroscience on 2026-06-28 and marked collected-needs-paper-record; promote them into data/papers.json plus data/paper-assets.json only as each bundle is reviewed.",
     "Masquelier2008a was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-29, so it was removed from this pre-promotion wanted list.",
     "An unverified seed reference was removed on 2026-06-28 after exact-title web searches and local provenance checks failed to support it as a real technical report.",
-    "Masquelier2008b was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-30, so it was removed from this pre-promotion wanted list."
+    "Masquelier2008b was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-30, so it was removed from this pre-promotion wanted list.",
+    "Song2000 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-01, so it was removed from this pre-promotion wanted list."
   ]
 }

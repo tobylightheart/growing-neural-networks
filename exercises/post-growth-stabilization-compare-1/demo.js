@@ -30,6 +30,8 @@ const algorithms = [
     id: 'cascade-correlation',
     name: 'Cascade-Correlation',
     paper: 'Fahlman & Lebiere (1990)',
+    reviewPath: '../../pages/review.html?id=fahlman-1990-cascade-correlation',
+    sourceNote: 'Source-grounded in the Cascade-Correlation review: installed candidate features are treated as fixed scaffolding after selection.',
     prompt: 'A candidate hidden unit is trained against residual error, installed, and then its incoming weights are fixed.',
     answer: 'freeze-feature',
     hint: 'Look for the family whose installed hidden units become frozen features.',
@@ -39,6 +41,8 @@ const algorithms = [
     id: 'dynamic-node-construction',
     name: 'Dynamic Node Construction',
     paper: 'Ash (1989)',
+    reviewPath: '../../pages/review.html?id=ash-1989-dynamic-node-construction',
+    sourceNote: 'Used cautiously from the DNC draft review: the comparison emphasizes continued backpropagation and leaves exact stabilization details open for human full-text verification.',
     prompt: 'New units can be added when performance stalls, while training continues to tune network parameters.',
     answer: 'continue-backprop',
     hint: 'This contrast case is about construction without Cascade-Correlation-style permanent feature freezing.',
@@ -48,6 +52,8 @@ const algorithms = [
     id: 'recurrent-cascade-correlation',
     name: 'Recurrent Cascade-Correlation',
     paper: 'Giles et al. limitations thread',
+    reviewPath: '../../pages/review.html?id=giles-1995-recurrent-cascade-correlation-limitations',
+    sourceNote: 'Grounded in the recurrent Cascade-Correlation limitations review: topology constraints can dominate whether constructive growth remains useful for sequence models.',
     prompt: 'Adding units to recurrent networks raises extra questions about temporal loops, permitted links, and stable dynamics.',
     answer: 'preserve-topology',
     hint: 'Ask what recurrent growth has to preserve that a feed-forward growth exercise can mostly ignore.',
@@ -57,6 +63,8 @@ const algorithms = [
     id: 'simulation-expansion-contraction',
     name: 'Simulation Expansion / Contraction',
     paper: 'Constructive spiking thesis integration',
+    reviewPath: '../../pages/review.html?id=lightheart-2018-constructive-spiking-thesis',
+    sourceNote: 'Grounded in the public thesis-synthesis record: construction is framed as simulation expansion/contraction with low-disruption plausibility constraints.',
     prompt: 'A model distinguishes components already simulated from surrounding components that could be carefully introduced or removed.',
     answer: 'low-disruption-expansion',
     hint: 'This one protects plausibility at the boundary between simulated and surrounding components.',
@@ -72,6 +80,7 @@ const feedback = document.querySelector('#feedback');
 const checkButton = document.querySelector('#check-answer');
 const hintButton = document.querySelector('#show-hints');
 const resetButton = document.querySelector('#reset-answer');
+const sourceHost = document.querySelector('#source-links');
 const canvas = document.querySelector('#stability-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -104,6 +113,14 @@ function renderCards() {
 
 function getSelection(algorithmId) {
   return document.querySelector(`[data-answer-for="${algorithmId}"]`).value;
+}
+
+function renderSources() {
+  sourceHost.innerHTML = algorithms.map(algorithm => `<article class="source-card">
+    <h3>${algorithm.name}</h3>
+    <p>${algorithm.sourceNote}</p>
+    <a href="${algorithm.reviewPath}">Open linked review</a>
+  </article>`).join('');
 }
 
 function selectedStrategyLabel(strategyId) {
@@ -212,6 +229,7 @@ function drawMatrix() {
 
 renderStrategies();
 renderCards();
+renderSources();
 drawMatrix();
 updateScore(false);
 checkButton.addEventListener('click', checkAnswers);

@@ -4,7 +4,9 @@ A no-build interactive comparison exercise for the Growing Neural Networks liter
 
 ## Purpose
 
-This exercise turns the `post-growth-stabilization` synthesis theme into a small matching activity. Learners compare four constructive-learning families by asking what each design most directly protects after adding structure:
+This exercise turns the `post-growth-stabilization` synthesis theme into a small matching activity. It is maintained as a conservative module/exercise pass for the seeded `classic-constructive-foundations` bundle. The active `stdp-hidden-pattern-construction` bundle has enough draft reviews to be close, but its timing-window exercise still needs a dedicated synthesis note before a new STDP demo is built.
+
+Learners compare four constructive-learning families by asking what each design most directly protects after adding structure:
 
 - Cascade-Correlation: frozen installed features.
 - Dynamic Node Construction: continued trainable-weight adaptation.

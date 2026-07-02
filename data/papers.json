@@ -462,5 +462,58 @@
       "lightheart-2018-constructive-spiking-thesis"
     ],
     "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using wanted-list metadata, Crossref metadata for DOI 10.1038/78829, Nature DOI landing-page metadata, Semantic Scholar metadata, and a verified private local PDF path. No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious automated reading guide rather than a human-verified close reading of the PDF."
+  },
+  {
+    "id": "legenstein-2005-neuron-learn-stdp",
+    "title": "What Can a Neuron Learn with Spike-Timing-Dependent Plasticity?",
+    "authors": [
+      "Robert Legenstein",
+      "Christian Naeger",
+      "Wolfgang Maass"
+    ],
+    "year": 2005,
+    "venue": "Neural Computation 17(11):2337-2382",
+    "families": [
+      "spiking-neural-networks",
+      "stdp",
+      "temporal-pattern-learning"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "parameter-calculation",
+      "biological-plausibility",
+      "synaptic-selectivity"
+    ],
+    "status": "review-draft",
+    "importance": "notable",
+    "summary": "Examines what transformations a single spiking neuron can learn under spike-timing-dependent plasticity with teacher forcing, contrasting lack of arbitrary-pattern convergence guarantees with positive average-case results for Poisson inputs under linear-separability-like conditions.",
+    "growth_mechanism": "Does not propose structural growth; it frames the learnability limits and parameter-adaptation capabilities of STDP in a single spiking neuron, which constrains how much constructive spiking systems can expect from timing-dependent synapse initialization alone.",
+    "what_grows": [
+      "synaptic-selectivity"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "supervised",
+      "spiking-neural-networks",
+      "temporal-pattern-learning"
+    ],
+    "review": "reviews/legenstein-2005-neuron-learn-stdp.md",
+    "links": {
+      "paper": "https://doi.org/10.1162/0899766054796888",
+      "doi": "10.1162/0899766054796888",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/04340e8e191dace60e54761b8e9f01dc28fc17ae",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "stdp-hidden-pattern-bundle-2026-07-02"
+    ],
+    "related": [
+      "song-2000-competitive-hebbian-stdp",
+      "masquelier-2008-repeating-patterns-stdp",
+      "masquelier-2009-competitive-stdp-spike-pattern-learning",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using wanted-list metadata, Crossref metadata for DOI 10.1162/0899766054796888, Semantic Scholar DOI lookup metadata, and a verified private local PDF path. No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious automated reading guide rather than a human-verified close reading of the PDF."
   }
 ]

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-01",
+  "updated": "2026-07-02",
   "library_root": "../growing-neural-networks-library",
   "purpose": "Bundle-first wanted list for papers that are high-value review targets but do not currently have an obvious matching local PDF in the private library. This file intentionally tracks wanted assets before they become formal paper records in data/papers.json.",
   "status_values": {
@@ -33,25 +33,6 @@
       "thesis_anchor": "Chapter 2 literature review and the STDP-dependent experimental chapters of /workspace/thesis-constructive-spiking.",
       "rationale": "These papers are not necessarily constructive algorithms themselves, but they provide the STDP mechanism background needed to keep spiking construction reviews accurate and well-grounded.",
       "wanted_assets": [
-        {
-          "paper_id_suggestion": "legenstein-2005-neuron-learn-stdp",
-          "citation_key": "Legenstein2005",
-          "title": "What can a neuron learn with spike-timing-dependent plasticity?",
-          "authors": [
-            "Robert Legenstein",
-            "Christian Naeger",
-            "Wolfgang Maass"
-          ],
-          "year": 2005,
-          "venue": "Neural Computation",
-          "doi": "10.1162/0899766054796888",
-          "access_hint": "unknown",
-          "priority": "high",
-          "collection_status": "collected-needs-paper-record",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Legenstein R, Naeger C and Maass W (2005) - What can a neuron learn with spike-timing-dependent plasticity.pdf",
-          "why_wanted": "Provides theoretical limits/capabilities of STDP learning that can frame constructive synapse and neuron-creation claims.",
-          "bundle_role": "background-anchor"
-        },
         {
           "paper_id_suggestion": "caporale-2008-stdp-hebbian-learning-rule",
           "citation_key": "Caporale2008",
@@ -99,6 +80,7 @@
     "Masquelier2008a was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-29, so it was removed from this pre-promotion wanted list.",
     "An unverified seed reference was removed on 2026-06-28 after exact-title web searches and local provenance checks failed to support it as a real technical report.",
     "Masquelier2008b was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-30, so it was removed from this pre-promotion wanted list.",
-    "Song2000 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-01, so it was removed from this pre-promotion wanted list."
+    "Song2000 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-01, so it was removed from this pre-promotion wanted list.",
+    "Legenstein2005 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-02, so it was removed from this pre-promotion wanted list."
   ]
 }

@@ -109,9 +109,17 @@ The distinction is valuable for this review because it turns a pure capacity-con
 
 This creates a planned visual module, **Simulation Expansion and Contraction**, that should show three sets side by side: simulated components, surrounding components, and components represented in memory. The first implementation should stay conceptual and avoid copying thesis figures wholesale; if a later pass uses source SVGs, it should copy only the specific asset needed and preserve provenance.
 
+## Stage 6 integration: hidden-pattern STDP as a bounded bridge
+
+Chapter 6 is useful for the active `stdp-hidden-pattern-construction` bundle because it frames the Masquelier hidden-pattern setting as a compatibility test between STDP simulations and constructive neuron insertion, not as proof that STDP alone grows structure. The thesis chapter starts from the already-public Masquelier-style question: can spike-timing-dependent plasticity tune synapses so a postsynaptic neuron responds near the beginning of a concealed repeating spike pattern? Its constructive extension asks a narrower modelling question: can a neuron introduced after a proxy event be initialized with synapse weights that let it reach comparable hidden-pattern detection behaviour?
+
+That framing keeps the bundle cautious. The currently drafted Masquelier2008, Masquelier2009, Song2000, and Legenstein2005 reviews ground **synaptic selectivity**, timing-based competition, and single-neuron STDP learnability limits. The thesis-derived contribution is the bridge from those reviewed mechanisms to **parameter calculation** for a constructed component: proxy timing can define an eligibility window, and estimated or normalized STDP-like updates can be treated as candidate initialization rules for new synapses. It should not yet be presented as a reviewed public claim that hidden-pattern STDP automatically chooses the right network size.
+
+Two constraints from the thesis source should shape future module or exercise work. First, Chapter 6 explicitly notes that its reproduced one-pattern setting does not test automatic network-size selection, because the number of hidden patterns is known in advance. Second, high presynaptic spike rates can make a proxy neuron fire indiscriminately, so proxy-triggered construction needs to be shown as a parameter-estimation scaffold with failure modes, not as a magic detector. A future timing-window exercise should therefore let learners compare predefined-neuron STDP selectivity with constructed-neuron initialization, while labelling automatic capacity control as an open question for the later competitive/multiple-pattern chapter.
+
 ## Open verification notes
 
-This draft is based primarily on the thesis abstract plus Chapter 2 and Chapter 3 source. It is intended as a synthesis scaffold for the web book, not a human-reviewed final interpretation. Before marking it reviewed, check:
+This draft is based primarily on the thesis abstract plus Chapter 2, Chapter 3, and a selective Chapter 6 pass over `06_hidden_spike_pattern/hidden_spike_pattern_detection.tex`. It is intended as a synthesis scaffold for the web book, not a human-reviewed final interpretation. Before marking it reviewed, check:
 
 - the exact wording of the thesis definitions against Chapter 2;
 - whether the public web-book paraphrases preserve the intended distinctions;

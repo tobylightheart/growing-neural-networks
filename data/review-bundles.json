@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-02",
+  "updated": "2026-07-03",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -60,7 +60,7 @@
           "citation_key": "Caporale2008",
           "title": "Spike timing-dependent plasticity: A Hebbian learning rule",
           "role": "background",
-          "asset_status": "collected-needs-paper-record"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "morrison-2008-phenomenological-synaptic-plasticity",
@@ -71,8 +71,8 @@
         }
       ],
       "next_actions": [
-        "Use the Masquelier2008/Masquelier2009/Song2000/Legenstein2005 reviews as a limited metadata bridge for synaptic selectivity, timing-based competition, and single-neuron STDP learnability limits, while keeping public synthesis claims cautious and explicitly separate from structural neuron-growth claims.",
-        "Promote Caporale2008 or Morrison2008 next for broader STDP rule/model background.",
+        "Use the Masquelier2008/Masquelier2009/Song2000/Legenstein2005/Caporale2008 reviews as a limited metadata bridge for synaptic selectivity, timing-based competition, single-neuron STDP learnability limits, and biological STDP-rule caveats, while keeping public synthesis claims cautious and explicitly separate from structural neuron-growth claims.",
+        "Promote Morrison2008 next for broader phenomenological STDP model background.",
         "Keep thesis-derived claims cautious until the corresponding paper review exists."
       ],
       "planned_outputs": [

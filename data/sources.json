@@ -105,5 +105,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Promoted Legenstein, Naeger, and Maass 2005 as the next active STDP background anchor. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, Crossref, and Semantic Scholar."
+  },
+  {
+    "id": "stdp-hidden-pattern-bundle-2026-07-03",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-03",
+    "description": "Daily bundle-first review promotion for the active STDP hidden-pattern construction bundle.",
+    "query": "data/review-bundles.json stdp-hidden-pattern-construction; DOI 10.1146/annurev.neuro.31.060407.125639; Crossref API; Semantic Scholar DOI lookup; local private PDF filename check",
+    "added": [
+      "caporale-2008-stdp-hebbian-learning-rule"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Promoted Caporale and Dan 2008 as the next active STDP background anchor. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, Crossref, and Semantic Scholar."
   }
 ]

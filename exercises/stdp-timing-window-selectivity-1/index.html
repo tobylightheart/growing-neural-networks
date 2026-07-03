@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When does a timing window grow selectivity? · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="exercise-topbar">
+    <a href="../../pages/exercises.html">← Exercises</a>
+    <a href="../../pages/themes.html">Themes</a>
+    <a href="../../pages/review.html?id=masquelier-2008-repeating-patterns-stdp">Masquelier 2008 review</a>
+  </header>
+
+  <main class="exercise-page">
+    <section class="exercise-hero">
+      <div>
+        <p class="kicker">Interactive exercise · active STDP bundle</p>
+        <h1>When does a timing window grow selectivity?</h1>
+        <p>Compare presynaptic spike timing against a postsynaptic spike. The exercise uses a deliberately simplified pair-based STDP curve as a study aid, then asks what the curve can and cannot support in a constructive spiking story.</p>
+      </div>
+      <aside class="readiness-card" aria-live="polite">
+        <span>selectivity score</span>
+        <strong id="selectivity-score">0.00</strong>
+        <small id="selectivity-note">Move the spike-time sliders or choose a scenario.</small>
+      </aside>
+    </section>
+
+    <section class="panel caution-panel">
+      <h2>Scope guard</h2>
+      <p>This is <strong>not</strong> a claim that STDP alone grows neurons or creates new synapses. It follows the active <code>stdp-hidden-pattern-construction</code> bundle by showing how timing-dependent synaptic updates can grow <em>selectivity</em> for predictive inputs. Structural growth still needs a separate trigger, recruitment rule, or constructive algorithm.</p>
+    </section>
+
+    <section class="exercise-layout">
+      <article class="panel controls-panel">
+        <h2>Choose spike timing</h2>
+        <p class="meta">Times are relative to the postsynaptic spike at 0 ms. Negative values mean the input fired before the output; positive values mean it fired after.</p>
+        <div class="scenario-row" id="scenario-row" aria-label="Timing scenarios"></div>
+        <div id="slider-host" class="slider-host"></div>
+        <div class="button-row">
+          <button id="check-answer">Check interpretation</button>
+          <button id="reset-answer" class="secondary">Reset</button>
+        </div>
+        <label for="interpretation">What is the safest interpretation?</label>
+        <select id="interpretation">
+          <option value="">Choose one…</option>
+          <option value="structural-growth">The timing window directly proves structural neuron growth.</option>
+          <option value="selectivity">Predictive inputs tend to strengthen, so selectivity can increase.</option>
+          <option value="universal-biology">The simple curve is a complete biological STDP rule.</option>
+        </select>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="panel visual-panel">
+        <h2>Simplified pair-based STDP curve</h2>
+        <div class="canvas-wrap">
+          <canvas id="stdp-canvas" width="920" height="560" aria-label="STDP timing-window plot and spike timing traces"></canvas>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel source-panel">
+      <h2>Bundle grounding</h2>
+      <p>The active bundle now has more than three related public draft reviews plus a thesis-synthesis bridge. The exercise stays conservative: it presents a timing-window intuition, links each claim to source records, and labels structural construction as an extra design layer.</p>
+      <div id="source-links" class="source-links"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.exercise-topbar'));
+  </script>
+</body>
+</html>

@@ -71,8 +71,8 @@
         }
       ],
       "next_actions": [
-        "Use the Masquelier2008/Masquelier2009/Song2000/Legenstein2005/Caporale2008 reviews as a limited metadata bridge for synaptic selectivity, timing-based competition, single-neuron STDP learnability limits, and biological STDP-rule caveats, while keeping public synthesis claims cautious and explicitly separate from structural neuron-growth claims.",
-        "Morrison2008 is now promoted; use the completed STDP background run to decide whether the next pass should synthesize the bundle or branch to the next high-priority seeded bundle.",
+        "Use the Masquelier2008/Masquelier2009/Song2000/Legenstein2005/Caporale2008/Morrison2008 reviews as a limited metadata bridge for synaptic selectivity, timing-based competition, single-neuron STDP learnability limits, biological STDP-rule caveats, and simulation-oriented phenomenological STDP model choices, while keeping public synthesis claims cautious and explicitly separate from structural neuron-growth claims.",
+        "The timing-window exercise and stdp-hidden-pattern-learning metadata now point at the completed six-review STDP background run; the next synthesis pass should either add a concise public synthesis note or branch to the next high-priority seeded bundle.",
         "Keep thesis-derived claims cautious until the corresponding paper review exists."
       ],
       "planned_outputs": [

@@ -105,7 +105,7 @@
     "id": "stdp-hidden-pattern-learning",
     "name": "STDP hidden-pattern learning",
     "family": "spiking temporal-pattern learning",
-    "summary": "A cautious bundle-level bridge for the promoted STDP reviews: STDP can grow synaptic selectivity for repeated temporal structure, competition can make a fixed pool of listeners differentiate, and single-neuron learnability results bound what timing-dependent synapse tuning can supply before separate structural-growth claims are made. This is not recorded as a neuron-growth algorithm until a reviewed source verifies structural growth.",
+    "summary": "A cautious bundle-level bridge for the promoted STDP reviews: STDP can grow synaptic selectivity for repeated temporal structure, competition can make a fixed pool of listeners differentiate, single-neuron learnability results bound what timing-dependent synapse tuning can supply, and biological/phenomenological STDP reviews constrain how simple timing-window stories should be interpreted. This is not recorded as a neuron-growth algorithm until a reviewed source verifies structural growth.",
     "themes": [
       "spiking-neural-networks",
       "spike-timing-dependent-construction",
@@ -117,7 +117,9 @@
       "masquelier-2008-repeating-patterns-stdp",
       "masquelier-2009-competitive-stdp-spike-pattern-learning",
       "song-2000-competitive-hebbian-stdp",
-      "legenstein-2005-neuron-learn-stdp"
+      "legenstein-2005-neuron-learn-stdp",
+      "caporale-2008-stdp-hebbian-learning-rule",
+      "morrison-2008-phenomenological-synaptic-plasticity"
     ]
   }
 ]

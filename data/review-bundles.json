@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-03",
+  "updated": "2026-07-04",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -67,12 +67,12 @@
           "citation_key": "Morrison2008",
           "title": "Phenomenological models of synaptic plasticity based on spike timing",
           "role": "background",
-          "asset_status": "collected-needs-paper-record"
+          "asset_status": "existing-paper"
         }
       ],
       "next_actions": [
         "Use the Masquelier2008/Masquelier2009/Song2000/Legenstein2005/Caporale2008 reviews as a limited metadata bridge for synaptic selectivity, timing-based competition, single-neuron STDP learnability limits, and biological STDP-rule caveats, while keeping public synthesis claims cautious and explicitly separate from structural neuron-growth claims.",
-        "Promote Morrison2008 next for broader phenomenological STDP model background.",
+        "Morrison2008 is now promoted; use the completed STDP background run to decide whether the next pass should synthesize the bundle or branch to the next high-priority seeded bundle.",
         "Keep thesis-derived claims cautious until the corresponding paper review exists."
       ],
       "planned_outputs": [

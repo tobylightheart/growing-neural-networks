@@ -118,5 +118,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Promoted Caporale and Dan 2008 as the next active STDP background anchor. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, Crossref, and Semantic Scholar."
+  },
+  {
+    "id": "stdp-hidden-pattern-bundle-2026-07-04",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-04",
+    "description": "Daily bundle-first review promotion for the active STDP hidden-pattern construction bundle.",
+    "query": "data/review-bundles.json stdp-hidden-pattern-construction; DOI 10.1007/s00422-008-0233-1; Crossref API; Semantic Scholar DOI lookup; local private PDF filename check",
+    "added": [
+      "morrison-2008-phenomenological-synaptic-plasticity"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Promoted Morrison, Diesmann, and Gerstner 2008 as the next active STDP background anchor. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, Crossref, and Semantic Scholar."
   }
 ]

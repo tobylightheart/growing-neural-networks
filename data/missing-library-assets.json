@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-03",
+  "updated": "2026-07-04",
   "library_root": "../growing-neural-networks-library",
   "purpose": "Bundle-first wanted list for papers that are high-value review targets but do not currently have an obvious matching local PDF in the private library. This file intentionally tracks wanted assets before they become formal paper records in data/papers.json.",
   "status_values": {
@@ -32,27 +32,7 @@
       "priority": "high",
       "thesis_anchor": "Chapter 2 literature review and the STDP-dependent experimental chapters of /workspace/thesis-constructive-spiking.",
       "rationale": "These papers are not necessarily constructive algorithms themselves, but they provide the STDP mechanism background needed to keep spiking construction reviews accurate and well-grounded.",
-      "wanted_assets": [
-        {
-          "paper_id_suggestion": "morrison-2008-phenomenological-synaptic-plasticity",
-          "citation_key": "Morrison2008",
-          "title": "Phenomenological models of synaptic plasticity based on spike timing",
-          "authors": [
-            "Abigail Morrison",
-            "Markus Diesmann",
-            "Wulfram Gerstner"
-          ],
-          "year": 2008,
-          "venue": "Biological Cybernetics",
-          "doi": "10.1007/s00422-008-0233-1",
-          "access_hint": "unknown",
-          "priority": "medium",
-          "collection_status": "collected-needs-paper-record",
-          "expected_local_path": "../growing-neural-networks-library/pdfs/Neuroscience/Morrison A, Diesmann M and Gerstner W (2008) - Phenomenological models of synaptic plasticity based on spike timing.pdf",
-          "why_wanted": "Supports accurate discussion of STDP modelling assumptions, especially where the thesis turns timing rules into construction mechanisms.",
-          "bundle_role": "background"
-        }
-      ]
+      "wanted_assets": []
     }
   ],
   "notes": [
@@ -64,6 +44,7 @@
     "Masquelier2008b was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-06-30, so it was removed from this pre-promotion wanted list.",
     "Song2000 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-01, so it was removed from this pre-promotion wanted list.",
     "Legenstein2005 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-02, so it was removed from this pre-promotion wanted list.",
-    "Caporale2008 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-03, so it was removed from this pre-promotion wanted list."
+    "Caporale2008 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-03, so it was removed from this pre-promotion wanted list.",
+    "Morrison2008 was promoted to data/papers.json, data/paper-assets.json, and reviews/ on 2026-07-04, so it was removed from this pre-promotion wanted list."
   ]
 }

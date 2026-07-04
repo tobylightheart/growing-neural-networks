@@ -566,5 +566,59 @@
       "lightheart-2018-constructive-spiking-thesis"
     ],
     "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using wanted-list metadata, Crossref metadata for DOI 10.1146/annurev.neuro.31.060407.125639, Semantic Scholar DOI lookup metadata, and a verified private local PDF path. No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious automated reading guide rather than a human-verified close reading of the PDF."
+  },
+  {
+    "id": "morrison-2008-phenomenological-synaptic-plasticity",
+    "title": "Phenomenological Models of Synaptic Plasticity Based on Spike Timing",
+    "authors": [
+      "Abigail Morrison",
+      "Markus Diesmann",
+      "Wulfram Gerstner"
+    ],
+    "year": 2008,
+    "venue": "Biological Cybernetics 98(6):459-478",
+    "families": [
+      "spiking-neural-networks",
+      "stdp"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "parameter-calculation",
+      "biological-plausibility",
+      "synaptic-selectivity"
+    ],
+    "status": "review-draft",
+    "importance": "background",
+    "summary": "Reviews phenomenological short- and long-term synaptic-plasticity models, especially STDP rules compatible with integrate-and-fire network simulations, and classifies what information such rules can depend on.",
+    "growth_mechanism": "Does not propose structural growth; it provides simulation-oriented STDP model background for synaptic selectivity, parameter updates, and plasticity-rule choices that constructive spiking systems may combine with separate growth or recruitment mechanisms.",
+    "what_grows": [
+      "synaptic-selectivity"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "spiking-neural-networks",
+      "synaptic-plasticity",
+      "simulation"
+    ],
+    "review": "reviews/morrison-2008-phenomenological-synaptic-plasticity.md",
+    "links": {
+      "paper": "https://doi.org/10.1007/s00422-008-0233-1",
+      "doi": "10.1007/s00422-008-0233-1",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/fb73b7aadf39ccb2c64e3dc152c18cd97507f4ee",
+      "pdf": "https://link.springer.com/content/pdf/10.1007/s00422-008-0233-1.pdf"
+    },
+    "discovered_via": [
+      "stdp-hidden-pattern-bundle-2026-07-04"
+    ],
+    "related": [
+      "caporale-2008-stdp-hebbian-learning-rule",
+      "song-2000-competitive-hebbian-stdp",
+      "legenstein-2005-neuron-learn-stdp",
+      "masquelier-2008-repeating-patterns-stdp",
+      "masquelier-2009-competitive-stdp-spike-pattern-learning",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using wanted-list metadata, Crossref metadata for DOI 10.1007/s00422-008-0233-1, Semantic Scholar DOI lookup metadata including the abstract and open-access PDF link, and a verified private local PDF path. No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious automated reading guide rather than a human-verified close reading of the PDF."
   }
 ]

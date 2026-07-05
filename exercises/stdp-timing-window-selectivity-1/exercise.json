@@ -3,7 +3,7 @@
   "title": "When does a timing window grow selectivity?",
   "type": "interactive-timing-window",
   "status": "available",
-  "summary": "Use a simplified STDP timing window to compare predictive, late, and mixed presynaptic spike patterns while keeping structural-growth claims separate from synaptic selectivity.",
+  "summary": "Use a simplified STDP timing window to compare predictive, late, and mixed presynaptic spike patterns while keeping structural-growth claims separate from synaptic selectivity and noting that real STDP model choice is richer than the toy curve.",
   "concepts": [
     "spike-timing-dependent-construction",
     "parameter-calculation",
@@ -16,6 +16,7 @@
     "song-2000-competitive-hebbian-stdp",
     "legenstein-2005-neuron-learn-stdp",
     "caporale-2008-stdp-hebbian-learning-rule",
+    "morrison-2008-phenomenological-synaptic-plasticity",
     "lightheart-2018-constructive-spiking-thesis"
   ],
   "algorithms": [

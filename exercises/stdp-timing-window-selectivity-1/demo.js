@@ -51,6 +51,11 @@ const sources = [
     note: 'Warns that a clean timing curve is a simplification of richer biological STDP contexts.'
   },
   {
+    title: 'Morrison, Diesmann & Gerstner 2008',
+    path: '../../pages/review.html?id=morrison-2008-phenomenological-synaptic-plasticity',
+    note: 'Grounds the model-choice caveat: simulation STDP rules can depend on traces, bounds, and implementation details beyond the toy pair window.'
+  },
+  {
     title: 'Lightheart 2018 thesis synthesis',
     path: '../../pages/review.html?id=lightheart-2018-constructive-spiking-thesis',
     note: 'Provides the constructive-spiking bridge: timing can help parameter calculation for constructed components, but growth triggers remain separate.'
@@ -256,7 +261,7 @@ function checkInterpretation() {
     feedback.textContent = 'Choose an interpretation before checking.';
   } else {
     feedback.className = 'feedback incorrect';
-    feedback.innerHTML = '<strong>Not quite.</strong> The active STDP reviews support timing-based synaptic selectivity, while Caporale2008 and Legenstein2005 add caveats. Do not turn the toy timing curve into a structural-growth proof or a complete biological model.';
+    feedback.innerHTML = '<strong>Not quite.</strong> The active STDP reviews support timing-based synaptic selectivity, while Caporale2008, Morrison2008, and Legenstein2005 add caveats. Do not turn the toy timing curve into a structural-growth proof or a complete biological/simulation model.';
   }
 }
 

@@ -9,6 +9,7 @@ This exercise is a small static artifact for the active STDP bundle. It was crea
 - Song, Miller & Abbott 2000 — competitive Hebbian/STDP selectivity.
 - Legenstein, Naeger & Maass 2005 — single-neuron STDP learnability limits.
 - Caporale & Dan 2008 — biological STDP-rule caveats.
+- Morrison, Diesmann & Gerstner 2008 — phenomenological STDP model choices for simulation.
 - Lightheart thesis synthesis — constructive-spiking bridge and parameter-calculation framing.
 
 ## What it demonstrates
@@ -16,6 +17,8 @@ This exercise is a small static artifact for the active STDP bundle. It was crea
 The page uses a deliberately simplified pair-based STDP timing window. Learners move presynaptic spike times around a postsynaptic spike and compare the net potentiation/depression score.
 
 The core teaching point is conservative: timing-dependent updates can grow **synaptic selectivity** for predictive inputs, but a constructive or growing neural-network algorithm still needs a separate structural trigger or recruitment rule before claiming neuron/synapse growth.
+
+The interface now also calls out Morrison, Diesmann & Gerstner (2008) so the simplified curve is framed as one teaching sketch among many phenomenological STDP model choices, not as the only biologically or simulation-valid rule.
 
 ## Static no-build pattern
 

@@ -305,7 +305,7 @@
     "links": {
       "paper": "https://doi.org/10.1162/neco.2008.06-08-804",
       "doi": "10.1162/neco.2008.06-08-804",
-      "semantic_scholar": "",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/80b01ba81ac71d574a761f85682d6d3f8014685e",
       "pdf": ""
     },
     "discovered_via": [
@@ -315,7 +315,7 @@
       "masquelier-2008-repeating-patterns-stdp",
       "lightheart-2018-constructive-spiking-thesis"
     ],
-    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using existing bundle/wanted-list metadata, MIT Press DOI landing-page metadata, DBLP bibliographic metadata, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
+    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using existing bundle/wanted-list metadata, MIT Press DOI landing-page metadata, DBLP bibliographic metadata, and a verified private local PDF path. Improved on 2026-07-05 with Crossref abstract metadata and a Semantic Scholar DOI lookup URL; Semantic Scholar reports the publisher-elided abstract as unavailable through its API. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
   },
   {
     "id": "schliebs-2013-evolving-spiking-survey",

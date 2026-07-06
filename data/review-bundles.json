@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-04",
+  "updated": "2026-07-06",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -110,14 +110,14 @@
           "citation_key": "Kasabov2013",
           "title": "Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition",
           "role": "anchor",
-          "asset_status": "available-in-library"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "wang-2014-adaptive-structure-snn",
           "citation_key": "Wang2014",
           "title": "Online supervised learning for spiking neural networks with adaptive structure",
           "role": "anchor",
-          "asset_status": "available-in-library"
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "roy-2017-online-structural-plasticity-snn",
@@ -129,7 +129,8 @@
       ],
       "next_actions": [
         "Keep the active STDP bundle first; use Schliebs2013 as the first eSNN survey review when the loop branches to evolving spiking networks.",
-        "Use Wysoski2010 as the application anchor after the Schliebs survey review, with Kasabov2013 still deferred as a later eSNN/deSNN detail review."
+        "Use Wysoski2010 as the application anchor after the Schliebs survey review, with Kasabov2013 still deferred as a later eSNN/deSNN detail review.",
+        "Kasabov2013 and Wang2014 now have conservative discovered paper records with verified private PDF paths; review Schliebs2013/Wysoski2010 first, then use these as later eSNN/deSNN detail reviews."
       ],
       "planned_outputs": [
         "eSNN/STDC lineage synthesis",

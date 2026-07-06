@@ -620,5 +620,105 @@
       "lightheart-2018-constructive-spiking-thesis"
     ],
     "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using wanted-list metadata, Crossref metadata for DOI 10.1007/s00422-008-0233-1, Semantic Scholar DOI lookup metadata including the abstract and open-access PDF link, and a verified private local PDF path. No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious automated reading guide rather than a human-verified close reading of the PDF."
+  },
+  {
+    "id": "kasabov-2013-dynamic-evolving-spiking",
+    "title": "Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition",
+    "authors": [
+      "Nikola Kasabov",
+      "Kedar Dhoble",
+      "Nuttapod Nuntalid",
+      "Giacomo Indiveri"
+    ],
+    "year": 2013,
+    "venue": "Neural Networks (bibliographic details pending verification)",
+    "families": [
+      "spiking-constructive-learning",
+      "evolving-spiking-neural-networks"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "structural-plasticity",
+      "growth-trigger"
+    ],
+    "status": "discovered",
+    "importance": "notable",
+    "summary": "Bundle-backed eSNN/deSNN candidate for on-line spatio- and spectro-temporal pattern recognition. A private local PDF filename match exists, but DOI, page range, and mechanism details still need a focused review pass.",
+    "growth_mechanism": "Deferred for review: bundle metadata and the local filename indicate an evolving spiking-network method, but this sync records only asset-backed candidate metadata pending bibliographic and full-text verification.",
+    "what_grows": [
+      "spiking-network-structure"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "spiking-neural-networks",
+      "online-learning",
+      "spatio-temporal-pattern-recognition"
+    ],
+    "links": {
+      "paper": "",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "weekly-bundle-sync-2026-07-06"
+    ],
+    "related": [
+      "schliebs-2013-evolving-spiking-survey",
+      "wysoski-2010-evolving-spiking-audiovisual",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Needs DOI/venue/page verification and a public automated review before detailed claims are made."
+  },
+  {
+    "id": "wang-2014-adaptive-structure-snn",
+    "title": "An online supervised learning method for spiking neural networks with adaptive structure",
+    "authors": [
+      "Jian Wang",
+      "Ammar Belatreche",
+      "Liam P. Maguire",
+      "Thomas M. McGinnity"
+    ],
+    "year": 2014,
+    "venue": "Bibliographic details pending verification",
+    "families": [
+      "spiking-constructive-learning",
+      "evolving-spiking-neural-networks"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "spike-timing-dependent-construction",
+      "structural-plasticity",
+      "growth-trigger"
+    ],
+    "status": "discovered",
+    "importance": "notable",
+    "summary": "Bundle-backed candidate on online supervised spiking learning with adaptive structure. A private local PDF filename match exists, but bibliographic details and algorithmic claims still need a focused review pass.",
+    "growth_mechanism": "Deferred for review: the title and bundle role indicate adaptive spiking-network structure, but this sync records only asset-backed candidate metadata pending bibliographic and full-text verification.",
+    "what_grows": [
+      "spiking-network-structure"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "supervised",
+      "spiking-neural-networks",
+      "online-learning"
+    ],
+    "links": {
+      "paper": "",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "weekly-bundle-sync-2026-07-06"
+    ],
+    "related": [
+      "schliebs-2013-evolving-spiking-survey",
+      "kasabov-2013-dynamic-evolving-spiking",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Needs DOI/venue/page verification and a public automated review before detailed claims are made."
   }
 ]

@@ -142,5 +142,29 @@
     "source_url": "https://doi.org/10.1007/s00422-008-0233-1",
     "last_checked": "2026-07-04",
     "notes": "Private local PDF path verified during cron promotion. No pdftotext, pypdf, PyPDF2, pdfminer, or fitz extraction tooling was available in the cron environment, so no extracted text was committed; review draft is grounded in bundle metadata, Crossref metadata, and Semantic Scholar DOI metadata/abstract."
+  },
+  {
+    "paper_id": "kasabov-2013-dynamic-evolving-spiking",
+    "pdf_status": "collected",
+    "text_status": "missing",
+    "access": "unknown",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive_Spiking/Kasabov N, Dhoble K, Nuntalid N and Indiveri G (2013) - Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/kasabov-2013-dynamic-evolving-spiking.md",
+    "source_url": "",
+    "last_checked": "2026-07-06",
+    "notes": "Private local PDF path verified by the weekly bundle-aware discovery/library-sync job. No public review or extracted text has been added yet; bibliographic details remain conservative pending a focused review pass."
+  },
+  {
+    "paper_id": "wang-2014-adaptive-structure-snn",
+    "pdf_status": "collected",
+    "text_status": "missing",
+    "access": "unknown",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive_Spiking/Wang J, Belatreche A, Maguire L, McGinnity T M (2014) - An online supervised learning method for spiking neural networks with adaptive structure.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/wang-2014-adaptive-structure-snn.md",
+    "source_url": "",
+    "last_checked": "2026-07-06",
+    "notes": "Private local PDF path verified by the weekly bundle-aware discovery/library-sync job. No public review or extracted text has been added yet; bibliographic details remain conservative pending a focused review pass."
   }
 ]

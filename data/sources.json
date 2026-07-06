@@ -131,5 +131,19 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Promoted Morrison, Diesmann, and Gerstner 2008 as the next active STDP background anchor. Local private PDF path was verified, but local text extraction tooling was unavailable in the cron environment; public metadata came from the existing bundle/wanted-list records, Crossref, and Semantic Scholar."
+  },
+  {
+    "id": "weekly-bundle-sync-2026-07-06",
+    "source": "bundle-aware-library-sync",
+    "date": "2026-07-06",
+    "description": "Weekly bundle-aware discovery and private-library sync for existing review bundles.",
+    "query": "Ran scripts/check_missing_library_assets.py, then focused local library filename searches for Kasabov2013 and Wang2014 within existing evolving-spiking-networks bundle anchors.",
+    "added": [
+      "kasabov-2013-dynamic-evolving-spiking",
+      "wang-2014-adaptive-structure-snn"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Added exactly two conservative candidate records for the high-priority evolving-spiking-networks bundle with matching private PDF asset records. No broad library ingest was performed. Deferred candidates from the larger Kasabov filename set were left as notes only because they are not current bundle anchors."
   }
 ]

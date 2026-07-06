@@ -4,7 +4,7 @@
 
 ## Review status
 
-Automated bundle-first draft for the `stdp-hidden-pattern-construction` bundle. It is grounded in the existing bundle and wanted-asset metadata, the DOI/PLOS landing-page metadata for DOI `10.1371/journal.pone.0001377`, a Semantic Scholar exact-title result, and a verified private local PDF path under `../growing-neural-networks-library/`. The cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), so this should be treated as a cautious reading guide rather than a full close reading of the PDF.
+Automated bundle-first draft for the `stdp-hidden-pattern-construction` bundle. It is grounded in the existing bundle and wanted-asset metadata, the DOI/PLOS landing-page metadata for DOI `10.1371/journal.pone.0001377`, Crossref metadata, Semantic Scholar DOI metadata including the indexed abstract/TLDR and open-access PDF pointer, and a verified private local PDF path under `../growing-neural-networks-library/`. This improvement pass was selected because the active STDP bundle has no remaining unpromoted collected anchors, while this first Masquelier review could still be strengthened with public Crossref/Semantic Scholar metadata. The cron environment still did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), so this should be treated as a cautious reading guide rather than a full close reading of the PDF.
 
 ## One-sentence summary
 
@@ -18,17 +18,19 @@ That mechanism is useful background for later claims about spike-timing-dependen
 
 ## Bibliographic metadata checked
 
-- Citation from DOI/PLOS metadata: Timothée Masquelier, Rudy Guyonneau, and Simon J. Thorpe, "Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains," *PLOS ONE* 3(1): e1377, 2008.
+- Citation from DOI/PLOS/Crossref metadata: Timothée Masquelier, Rudy Guyonneau, and Simon J. Thorpe, "Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains," *PLOS ONE* 3(1): e1377, 2008.
 - DOI: `10.1371/journal.pone.0001377`.
-- Publication date listed by PLOS: January 2, 2008.
-- Semantic Scholar exact-title result found for the paper.
+- Publication date listed by PLOS/Crossref/Semantic Scholar: January 2, 2008.
+- Crossref indexes the article as a PLOS journal article with page/article number `e1377`, volume `3`, issue `1`, publisher Public Library of Science, and a CC BY 4.0 license URL.
+- Semantic Scholar DOI lookup resolves to paper ID `3724cdcd0b506384c5e8841acabad1b6ef9ec107`, with PubMed ID `18167538`, PubMed Central ID `2147052`, CorpusId `6309804`, and an open-access PDF URL at PLOS.
+- Semantic Scholar's indexed abstract and TLDR were available and used for the mechanism wording below; this remains public metadata grounding, not a substitute for a human full-text verification pass.
 - Private library PDF path verified, but the PDF and extracted full text were not copied into Git.
 
 ## Core idea
 
 The reviewed problem is deliberately difficult for rate-based or onset-triggered explanations. A repeating spatio-temporal pattern is embedded in ongoing spike trains, and the surrounding distractor activity has comparable density. The useful signal is therefore not a simple increase in population firing rate or an externally marked stimulus onset; it is the repeated timing structure itself.
 
-The paper's central claim, as reported by the DOI/PLOS metadata, is that STDP can make a single leaky integrate-and-fire neuron localize the start of that repeated pattern. Synapses that tend to fire shortly before the postsynaptic response are potentiated, while less predictive or later-timed synapses are weakened. Over learning, the neuron becomes driven by the earliest reliable part of the pattern and its response shifts toward the pattern onset.
+The paper's central claim, as supported by the DOI/PLOS metadata and Semantic Scholar's indexed abstract, is that STDP can make a single leaky integrate-and-fire neuron localize the start of that repeated pattern. The abstract frames this as an extension of earlier "early spike pattern" learning results into a continuous regime where afferents fire continuously at a constant population rate. Synapses that tend to fire shortly before the postsynaptic response are potentiated, while less predictive or later-timed synapses are weakened. Over learning, the neuron becomes driven by the earliest reliable part of the pattern and its response shifts toward the pattern onset.
 
 ## What grows, what changes, and what should not be overstated
 

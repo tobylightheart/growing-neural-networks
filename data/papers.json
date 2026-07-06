@@ -252,7 +252,7 @@
     "links": {
       "paper": "https://doi.org/10.1371/journal.pone.0001377",
       "doi": "10.1371/journal.pone.0001377",
-      "semantic_scholar": "https://www.semanticscholar.org/paper/Spike-Timing-Dependent-Plasticity-Finds-the-Start-Masquelier-Guyonneau/3724cdcd0b506384c5e8841acabad1b6ef9ec107",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/3724cdcd0b506384c5e8841acabad1b6ef9ec107",
       "pdf": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0001377&type=printable"
     },
     "discovered_via": [
@@ -262,7 +262,7 @@
       "masquelier-2009-competitive-stdp-spike-pattern-learning",
       "lightheart-2018-constructive-spiking-thesis"
     ],
-    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using the existing bundle metadata, DOI/PLOS landing-page metadata, Semantic Scholar search result, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading."
+    "notes": "Promoted from the active stdp-hidden-pattern-construction review bundle using the existing bundle metadata, DOI/PLOS landing-page metadata, Semantic Scholar search result, and a verified private local PDF path. No reliable local text-extraction tool was available in this cron environment, so the review is a cautious automated reading guide rather than a full human-verified close reading. Improved on 2026-07-06 with Crossref metadata and Semantic Scholar DOI metadata including the indexed abstract/TLDR, PubMed/PubMed Central identifiers, and open-access PLOS PDF pointer; local PDF text extraction still unavailable, so detailed claims remain cautious."
   },
   {
     "id": "masquelier-2009-competitive-stdp-spike-pattern-learning",

@@ -39,6 +39,8 @@ Current cautious STDP synthesis axis: distinguish **constructive growth of struc
 
 The daily review sequence has now started with Schliebs and Kasabov 2013 as the eSNN survey anchor. The next review should use Wysoski, Benuskova, and Kasabov 2010 as an application anchor, before using Kasabov et al. 2013 and Wang et al. 2014 as more detailed eSNN/deSNN or adaptive-structure reviews.
 
+Active-bundle synthesis guardrail: Schliebs2013 is enough for a cautious `evolving-spiking-network-lineage` metadata bridge that names the eSNN/STDC lineage and points back to the thesis taxonomy, but it is not yet enough for detailed claims about individual Wysoski2010, Kasabov2013, Wang2014, or Roy2017 growth rules. Keep those method details as review tasks until each anchor has a public review draft.
+
 ## Bundle list
 
 ### 1. STDP, hidden spike patterns, and constructive synapse initialization

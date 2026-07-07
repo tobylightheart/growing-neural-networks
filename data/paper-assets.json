@@ -74,14 +74,14 @@
   {
     "paper_id": "schliebs-2013-evolving-spiking-survey",
     "pdf_status": "collected",
-    "text_status": "missing",
-    "access": "unknown",
+    "text_status": "extraction-failed",
+    "access": "publisher-gated",
     "local_private_only": true,
     "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive_Spiking/Schliebs S and Kasabov N (2013) - Evolving spiking neural network--A survey.pdf",
     "text_local_path": "../growing-neural-networks-library/text/schliebs-2013-evolving-spiking-survey.md",
-    "source_url": "",
-    "last_checked": "2026-06-29",
-    "notes": "Private local PDF path verified by the weekly bundle-aware discovery/library-sync job. No public review or extracted text has been added yet; bibliographic details remain conservative pending a focused review pass."
+    "source_url": "https://doi.org/10.1007/s12530-013-9074-9",
+    "last_checked": "2026-07-07",
+    "notes": "Private local PDF path verified during bundle-first review drafting. Springer landing-page metadata exposes the DOI, bibliographic details, abstract, and PDF URL, but this cron environment had no usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz`), so no extracted text was committed and the review remains a cautious reading guide."
   },
   {
     "paper_id": "wysoski-2010-evolving-spiking-audiovisual",

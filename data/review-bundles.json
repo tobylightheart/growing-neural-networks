@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -18,14 +18,14 @@
     {
       "id": "stdp-hidden-pattern-construction",
       "title": "STDP, hidden spike patterns, and constructive synapse initialization",
-      "priority": "urgent",
-      "status": "active",
+      "priority": "high",
+      "status": "seeded",
       "thesis_anchors": [
         "Chapter 3 simulation and STDP context",
         "Chapter 6 hidden spike-pattern detection",
         "Chapter 7 competitive spike-pattern learning"
       ],
-      "rationale": "This bundle is the most thesis-aligned near-term branch. The key Masquelier and STDP background PDFs are now collected in the private Neuroscience library folder, so the review loop can promote grounded papers one at a time.",
+      "rationale": "This thesis-aligned branch completed its first six-anchor review milestone. Keep it warm for bounded synthesis and teaching follow-up, but do not prefer it over the next structural/eSNN review branch merely because it was the first active bundle.",
       "anchor_papers": [
         {
           "paper_id": "masquelier-2008-repeating-patterns-stdp",
@@ -72,7 +72,7 @@
       ],
       "next_actions": [
         "Use the Masquelier2008/Masquelier2009/Song2000/Legenstein2005/Caporale2008/Morrison2008 reviews as a limited metadata bridge for synaptic selectivity, timing-based competition, single-neuron STDP learnability limits, biological STDP-rule caveats, and simulation-oriented phenomenological STDP model choices, while keeping public synthesis claims cautious and explicitly separate from structural neuron-growth claims.",
-        "The timing-window exercise and stdp-hidden-pattern-learning metadata now point at the completed six-review STDP background run; the next synthesis pass should either add a concise public synthesis note or branch to the next high-priority seeded bundle.",
+        "The timing-window exercise and stdp-hidden-pattern-learning metadata now point at the completed six-review STDP background run; the next synthesis pass should add a concise public synthesis note when needed, while daily review work branches to evolving-spiking-networks.",
         "Keep thesis-derived claims cautious until the corresponding paper review exists."
       ],
       "planned_outputs": [
@@ -84,12 +84,12 @@
     {
       "id": "evolving-spiking-networks",
       "title": "Evolving spiking networks and spike-timing-dependent construction",
-      "priority": "high",
-      "status": "planned",
+      "priority": "urgent",
+      "status": "active",
       "thesis_anchors": [
         "Chapter 2 literature review: spike-timing-dependent construction and evolving SNNs"
       ],
-      "rationale": "This bundle turns the thesis literature-review spine into public reviews around eSNN/deSNN/STDC methods before broader synthesis.",
+      "rationale": "This bundle turns the thesis literature-review spine into public reviews around eSNN/deSNN/STDC methods before broader synthesis. It is now the active review branch because the initial STDP six-anchor milestone is complete and multiple eSNN records have verified private PDF paths.",
       "anchor_papers": [
         {
           "paper_id": "schliebs-2013-evolving-spiking-survey",
@@ -128,9 +128,9 @@
         }
       ],
       "next_actions": [
-        "Keep the active STDP bundle first; use Schliebs2013 as the first eSNN survey review when the loop branches to evolving spiking networks.",
-        "Use Wysoski2010 as the application anchor after the Schliebs survey review, with Kasabov2013 still deferred as a later eSNN/deSNN detail review.",
-        "Kasabov2013 and Wang2014 now have conservative discovered paper records with verified private PDF paths; review Schliebs2013/Wysoski2010 first, then use these as later eSNN/deSNN detail reviews."
+        "Schliebs2013 now has a public automated review draft; use Wysoski2010 as the next eSNN application anchor.",
+        "After Wysoski2010, use Kasabov2013 and Wang2014 as later eSNN/deSNN or adaptive-structure detail reviews.",
+        "Kasabov2013 and Wang2014 now have conservative discovered paper records with verified private PDF paths; review Wysoski2010 next, then use Kasabov2013/Wang2014 as later eSNN/deSNN detail reviews."
       ],
       "planned_outputs": [
         "eSNN/STDC lineage synthesis",

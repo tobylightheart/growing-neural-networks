@@ -1,6 +1,6 @@
 # PDF Library Review Plan
 
-Updated: 2026-06-28
+Updated: 2026-07-07
 
 This project now uses a bundle-first content loop. The private paper library is large enough that adding paper records one-by-one without a topic plan would make the public site noisy. Bundles define the order in which papers should be promoted from the private library into public metadata, reviews, synthesis notes, modules, and exercises.
 
@@ -14,17 +14,17 @@ Private PDFs remain outside Git under `/workspace/growing-neural-networks-librar
 
 ## Current priority
 
-The active bundle is:
+The active review bundle is now:
 
-1. `stdp-hidden-pattern-construction`
+1. `evolving-spiking-networks`
 
 Why this first:
 
-- It is highly aligned with the thesis chapters on hidden spike-pattern detection and competitive STDP learning.
-- The previously missing STDP PDFs have now been added under `../growing-neural-networks-library/pdfs/Neuroscience/`.
-- It gives the site a thesis-grounded spiking branch rather than repeatedly polishing the small existing public paper set.
+- The first six-anchor STDP review milestone is complete, so that bundle should stay warm for bounded synthesis and exercises rather than continue to monopolize daily review work.
+- Multiple eSNN/STDC anchors now have public paper records plus verified private PDF paths under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`.
+- This branch moves the review from STDP-as-synaptic-selectivity background toward explicitly evolving or adaptive spiking-network structure.
 
-The first promotion sequence should be:
+The completed STDP promotion sequence was:
 
 1. Masquelier, Guyonneau, and Thorpe 2008 — repeating patterns in continuous spike trains.
 2. Masquelier, Guyonneau, and Thorpe 2009 — competitive STDP-based spike-pattern learning.
@@ -35,15 +35,17 @@ The first promotion sequence should be:
 
 The promoted Masquelier2008, Masquelier2009, Song2000, Legenstein2005, Caporale2008, and Morrison2008 review drafts now support a limited metadata bridge: STDP can be discussed as growing synaptic selectivity for hidden temporal patterns; the 2009 competitive setup can be discussed as fixed-pool differentiation rather than neuron growth; Song2000 grounds the competitive Hebbian/STDP background; Legenstein2005 adds a caution about what one STDP-equipped neuron can learn; Caporale2008 keeps the site from reducing biological STDP to a single simple timing-window rule; and Morrison2008 grounds simulation-oriented phenomenological STDP model choices. The first timing-window exercise can use this bridge, but broader structural-growth claims still need a public review of a method that actually adds or removes neurons/synapses.
 
-Current cautious synthesis axis: distinguish **constructive growth of structure** from **STDP growth of selectivity**. The active bundle has enough public draft material to link the six promoted STDP papers in metadata and teaching artifacts, but not enough yet to claim a reviewed structural-growth mechanism for STDP hidden-pattern construction.
+Current cautious STDP synthesis axis: distinguish **constructive growth of structure** from **STDP growth of selectivity**. The STDP bundle has enough public draft material to link the six promoted STDP papers in metadata and teaching artifacts, but not enough yet to claim a reviewed structural-growth mechanism for STDP hidden-pattern construction.
+
+The daily review sequence has now started with Schliebs and Kasabov 2013 as the eSNN survey anchor. The next review should use Wysoski, Benuskova, and Kasabov 2010 as an application anchor, before using Kasabov et al. 2013 and Wang et al. 2014 as more detailed eSNN/deSNN or adaptive-structure reviews.
 
 ## Bundle list
 
 ### 1. STDP, hidden spike patterns, and constructive synapse initialization
 
 ID: `stdp-hidden-pattern-construction`
-Priority: urgent
-Status: active
+Priority: high
+Status: seeded
 
 Role:
 
@@ -63,8 +65,8 @@ Immediate anchors:
 ### 2. Evolving spiking networks and STDC/eSNN methods
 
 ID: `evolving-spiking-networks`
-Priority: high
-Status: planned
+Priority: urgent
+Status: active
 
 Role:
 

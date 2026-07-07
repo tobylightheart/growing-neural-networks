@@ -145,5 +145,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Added exactly two conservative candidate records for the high-priority evolving-spiking-networks bundle with matching private PDF asset records. No broad library ingest was performed. Deferred candidates from the larger Kasabov filename set were left as notes only because they are not current bundle anchors."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-07",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-07",
+    "description": "Daily bundle-first review promotion for the evolving-spiking-networks bundle after the initial STDP review milestone was completed.",
+    "query": "data/review-bundles.json evolving-spiking-networks; DOI 10.1007/s12530-013-9074-9; Crossref API; Springer DOI landing page; local private PDF filename check; Semantic Scholar DOI lookup attempted but rate-limited",
+    "added": [
+      "schliebs-2013-evolving-spiking-survey"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Drafted the Schliebs and Kasabov 2013 survey review from the active eSNN bundle. Local private PDF path was verified, but local PDF text-extraction tooling was unavailable in the cron environment; public metadata came from Crossref and Springer landing-page metadata."
   }
 ]

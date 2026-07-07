@@ -319,13 +319,13 @@
   },
   {
     "id": "schliebs-2013-evolving-spiking-survey",
-    "title": "Evolving Spiking Neural Network — A Survey",
+    "title": "Evolving spiking neural network—a survey",
     "authors": [
       "Stefan Schliebs",
       "Nikola Kasabov"
     ],
     "year": 2013,
-    "venue": "Evolving Systems",
+    "venue": "Evolving Systems 4(2):87-98",
     "families": [
       "spiking-constructive-learning",
       "evolving-spiking-neural-networks"
@@ -336,10 +336,10 @@
       "structural-plasticity",
       "growth-trigger"
     ],
-    "status": "discovered",
+    "status": "review-draft",
     "importance": "survey-anchor",
-    "summary": "Survey anchor for the evolving spiking neural-network bundle; local library discovery confirms a collected PDF, but bibliographic details and mechanism claims still need a focused review pass.",
-    "growth_mechanism": "Deferred for review: expected to survey evolving spiking neural-network construction and adaptation mechanisms rather than introduce one verified growth rule in this metadata-only sync.",
+    "summary": "Surveys the evolving Spiking Neural Network (eSNN) architecture, its relation to the ECoS paradigm, extensions for spatio-temporal data, feature/parameter optimisation, applications, and open problems.",
+    "growth_mechanism": "Surveys eSNN as an evolving spiking-network architecture rather than adding one newly verified growth rule in this review pass; use as lineage and terminology grounding before making detailed algorithm claims from later method papers.",
     "what_grows": [
       "neurons",
       "synapses",
@@ -347,22 +347,29 @@
     ],
     "what_freezes": [],
     "learning_setting": [
-      "spiking-neural-networks"
+      "spiking-neural-networks",
+      "online-learning",
+      "survey"
     ],
+    "review": "reviews/schliebs-2013-evolving-spiking-survey.md",
     "links": {
-      "paper": "",
-      "doi": "",
+      "paper": "https://doi.org/10.1007/s12530-013-9074-9",
+      "doi": "10.1007/s12530-013-9074-9",
       "semantic_scholar": "",
-      "pdf": ""
+      "pdf": "https://link.springer.com/content/pdf/10.1007/s12530-013-9074-9.pdf"
     },
     "discovered_via": [
-      "weekly-bundle-sync-2026-06-29"
+      "weekly-bundle-sync-2026-06-29",
+      "evolving-spiking-bundle-2026-07-07"
     ],
     "related": [
+      "wysoski-2010-evolving-spiking-audiovisual",
+      "kasabov-2013-dynamic-evolving-spiking",
+      "wang-2014-adaptive-structure-snn",
       "lightheart-2018-constructive-spiking-thesis",
       "masquelier-2008-repeating-patterns-stdp"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Needs DOI/venue/page verification and a public automated review before detailed claims are made."
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-07 verified DOI, journal, volume/issue/pages, authors, Springer landing-page abstract, Crossref metadata, and the private PDF path. Semantic Scholar DOI lookup was attempted but rate-limited (HTTP 429). No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious reading guide rather than a full human-verified close reading."
   },
   {
     "id": "wysoski-2010-evolving-spiking-audiovisual",

@@ -62,6 +62,27 @@ const sources = [
   }
 ];
 
+const claimChecks = [
+  {
+    label: 'Supported by current reviews',
+    verdict: 'Timing can increase synaptic selectivity for predictive afferents.',
+    detail: 'Masquelier2008, Song2000, and the follow-up competitive STDP review give enough public grounding for a selectivity exercise, especially when the score is framed as a toy teaching signal.',
+    tone: 'supported'
+  },
+  {
+    label: 'Use as a caveat',
+    verdict: 'A pair-based curve is only one simplified STDP sketch.',
+    detail: 'Caporale2008 and Morrison2008 are included to remind readers that biological and simulation STDP rules may use traces, bounds, state variables, and model-specific choices.',
+    tone: 'caution'
+  },
+  {
+    label: 'Not yet supported by this artifact',
+    verdict: 'Do not claim that the timing window itself adds neurons or synapses.',
+    detail: 'The constructive-spiking thesis bridge allows timing-dependent parameter calculation, but structural growth still needs a separate trigger, recruitment step, or reviewed adaptive-structure method.',
+    tone: 'blocked'
+  }
+];
+
 const state = {
   times: [...scenarios[0].times]
 };
@@ -75,6 +96,7 @@ const ctx = canvas.getContext('2d');
 const feedback = document.querySelector('#feedback');
 const interpretation = document.querySelector('#interpretation');
 const sourceHost = document.querySelector('#source-links');
+const claimHost = document.querySelector('#claim-cards');
 
 function stdp(deltaT) {
   if (deltaT < 0) return aPlus * Math.exp(deltaT / tauPlus);
@@ -129,6 +151,14 @@ function renderSources() {
     <h3>${source.title}</h3>
     <p>${source.note}</p>
     <a href="${source.path}">Open review</a>
+  </article>`).join('');
+}
+
+function renderClaimChecks() {
+  claimHost.innerHTML = claimChecks.map(claim => `<article class="claim-card ${claim.tone}">
+    <span>${claim.label}</span>
+    <h3>${claim.verdict}</h3>
+    <p>${claim.detail}</p>
   </article>`).join('');
 }
 
@@ -278,6 +308,7 @@ function reset() {
 renderScenarios();
 renderSliders();
 renderSources();
+renderClaimChecks();
 update();
 document.querySelector('#check-answer').addEventListener('click', checkInterpretation);
 document.querySelector('#reset-answer').addEventListener('click', reset);

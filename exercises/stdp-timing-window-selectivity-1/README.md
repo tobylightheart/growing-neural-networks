@@ -20,6 +20,8 @@ The core teaching point is conservative: timing-dependent updates can grow **syn
 
 The interface now also calls out Morrison, Diesmann & Gerstner (2008) so the simplified curve is framed as one teaching sketch among many phenomenological STDP model choices, not as the only biologically or simulation-valid rule.
 
+The 2026-07-08 refinement adds a claim-checker panel. It makes the bundle readiness decision visible in the artifact itself: selectivity claims are supported by the STDP review set, biological/simulation details are caveated by review papers, and structural-growth claims remain blocked unless paired with a separate constructive trigger or recruitment rule.
+
 ## Static no-build pattern
 
 Files:

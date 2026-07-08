@@ -147,9 +147,20 @@ canvas {
   margin-top: 1.25rem;
 }
 
+.claim-panel {
+  margin-top: 1.25rem;
+}
+
 .source-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.claim-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
   margin-top: 1rem;
 }
@@ -173,6 +184,43 @@ canvas {
   font-weight: 700;
 }
 
+.claim-card {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel) 94%, var(--bg));
+}
+
+.claim-card span {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.claim-card h3 {
+  margin: 0 0 0.6rem;
+}
+
+.claim-card p {
+  color: var(--muted);
+}
+
+.claim-card.supported {
+  border-top: 5px solid var(--accent);
+}
+
+.claim-card.caution {
+  border-top: 5px solid var(--accent-2);
+}
+
+.claim-card.blocked {
+  border-top: 5px solid var(--ink);
+}
+
 @media (max-width: 920px) {
   .exercise-hero,
   .exercise-layout,
@@ -181,6 +229,10 @@ canvas {
   }
 
   .source-links {
+    grid-template-columns: 1fr;
+  }
+
+  .claim-cards {
     grid-template-columns: 1fr;
   }
 

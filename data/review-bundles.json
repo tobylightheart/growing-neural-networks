@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-07",
+  "updated": "2026-07-08",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -128,9 +128,9 @@
         }
       ],
       "next_actions": [
-        "Schliebs2013 now has a public automated review draft and supports a cautious evolving-spiking-network-lineage metadata bridge; use Wysoski2010 as the next eSNN application anchor before making detailed method claims.",
-        "After Wysoski2010, use Kasabov2013 and Wang2014 as later eSNN/deSNN or adaptive-structure detail reviews.",
-        "Kasabov2013 and Wang2014 now have conservative discovered paper records with verified private PDF paths; review Wysoski2010 next, then use Kasabov2013/Wang2014 as later eSNN/deSNN detail reviews."
+        "Schliebs2013 and Wysoski2010 now have public automated review drafts: use Schliebs2013 for the eSNN survey lineage and Wysoski2010 as a cautious audiovisual application anchor, without overclaiming method details that still need full-text review.",
+        "Review Kasabov2013 next as the dynamic eSNN/deSNN detail anchor, then Wang2014 as the adaptive-structure supervised spiking-network anchor.",
+        "Kasabov2013 and Wang2014 have conservative discovered paper records with verified private PDF paths; keep their detailed growth/adaptation claims pending public review drafts."
       ],
       "planned_outputs": [
         "eSNN/STDC lineage synthesis",

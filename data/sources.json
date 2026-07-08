@@ -158,5 +158,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Drafted the Schliebs and Kasabov 2013 survey review from the active eSNN bundle. Local private PDF path was verified, but local PDF text-extraction tooling was unavailable in the cron environment; public metadata came from Crossref and Springer landing-page metadata."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-08",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-08",
+    "description": "Daily bundle-first review promotion for the evolving-spiking-networks bundle after Schliebs2013 established the eSNN survey anchor.",
+    "query": "data/review-bundles.json evolving-spiking-networks; Crossref title lookup and DOI 10.1016/j.neunet.2010.04.009; local private PDF filename check; embedded PDF metadata via strings; Semantic Scholar lookup attempted but rate-limited",
+    "added": [
+      "wysoski-2010-evolving-spiking-audiovisual"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Drafted the Wysoski, Benuskova, and Kasabov 2010 audiovisual information-processing review from the active eSNN bundle. Local private PDF path was verified, but local PDF text-extraction tooling was unavailable in the cron environment; public metadata came from Crossref, and embedded PDF metadata confirmed the title/authors."
   }
 ]

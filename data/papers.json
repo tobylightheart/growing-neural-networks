@@ -375,12 +375,12 @@
     "id": "wysoski-2010-evolving-spiking-audiovisual",
     "title": "Evolving spiking neural networks for audiovisual information processing",
     "authors": [
-      "Szymon G. Wysoski",
+      "Simei Gomes Wysoski",
       "Lubica Benuskova",
       "Nikola Kasabov"
     ],
     "year": 2010,
-    "venue": "Neural Networks",
+    "venue": "Neural Networks 23(7):819-835",
     "families": [
       "spiking-constructive-learning",
       "evolving-spiking-neural-networks"
@@ -391,10 +391,10 @@
       "structural-plasticity",
       "growth-trigger"
     ],
-    "status": "discovered",
+    "status": "review-draft",
     "importance": "notable",
-    "summary": "Application anchor for the evolving spiking-network bundle; local library discovery confirms a collected PDF for a future focused review on adaptive audiovisual processing.",
-    "growth_mechanism": "Deferred for review: bundle metadata identifies the paper as an eSNN anchor, but this sync records only asset-backed candidate metadata pending bibliographic and full-text verification.",
+    "summary": "Application anchor for the evolving spiking-network bundle; Crossref verifies the Neural Networks article and a private local PDF path is available, but full-text extraction remains unavailable in cron so mechanism details are kept cautious.",
+    "growth_mechanism": "Pending close review: treated as an eSNN-family audiovisual information-processing application anchor, but exact construction/adaptation rules are not asserted until reliable full-text or human review is available.",
     "what_grows": [
       "spiking-network-structure"
     ],
@@ -405,19 +405,23 @@
       "audiovisual-pattern-recognition"
     ],
     "links": {
-      "paper": "",
-      "doi": "",
+      "paper": "https://doi.org/10.1016/j.neunet.2010.04.009",
+      "doi": "10.1016/j.neunet.2010.04.009",
       "semantic_scholar": "",
       "pdf": ""
     },
     "discovered_via": [
-      "weekly-bundle-sync-2026-06-29"
+      "weekly-bundle-sync-2026-06-29",
+      "evolving-spiking-bundle-2026-07-08"
     ],
     "related": [
       "schliebs-2013-evolving-spiking-survey",
+      "kasabov-2013-dynamic-evolving-spiking",
+      "wang-2014-adaptive-structure-snn",
       "lightheart-2018-constructive-spiking-thesis"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Needs DOI/issue/page verification and a public automated review before detailed claims are made."
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-08 verified DOI, journal, volume/issue/pages, authors, a private PDF path, and embedded PDF title/author metadata. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious reading guide rather than a full human-verified close reading.",
+    "review": "reviews/wysoski-2010-evolving-spiking-audiovisual.md"
   },
   {
     "id": "song-2000-competitive-hebbian-stdp",

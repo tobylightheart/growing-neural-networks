@@ -94,6 +94,14 @@ performance evaluation  ->  structural operation  ->  parameter calculation
 
 Later modules can specialize this frame for simulation expansion, STDP windows, proxy-neuron construction, and competitive spike-pattern growth.
 
+## Active bundle bridge: eSNN/STDC lineage
+
+Chapter 2 also gives the current `evolving-spiking-networks` bundle a useful organizing rule: do not treat every spiking or STDP-equipped model as constructive. The thesis frames spike-timing-dependent construction as a narrower case where spike times participate in the constructive process itself, either by supplying variables to performance/parameter calculations or by controlling when constructive steps run. That keeps the active bundle aligned with public review records for Schliebs2013, Wysoski2010, and Kasabov2013 while leaving method-specific details to their own paper reviews.
+
+The same chapter is helpful because it describes eSNN-style algorithms as using a different sequence from classic error-triggered growth. Instead of first observing a global training plateau and then adding capacity, an eSNN-style pass may calculate candidate parameters for the current input first, then decide whether the candidate is distinct enough to become a new neuron or should be merged with an existing one. For the web book, that makes `parameter-calculation`, `local-performance-trigger`, and `pruning-and-merging` the safest thesis-derived themes to use when comparing eSNN/deSNN papers: they name the comparison axis without asserting unreviewed details about Wang2014, Roy2017, or later derivatives.
+
+A cautious reading of the thesis STDC literature list also suggests a bundle boundary. Refractoriness-based construction, eSNN/deSNN derivatives, growing-pruning spiking classifiers, and structural-plasticity algorithms all belong in the broader constructive-spiking map, but they should not be collapsed into one mechanism. The next eSNN synthesis should therefore ask three public-review questions for each anchor: what event or interval runs the constructive process, what candidate parameters are calculated before a structure decision, and what operation distinguishes adding a new component from merging, pruning, or adapting an existing one.
+
 ## Stage 4 integration: simulation expansion/contraction
 
 Chapter 3 adds a useful distinction for constructive spiking simulations: a structural change in a computer model does not always have to be narrated as a biological neuron being instantly born or deleted. The thesis separates the **memory representation** of components from the **simulated set** of components participating in network operation.

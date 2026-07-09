@@ -88,7 +88,7 @@
     "id": "evolving-spiking-network-lineage",
     "name": "Evolving spiking-network lineage",
     "family": "constructive spiking learning",
-    "summary": "A cautious active-bundle bridge for eSNN/STDC material: the reviewed Schliebs and Kasabov survey grounds the lineage and vocabulary of evolving spiking networks, while detailed claims about individual growth rules should wait for the Wysoski2010, Kasabov2013, Wang2014, and Roy2017 reviews.",
+    "summary": "A cautious active-bundle bridge for eSNN/STDC material: Schliebs2013 grounds the lineage and vocabulary of evolving spiking networks, Wysoski2010 provides a reviewed audiovisual application anchor, and Kasabov2013 is now the dynamic eSNN/deSNN detail-review placeholder. Exact growth-rule claims for Kasabov2013, Wang2014, and Roy2017 remain pending close full-text or human review.",
     "themes": [
       "spiking-neural-networks",
       "spike-timing-dependent-construction",
@@ -97,6 +97,8 @@
     ],
     "papers": [
       "schliebs-2013-evolving-spiking-survey",
+      "wysoski-2010-evolving-spiking-audiovisual",
+      "kasabov-2013-dynamic-evolving-spiking",
       "lightheart-2018-constructive-spiking-thesis"
     ]
   },

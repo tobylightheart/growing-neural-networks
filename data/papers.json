@@ -637,12 +637,12 @@
     "title": "Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition",
     "authors": [
       "Nikola Kasabov",
-      "Kedar Dhoble",
+      "Kshitij Dhoble",
       "Nuttapod Nuntalid",
       "Giacomo Indiveri"
     ],
     "year": 2013,
-    "venue": "Neural Networks (bibliographic details pending verification)",
+    "venue": "Neural Networks 41:188-201",
     "families": [
       "spiking-constructive-learning",
       "evolving-spiking-neural-networks"
@@ -653,10 +653,10 @@
       "structural-plasticity",
       "growth-trigger"
     ],
-    "status": "discovered",
+    "status": "review-draft",
     "importance": "notable",
-    "summary": "Bundle-backed eSNN/deSNN candidate for on-line spatio- and spectro-temporal pattern recognition. A private local PDF filename match exists, but DOI, page range, and mechanism details still need a focused review pass.",
-    "growth_mechanism": "Deferred for review: bundle metadata and the local filename indicate an evolving spiking-network method, but this sync records only asset-backed candidate metadata pending bibliographic and full-text verification.",
+    "summary": "Dynamic evolving spiking-neural-network paper for online spatio- and spectro-temporal pattern recognition; this automated draft verifies DOI/bibliographic metadata and local PDF metadata, while leaving algorithmic details for full-text or human review.",
+    "growth_mechanism": "Pending close review: Crossref and PDF metadata identify this as a dynamic evolving spiking-neural-network method, but exact creation/adaptation triggers, dynamic-synapse details, and what structural elements change online should not be asserted until reliable full-text review.",
     "what_grows": [
       "spiking-network-structure"
     ],
@@ -667,20 +667,23 @@
       "spatio-temporal-pattern-recognition"
     ],
     "links": {
-      "paper": "",
-      "doi": "",
-      "semantic_scholar": "",
+      "paper": "https://doi.org/10.1016/j.neunet.2012.11.014",
+      "doi": "10.1016/j.neunet.2012.11.014",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/337878293b38b0db01f32a444b4dc072f0c6fbb8",
       "pdf": ""
     },
     "discovered_via": [
-      "weekly-bundle-sync-2026-07-06"
+      "weekly-bundle-sync-2026-07-06",
+      "evolving-spiking-bundle-2026-07-09"
     ],
     "related": [
       "schliebs-2013-evolving-spiking-survey",
       "wysoski-2010-evolving-spiking-audiovisual",
-      "lightheart-2018-constructive-spiking-thesis"
+      "lightheart-2018-constructive-spiking-thesis",
+      "wang-2014-adaptive-structure-snn"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Needs DOI/venue/page verification and a public automated review before detailed claims are made."
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-09 verified DOI, journal, volume/pages, authors, Semantic Scholar DOI metadata, a private PDF path, and embedded PDF metadata. Local Python PDF text-extraction libraries were unavailable and raw strings exposed only metadata/keywords, so mechanism details remain cautious pending full-text or human review.",
+    "review": "reviews/kasabov-2013-dynamic-evolving-spiking.md"
   },
   {
     "id": "wang-2014-adaptive-structure-snn",

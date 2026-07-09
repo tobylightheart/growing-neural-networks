@@ -1,6 +1,6 @@
 # PDF Library Review Plan
 
-Updated: 2026-07-08
+Updated: 2026-07-09
 
 This project now uses a bundle-first content loop. The private paper library is large enough that adding paper records one-by-one without a topic plan would make the public site noisy. Bundles define the order in which papers should be promoted from the private library into public metadata, reviews, synthesis notes, modules, and exercises.
 
@@ -37,9 +37,9 @@ The promoted Masquelier2008, Masquelier2009, Song2000, Legenstein2005, Caporale2
 
 Current cautious STDP synthesis axis: distinguish **constructive growth of structure** from **STDP growth of selectivity**. The STDP bundle has enough public draft material to link the six promoted STDP papers in metadata and teaching artifacts, but not enough yet to claim a reviewed structural-growth mechanism for STDP hidden-pattern construction.
 
-The daily review sequence has now drafted Schliebs and Kasabov 2013 as the eSNN survey anchor and Wysoski, Benuskova, and Kasabov 2010 as a cautious audiovisual application anchor. The next review should use Kasabov et al. 2013 as the dynamic eSNN/deSNN detail anchor, before using Wang et al. 2014 as the adaptive-structure supervised spiking-network review.
+The daily review sequence has now drafted Schliebs and Kasabov 2013 as the eSNN survey anchor, Wysoski, Benuskova, and Kasabov 2010 as a cautious audiovisual application anchor, and Kasabov et al. 2013 as a cautious dynamic eSNN/deSNN detail-review placeholder. The next review should use Wang et al. 2014 as the adaptive-structure supervised spiking-network review.
 
-Active-bundle synthesis guardrail: Schliebs2013 is enough for a cautious `evolving-spiking-network-lineage` metadata bridge that names the eSNN/STDC lineage and points back to the thesis taxonomy, and Wysoski2010 can now serve as a cautious audiovisual application anchor. It is still not enough for detailed claims about Kasabov2013, Wang2014, or Roy2017 growth rules. Keep those method details as review tasks until each anchor has a public review draft.
+Active-bundle synthesis guardrail: Schliebs2013 is enough for a cautious `evolving-spiking-network-lineage` metadata bridge that names the eSNN/STDC lineage and points back to the thesis taxonomy, Wysoski2010 can serve as a cautious audiovisual application anchor, and Kasabov2013 can be named as the dynamic evolving-spiking detail anchor. It is still not enough for exact algorithm-step claims about Kasabov2013, Wang2014, or Roy2017 growth rules. Keep those method details as review tasks until each anchor has a full-text or human review.
 
 ## Bundle list
 

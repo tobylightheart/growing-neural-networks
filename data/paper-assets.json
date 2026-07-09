@@ -146,14 +146,14 @@
   {
     "paper_id": "kasabov-2013-dynamic-evolving-spiking",
     "pdf_status": "collected",
-    "text_status": "missing",
-    "access": "unknown",
+    "text_status": "extraction-failed",
+    "access": "publisher-gated",
     "local_private_only": true,
     "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive_Spiking/Kasabov N, Dhoble K, Nuntalid N and Indiveri G (2013) - Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition.pdf",
     "text_local_path": "../growing-neural-networks-library/text/kasabov-2013-dynamic-evolving-spiking.md",
-    "source_url": "",
-    "last_checked": "2026-07-06",
-    "notes": "Private local PDF path verified by the weekly bundle-aware discovery/library-sync job. No public review or extracted text has been added yet; bibliographic details remain conservative pending a focused review pass."
+    "source_url": "https://doi.org/10.1016/j.neunet.2012.11.014",
+    "last_checked": "2026-07-09",
+    "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, Neural Networks volume/pages, publication month, and authors; Semantic Scholar DOI metadata matched the record; local PDF embedded metadata includes matching DOI/title/authors and keywords. Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) were unavailable in cron and raw strings exposed only metadata/keywords, so no extracted text was committed and the review remains a cautious reading guide."
   },
   {
     "paper_id": "wang-2014-adaptive-structure-snn",

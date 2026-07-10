@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evolving Spiking Lineage Cards · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar">
+    <a href="../../pages/modules.html">← Modules</a>
+    <a href="../../pages/review.html?id=schliebs-2013-evolving-spiking-survey">Schliebs2013 survey review</a>
+  </header>
+
+  <main class="module-page">
+    <section class="module-hero lineage-hero">
+      <div>
+        <p class="kicker">Active bundle paper cards</p>
+        <h1>Evolving Spiking Lineage Cards</h1>
+        <p>Use four public draft reviews to build a cautious eSNN/STDC lineage map. The goal is not to memorize algorithms; it is to label which claims are ready and which still need full-text or human review.</p>
+      </div>
+      <aside class="score-card" aria-live="polite">
+        <span>selected card role</span>
+        <strong id="role-name">Survey anchor</strong>
+        <small id="role-summary">Grounds vocabulary and lineage before details.</small>
+      </aside>
+    </section>
+
+    <section class="lineage-layout">
+      <div class="panel control-panel">
+        <h2>Paper cards</h2>
+        <p class="meta">Choose a paper to see what the current bundle supports. Caution badges mark details that should remain pending.</p>
+        <div id="paper-buttons" class="paper-buttons" role="tablist" aria-label="Evolving spiking paper cards"></div>
+        <div class="claim-box">
+          <h3 id="paper-title"></h3>
+          <p id="paper-summary"></p>
+          <a id="review-link" href="#">Open review</a>
+        </div>
+      </div>
+
+      <div class="panel visual-panel">
+        <canvas id="lineage-canvas" width="1040" height="650" aria-label="Evolving spiking network lineage card map"></canvas>
+      </div>
+    </section>
+
+    <section class="panel readiness-panel">
+      <h2>What is ready to teach?</h2>
+      <div class="readiness-grid" id="readiness-grid"></div>
+    </section>
+
+    <section class="panel guardrail-panel">
+      <h2>Bundle guardrail</h2>
+      <p>The active bundle has enough public draft reviews for a paper-card bridge: Schliebs2013 supplies the lineage vocabulary, Wysoski2010 provides an application anchor, Kasabov2013 names the dynamic eSNN/deSNN detail slot, and Wang2014 names the supervised adaptive-structure slot. It is still too early to present exact construction, pruning, or adaptation triggers as verified algorithm steps.</p>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.module-topbar'));
+  </script>
+</body>
+</html>

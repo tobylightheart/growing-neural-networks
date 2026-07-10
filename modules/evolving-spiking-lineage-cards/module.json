@@ -1,0 +1,30 @@
+{
+  "id": "evolving-spiking-lineage-cards",
+  "title": "Evolving Spiking Lineage Cards",
+  "type": "paper-card-bridge",
+  "status": "available",
+  "summary": "Sort cautious paper cards for the active eSNN bundle into lineage, application, method-placeholder, and adaptive-structure roles without overclaiming unreviewed algorithm details.",
+  "concepts": [
+    "spiking-neural-networks",
+    "spike-timing-dependent-construction",
+    "structural-plasticity",
+    "growth-trigger"
+  ],
+  "papers": [
+    "schliebs-2013-evolving-spiking-survey",
+    "wysoski-2010-evolving-spiking-audiovisual",
+    "kasabov-2013-dynamic-evolving-spiking",
+    "wang-2014-adaptive-structure-snn",
+    "lightheart-2018-constructive-spiking-thesis"
+  ],
+  "algorithms": [
+    "evolving-spiking-network-lineage",
+    "constructive-spiking-taxonomy"
+  ],
+  "learning_goals": [
+    "Separate reviewed eSNN lineage context from pending exact growth-rule details.",
+    "Connect Schliebs2013, Wysoski2010, Kasabov2013, and Wang2014 to the thesis taxonomy without duplicating Roy2017 prematurely.",
+    "Use bundle readiness notes to decide which claims are safe for public teaching artifacts."
+  ],
+  "entry": "modules/evolving-spiking-lineage-cards/index.html"
+}

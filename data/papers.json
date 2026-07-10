@@ -689,13 +689,13 @@
     "id": "wang-2014-adaptive-structure-snn",
     "title": "An online supervised learning method for spiking neural networks with adaptive structure",
     "authors": [
-      "Jian Wang",
+      "Jinling Wang",
       "Ammar Belatreche",
-      "Liam P. Maguire",
-      "Thomas M. McGinnity"
+      "Liam Maguire",
+      "Thomas Martin McGinnity"
     ],
     "year": 2014,
-    "venue": "Bibliographic details pending verification",
+    "venue": "Neurocomputing 144:526-536",
     "families": [
       "spiking-constructive-learning",
       "evolving-spiking-neural-networks"
@@ -706,10 +706,10 @@
       "structural-plasticity",
       "growth-trigger"
     ],
-    "status": "discovered",
+    "status": "review-draft",
     "importance": "notable",
-    "summary": "Bundle-backed candidate on online supervised spiking learning with adaptive structure. A private local PDF filename match exists, but bibliographic details and algorithmic claims still need a focused review pass.",
-    "growth_mechanism": "Deferred for review: the title and bundle role indicate adaptive spiking-network structure, but this sync records only asset-backed candidate metadata pending bibliographic and full-text verification.",
+    "summary": "Presents an online supervised-learning method for spiking neural networks with adaptive structure; this automated draft verifies bibliographic and PDF metadata and treats detailed structural-adaptation mechanics as pending full-text or human review.",
+    "growth_mechanism": "Pending close review: DOI and PDF metadata identify adaptive spiking-network structure and PDF keywords include neuronal pruning, online learning, supervised learning, unsupervised learning, and radial basis functions, but exact creation/pruning triggers and what is structurally changed should not be asserted until reliable full-text review.",
     "what_grows": [
       "spiking-network-structure"
     ],
@@ -720,19 +720,22 @@
       "online-learning"
     ],
     "links": {
-      "paper": "",
-      "doi": "",
-      "semantic_scholar": "",
+      "paper": "https://doi.org/10.1016/j.neucom.2014.04.017",
+      "doi": "10.1016/j.neucom.2014.04.017",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/85f7fca6b83e730585228b3ffe8a6da0e182f869",
       "pdf": ""
     },
     "discovered_via": [
-      "weekly-bundle-sync-2026-07-06"
+      "weekly-bundle-sync-2026-07-06",
+      "evolving-spiking-bundle-2026-07-10"
     ],
     "related": [
       "schliebs-2013-evolving-spiking-survey",
       "kasabov-2013-dynamic-evolving-spiking",
-      "lightheart-2018-constructive-spiking-thesis"
+      "lightheart-2018-constructive-spiking-thesis",
+      "wysoski-2010-evolving-spiking-audiovisual"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Needs DOI/venue/page verification and a public automated review before detailed claims are made."
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-10 verified DOI, Neurocomputing volume/pages/date, authors, Semantic Scholar DOI metadata/TLDR, a private PDF path, DOI landing redirect, and embedded PDF metadata/keywords. No usable PDF text-extraction tooling was available in cron, so mechanism details remain cautious pending full-text or human review.",
+    "review": "reviews/wang-2014-adaptive-structure-snn.md"
   }
 ]

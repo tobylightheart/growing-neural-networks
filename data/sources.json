@@ -184,5 +184,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Drafted the Kasabov, Dhoble, Nuntalid, and Indiveri 2013 dynamic evolving spiking-networks review from the active eSNN bundle. Local private PDF path was verified, but no usable local PDF text-extraction library was available in cron; public metadata came from Crossref and Semantic Scholar, and embedded PDF metadata confirmed DOI/title/authors/keywords."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-10",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-10",
+    "description": "Daily bundle-first review promotion for the evolving-spiking-networks bundle after Schliebs2013, Wysoski2010, and Kasabov2013 established survey, application, and dynamic eSNN anchors.",
+    "query": "data/review-bundles.json evolving-spiking-networks; Crossref title lookup and DOI 10.1016/j.neucom.2014.04.017; Semantic Scholar DOI lookup; DOI landing redirect; local private PDF filename check; embedded PDF metadata via Python byte/string inspection; PDF extraction tooling check",
+    "added": [
+      "wang-2014-adaptive-structure-snn"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Drafted the Wang, Belatreche, Maguire, and McGinnity 2014 adaptive-structure supervised spiking-network review from the active eSNN bundle. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron; public metadata came from Crossref and Semantic Scholar, and embedded PDF metadata confirmed DOI/title/authors/venue/pages/keywords."
   }
 ]

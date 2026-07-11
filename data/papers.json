@@ -737,5 +737,54 @@
     ],
     "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-10 verified DOI, Neurocomputing volume/pages/date, authors, Semantic Scholar DOI metadata/TLDR, a private PDF path, DOI landing redirect, and embedded PDF metadata/keywords. No usable PDF text-extraction tooling was available in cron, so mechanism details remain cautious pending full-text or human review.",
     "review": "reviews/wang-2014-adaptive-structure-snn.md"
+  },
+  {
+    "id": "roy-2017-online-structural-plasticity-snn",
+    "title": "An Online Unsupervised Structural Plasticity Algorithm for Spiking Neural Networks",
+    "authors": [
+      "Subhrajit Roy",
+      "Arindam Basu"
+    ],
+    "year": 2017,
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems 28(4):900-910",
+    "families": [
+      "spiking-constructive-learning",
+      "structural-plasticity"
+    ],
+    "themes": [
+      "spiking-neural-networks",
+      "structural-plasticity",
+      "growth-trigger"
+    ],
+    "status": "review-draft",
+    "importance": "notable",
+    "summary": "Bridge anchor from evolving spiking-network reviews into explicit online unsupervised structural plasticity for spiking neural networks; metadata and private PDF path are verified, while exact structural-update mechanics remain pending full-text or human review.",
+    "growth_mechanism": "Pending close review: Crossref and DOI metadata identify an online unsupervised structural-plasticity algorithm for spiking neural networks, but exact creation, deletion, rewiring, or adaptation triggers should not be asserted until reliable full-text review.",
+    "what_grows": [
+      "spiking-network-structure"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "unsupervised",
+      "spiking-neural-networks",
+      "online-learning"
+    ],
+    "links": {
+      "paper": "https://doi.org/10.1109/TNNLS.2016.2582517",
+      "doi": "10.1109/TNNLS.2016.2582517",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "evolving-spiking-bundle-2026-07-11"
+    ],
+    "related": [
+      "schliebs-2013-evolving-spiking-survey",
+      "wang-2014-adaptive-structure-snn",
+      "kasabov-2013-dynamic-evolving-spiking",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Drafted as the shared Roy2017 bridge between the active evolving-spiking-networks bundle and the structural-plasticity-and-binary-synapses bundle. Crossref verified DOI, title, authors, IEEE TNNLS volume/issue/pages, and publication date; DOI landing redirected to IEEE Xplore document 7508492; the private PDF path was verified. Semantic Scholar lookup returned HTTP 429. No usable PDF text-extraction tooling was available in cron, so detailed structural-plasticity mechanism claims remain cautious pending full-text or human review.",
+    "review": "reviews/roy-2017-online-structural-plasticity-snn.md"
   }
 ]

@@ -166,5 +166,17 @@
     "source_url": "https://doi.org/10.1016/j.neucom.2014.04.017",
     "last_checked": "2026-07-10",
     "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, Neurocomputing volume/pages/date, and authors; Semantic Scholar DOI metadata matched the record and returned a publisher-elided abstract plus TLDR; DOI landing redirects through Elsevier/ScienceDirect; local PDF embedded metadata includes matching DOI/title/authors, Neurocomputing 144 (2014) 526-536, and keywords including spiking neurons, online learning, neuronal pruning, supervised learning, unsupervised learning, and radial basis functions. Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, so no extracted text was committed and the review remains a cautious reading guide."
+  },
+  {
+    "paper_id": "roy-2017-online-structural-plasticity-snn",
+    "pdf_status": "collected",
+    "text_status": "extraction-failed",
+    "access": "publisher-gated",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive_Spiking/Roy S, Basu A (2017) - An online unsupervised structural plasticity algorithm for spiking neural networks.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/roy-2017-online-structural-plasticity-snn.md",
+    "source_url": "https://doi.org/10.1109/TNNLS.2016.2582517",
+    "last_checked": "2026-07-11",
+    "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, IEEE TNNLS volume/issue/pages, publication month, and authors; DOI landing redirects to IEEE Xplore document 7508492. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
   }
 ]

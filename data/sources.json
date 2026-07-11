@@ -197,5 +197,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Drafted the Wang, Belatreche, Maguire, and McGinnity 2014 adaptive-structure supervised spiking-network review from the active eSNN bundle. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron; public metadata came from Crossref and Semantic Scholar, and embedded PDF metadata confirmed DOI/title/authors/venue/pages/keywords."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-11",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-11",
+    "description": "Daily bundle-first review promotion for the evolving-spiking-networks bundle, coordinating Roy2017 as the shared bridge into the structural-plasticity bundle.",
+    "query": "data/review-bundles.json evolving-spiking-networks and structural-plasticity-and-binary-synapses; Crossref title lookup and DOI 10.1109/TNNLS.2016.2582517; DOI landing redirect; local private PDF filename check; PDF extraction tooling check; Semantic Scholar lookup attempted but rate-limited",
+    "added": [
+      "roy-2017-online-structural-plasticity-snn"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Drafted the Roy and Basu 2017 online unsupervised structural-plasticity review as one shared paper record rather than duplicating it across eSNN and structural-plasticity bundles. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron; public metadata came from Crossref and the DOI/IEEE Xplore redirect."
   }
 ]

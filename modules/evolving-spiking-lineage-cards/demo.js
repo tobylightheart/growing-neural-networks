@@ -50,6 +50,19 @@ const cards = [
     color: '#b85c38',
     safe: 'Safe claim: use as the supervised adaptive-structure spiking-network placeholder in the active eSNN lineage.',
     caution: 'Keep neuronal creation, pruning, and adaptation triggers marked pending despite keyword metadata mentioning pruning and online learning.'
+  },
+  {
+    id: 'roy',
+    paperId: 'roy-2017-online-structural-plasticity-snn',
+    title: 'Roy & Basu 2017',
+    role: 'Structural-plasticity bridge',
+    roleSummary: 'Links the active eSNN bundle to structural-plasticity follow-up work.',
+    year: 2017,
+    x: 620,
+    y: 430,
+    color: '#8d4f7d',
+    safe: 'Safe claim: use as the shared online unsupervised structural-plasticity bridge between the active eSNN bundle and the structural-plasticity bundle.',
+    caution: 'Do not assert exact creation, deletion, rewiring, thresholding, or adaptation rules until full-text or human review verifies them.'
   }
 ];
 
@@ -140,6 +153,7 @@ function drawCanvas() {
   drawArrow(cards[0], cards[1]);
   drawArrow(cards[0], cards[2]);
   drawArrow(cards[2], cards[3]);
+  drawArrow(cards[3], cards[4]);
   cards.forEach(drawCard);
 
   ctx.save();

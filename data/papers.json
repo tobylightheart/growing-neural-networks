@@ -786,5 +786,54 @@
     ],
     "notes": "Drafted as the shared Roy2017 bridge between the active evolving-spiking-networks bundle and the structural-plasticity-and-binary-synapses bundle. Crossref verified DOI, title, authors, IEEE TNNLS volume/issue/pages, and publication date; DOI landing redirected to IEEE Xplore document 7508492; the private PDF path was verified. Semantic Scholar lookup returned HTTP 429. No usable PDF text-extraction tooling was available in cron, so detailed structural-plasticity mechanism claims remain cautious pending full-text or human review.",
     "review": "reviews/roy-2017-online-structural-plasticity-snn.md"
+  },
+  {
+    "id": "platt-1991-resource-allocating-network",
+    "title": "A Resource-Allocating Network for Function Interpolation",
+    "authors": [
+      "John C. Platt"
+    ],
+    "year": 1991,
+    "venue": "Neural Computation 3(2)",
+    "families": [
+      "resource-allocating-network",
+      "constructive-learning"
+    ],
+    "themes": [
+      "constructive-learning",
+      "hidden-unit-growth",
+      "growth-trigger",
+      "capacity-control",
+      "historical-foundations"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Classic resource-allocating network paper for function interpolation; this automated draft verifies bibliographic metadata and local PDF availability, while leaving exact allocation criteria and algorithmic details for full-text or human review.",
+    "growth_mechanism": "Pending close review: Semantic Scholar's TLDR characterizes the method as allocating a new computational unit for unusual patterns, but the exact novelty criterion, unit parameters, and update equations should not be asserted until reliable full-text review.",
+    "what_grows": [
+      "computational-units"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "supervised",
+      "function-interpolation",
+      "function-approximation"
+    ],
+    "links": {
+      "paper": "https://doi.org/10.1162/neco.1991.3.2.213",
+      "doi": "10.1162/neco.1991.3.2.213",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/15e2989c299b63efc42f0b93bf63848a92b88c63",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "classic-constructive-bundle-2026-07-12"
+    ],
+    "related": [
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Promoted from the classic-constructive-foundations bundle after the eSNN branch completed its first planned review sequence. Crossref verified DOI, title, author, Neural Computation venue, and June 1991 publication metadata; Semantic Scholar verified matching DOI metadata and supplied a TLDR, while the abstract was publisher-elided. DOI landing check returned HTTP 403 in cron. The private PDF path was verified, but no usable PDF text-extraction tooling was available, so detailed mechanism claims remain cautious pending full-text or human review.",
+    "review": "reviews/platt-1991-resource-allocating-network.md"
   }
 ]

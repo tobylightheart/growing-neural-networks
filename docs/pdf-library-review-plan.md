@@ -1,6 +1,6 @@
 # PDF Library Review Plan
 
-Updated: 2026-07-11
+Updated: 2026-07-12
 
 This project now uses a bundle-first content loop. The private paper library is large enough that adding paper records one-by-one without a topic plan would make the public site noisy. Bundles define the order in which papers should be promoted from the private library into public metadata, reviews, synthesis notes, modules, and exercises.
 
@@ -16,13 +16,13 @@ Private PDFs remain outside Git under `/workspace/growing-neural-networks-librar
 
 The active review bundle is now:
 
-1. `evolving-spiking-networks`
+1. `classic-constructive-foundations`
 
 Why this first:
 
 - The first six-anchor STDP review milestone is complete, so that bundle should stay warm for bounded synthesis and exercises rather than continue to monopolize daily review work.
-- Multiple eSNN/STDC anchors now have public paper records plus verified private PDF paths under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`.
-- This branch moves the review from STDP-as-synaptic-selectivity background toward explicitly evolving or adaptive spiking-network structure.
+- The eSNN branch has now drafted its planned first sequence through Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017, so it should stay warm for cautious synthesis and future full-text improvements rather than remain the default daily promotion branch.
+- The classic branch has collected Platt1991 and Prechelt1997 assets ready for public review records, and it grounds non-spiking constructive growth before broader comparison with spiking/evolving methods.
 
 The completed STDP promotion sequence was:
 
@@ -37,9 +37,9 @@ The promoted Masquelier2008, Masquelier2009, Song2000, Legenstein2005, Caporale2
 
 Current cautious STDP synthesis axis: distinguish **constructive growth of structure** from **STDP growth of selectivity**. The STDP bundle has enough public draft material to link the six promoted STDP papers in metadata and teaching artifacts, but not enough yet to claim a reviewed structural-growth mechanism for STDP hidden-pattern construction.
 
-The daily review sequence has now drafted Schliebs and Kasabov 2013 as the eSNN survey anchor, Wysoski, Benuskova, and Kasabov 2010 as a cautious audiovisual application anchor, Kasabov et al. 2013 as a cautious dynamic eSNN/deSNN detail-review placeholder, Wang et al. 2014 as the adaptive-structure supervised spiking-network placeholder, and Roy and Basu 2017 as the shared structural-plasticity bridge. Roy2017 should now be treated as one existing paper record shared with the structural-plasticity bundle rather than duplicated.
+The daily review sequence has now drafted Schliebs and Kasabov 2013 as the eSNN survey anchor, Wysoski, Benuskova, and Kasabov 2010 as a cautious audiovisual application anchor, Kasabov et al. 2013 as a cautious dynamic eSNN/deSNN detail-review placeholder, Wang et al. 2014 as the adaptive-structure supervised spiking-network placeholder, and Roy and Basu 2017 as the shared structural-plasticity bridge. Roy2017 should now be treated as one existing paper record shared with the structural-plasticity bundle rather than duplicated. Because that planned first eSNN sequence is drafted, daily promotion work has branched to the classic constructive foundations bundle; Platt 1991 is now the first resource-allocation review draft in that branch.
 
-Active-bundle synthesis guardrail: Schliebs2013 is enough for a cautious `evolving-spiking-network-lineage` metadata bridge that names the eSNN/STDC lineage and points back to the thesis taxonomy, Wysoski2010 can serve as a cautious audiovisual application anchor, Kasabov2013 can be named as the dynamic evolving-spiking detail anchor, Wang2014 can be named as the supervised adaptive-structure anchor, and Roy2017 can be named as the online unsupervised structural-plasticity bridge. It is still not enough for exact algorithm-step claims about Kasabov2013, Wang2014, or Roy2017 growth rules. Keep those method details as review tasks until each anchor has a full-text or human review.
+Active-bundle synthesis guardrail: Schliebs2013 is enough for a cautious `evolving-spiking-network-lineage` metadata bridge that names the eSNN/STDC lineage and points back to the thesis taxonomy, Wysoski2010 can serve as a cautious audiovisual application anchor, Kasabov2013 can be named as the dynamic evolving-spiking detail anchor, Wang2014 can be named as the supervised adaptive-structure anchor, and Roy2017 can be named as the online unsupervised structural-plasticity bridge. It is still not enough for exact algorithm-step claims about Kasabov2013, Wang2014, or Roy2017 growth rules. Keep those method details as review tasks until each anchor has a full-text or human review. For the newly active classic branch, Platt1991 can be named as a resource-allocating/function-interpolation anchor, but exact novelty tests and allocation/update equations also remain pending full-text or human review.
 
 ## Bundle list
 
@@ -67,8 +67,8 @@ Immediate anchors:
 ### 2. Evolving spiking networks and STDC/eSNN methods
 
 ID: `evolving-spiking-networks`
-Priority: urgent
-Status: active
+Priority: high
+Status: seeded
 
 Role:
 
@@ -86,8 +86,8 @@ Likely first anchors:
 ### 3. Classic constructive foundations
 
 ID: `classic-constructive-foundations`
-Priority: high
-Status: seeded
+Priority: urgent
+Status: active
 
 Role:
 
@@ -98,12 +98,12 @@ Existing anchors:
 
 - Ash 1989, Dynamic Node Creation.
 - Fahlman and Lebiere 1989/1990, Cascade-Correlation.
+- Platt 1991, Resource-Allocating Network for function interpolation.
 - Giles et al. 1995, recurrent Cascade-Correlation limitations.
 - Lightheart 2018 thesis synthesis.
 
 Possible next additions:
 
-- Platt 1991 resource-allocating networks.
 - Prechelt 1997 CasCor family.
 - Broader constructive neural-network surveys.
 

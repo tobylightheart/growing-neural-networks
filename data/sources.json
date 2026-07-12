@@ -210,5 +210,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Drafted the Roy and Basu 2017 online unsupervised structural-plasticity review as one shared paper record rather than duplicating it across eSNN and structural-plasticity bundles. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron; public metadata came from Crossref and the DOI/IEEE Xplore redirect."
+  },
+  {
+    "id": "classic-constructive-bundle-2026-07-12",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-12",
+    "description": "Daily bundle-first review promotion for the classic-constructive-foundations bundle after the eSNN branch completed its first planned review sequence.",
+    "query": "data/review-bundles.json classic-constructive-foundations; Crossref title lookup and DOI 10.1162/neco.1991.3.2.213; Semantic Scholar DOI lookup; DOI landing check attempted but HTTP 403; local private PDF filename check; PDF extraction tooling check",
+    "added": [
+      "platt-1991-resource-allocating-network"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Drafted John C. Platt's 1991 resource-allocating network review from the classic constructive foundations bundle. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron; public metadata came from Crossref and Semantic Scholar."
   }
 ]

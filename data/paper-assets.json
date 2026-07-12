@@ -178,5 +178,17 @@
     "source_url": "https://doi.org/10.1109/TNNLS.2016.2582517",
     "last_checked": "2026-07-11",
     "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, IEEE TNNLS volume/issue/pages, publication month, and authors; DOI landing redirects to IEEE Xplore document 7508492. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
+  },
+  {
+    "paper_id": "platt-1991-resource-allocating-network",
+    "pdf_status": "collected",
+    "text_status": "extraction-failed",
+    "access": "publisher-gated",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Platt J (1991) - A Resource-Allocating Network for Function Interpolation.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/platt-1991-resource-allocating-network.md",
+    "source_url": "https://doi.org/10.1162/neco.1991.3.2.213",
+    "last_checked": "2026-07-12",
+    "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, title, author, Neural Computation venue, and June 1991 publication metadata; Semantic Scholar DOI metadata matched the record and returned a TLDR while eliding the abstract. DOI landing check returned HTTP 403 in cron. Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
   }
 ]

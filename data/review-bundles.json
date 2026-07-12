@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-11",
+  "updated": "2026-07-12",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -84,12 +84,12 @@
     {
       "id": "evolving-spiking-networks",
       "title": "Evolving spiking networks and spike-timing-dependent construction",
-      "priority": "urgent",
-      "status": "active",
+      "priority": "high",
+      "status": "seeded",
       "thesis_anchors": [
         "Chapter 2 literature review: spike-timing-dependent construction and evolving SNNs"
       ],
-      "rationale": "This bundle turns the thesis literature-review spine into public reviews around eSNN/deSNN/STDC methods before broader synthesis. It is now the active review branch because the initial STDP six-anchor milestone is complete and multiple eSNN records have verified private PDF paths.",
+      "rationale": "This bundle turned the thesis literature-review spine into public eSNN/deSNN/STDC review drafts. Its first planned sequence through Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017 is complete, so keep it warm for bounded synthesis and future full-text improvements rather than treating it as the default daily promotion branch.",
       "anchor_papers": [
         {
           "paper_id": "schliebs-2013-evolving-spiking-survey",
@@ -130,7 +130,7 @@
       "next_actions": [
         "Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017 now have public automated review drafts: use them as a cautious eSNN/adaptive-structure lineage from survey context through application, dynamic eSNN/deSNN placeholder, supervised adaptive-structure placeholder, and structural-plasticity bridge without overclaiming algorithm steps that still need full-text review.",
         "Roy2017 is now a shared existing-paper bridge with the structural-plasticity bundle; do not create a duplicate Roy2017 record.",
-        "Next daily review work can either improve one eSNN draft with full-text details if extraction becomes available, or branch to the high-priority classic-constructive-foundations seeded bundle for Platt1991/Prechelt1997."
+        "Future work should improve one eSNN draft with full-text details if extraction becomes available, or synthesize the lineage cautiously; daily review promotion has branched to the classic-constructive-foundations bundle."
       ],
       "planned_outputs": [
         "eSNN/STDC lineage synthesis",
@@ -140,13 +140,13 @@
     {
       "id": "classic-constructive-foundations",
       "title": "Classic constructive foundations",
-      "priority": "high",
-      "status": "seeded",
+      "priority": "urgent",
+      "status": "active",
       "thesis_anchors": [
         "Chapter 2 constructive neural-network taxonomy",
         "Existing public Cascade-Correlation and Dynamic Node Creation demos"
       ],
-      "rationale": "This bundle anchors the non-spiking historical foundation. It should now use only verified sources after the unsupported Fahlman seed reference was removed.",
+      "rationale": "This bundle anchors the non-spiking historical foundation. It is now the active review branch because the first eSNN planned sequence is drafted and the site needs the verified classic resource-allocation/CasCor grounding branch before broader synthesis.",
       "anchor_papers": [
         {
           "paper_id": "ash-1989-dynamic-node-construction",
@@ -166,8 +166,8 @@
           "paper_id": "platt-1991-resource-allocating-network",
           "citation_key": "",
           "title": "A resource-allocating network for function interpolation",
-          "role": "candidate-anchor",
-          "asset_status": "available-in-library"
+          "role": "existing-paper",
+          "asset_status": "existing-paper"
         },
         {
           "paper_id": "prechelt-1997-cascor-family",
@@ -178,8 +178,9 @@
         }
       ],
       "next_actions": [
-        "Update asset records for already-collected Ash/Cascade-Correlation PDFs when filenames are verified.",
-        "Add Platt1991 or Prechelt1997 after the active STDP bundle has a first anchor review."
+        "Platt1991 now has a public automated review draft grounded in Crossref/Semantic Scholar metadata and a verified private PDF path; keep exact resource-allocation mechanics cautious until full-text or human review.",
+        "Promote Prechelt1997 as the next classic constructive survey anchor when the daily loop continues this active branch.",
+        "Update asset records for already-collected Ash/Cascade-Correlation PDFs when filenames are verified."
       ],
       "planned_outputs": [
         "clean foundation bundle page",

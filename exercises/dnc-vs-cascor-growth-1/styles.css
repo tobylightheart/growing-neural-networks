@@ -1,0 +1,231 @@
+.exercise-topbar {
+  align-items: center;
+  background: #2e443d;
+  color: #fffaf1;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  padding: 0.85rem clamp(1rem, 4vw, 3rem);
+}
+
+.exercise-topbar a {
+  color: #fffaf1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.exercise-page {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: clamp(1rem, 3vw, 2.5rem);
+}
+
+.exercise-hero {
+  align-items: stretch;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  margin-bottom: 1.5rem;
+}
+
+.exercise-hero h1 {
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1;
+  margin: 0.2rem 0 1rem;
+}
+
+.kicker {
+  color: #356859;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.panel,
+.score-card,
+.claim-card {
+  background: #fffaf1;
+  border: 1px solid #ded6c8;
+  border-radius: 24px;
+  box-shadow: 0 14px 34px rgba(35, 33, 29, 0.08);
+}
+
+.score-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.score-card span,
+.meta {
+  color: #6f6a60;
+}
+
+.score-card strong {
+  color: #356859;
+  display: block;
+  font-size: 2.9rem;
+  margin: 0.25rem 0;
+}
+
+.panel {
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+.guardrail {
+  border-left: 8px solid #d9b36f;
+  margin-bottom: 1.5rem;
+}
+
+.exercise-layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(360px, 1.05fr) minmax(360px, 0.95fr);
+}
+
+.claim-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.claim-card {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 44px 1fr;
+  padding: 1rem;
+}
+
+.claim-number {
+  align-items: center;
+  background: #e8f0de;
+  border-radius: 50%;
+  color: #2e443d;
+  display: flex;
+  font-weight: 800;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+}
+
+.claim-card p {
+  margin-top: 0;
+}
+
+.claim-card label {
+  color: #453f35;
+  display: grid;
+  font-weight: 800;
+  gap: 0.35rem;
+}
+
+select {
+  border: 1px solid #b8ad9c;
+  border-radius: 12px;
+  font: inherit;
+  padding: 0.65rem 0.75rem;
+}
+
+.claim-card.correct {
+  border-color: #5f8f73;
+}
+
+.claim-card.incorrect {
+  border-color: #b76d58;
+}
+
+.result-line,
+.hint {
+  color: #5c5347;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.hint {
+  background: #f6ead8;
+  border-radius: 12px;
+  padding: 0.65rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+button {
+  background: #356859;
+  border: 0;
+  border-radius: 999px;
+  color: #fffaf1;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 0.75rem 1.1rem;
+}
+
+button.secondary {
+  background: #efe8dc;
+  color: #2e443d;
+}
+
+.feedback {
+  border-radius: 16px;
+  color: #5c5347;
+  min-height: 1.4rem;
+  padding: 0.8rem 1rem;
+}
+
+.feedback.correct {
+  background: #e8f0de;
+  color: #24483a;
+}
+
+.feedback.incorrect {
+  background: #f6ead8;
+  color: #68412f;
+}
+
+.canvas-wrap {
+  overflow-x: auto;
+}
+
+canvas {
+  background: #fffaf1;
+  border: 1px solid #ded6c8;
+  border-radius: 18px;
+  max-width: 100%;
+}
+
+.source-panel {
+  margin-top: 1.5rem;
+}
+
+.source-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.source-grid article {
+  background: #f7f0e7;
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.source-grid a {
+  color: #356859;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .exercise-hero,
+  .exercise-layout,
+  .source-grid {
+    grid-template-columns: 1fr;
+  }
+}

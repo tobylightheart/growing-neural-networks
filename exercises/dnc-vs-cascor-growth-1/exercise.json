@@ -1,0 +1,25 @@
+{
+  "id": "dnc-vs-cascor-growth-1",
+  "title": "Dynamic Node Creation or Cascade-Correlation?",
+  "type": "bundle-comparison",
+  "status": "available",
+  "summary": "Classify cautious review-grounded claims about Dynamic Node Creation and Cascade-Correlation so their growth triggers, candidate training, and stabilization choices stay distinct.",
+  "concepts": [
+    "constructive-learning",
+    "hidden-unit-growth",
+    "growth-trigger",
+    "candidate-unit-training",
+    "residual-error-correlation",
+    "frozen-features",
+    "post-growth-stabilization"
+  ],
+  "papers": [
+    "ash-1989-dynamic-node-construction",
+    "fahlman-1990-cascade-correlation"
+  ],
+  "algorithms": [
+    "dynamic-node-construction",
+    "cascade-correlation"
+  ],
+  "entry": "exercises/dnc-vs-cascor-growth-1/index.html"
+}

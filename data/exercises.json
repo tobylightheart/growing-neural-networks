@@ -67,5 +67,30 @@
     ],
     "summary": "Use a simplified STDP timing window to compare predictive, late, and mixed presynaptic spike patterns while keeping structural-growth claims separate from synaptic selectivity and noting that biological/phenomenological STDP reviews make real rule choice more complex than the toy curve.",
     "entry": "exercises/stdp-timing-window-selectivity-1/index.html"
+  },
+  {
+    "id": "dnc-vs-cascor-growth-1",
+    "title": "Dynamic Node Creation or Cascade-Correlation?",
+    "type": "bundle-comparison",
+    "status": "available",
+    "concepts": [
+      "constructive-learning",
+      "hidden-unit-growth",
+      "growth-trigger",
+      "candidate-unit-training",
+      "residual-error-correlation",
+      "frozen-features",
+      "post-growth-stabilization"
+    ],
+    "papers": [
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation"
+    ],
+    "algorithms": [
+      "dynamic-node-construction",
+      "cascade-correlation"
+    ],
+    "summary": "Classify cautious review-grounded claims about Dynamic Node Creation and Cascade-Correlation so their growth triggers, candidate training, and stabilization choices stay distinct.",
+    "entry": "exercises/dnc-vs-cascor-growth-1/index.html"
   }
 ]

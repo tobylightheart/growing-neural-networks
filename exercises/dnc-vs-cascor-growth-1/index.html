@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic Node Creation or Cascade-Correlation? · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="exercise-topbar">
+    <a href="../../pages/exercises.html">← Exercises</a>
+    <a href="../../pages/modules.html">Modules</a>
+    <a href="../../pages/themes.html">Themes</a>
+  </header>
+
+  <main class="exercise-page">
+    <section class="exercise-hero">
+      <div>
+        <p class="kicker">Classic constructive foundations · comparison exercise</p>
+        <h1>Dynamic Node Creation or Cascade-Correlation?</h1>
+        <p>Both classic methods grow hidden structure, but the reviewed public records support different claims about <strong>when growth is proposed</strong>, <strong>how a new unit is chosen</strong>, and <strong>what is stabilized after insertion</strong>.</p>
+      </div>
+      <aside class="score-card" aria-live="polite">
+        <span>claims classified</span>
+        <strong id="score">0 / 6</strong>
+        <small id="score-note">Choose the best match for each claim.</small>
+      </aside>
+    </section>
+
+    <section class="guardrail panel">
+      <h2>Read this as a cautious bundle exercise</h2>
+      <p>This artifact follows the active <code>classic-constructive-foundations</code> bundle and its planned DNC vs Cascade-Correlation comparison. It uses the public Ash1989 and Fahlman1990 review drafts; it does not add unverified equations or exact DNC trigger details.</p>
+    </section>
+
+    <section class="exercise-layout">
+      <article class="panel prompt-panel">
+        <h2>Classify the claims</h2>
+        <p class="meta">Select the source family best supported by each statement. Some claims describe a contrast rather than a complete algorithm.</p>
+        <div id="claim-list" class="claim-list"></div>
+        <div class="button-row">
+          <button id="check-answer">Check answers</button>
+          <button id="show-hints" class="secondary">Show hints</button>
+          <button id="reset-answer" class="secondary">Reset</button>
+        </div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="panel comparison-panel">
+        <h2>Comparison map</h2>
+        <p>Use the map after the quiz: it separates shared constructive ideas from claims that are specific to Cascade-Correlation's candidate-training loop or to DNC's backpropagation-growth framing.</p>
+        <div class="canvas-wrap">
+          <canvas id="comparison-canvas" width="900" height="540" aria-label="Comparison map for Dynamic Node Creation and Cascade-Correlation"></canvas>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel source-panel">
+      <h2>Review-grounded source links</h2>
+      <div class="source-grid">
+        <article>
+          <h3>Dynamic Node Creation</h3>
+          <p>The public draft supports a conservative summary: a backpropagation network can add hidden nodes during training when capacity appears insufficient; exact schedules remain marked for human full-text verification.</p>
+          <a href="../../pages/review.html?id=ash-1989-dynamic-node-construction">Open Ash1989 review</a>
+        </article>
+        <article>
+          <h3>Cascade-Correlation</h3>
+          <p>The public draft supports candidate-unit training against residual error, installing the best candidate, and freezing installed input weights as the distinctive stabilization move.</p>
+          <a href="../../pages/review.html?id=fahlman-1990-cascade-correlation">Open Fahlman1990 review</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.exercise-topbar'));
+  </script>
+</body>
+</html>

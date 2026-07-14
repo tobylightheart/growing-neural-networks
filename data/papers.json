@@ -835,5 +835,56 @@
     ],
     "notes": "Promoted from the classic-constructive-foundations bundle after the eSNN branch completed its first planned review sequence. Crossref verified DOI, title, author, Neural Computation venue, and June 1991 publication metadata; Semantic Scholar verified matching DOI metadata and supplied a TLDR, while the abstract was publisher-elided. DOI landing check returned HTTP 403 in cron. The private PDF path was verified, but no usable PDF text-extraction tooling was available, so detailed mechanism claims remain cautious pending full-text or human review.",
     "review": "reviews/platt-1991-resource-allocating-network.md"
+  },
+  {
+    "id": "prechelt-1997-cascor-family",
+    "title": "Investigation of the CasCor Family of Learning Algorithms",
+    "authors": [
+      "Lutz Prechelt"
+    ],
+    "year": 1997,
+    "venue": "Neural Networks 10(5):885-896",
+    "families": [
+      "cascade-correlation",
+      "constructive-learning"
+    ],
+    "themes": [
+      "constructive-learning",
+      "candidate-unit-training",
+      "residual-error-correlation",
+      "hidden-unit-growth",
+      "capacity-control",
+      "historical-foundations"
+    ],
+    "status": "review-draft",
+    "importance": "survey-anchor",
+    "summary": "Survey and comparison anchor for the Cascade-Correlation family of constructive learning algorithms; this automated draft verifies bibliographic metadata and local PDF availability, while leaving algorithm-family comparisons and empirical conclusions for full-text or human review.",
+    "growth_mechanism": "Pending close review: Crossref verifies this as an investigation of the CasCor family, so it is treated as a Cascade-Correlation-family survey anchor rather than a newly verified growth rule. Exact variants, stopping criteria, candidate-unit handling, and comparative results should not be asserted until reliable full-text or human review.",
+    "what_grows": [
+      "hidden-units"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "supervised",
+      "constructive-learning",
+      "survey"
+    ],
+    "links": {
+      "paper": "https://doi.org/10.1016/s0893-6080(96)00115-3",
+      "doi": "10.1016/s0893-6080(96)00115-3",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "classic-constructive-bundle-2026-07-14"
+    ],
+    "related": [
+      "fahlman-1990-cascade-correlation",
+      "ash-1989-dynamic-node-construction",
+      "platt-1991-resource-allocating-network",
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Promoted from the classic-constructive-foundations bundle after Platt1991. Crossref verified DOI, title, author, Neural Networks volume/issue/pages, and July 1997 print publication metadata; DOI landing redirected to Elsevier/ScienceDirect. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). The private PDF path was verified, but no usable PDF text-extraction tooling was available and raw byte/string inspection did not expose reliable body text, so detailed CasCor-family comparison claims remain cautious pending full-text or human review.",
+    "review": "reviews/prechelt-1997-cascor-family.md"
   }
 ]

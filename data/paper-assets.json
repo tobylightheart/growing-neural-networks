@@ -190,5 +190,17 @@
     "source_url": "https://doi.org/10.1162/neco.1991.3.2.213",
     "last_checked": "2026-07-12",
     "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, title, author, Neural Computation venue, and June 1991 publication metadata; Semantic Scholar DOI metadata matched the record and returned a TLDR while eliding the abstract. DOI landing check returned HTTP 403 in cron. Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
+  },
+  {
+    "paper_id": "prechelt-1997-cascor-family",
+    "pdf_status": "collected",
+    "text_status": "extraction-failed",
+    "access": "publisher-gated",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Prechelt L (1997) - Investigation of the CasCor family of learning algorithms.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/prechelt-1997-cascor-family.md",
+    "source_url": "https://doi.org/10.1016/s0893-6080(96)00115-3",
+    "last_checked": "2026-07-14",
+    "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, title, author, Neural Networks 10(5):885-896, and July 1997 print publication metadata; DOI landing redirects to Elsevier/ScienceDirect. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
   }
 ]

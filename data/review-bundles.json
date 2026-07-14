@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-12",
+  "updated": "2026-07-14",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -174,12 +174,12 @@
           "citation_key": "",
           "title": "Investigation of the CasCor family of learning algorithms",
           "role": "survey-anchor",
-          "asset_status": "available-in-library"
+          "asset_status": "existing-paper"
         }
       ],
       "next_actions": [
-        "Platt1991 now has a public automated review draft grounded in Crossref/Semantic Scholar metadata and a verified private PDF path; keep exact resource-allocation mechanics cautious until full-text or human review.",
-        "Promote Prechelt1997 as the next classic constructive survey anchor when the daily loop continues this active branch.",
+        "Prechelt1997 now has a public automated review draft grounded in Crossref metadata and a verified private PDF path; keep detailed CasCor-family comparisons cautious until full-text or human review.",
+        "Use Ash1989, Fahlman1990, Platt1991, and Prechelt1997 as the classic constructive grounding set for the planned DNC vs Cascade-Correlation/resource-allocation comparison, while keeping exact algorithm-step claims tied to human-reviewed or extractable sources.",
         "Update asset records for already-collected Ash/Cascade-Correlation PDFs when filenames are verified."
       ],
       "planned_outputs": [

@@ -223,5 +223,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Drafted John C. Platt's 1991 resource-allocating network review from the classic constructive foundations bundle. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron; public metadata came from Crossref and Semantic Scholar."
+  },
+  {
+    "id": "classic-constructive-bundle-2026-07-14",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-14",
+    "description": "Daily bundle-first review promotion for the classic-constructive-foundations bundle, adding the Prechelt 1997 CasCor-family survey anchor after Platt1991.",
+    "query": "data/review-bundles.json classic-constructive-foundations; Crossref title lookup and DOI 10.1016/s0893-6080(96)00115-3; DOI landing redirect; local private PDF filename check; PDF extraction tooling check; Semantic Scholar lookup attempted but rate-limited",
+    "added": [
+      "prechelt-1997-cascor-family"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Drafted Lutz Prechelt's 1997 investigation of the CasCor family as the next classic constructive foundations survey anchor. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron and byte/string inspection exposed no reliable body text; public metadata came from Crossref and the DOI/Elsevier redirect."
   }
 ]

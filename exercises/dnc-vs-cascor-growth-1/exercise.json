@@ -3,7 +3,7 @@
   "title": "Dynamic Node Creation or Cascade-Correlation?",
   "type": "bundle-comparison",
   "status": "available",
-  "summary": "Classify cautious review-grounded claims about Dynamic Node Creation and Cascade-Correlation so their growth triggers, candidate training, and stabilization choices stay distinct.",
+  "summary": "Classify cautious review-grounded claims about Dynamic Node Creation and Cascade-Correlation while using Platt1991 and Prechelt1997 as bundle context for resource allocation and CasCor-family guardrails.",
   "concepts": [
     "constructive-learning",
     "hidden-unit-growth",
@@ -15,7 +15,9 @@
   ],
   "papers": [
     "ash-1989-dynamic-node-construction",
-    "fahlman-1990-cascade-correlation"
+    "fahlman-1990-cascade-correlation",
+    "platt-1991-resource-allocating-network",
+    "prechelt-1997-cascor-family"
   ],
   "algorithms": [
     "dynamic-node-construction",

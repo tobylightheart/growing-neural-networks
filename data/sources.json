@@ -235,6 +235,17 @@
     ],
     "needs_triage": [],
     "rejected": [],
-    "notes": "Drafted Lutz Prechelt's 1997 investigation of the CasCor family as the next classic constructive foundations survey anchor. Local private PDF path was verified, but no usable local PDF text-extraction tool was available in cron and byte/string inspection exposed no reliable body text; public metadata came from Crossref and the DOI/Elsevier redirect."
+    "notes": "Drafted Lutz Prechelt's 1997 investigation of the CasCor family as the next classic constructive foundations survey anchor. Local private PDF path was verified, but no usable local PDF text-extraction tooling was available in cron and byte/string inspection exposed no reliable body text; public metadata came from Crossref and the DOI/Elsevier redirect."
+  },
+  {
+    "id": "classic-constructive-bundle-2026-07-15-ash-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-15",
+    "description": "Daily bundle-first review improvement for the active classic-constructive-foundations bundle, updating Ash1989 after verifying the private PDF asset path.",
+    "query": "data/review-bundles.json classic-constructive-foundations; local private PDF filename check for Ash T (1989) - Dynamic Node Creation in Backpropagation Networks.pdf; PDF extraction tooling check; lightweight PDF byte/Flate-string inspection",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing Ash1989 Dynamic Node Creation review rather than promoting a new paper because the active classic bundle's remaining concrete action was asset verification/improvement. The private PDF path was verified under pdfs/Constructive, but `pdftotext` and Python PDF extraction libraries were unavailable; lightweight Flate-string inspection supported cautious notes about one-at-a-time hidden-node addition, average-squared-error flattening as the growth trigger, and regular backpropagation after node growth. No extracted full text was committed."
   }
 ]

@@ -22,7 +22,7 @@ Why this first:
 
 - The first six-anchor STDP review milestone is complete, so that bundle should stay warm for bounded synthesis and exercises rather than continue to monopolize daily review work.
 - The eSNN branch has now drafted its planned first sequence through Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017, so it should stay warm for cautious synthesis and future full-text improvements rather than remain the default daily promotion branch.
-- The classic branch has now drafted Platt1991 and Prechelt1997 as public review records, and it grounds non-spiking constructive growth before broader comparison with spiking/evolving methods.
+- The classic branch has now drafted Platt1991 and Prechelt1997 as public review records, and Ash1989 has a verified private PDF asset plus a cautious inspected-PDF review improvement; this branch grounds non-spiking constructive growth before broader comparison with spiking/evolving methods.
 
 The completed STDP promotion sequence was:
 
@@ -102,9 +102,10 @@ Existing anchors:
 - Giles et al. 1995, recurrent Cascade-Correlation limitations.
 - Lightheart 2018 thesis synthesis.
 
-Possible next additions:
+Possible next additions/follow-ups:
 
-- Prechelt 1997, CasCor family survey/investigation.
+- Prechelt 1997 is now drafted; use it as a cautious CasCor-family survey anchor rather than adding a duplicate record.
+- Verify the already-collected Cascade-Correlation PDF asset filename and keep the DNC-vs-CasCor comparison cautious until human review checks exact formulae and benchmark details.
 - Broader constructive neural-network surveys.
 
 ### 4. Growing topology and neural gas methods

@@ -20,8 +20,8 @@
     ],
     "status": "review-draft",
     "importance": "canonical",
-    "summary": "Introduces Dynamic Node Creation, a constructive approach in which a backpropagation network can add hidden units during training instead of fixing hidden-layer size in advance.",
-    "growth_mechanism": "Adds hidden nodes during backpropagation training when existing capacity appears insufficient.",
+    "summary": "Introduces Dynamic Node Creation, a constructive approach in which a backpropagation network can add hidden units during training instead of fixing hidden-layer size in advance; inspected private-PDF snippets support a plateau/flatness trigger on the average squared-error curve.",
+    "growth_mechanism": "Adds hidden nodes one at a time during backpropagation training; inspected private-PDF snippets say a new hidden node is triggered when flattening of the average squared-error curve is detected, after which regular backpropagation continues until the desired mapping is learned or another node is needed.",
     "what_grows": [
       "hidden-units"
     ],
@@ -42,7 +42,7 @@
     "related": [
       "fahlman-1990-cascade-correlation"
     ],
-    "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft improved with Crossref API, DOI landing page, Semantic Scholar metadata, and targeted web search; still needs human full-text verification for the exact DNC trigger and training schedule. Synthesis note: post-growth stabilization is included as an open comparison axis because the automated review has not yet verified whether DNC freezes, continues, or otherwise constrains existing weights after insertion."
+    "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft improved with Crossref API, DOI landing page, Semantic Scholar metadata, targeted web search, and a verified private PDF path. On 2026-07-15, lightweight PDF byte/Flate-string inspection supported cautious notes that DNC adds hidden nodes one at a time, uses flattening of the average squared-error curve as the addition trigger, and resumes regular backpropagation after node growth; exact formulae, parameter definitions, and experiment conclusions still need human full-text verification. Synthesis note: post-growth stabilization remains a comparison axis, but this pass found no evidence that DNC freezes installed features in the Cascade-Correlation sense."
   },
   {
     "id": "fahlman-1990-cascade-correlation",

@@ -1,15 +1,15 @@
 [
   {
     "paper_id": "ash-1989-dynamic-node-construction",
-    "pdf_status": "missing",
-    "text_status": "missing",
+    "pdf_status": "collected",
+    "text_status": "extraction-failed",
     "access": "publisher-gated",
     "local_private_only": true,
-    "pdf_local_path": "../growing-neural-networks-library/pdfs/ash-1989-dynamic-node-construction.pdf",
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Ash T (1989) - Dynamic Node Creation in Backpropagation Networks.pdf",
     "text_local_path": "../growing-neural-networks-library/text/ash-1989-dynamic-node-construction.md",
     "source_url": "https://doi.org/10.1080/09540098908915647",
-    "last_checked": "",
-    "notes": "Bibliographic metadata is verified, but no local PDF/text asset is recorded. Use caution around publisher access."
+    "last_checked": "2026-07-15",
+    "notes": "Private Taylor & Francis/Informaworld PDF path verified during bundle-first review improvement. The PDF exists under the private library and begins with a PDF-1.5 header. `pdftotext` was unavailable and Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) were unavailable in cron; a lightweight Flate-string inspection exposed useful article snippets but no clean extracted text was committed."
   },
   {
     "paper_id": "fahlman-1990-cascade-correlation",

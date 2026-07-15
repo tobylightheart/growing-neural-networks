@@ -180,7 +180,7 @@
       "next_actions": [
         "Prechelt1997 now has a public automated review draft grounded in Crossref metadata and a verified private PDF path; keep detailed CasCor-family comparisons cautious until full-text or human review.",
         "Use Ash1989, Fahlman1990, Platt1991, and Prechelt1997 as the classic constructive grounding set for the planned DNC vs Cascade-Correlation/resource-allocation comparison, while keeping exact algorithm-step claims tied to human-reviewed or extractable sources.",
-        "Update asset records for already-collected Ash/Cascade-Correlation PDFs when filenames are verified."
+        "Ash1989 now has a verified private PDF asset path and a cautious inspected-PDF review improvement; next, update the Cascade-Correlation asset record if the already-collected filename is verified."
       ],
       "planned_outputs": [
         "clean foundation bundle page",

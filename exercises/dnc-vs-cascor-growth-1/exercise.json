@@ -3,7 +3,7 @@
   "title": "Dynamic Node Creation or Cascade-Correlation?",
   "type": "bundle-comparison",
   "status": "available",
-  "summary": "Classify cautious review-grounded claims about Dynamic Node Creation and Cascade-Correlation while using Platt1991 and Prechelt1997 as bundle context for resource allocation and CasCor-family guardrails.",
+  "summary": "Classify cautious review-grounded claims about Dynamic Node Creation and Cascade-Correlation, including Ash1989's bounded flattening-error cue, while using Platt1991 and Prechelt1997 as bundle context for resource allocation and CasCor-family guardrails.",
   "concepts": [
     "constructive-learning",
     "hidden-unit-growth",

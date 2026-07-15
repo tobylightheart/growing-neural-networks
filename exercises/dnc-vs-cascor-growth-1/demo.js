@@ -28,6 +28,13 @@ const claims = [
     explanation: 'The Ash record supports this conservative DNC summary while keeping exact trigger schedules open for review.'
   },
   {
+    id: 'dnc-flattening-cue',
+    text: 'Lightweight inspection of the Ash1989 private PDF supports a cautious plateau/flattening cue on the average squared-error curve as a DNC growth signal, but not exact threshold formulae.',
+    answer: 'dnc',
+    hint: 'This is a newly safe DNC-specific claim, bounded by the Ash review notes rather than a full equation claim.',
+    explanation: 'The improved Ash1989 record cautiously supports the flattening-error cue while still withholding exact formulae, parameter definitions, and experiment conclusions.'
+  },
+  {
     id: 'freeze-inputs',
     text: 'After a new hidden feature is installed, its incoming weights are frozen while later training uses it as a stable feature.',
     answer: 'cascor',
@@ -185,7 +192,7 @@ function drawComparisonMap() {
       x: 42,
       y: 96,
       color: '#e8f0de',
-      lines: ['Backpropagation network', 'Adds hidden nodes during training', 'Exact trigger/schedule still cautious']
+      lines: ['Backpropagation network', 'Adds hidden nodes during training', 'Flattening-error cue; exact formulae cautious']
     },
     {
       title: 'Shared constructive core',

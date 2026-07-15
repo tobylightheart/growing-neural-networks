@@ -11,7 +11,7 @@ The active bundle plan calls for a **DNC vs Cascade-Correlation comparison exerc
 - Platt 1991, `platt-1991-resource-allocating-network`
 - Prechelt 1997, `prechelt-1997-cascor-family`
 
-That is enough for a conservative teaching exercise that distinguishes shared hidden-unit growth from Cascade-Correlation-specific candidate training/freezing and from DNC details that remain pending human full-text verification. Platt1991 and Prechelt1997 are included as bundle context only: they widen the comparison toward resource allocation and CasCor-family survey guardrails without adding exact novelty tests, allocation equations, variant rankings, or empirical conclusions.
+That is enough for a conservative teaching exercise that distinguishes shared hidden-unit growth from Cascade-Correlation-specific candidate training/freezing and from DNC details that remain pending human full-text verification. A later inspected-PDF Ash1989 review improvement supports one bounded DNC-specific cue — plateau/flattening on the average squared-error curve — but the exercise still avoids exact insertion formulae, threshold parameters, and full post-insertion schedules. Platt1991 and Prechelt1997 are included as bundle context only: they widen the comparison toward resource allocation and CasCor-family survey guardrails without adding exact novelty tests, allocation equations, variant rankings, or empirical conclusions.
 
 ## Static files
 

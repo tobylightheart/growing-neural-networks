@@ -94,7 +94,7 @@
       "ash-1989-dynamic-node-construction",
       "giles-1995-recurrent-cascade-correlation-limitations"
     ],
-    "notes": "Primary anchor paper for early site demos. Proceedings/Semantic Scholar index it under NeurIPS 1989, while this repository keeps the established 1990 ID pending a human bibliographic cleanup pass."
+    "notes": "Primary anchor paper for early site demos. Proceedings/Semantic Scholar index it under NeurIPS 1989, while this repository keeps the established 1990 ID pending a human bibliographic cleanup pass. On 2026-07-16, the private library PDF path was verified under pdfs/Constructive and the asset record was updated from located to collected; extraction tooling was still unavailable, and embedded PDF metadata was generic conversion metadata rather than article-specific bibliographic evidence."
   },
   {
     "id": "giles-1995-recurrent-cascade-correlation-limitations",

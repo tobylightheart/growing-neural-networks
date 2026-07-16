@@ -247,5 +247,16 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing Ash1989 Dynamic Node Creation review rather than promoting a new paper because the active classic bundle's remaining concrete action was asset verification/improvement. The private PDF path was verified under pdfs/Constructive, but `pdftotext` and Python PDF extraction libraries were unavailable; lightweight Flate-string inspection supported cautious notes about one-at-a-time hidden-node addition, average-squared-error flattening as the growth trigger, and regular backpropagation after node growth. No extracted full text was committed."
+  },
+  {
+    "id": "classic-constructive-bundle-2026-07-16-fahlman-asset-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-16",
+    "description": "Daily bundle-first review improvement for the active classic-constructive-foundations bundle, updating Fahlman1990 after verifying the private Cascade-Correlation PDF asset path.",
+    "query": "data/review-bundles.json classic-constructive-foundations; local private PDF filename check for Fahlman S E and Lebiere C (1989) - The Cascade-Correlation Learning Architecture.pdf; NeurIPS proceedings PDF HTTP check; CMU KiltHub HTTP check; PDF extraction tooling check; embedded PDF metadata byte check",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing Fahlman1990 Cascade-Correlation asset bookkeeping rather than promoting a new paper because the active classic bundle's remaining concrete action was to verify the already-collected Cascade-Correlation filename. The private PDF path was verified under pdfs/Constructive, the public NeurIPS PDF returned HTTP 200, and CMU KiltHub returned HTTP 202. `pdftotext` and Python PDF extraction libraries were unavailable, and embedded PDF metadata was generic DjVu conversion metadata, so no extracted full text was committed."
   }
 ]

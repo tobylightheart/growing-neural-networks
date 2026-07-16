@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-14",
+  "updated": "2026-07-16",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -180,7 +180,7 @@
       "next_actions": [
         "Prechelt1997 now has a public automated review draft grounded in Crossref metadata and a verified private PDF path; keep detailed CasCor-family comparisons cautious until full-text or human review.",
         "Use Ash1989, Fahlman1990, Platt1991, and Prechelt1997 as the classic constructive grounding set for the planned DNC vs Cascade-Correlation/resource-allocation comparison, while keeping exact algorithm-step claims tied to human-reviewed or extractable sources.",
-        "Ash1989 now has a verified private PDF asset path and a cautious inspected-PDF review improvement; next, update the Cascade-Correlation asset record if the already-collected filename is verified."
+        "Ash1989 and Fahlman1990 now have verified private PDF asset paths, and Ash1989 has a cautious inspected-PDF review improvement; next, keep the DNC-vs-Cascade-Correlation/resource-allocation comparison cautious until full-text or human review checks exact formulae, candidate criteria, and benchmark details."
       ],
       "planned_outputs": [
         "clean foundation bundle page",

@@ -4,7 +4,7 @@
 
 ## Review status
 
-Improved automated draft based on the NeurIPS proceedings PDF, the CMU KiltHub record, and Semantic Scholar metadata. The paper is sufficiently well documented to summarize the algorithmic pattern, but a human pass should still verify the experimental details and final bibliographic convention for the year/venue label.
+Improved automated draft based on the NeurIPS proceedings PDF, the CMU KiltHub record, Semantic Scholar metadata, and a verified private-library PDF path. The paper is sufficiently well documented to summarize the algorithmic pattern, but a human pass should still verify the experimental details and final bibliographic convention for the year/venue label. On 2026-07-16, the private Cascade-Correlation PDF filename was verified under `../growing-neural-networks-library/`; extraction tooling was still unavailable in cron, so no extracted full text was committed.
 
 ## One-sentence summary
 
@@ -77,6 +77,8 @@ The existing `modules/cascade-correlation-growth/` and `modules/residual-correla
 The NeurIPS proceedings PDF and Semantic Scholar metadata index the paper as *The Cascade-Correlation Learning Architecture* by Scott E. Fahlman and Christian Lebiere in Neural Information Processing Systems, with the proceedings PDF under the 1989 NeurIPS record. The existing project ID and paper metadata use the common `fahlman-1990-cascade-correlation` label. Until a human bibliographic cleanup pass decides whether to rename the ID, this review keeps the established site identifier and records the proceedings links in metadata.
 
 CMU KiltHub also hosts a record for the work, posted in 1993, with an abstract emphasizing four claimed advantages: fast learning, automatic determination of size/topology, retention of learned structures when the training set changes, and no need to back-propagate error signals through the network's existing hidden connections.
+
+Private-library asset check on 2026-07-16: `../growing-neural-networks-library/pdfs/Constructive/Fahlman S E and Lebiere C (1989) - The Cascade-Correlation Learning Architecture.pdf` exists and begins with a PDF-1.2 header. The public NeurIPS proceedings PDF returned HTTP 200 and the CMU KiltHub record returned HTTP 202. The local PDF's embedded metadata appears to be generic DjVu conversion metadata rather than article-specific bibliographic evidence, and `pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable, so this review does not add new full-text-derived claims.
 
 ## Open questions for human review
 

@@ -13,15 +13,15 @@
   },
   {
     "paper_id": "fahlman-1990-cascade-correlation",
-    "pdf_status": "located",
-    "text_status": "missing",
+    "pdf_status": "collected",
+    "text_status": "extraction-failed",
     "access": "open",
     "local_private_only": true,
-    "pdf_local_path": "../growing-neural-networks-library/pdfs/fahlman-1990-cascade-correlation.pdf",
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Fahlman S E and Lebiere C (1989) - The Cascade-Correlation Learning Architecture.pdf",
     "text_local_path": "../growing-neural-networks-library/text/fahlman-1990-cascade-correlation.md",
     "source_url": "https://proceedings.neurips.cc/paper_files/paper/1989/file/69adc1e107f7f7d035d7baf04342e1ca-Paper.pdf",
-    "last_checked": "2026-06-25",
-    "notes": "Open NeurIPS proceedings PDF located during automated review improvement; no local private PDF/text asset was collected."
+    "last_checked": "2026-07-16",
+    "notes": "Private local PDF path verified during the classic constructive foundations review-improvement pass. The PDF exists under the private library with a PDF-1.2 header; online NeurIPS proceedings PDF returned HTTP 200, and the CMU KiltHub record returned HTTP 202. The private PDF embedded metadata is generic DjVu conversion metadata rather than reliable article metadata. `pdftotext` and Python PDF extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) were unavailable in cron, so no extracted text was committed; the existing review remains grounded in public proceedings/KiltHub/Semantic Scholar metadata and cautious algorithm-level reading notes."
   },
   {
     "paper_id": "giles-1995-recurrent-cascade-correlation-limitations",

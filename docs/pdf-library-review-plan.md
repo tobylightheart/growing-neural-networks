@@ -1,6 +1,6 @@
 # PDF Library Review Plan
 
-Updated: 2026-07-16
+Updated: 2026-07-17
 
 This project now uses a bundle-first content loop. The private paper library is large enough that adding paper records one-by-one without a topic plan would make the public site noisy. Bundles define the order in which papers should be promoted from the private library into public metadata, reviews, synthesis notes, modules, and exercises.
 
@@ -22,7 +22,7 @@ Why this first:
 
 - The first six-anchor STDP review milestone is complete, so that bundle should stay warm for bounded synthesis and exercises rather than continue to monopolize daily review work.
 - The eSNN branch has now drafted its planned first sequence through Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017, so it should stay warm for cautious synthesis and future full-text improvements rather than remain the default daily promotion branch.
-- The classic branch has now drafted Platt1991 and Prechelt1997 as public review records; Ash1989 has a verified private PDF asset plus a cautious inspected-PDF review improvement; and Fahlman1990 now has its already-collected Cascade-Correlation PDF path verified in the private library. This branch grounds non-spiking constructive growth before broader comparison with spiking/evolving methods.
+- The classic branch has now drafted Platt1991 and Prechelt1997 as public review records; Ash1989 has a verified private PDF asset plus a cautious inspected-PDF review improvement; Fahlman1990 now has its already-collected Cascade-Correlation PDF path verified in the private library; and Platt1991 has a 2026-07-17 metadata/asset recheck that confirms pages/external IDs while leaving exact novelty-test and equation details pending. This branch grounds non-spiking constructive growth before broader comparison with spiking/evolving methods.
 
 The completed STDP promotion sequence was:
 

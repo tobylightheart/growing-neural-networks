@@ -6,7 +6,7 @@
 
 Automated bundle-first draft for the `classic-constructive-foundations` bundle. It was selected after the eSNN active branch completed its planned first-anchor review sequence and the bundle plan explicitly allowed daily review work to branch back to the high-priority classic constructive foundations.
 
-This draft is grounded in the existing bundle metadata, Crossref title/DOI metadata for DOI `10.1162/neco.1991.3.2.213`, Semantic Scholar DOI metadata, and a verified local private PDF path under `../growing-neural-networks-library/pdfs/Constructive/`. The cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz` were unavailable), and raw byte/string inspection did not expose reliable body text, so this is a cautious reading guide rather than a full close reading of the article.
+This draft is grounded in the existing bundle metadata, Crossref title/DOI metadata for DOI `10.1162/neco.1991.3.2.213`, Semantic Scholar DOI metadata, and a verified local private PDF path under `../growing-neural-networks-library/pdfs/Constructive/`. Rechecked on 2026-07-17: the cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz` were unavailable), and the local PDF appears to be TeX/Ghostscript/DVI-derived with no recoverable body text from lightweight byte/string inspection, so this remains a cautious reading guide rather than a full close reading of the article.
 
 ## One-sentence summary
 
@@ -24,11 +24,12 @@ That makes it useful for three site-level comparisons:
 
 ## Bibliographic metadata checked
 
-- Crossref title lookup returned John Platt, "A Resource-Allocating Network for Function Interpolation", *Neural Computation* 3(2), June 1991, DOI `10.1162/neco.1991.3.2.213`.
-- Semantic Scholar DOI lookup returned the matching title, year 1991, venue *Neural Computation*, author John C. Platt, DOI `10.1162/neco.1991.3.2.213`, DBLP key `journals/neco/Platt91`, and Semantic Scholar paper id `15e2989c299b63efc42f0b93bf63848a92b88c63`.
-- Semantic Scholar's publisher-elided metadata did not expose an abstract, but did expose a TLDR describing allocation of a new computational unit for unusual patterns, faster learning than backpropagation networks, and comparable synapse count.
-- A DOI landing check was attempted but the DOI resolver/publisher path returned HTTP 403 in this cron environment, so no publisher landing-page details beyond Crossref/Semantic Scholar are used here.
-- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive/`; the PDF and extracted full text were not copied into Git.
+- Crossref title lookup returned John Platt, "A Resource-Allocating Network for Function Interpolation", *Neural Computation* 3(2):213-225, June 1991, DOI `10.1162/neco.1991.3.2.213`, published by MIT Press Journals.
+- Semantic Scholar DOI lookup returned the matching title, year 1991, venue *Neural Computation*, author John C. Platt, DOI `10.1162/neco.1991.3.2.213`, DBLP key `journals/neco/Platt91`, PubMed id `31167310`, and Semantic Scholar paper id `15e2989c299b63efc42f0b93bf63848a92b88c63`.
+- Semantic Scholar's publisher-elided metadata did not expose an abstract, but did expose a TLDR describing allocation of a new computational unit for unusual patterns, faster learning than backpropagation networks, and comparable synapse count. Treat the TLDR as a search/triage aid rather than as a substitute for close reading.
+- Semantic Scholar also exposed a green open-access PDF pointer, but this review remains grounded in the already-collected private library PDF and public metadata; no PDF or extracted text was copied into Git.
+- A DOI landing check was attempted again on 2026-07-17, but the DOI resolver redirected to MIT Press/Cloudflare and returned HTTP 403 in this cron environment, so no publisher landing-page details beyond Crossref/Semantic Scholar are used here.
+- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive/`; the file has a PDF-1.4 header and TeX/Ghostscript/DVI-derived metadata (`paperWeb.dvi`/`ran.pdf`). Lightweight Flate/string inspection exposed no recoverable body text, so the PDF and extracted full text were not copied into Git.
 
 ## Core idea for the review graph
 

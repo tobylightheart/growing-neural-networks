@@ -794,7 +794,7 @@
       "John C. Platt"
     ],
     "year": 1991,
-    "venue": "Neural Computation 3(2)",
+    "venue": "Neural Computation 3(2):213-225",
     "families": [
       "resource-allocating-network",
       "constructive-learning"
@@ -833,7 +833,7 @@
       "fahlman-1990-cascade-correlation",
       "lightheart-2018-constructive-spiking-thesis"
     ],
-    "notes": "Promoted from the classic-constructive-foundations bundle after the eSNN branch completed its first planned review sequence. Crossref verified DOI, title, author, Neural Computation venue, and June 1991 publication metadata; Semantic Scholar verified matching DOI metadata and supplied a TLDR, while the abstract was publisher-elided. DOI landing check returned HTTP 403 in cron. The private PDF path was verified, but no usable PDF text-extraction tooling was available, so detailed mechanism claims remain cautious pending full-text or human review.",
+    "notes": "Promoted from the classic-constructive-foundations bundle after the eSNN branch completed its first planned review sequence. Crossref verified DOI, title, author, Neural Computation venue, pages 213-225, and June 1991 publication metadata; Semantic Scholar verified matching DOI metadata, DBLP and PubMed IDs, citation-count fields, a green open-access PDF pointer, and a TLDR, while the abstract was publisher-elided. DOI landing checks returned HTTP 403 in cron. The private PDF path was verified; on 2026-07-17, the PDF appeared to be TeX/Ghostscript/DVI-derived with no recoverable body text via local byte/string inspection, and no usable PDF text-extraction tooling was available, so detailed mechanism claims remain cautious pending full-text or human review.",
     "review": "reviews/platt-1991-resource-allocating-network.md"
   },
   {

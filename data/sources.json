@@ -258,5 +258,16 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing Fahlman1990 Cascade-Correlation asset bookkeeping rather than promoting a new paper because the active classic bundle's remaining concrete action was to verify the already-collected Cascade-Correlation filename. The private PDF path was verified under pdfs/Constructive, the public NeurIPS PDF returned HTTP 200, and CMU KiltHub returned HTTP 202. `pdftotext` and Python PDF extraction libraries were unavailable, and embedded PDF metadata was generic DjVu conversion metadata, so no extracted full text was committed."
+  },
+  {
+    "id": "classic-constructive-bundle-2026-07-17-platt-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-17",
+    "description": "Daily bundle-first review improvement for the active classic-constructive-foundations bundle, rechecking Platt1991 resource-allocation metadata and the private PDF asset after all current classic anchors had draft records.",
+    "query": "data/review-bundles.json classic-constructive-foundations; Crossref DOI 10.1162/neco.1991.3.2.213; Semantic Scholar DOI lookup; DOI landing redirect; local private PDF filename check for Platt J (1991) - A Resource-Allocating Network for Function Interpolation.pdf; PDF extraction tooling check; lightweight PDF byte/string inspection",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing Platt1991 review and asset bookkeeping rather than promoting a new paper because the urgent/active classic bundle had no collected-needs-paper-record anchors remaining. Crossref verified Neural Computation 3(2):213-225 and MIT Press Journals metadata; Semantic Scholar verified the DOI record, DBLP/PubMed IDs, citation-count fields, a green open-access PDF pointer, and a TLDR while eliding the abstract. DOI landing returned HTTP 403. The private PDF path was verified under pdfs/Constructive, but `pdftotext` and Python PDF extraction libraries were unavailable and byte/string inspection exposed no recoverable body text, so no extracted full text was committed."
   }
 ]

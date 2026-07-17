@@ -188,8 +188,8 @@
     "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Platt J (1991) - A Resource-Allocating Network for Function Interpolation.pdf",
     "text_local_path": "../growing-neural-networks-library/text/platt-1991-resource-allocating-network.md",
     "source_url": "https://doi.org/10.1162/neco.1991.3.2.213",
-    "last_checked": "2026-07-12",
-    "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, title, author, Neural Computation venue, and June 1991 publication metadata; Semantic Scholar DOI metadata matched the record and returned a TLDR while eliding the abstract. DOI landing check returned HTTP 403 in cron. Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
+    "last_checked": "2026-07-17",
+    "notes": "Private local PDF path verified during bundle-first review improvement. Crossref verifies DOI, title, author, Neural Computation venue, pages 213-225, and June 1991 publication metadata; Semantic Scholar DOI metadata matched the record, exposed DBLP/PubMed identifiers, citation-count fields, a green open-access PDF pointer, and a TLDR while eliding the abstract. DOI landing check returned HTTP 403 in cron. Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron; the private PDF has a PDF-1.4 header and TeX/Ghostscript/DVI-derived metadata, and byte/string inspection exposed no recoverable body text, so no extracted text was committed and the review remains a cautious reading guide."
   },
   {
     "paper_id": "prechelt-1997-cascor-family",

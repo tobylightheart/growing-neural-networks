@@ -57,9 +57,33 @@ const claims = [
   }
 ];
 
+const sourceBoundaries = [
+  {
+    short: 'Ash1989 / DNC',
+    use: 'backpropagation-network growth and a cautious flattening-error cue',
+    hold: 'exact insertion equations, thresholds, and full post-growth schedules'
+  },
+  {
+    short: 'Fahlman1990 / CasCor',
+    use: 'candidate-unit training, residual-error correlation, installation, and frozen incoming weights',
+    hold: 'claims that every constructive method uses candidate correlation or freezes features'
+  },
+  {
+    short: 'Platt1991 / RAN',
+    use: 'resource-allocation and function-interpolation context for classic capacity growth',
+    hold: 'exact novelty tests, unit parameters, and update equations'
+  },
+  {
+    short: 'Prechelt1997 / CasCor family',
+    use: 'family-level survey context and a reminder that CasCor variants need close review',
+    hold: 'variant rankings, benchmark conclusions, and detailed algorithm-family comparisons'
+  }
+];
+
 const score = document.querySelector('#score');
 const scoreNote = document.querySelector('#score-note');
 const claimList = document.querySelector('#claim-list');
+const boundaryList = document.querySelector('#boundary-list');
 const feedback = document.querySelector('#feedback');
 const checkButton = document.querySelector('#check-answer');
 const hintButton = document.querySelector('#show-hints');
@@ -89,6 +113,14 @@ function renderClaims() {
       <p class="result-line" aria-live="polite"></p>
     </div>
   </section>`).join('');
+}
+
+function renderSourceBoundaries() {
+  boundaryList.innerHTML = sourceBoundaries.map(boundary => `<article class="boundary-card">
+    <h3>${boundary.short}</h3>
+    <p><strong>Use:</strong> ${boundary.use}.</p>
+    <p><strong>Hold back:</strong> ${boundary.hold}.</p>
+  </article>`).join('');
 }
 
 function selectedFor(claimId) {
@@ -235,6 +267,7 @@ function drawComparisonMap() {
 }
 
 renderClaims();
+renderSourceBoundaries();
 drawComparisonMap();
 updateScore(false);
 checkButton.addEventListener('click', checkAnswers);

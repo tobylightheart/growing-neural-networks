@@ -17,7 +17,7 @@ That is enough for a conservative teaching exercise that distinguishes shared hi
 
 - `exercise.json` — local metadata synchronized with `data/exercises.json`
 - `index.html` — exercise route
-- `demo.js` — claim classification interaction and canvas comparison map
+- `demo.js` — source-boundary warmup, claim classification interaction, and canvas comparison map
 - `styles.css` — route-specific styling
 
 ## Guardrails

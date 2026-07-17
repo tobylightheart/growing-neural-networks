@@ -81,6 +81,35 @@
   margin-bottom: 1.5rem;
 }
 
+.boundary-panel {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.boundary-list {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.boundary-card {
+  background: #f7f0e7;
+  border: 1px solid #e4d7c5;
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.boundary-card h3 {
+  color: #2e443d;
+  margin-top: 0;
+}
+
+.boundary-card p {
+  color: #5c5347;
+  font-size: 0.95rem;
+}
+
 .exercise-layout {
   display: grid;
   gap: 1.5rem;
@@ -225,6 +254,7 @@ canvas {
 @media (max-width: 900px) {
   .exercise-hero,
   .exercise-layout,
+  .boundary-list,
   .source-grid {
     grid-template-columns: 1fr;
   }

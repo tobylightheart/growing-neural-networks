@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-17",
+  "updated": "2026-07-18",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -84,12 +84,12 @@
     {
       "id": "evolving-spiking-networks",
       "title": "Evolving spiking networks and spike-timing-dependent construction",
-      "priority": "high",
-      "status": "seeded",
+      "priority": "urgent",
+      "status": "active",
       "thesis_anchors": [
         "Chapter 2 literature review: spike-timing-dependent construction and evolving SNNs"
       ],
-      "rationale": "This bundle turned the thesis literature-review spine into public eSNN/deSNN/STDC review drafts. Its first planned sequence through Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017 is complete, so keep it warm for bounded synthesis and future full-text improvements rather than treating it as the default daily promotion branch.",
+      "rationale": "This bundle has completed its first public eSNN/deSNN/STDC review sequence, but the records and private assets are ready for bounded review-improvement work. It is the active branch again for cautious full-text/metadata improvements and synthesis preparation, not for duplicate promotions.",
       "anchor_papers": [
         {
           "paper_id": "schliebs-2013-evolving-spiking-survey",
@@ -130,7 +130,8 @@
       "next_actions": [
         "Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017 now have public automated review drafts: use them as a cautious eSNN/adaptive-structure lineage from survey context through application, dynamic eSNN/deSNN placeholder, supervised adaptive-structure placeholder, and structural-plasticity bridge without overclaiming algorithm steps that still need full-text review.",
         "Roy2017 is now a shared existing-paper bridge with the structural-plasticity bundle; do not create a duplicate Roy2017 record.",
-        "Future work should improve one eSNN draft with full-text details if extraction becomes available, or synthesize the lineage cautiously; daily review promotion has branched to the classic-constructive-foundations bundle.",
+        "Schliebs2013 was rechecked on 2026-07-18: Crossref and Semantic Scholar DOI metadata now record paper id, citation counts, TLDR, and closed/open-access status while the private PDF path remains verified; exact surveyed variant mechanics remain a human/full-text task because extraction tooling is still unavailable.",
+        "Next daily paper work should improve one existing eSNN draft with concrete public metadata, private-path checks, or full-text snippets if extraction becomes available, then prepare a bounded lineage synthesis.",
         "Thesis-derived comparison axis for bounded synthesis: Chapter 2 frames eSNN-style construction as calculating candidate-neuron parameters from the current input before deciding whether the candidate is novel enough to add or close enough to merge with an existing neuron; use this as a cautious public bridge to `parameter-calculation`, `local-performance-trigger`, and `pruning-and-merging`, not as a substitute for full-text method claims about later eSNN derivatives."
       ],
       "planned_outputs": [
@@ -141,13 +142,13 @@
     {
       "id": "classic-constructive-foundations",
       "title": "Classic constructive foundations",
-      "priority": "urgent",
-      "status": "active",
+      "priority": "high",
+      "status": "seeded",
       "thesis_anchors": [
         "Chapter 2 constructive neural-network taxonomy",
         "Existing public Cascade-Correlation and Dynamic Node Creation demos"
       ],
-      "rationale": "This bundle anchors the non-spiking historical foundation. It is now the active review branch because the first eSNN planned sequence is drafted and the site needs the verified classic resource-allocation/CasCor grounding branch before broader synthesis.",
+      "rationale": "This bundle anchors the non-spiking historical foundation and has completed its current four-anchor draft/improvement pass through Ash1989, Fahlman1990, Platt1991, and Prechelt1997. Keep it high and seeded as a grounding branch for cautious synthesis and the planned DNC-vs-Cascade-Correlation/resource-allocation comparison rather than as the default daily review branch.",
       "anchor_papers": [
         {
           "paper_id": "ash-1989-dynamic-node-construction",
@@ -179,10 +180,9 @@
         }
       ],
       "next_actions": [
-        "Prechelt1997 now has a public automated review draft grounded in Crossref metadata and a verified private PDF path; keep detailed CasCor-family comparisons cautious until full-text or human review.",
-        "Platt1991 was rechecked on 2026-07-17: Crossref/Semantic Scholar metadata now record pages and external IDs, the private PDF path remains verified, but no usable text extraction or byte-inspected body text was available, so exact resource-allocation novelty tests and equations remain human-review tasks.",
+        "The current classic constructive four-anchor pass is complete: Ash1989, Fahlman1990, Platt1991, and Prechelt1997 all have public automated review drafts or checked review improvements with verified private PDF asset paths.",
         "Use Ash1989, Fahlman1990, Platt1991, and Prechelt1997 as the classic constructive grounding set for the planned DNC vs Cascade-Correlation/resource-allocation comparison, while keeping exact algorithm-step claims tied to human-reviewed or extractable sources.",
-        "Ash1989 and Fahlman1990 now have verified private PDF asset paths, and Ash1989 has a cautious inspected-PDF review improvement; next, keep the DNC-vs-Cascade-Correlation/resource-allocation comparison cautious until full-text or human review checks exact formulae, candidate criteria, and benchmark details."
+        "Keep detailed DNC, CasCor-family, resource-allocation novelty-test, formula, candidate criteria, and benchmark claims cautious until full-text or human review checks them."
       ],
       "planned_outputs": [
         "clean foundation bundle page",

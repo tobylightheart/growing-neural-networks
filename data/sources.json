@@ -269,5 +269,16 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing Platt1991 review and asset bookkeeping rather than promoting a new paper because the urgent/active classic bundle had no collected-needs-paper-record anchors remaining. Crossref verified Neural Computation 3(2):213-225 and MIT Press Journals metadata; Semantic Scholar verified the DOI record, DBLP/PubMed IDs, citation-count fields, a green open-access PDF pointer, and a TLDR while eliding the abstract. DOI landing returned HTTP 403. The private PDF path was verified under pdfs/Constructive, but `pdftotext` and Python PDF extraction libraries were unavailable and byte/string inspection exposed no recoverable body text, so no extracted full text was committed."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-18-schliebs-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-18",
+    "description": "Daily bundle-first review improvement for the active evolving-spiking-networks bundle, rechecking Schliebs2013 survey metadata and the private PDF asset after priority review moved eSNN back to active improvement work.",
+    "query": "data/review-bundles.json evolving-spiking-networks; Crossref DOI 10.1007/s12530-013-9074-9; Semantic Scholar DOI lookup; DOI/Springer landing check; local private PDF filename check; PDF extraction tooling check",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing Schliebs2013 review and asset bookkeeping rather than promoting a new paper. Crossref verified Evolving Systems 4(2):87-98; Semantic Scholar DOI lookup returned paperId 125798f613ea5974a55b413ce5eb0c37769f45c6, citation-count fields, TLDR, and closed open-access-PDF status while eliding the abstract; the DOI landing page redirected to Springer; the private PDF path was verified under pdfs/Constructive_Spiking. `pdftotext` and Python PDF extraction libraries were unavailable, so no extracted full text was committed."
   }
 ]

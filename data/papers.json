@@ -338,7 +338,7 @@
     ],
     "status": "review-draft",
     "importance": "survey-anchor",
-    "summary": "Surveys the evolving Spiking Neural Network (eSNN) architecture, its relation to the ECoS paradigm, extensions for spatio-temporal data, feature/parameter optimisation, applications, and open problems.",
+    "summary": "Surveys the evolving Spiking Neural Network (eSNN) architecture as an extension of the ECoS paradigm; public DOI/Springer/Crossref/Semantic Scholar metadata support lineage-level claims, while exact variant mechanics remain pending full-text or human review.",
     "growth_mechanism": "Surveys eSNN as an evolving spiking-network architecture rather than adding one newly verified growth rule in this review pass; use as lineage and terminology grounding before making detailed algorithm claims from later method papers.",
     "what_grows": [
       "neurons",
@@ -355,7 +355,7 @@
     "links": {
       "paper": "https://doi.org/10.1007/s12530-013-9074-9",
       "doi": "10.1007/s12530-013-9074-9",
-      "semantic_scholar": "",
+      "semantic_scholar": "https://www.semanticscholar.org/paper/125798f613ea5974a55b413ce5eb0c37769f45c6",
       "pdf": "https://link.springer.com/content/pdf/10.1007/s12530-013-9074-9.pdf"
     },
     "discovered_via": [
@@ -369,7 +369,7 @@
       "lightheart-2018-constructive-spiking-thesis",
       "masquelier-2008-repeating-patterns-stdp"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-07 verified DOI, journal, volume/issue/pages, authors, Springer landing-page abstract, Crossref metadata, and the private PDF path. Semantic Scholar DOI lookup was attempted but rate-limited (HTTP 429). No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious reading guide rather than a full human-verified close reading."
+    "notes": "Automated review draft on 2026-07-07 verified DOI, journal, volume/issue/pages, authors, Springer landing-page abstract, Crossref metadata, and the private PDF path. Rechecked on 2026-07-18 after the eSNN branch became the active improvement branch again: Crossref still verifies Evolving Systems 4(2):87-98; Semantic Scholar DOI lookup now succeeds with paperId 125798f613ea5974a55b413ce5eb0c37769f45c6, citation-count fields, a TLDR, and closed open-access-PDF status while eliding the publisher abstract. No reliable local text-extraction tooling was available in cron, so exact eSNN variant mechanics remain cautious pending full-text or human review."
   },
   {
     "id": "wysoski-2010-evolving-spiking-audiovisual",

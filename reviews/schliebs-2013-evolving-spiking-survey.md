@@ -6,7 +6,7 @@
 
 Automated bundle-first draft for the `evolving-spiking-networks` bundle. It was selected because the initial six-paper STDP background milestone is complete, the project policy now prefers the eSNN branch for daily review work, and this survey is the bundle's first lineage anchor before Wysoski2010, Kasabov2013, and Wang2014 detail reviews.
 
-This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1007/s12530-013-9074-9`, the Springer DOI landing page and abstract, and a verified local private PDF path. The cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz` were unavailable), so this should be treated as a cautious reading guide rather than a full close reading of the PDF. A Semantic Scholar DOI lookup was attempted but returned HTTP 429 rate limiting.
+This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1007/s12530-013-9074-9`, the Springer DOI landing page and abstract, Semantic Scholar DOI metadata rechecked on 2026-07-18, and a verified local private PDF path. The cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz` were unavailable), so this should be treated as a cautious reading guide rather than a full close reading of the PDF.
 
 ## One-sentence summary
 
@@ -24,6 +24,7 @@ For the literature review, Schliebs2013 is useful as a map rather than as a sing
 - DOI: `10.1007/s12530-013-9074-9`.
 - Crossref records online publication on 2013-02-10 and print publication in June 2013.
 - The Springer landing page exposes matching citation metadata, a Springer PDF URL, and an abstract describing the paper as a comprehensive literature survey of eSNNs since their introduction in 2006 as an extension of Kasabov's 1998 ECoS paradigm.
+- Semantic Scholar DOI lookup on 2026-07-18 returned paperId `125798f613ea5974a55b413ce5eb0c37769f45c6`, a DOI-matching record, citation-count fields, a TLDR with the same high-level survey framing, and `CLOSED` open-access-PDF status while eliding the publisher abstract.
 - The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`, but the PDF and extracted full text were not copied into Git.
 
 ## Core idea
@@ -71,10 +72,10 @@ That approach would keep the site educational while avoiding unsupported impleme
 
 ## Relationship to neighboring bundle papers
 
-- **Wysoski, Benuskova, and Kasabov 2010:** planned next application anchor for audiovisual information processing.
-- **Kasabov, Dhoble, Nuntalid, and Indiveri 2013:** planned detail review for dynamic evolving spiking neural networks in online spatio- and spectro-temporal recognition.
-- **Wang, Belatreche, Maguire, and McGinnity 2014:** planned detail review for online supervised spiking learning with adaptive structure.
-- **Roy and Basu 2017:** bridge toward structural-plasticity mechanisms that should not duplicate the eSNN branch.
+- **Wysoski, Benuskova, and Kasabov 2010:** drafted audiovisual information-processing application anchor; keep exact application mechanisms pending full-text or human review.
+- **Kasabov, Dhoble, Nuntalid, and Indiveri 2013:** drafted detail-review placeholder for dynamic evolving spiking neural networks in online spatio- and spectro-temporal recognition.
+- **Wang, Belatreche, Maguire, and McGinnity 2014:** drafted detail-review placeholder for online supervised spiking learning with adaptive structure.
+- **Roy and Basu 2017:** drafted bridge toward structural-plasticity mechanisms that should not duplicate the eSNN branch.
 - **Lightheart 2018 thesis source:** thesis-aligned taxonomy context for spike-timing-dependent construction and evolving spiking systems.
 
 ## Open questions for human review

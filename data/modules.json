@@ -111,7 +111,7 @@
     "title": "Evolving Spiking Lineage Cards",
     "type": "paper-card-bridge",
     "status": "available",
-    "summary": "Sort cautious paper cards for the active eSNN bundle into lineage, application, method-placeholder, adaptive-structure, and structural-plasticity bridge roles without overclaiming unreviewed algorithm details.",
+    "summary": "Sort cautious paper cards for the active eSNN bundle from thesis-taxonomy vocabulary through lineage, application, method-placeholder, adaptive-structure, and structural-plasticity bridge roles without overclaiming unreviewed algorithm details.",
     "concepts": [
       "spiking-neural-networks",
       "spike-timing-dependent-construction",

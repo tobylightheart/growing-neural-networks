@@ -1,5 +1,18 @@
 const cards = [
   {
+    id: 'lightheart',
+    paperId: 'lightheart-2018-constructive-spiking-thesis',
+    title: 'Lightheart 2018',
+    role: 'Thesis taxonomy bridge',
+    roleSummary: 'Connects eSNN cards to construction, pruning, merging, and parameter-calculation vocabulary.',
+    year: 2018,
+    x: 150,
+    y: 390,
+    color: '#4f6f9f',
+    safe: 'Safe claim: use as the public thesis-taxonomy bridge for spike-timing-dependent construction, parameter calculation, local performance triggers, and pruning/merging vocabulary.',
+    caution: 'Do not let thesis-derived vocabulary replace source-specific full-text claims about later eSNN variants or structural-plasticity algorithms.'
+  },
+  {
     id: 'schliebs',
     paperId: 'schliebs-2013-evolving-spiking-survey',
     title: 'Schliebs & Kasabov 2013',
@@ -151,9 +164,10 @@ function drawCanvas() {
   ctx.fillText('Connect the cards, but keep exact growth-rule claims behind the review guardrail.', 54, 92);
 
   drawArrow(cards[0], cards[1]);
-  drawArrow(cards[0], cards[2]);
-  drawArrow(cards[2], cards[3]);
+  drawArrow(cards[1], cards[2]);
+  drawArrow(cards[1], cards[3]);
   drawArrow(cards[3], cards[4]);
+  drawArrow(cards[4], cards[5]);
   cards.forEach(drawCard);
 
   ctx.save();

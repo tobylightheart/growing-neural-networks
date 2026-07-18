@@ -2,8 +2,9 @@
 
 A standalone, no-build JavaScript module for the active `evolving-spiking-networks` review bundle.
 
-The module implements the bundle's planned paper-card output rather than a new algorithm demo. It uses the currently public automated review drafts for:
+The module implements the bundle's planned paper-card output rather than a new algorithm demo. It uses the public thesis-taxonomy review as connective vocabulary plus the currently public automated review drafts for:
 
+- Lightheart 2018 — thesis taxonomy bridge for construction, pruning/merging, and parameter-calculation vocabulary.
 - Schliebs and Kasabov 2013 — survey/lineage vocabulary.
 - Wysoski, Benuskova, and Kasabov 2010 — audiovisual application anchor.
 - Kasabov et al. 2013 — dynamic eSNN/deSNN detail-review placeholder.
@@ -12,7 +13,7 @@ The module implements the bundle's planned paper-card output rather than a new a
 
 ## Guardrail
 
-This module intentionally separates safe bundle-level claims from pending method details. It should not present exact neuron-creation, pruning, merging, rewiring, or adaptation triggers for Kasabov2013, Wang2014, or Roy2017 until a full-text or human review verifies them.
+This module intentionally separates safe bundle-level claims from pending method details. It may use Lightheart2018 for taxonomy vocabulary, but it should not let thesis-derived vocabulary stand in for exact neuron-creation, pruning, merging, rewiring, or adaptation triggers for Kasabov2013, Wang2014, or Roy2017 until a full-text or human review verifies them.
 
 ## Static pattern
 

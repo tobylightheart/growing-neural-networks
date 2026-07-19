@@ -15,6 +15,8 @@ The module implements the bundle's planned paper-card output rather than a new a
 
 This module intentionally separates safe bundle-level claims from pending method details. It may use Lightheart2018 for taxonomy vocabulary, but it should not let thesis-derived vocabulary stand in for exact neuron-creation, pruning, merging, rewiring, or adaptation triggers for Kasabov2013, Wang2014, or Roy2017 until a full-text or human review verifies them.
 
+The thesis comparison-axis selector is a guardrail, not a source of new mechanism claims. It lets readers test whether `parameter-calculation`, `local-performance-trigger`, and `pruning-and-merging` are directly supported by the public thesis review, present only as cautious lineage context, or still pending for each eSNN paper card.
+
 ## Static pattern
 
 Files are plain static assets:

@@ -8,7 +8,10 @@
     "spiking-neural-networks",
     "spike-timing-dependent-construction",
     "structural-plasticity",
-    "growth-trigger"
+    "growth-trigger",
+    "parameter-calculation",
+    "local-performance-trigger",
+    "pruning-and-merging"
   ],
   "papers": [
     "schliebs-2013-evolving-spiking-survey",

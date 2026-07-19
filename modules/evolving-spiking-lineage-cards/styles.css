@@ -50,6 +50,39 @@
 .claim-box a {
   font-weight: 800;
 }
+.axis-box {
+  margin-top: 1rem;
+  border-radius: 18px;
+  padding: 1rem;
+  background: rgba(53, 104, 89, 0.08);
+  border: 1px solid rgba(53, 104, 89, 0.22);
+}
+.axis-box h3 {
+  margin-top: 0;
+}
+.axis-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+.axis-button {
+  border: 1px solid var(--border, #ded6c8);
+  border-radius: 999px;
+  background: var(--surface, #fffdf8);
+  color: inherit;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.5rem 0.8rem;
+}
+.axis-button:hover,
+.axis-button.active {
+  border-color: #356859;
+  background: rgba(53, 104, 89, 0.13);
+}
+.axis-note {
+  margin-bottom: 0;
+}
 .visual-panel {
   overflow-x: auto;
 }

@@ -1,3 +1,45 @@
+const claimAxes = [
+  {
+    id: 'parameter-calculation',
+    label: 'Parameter calculation',
+    description: 'Thesis vocabulary for setting useful initial parameters when a new component is constructed.',
+    statuses: {
+      lightheart: 'direct vocabulary support from the public thesis-taxonomy review.',
+      schliebs: 'lineage context only; do not infer variant-specific parameter formulas from the survey card.',
+      wysoski: 'application context only; the audiovisual review draft does not verify exact parameter rules.',
+      kasabov: 'pending detail review; exact deSNN/dynamic parameter calculations need full-text or human checking.',
+      wang: 'pending detail review; keyword metadata is not enough to teach exact adaptive-structure parameters.',
+      roy: 'not yet verified; keep structural-plasticity parameter or threshold rules pending.'
+    }
+  },
+  {
+    id: 'local-performance-trigger',
+    label: 'Local performance trigger',
+    description: 'Thesis vocabulary for growth or pruning decisions driven by component-level performance rather than only global error.',
+    statuses: {
+      lightheart: 'direct vocabulary support from the public thesis-taxonomy review.',
+      schliebs: 'lineage context only; survey-level eSNN vocabulary is safe, exact trigger mechanics are not.',
+      wysoski: 'application context only; no reviewed local-trigger claim should be made from the current draft.',
+      kasabov: 'pending detail review; creation/adaptation triggers remain unverified.',
+      wang: 'pending detail review; supervised adaptive-structure trigger details remain unverified.',
+      roy: 'pending detail review; structural-update triggers remain unverified.'
+    }
+  },
+  {
+    id: 'pruning-and-merging',
+    label: 'Pruning and merging',
+    description: 'Thesis vocabulary for capacity-control operations that remove or combine components after growth.',
+    statuses: {
+      lightheart: 'direct vocabulary support from the public thesis-taxonomy review.',
+      schliebs: 'context only; use the survey as lineage framing, not as verified pruning instructions.',
+      wysoski: 'not yet verified for this card; keep audiovisual mechanism details pending.',
+      kasabov: 'pending detail review; dynamic-synapse or adaptation details should stay guarded.',
+      wang: 'context only from title/keywords; exact neuronal pruning criteria remain unverified.',
+      roy: 'bridge context only; exact deletion/rewiring rules remain pending full-text or human review.'
+    }
+  }
+];
+
 const cards = [
   {
     id: 'lightheart',
@@ -79,7 +121,7 @@ const cards = [
   }
 ];
 
-const state = { selected: cards[0].id };
+const state = { selected: cards[0].id, selectedAxis: claimAxes[0].id };
 const canvas = document.querySelector('#lineage-canvas');
 const ctx = canvas.getContext('2d');
 const roleName = document.querySelector('#role-name');
@@ -89,9 +131,14 @@ const paperTitle = document.querySelector('#paper-title');
 const paperSummary = document.querySelector('#paper-summary');
 const reviewLink = document.querySelector('#review-link');
 const readinessGrid = document.querySelector('#readiness-grid');
+const axisButtons = document.querySelector('#axis-buttons');
+const axisNote = document.querySelector('#axis-note');
 
 function activeCard() {
   return cards.find(card => card.id === state.selected) || cards[0];
+}
+function activeAxis() {
+  return claimAxes.find(axis => axis.id === state.selectedAxis) || claimAxes[0];
 }
 function roundRect(x, y, w, h, r) {
   ctx.beginPath();
@@ -177,12 +224,13 @@ function drawCanvas() {
   ctx.lineWidth = 3;
   ctx.fill();
   ctx.stroke();
+  const axis = activeAxis();
   ctx.fillStyle = selected.color;
   ctx.font = 'bold 18px system-ui, sans-serif';
-  ctx.fillText(`${selected.role}: ready claim`, 110, 532);
+  ctx.fillText(`${selected.role}: ${axis.label}`, 110, 532);
   ctx.fillStyle = '#3f3a32';
   ctx.font = '15px system-ui, sans-serif';
-  wrapText(selected.safe, 110, 560, 805, 21);
+  wrapText(axis.statuses[selected.id], 110, 560, 805, 21);
   ctx.restore();
 }
 function renderButtons() {
@@ -197,6 +245,18 @@ function renderButtons() {
     });
   });
 }
+function renderAxes() {
+  axisButtons.innerHTML = claimAxes.map(axis => `
+    <button type="button" class="axis-button" data-axis="${axis.id}" role="tab" aria-selected="${axis.id === state.selectedAxis}">
+      ${axis.label}
+    </button>`).join('');
+  axisButtons.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+      state.selectedAxis = button.dataset.axis;
+      render();
+    });
+  });
+}
 function renderReadiness() {
   readinessGrid.innerHTML = cards.map(card => `
     <article class="readiness-card">
@@ -207,19 +267,26 @@ function renderReadiness() {
 }
 function render() {
   const card = activeCard();
+  const axis = activeAxis();
   roleName.textContent = card.role;
   roleSummary.textContent = card.roleSummary;
   paperTitle.textContent = card.title;
   paperSummary.textContent = card.safe;
   reviewLink.href = `../../pages/review.html?id=${card.paperId}`;
+  axisNote.innerHTML = `<strong>${axis.label}:</strong> ${axis.description}<br><strong>${card.title} status:</strong> ${axis.statuses[card.id]}`;
   [...paperButtons.querySelectorAll('button')].forEach(button => {
     button.classList.toggle('active', button.dataset.card === state.selected);
     button.setAttribute('aria-selected', String(button.dataset.card === state.selected));
+  });
+  [...axisButtons.querySelectorAll('button')].forEach(button => {
+    button.classList.toggle('active', button.dataset.axis === state.selectedAxis);
+    button.setAttribute('aria-selected', String(button.dataset.axis === state.selectedAxis));
   });
   drawCanvas();
 }
 function init() {
   renderButtons();
+  renderAxes();
   renderReadiness();
   render();
 }

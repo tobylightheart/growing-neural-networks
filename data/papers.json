@@ -420,7 +420,7 @@
       "wang-2014-adaptive-structure-snn",
       "lightheart-2018-constructive-spiking-thesis"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-08 verified DOI, journal, volume/issue/pages, authors, a private PDF path, and embedded PDF title/author metadata. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). No reliable local text-extraction tooling was available in this cron environment, so the review is a cautious reading guide rather than a full human-verified close reading.",
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after an exact local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-08 verified DOI, journal, volume/issue/pages, authors, a private PDF path, and embedded PDF title/author metadata. On 2026-07-19 the review was improved with a Crossref DOI recheck, DOI/Elsevier landing-route check, private PDF existence/header/size verification, and extraction-tooling check; Semantic Scholar DOI lookup still returned HTTP 429, and no reliable full-text extraction tooling was available, so the review remains a cautious reading guide rather than a full human-verified close reading.",
     "review": "reviews/wysoski-2010-evolving-spiking-audiovisual.md"
   },
   {

@@ -6,7 +6,7 @@
 
 Automated bundle-first draft for the `evolving-spiking-networks` bundle. It was selected because the first STDP six-anchor milestone is complete, Schliebs and Kasabov 2013 already provides a public survey anchor for the eSNN lineage, and the current bundle plan names Wysoski, Benuskova, and Kasabov 2010 as the next application anchor before more detailed Kasabov2013 and Wang2014 method reviews.
 
-This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1016/j.neunet.2010.04.009`, a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`, and basic PDF embedded metadata visible through local string inspection. The cron environment still lacks usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), and Semantic Scholar returned HTTP 429 rate limiting during lookup, so this is a cautious reading guide rather than a full close reading of the paper.
+This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1016/j.neunet.2010.04.009`, a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`, DOI landing-page routing to Elsevier, and limited PDF byte/embedded-metadata checks. The 2026-07-19 improvement pass found that the cron environment still lacks usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), and Semantic Scholar again returned HTTP 429 rate limiting during DOI lookup, so this remains a cautious reading guide rather than a full close reading of the paper.
 
 ## One-sentence summary
 
@@ -23,9 +23,10 @@ For this web book, the important conservative role is not to overclaim the exact
 - Crossref indexes the article as Simei Gomes Wysoski, Lubica Benuskova, and Nikola Kasabov, "Evolving spiking neural networks for audiovisual information processing", *Neural Networks* 23(7):819-835, 2010.
 - DOI: `10.1016/j.neunet.2010.04.009`.
 - Crossref records print publication in September 2010 and a DOI landing URL at `https://doi.org/10.1016/j.neunet.2010.04.009`.
-- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`.
-- Local PDF embedded metadata includes a matching title and author string, but raw `strings` output did not expose reliable body text or abstract content. The PDF and any extracted text were not copied into Git.
-- Semantic Scholar lookup was attempted but returned HTTP 429 rate limiting in this cron environment.
+- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`; on 2026-07-19 the file existed with a `%PDF-1.4` header and size 2,360,988 bytes.
+- Local PDF embedded metadata/byte checks exposed mostly Elsevier artwork/conversion metadata, not reliable article body text or abstract content. The PDF and any extracted text were not copied into Git.
+- Semantic Scholar DOI lookup was retried on 2026-07-19 but again returned HTTP 429 rate limiting in this cron environment.
+- DOI resolution returned HTTP 200 and redirected to Elsevier's `linkinghub.elsevier.com/retrieve/pii/S0893608010000924` landing route.
 
 ## Core idea for the review graph
 
@@ -50,6 +51,10 @@ However, this automated draft should not yet be cited for specifics such as:
 - the evaluation protocol and datasets used for the audiovisual task.
 
 Those points require a reliable full-text extraction pass or human review of the PDF.
+
+## 2026-07-19 automated improvement note
+
+Today's bundle-first pass kept `evolving-spiking-networks` as the urgent active branch and improved this existing Wysoski2010 application-anchor draft rather than promoting a duplicate eSNN paper. Source checks re-verified Crossref bibliographic metadata, DOI/Elsevier routing, and the private local PDF path. Semantic Scholar remains unavailable from cron because the DOI lookup returned HTTP 429, and the local environment still lacks `pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz`. As a result, this review can safely support the public graph role "eSNN audiovisual application anchor", but it should not yet support exact claims about encoding, repository matching, growth/pruning thresholds, datasets, or quantitative results.
 
 ## Relationship to neighboring bundle papers
 

@@ -92,8 +92,8 @@
     "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive_Spiking/Wysoski S G, Benuskova L and Kasabov N (2010) - Evolving spiking neural networks for audiovisual information processing.pdf",
     "text_local_path": "../growing-neural-networks-library/text/wysoski-2010-evolving-spiking-audiovisual.md",
     "source_url": "https://doi.org/10.1016/j.neunet.2010.04.009",
-    "last_checked": "2026-07-08",
-    "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies the DOI and bibliographic details; local PDF embedded metadata includes the matching title/authors. This cron environment had no usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz`), and raw strings did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
+    "last_checked": "2026-07-19",
+    "notes": "Private local PDF path verified during bundle-first review drafting and rechecked during the 2026-07-19 eSNN improvement pass. Crossref verifies the DOI and bibliographic details; DOI resolution returned HTTP 200 and routed to Elsevier linkinghub/S0893608010000924; the private file exists under Constructive_Spiking with a PDF-1.4 header and size 2,360,988 bytes. Local PDF embedded metadata/byte checks mostly exposed Elsevier artwork/conversion metadata rather than reliable article body text. Semantic Scholar DOI lookup again returned HTTP 429. This cron environment had no usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz`), so no extracted text was committed and the review remains a cautious reading guide."
   },
   {
     "paper_id": "song-2000-competitive-hebbian-stdp",

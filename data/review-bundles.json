@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-18",
+  "updated": "2026-07-19",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -131,7 +131,8 @@
         "Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017 now have public automated review drafts: use them as a cautious eSNN/adaptive-structure lineage from survey context through application, dynamic eSNN/deSNN placeholder, supervised adaptive-structure placeholder, and structural-plasticity bridge without overclaiming algorithm steps that still need full-text review.",
         "Roy2017 is now a shared existing-paper bridge with the structural-plasticity bundle; do not create a duplicate Roy2017 record.",
         "Schliebs2013 was rechecked on 2026-07-18: Crossref and Semantic Scholar DOI metadata now record paper id, citation counts, TLDR, and closed/open-access status while the private PDF path remains verified; exact surveyed variant mechanics remain a human/full-text task because extraction tooling is still unavailable.",
-        "Next daily paper work should improve one existing eSNN draft with concrete public metadata, private-path checks, or full-text snippets if extraction becomes available, then prepare a bounded lineage synthesis.",
+        "Wysoski2010 was rechecked on 2026-07-19: Crossref still verifies Neural Networks 23(7):819-835 and the DOI route reaches Elsevier, the private PDF path remains verified with a PDF-1.4 header, Semantic Scholar DOI lookup is still rate-limited from cron, and exact audiovisual/eSNN mechanism details remain a human/full-text task because extraction tooling is still unavailable.",
+        "Next daily paper work should improve another existing eSNN draft (for example Kasabov2013, Wang2014, or Roy2017) with concrete public metadata, private-path checks, or full-text snippets if extraction becomes available, then prepare a bounded lineage synthesis.",
         "Thesis-derived comparison axis for bounded synthesis: Chapter 2 frames eSNN-style construction as calculating candidate-neuron parameters from the current input before deciding whether the candidate is novel enough to add or close enough to merge with an existing neuron; use this as a cautious public bridge to `parameter-calculation`, `local-performance-trigger`, and `pruning-and-merging`, not as a substitute for full-text method claims about later eSNN derivatives."
       ],
       "planned_outputs": [

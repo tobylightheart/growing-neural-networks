@@ -280,5 +280,16 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing Schliebs2013 review and asset bookkeeping rather than promoting a new paper. Crossref verified Evolving Systems 4(2):87-98; Semantic Scholar DOI lookup returned paperId 125798f613ea5974a55b413ce5eb0c37769f45c6, citation-count fields, TLDR, and closed open-access-PDF status while eliding the abstract; the DOI landing page redirected to Springer; the private PDF path was verified under pdfs/Constructive_Spiking. `pdftotext` and Python PDF extraction libraries were unavailable, so no extracted full text was committed."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-19-wysoski-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-19",
+    "description": "Daily bundle-first review improvement for the active evolving-spiking-networks bundle, rechecking Wysoski2010 audiovisual eSNN metadata and the private PDF asset after Schliebs2013 was improved.",
+    "query": "data/review-bundles.json evolving-spiking-networks; Crossref DOI 10.1016/j.neunet.2010.04.009; Semantic Scholar DOI lookup attempted but rate-limited; DOI/Elsevier landing check; local private PDF filename/header/size check; PDF extraction tooling check",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing Wysoski2010 review and asset bookkeeping rather than promoting a new paper. Crossref verified Neural Networks 23(7):819-835 and September 2010 print publication metadata; DOI resolution reached Elsevier linkinghub/S0893608010000924; the private PDF path was verified under pdfs/Constructive_Spiking with a PDF-1.4 header and size 2,360,988 bytes. Semantic Scholar returned HTTP 429. `pdftotext` and Python PDF extraction libraries were unavailable, and local byte/metadata checks did not expose reliable body text, so no extracted full text was committed."
   }
 ]

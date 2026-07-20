@@ -886,5 +886,52 @@
     ],
     "notes": "Promoted from the classic-constructive-foundations bundle after Platt1991. Crossref verified DOI, title, author, Neural Networks volume/issue/pages, and July 1997 print publication metadata; DOI landing redirected to Elsevier/ScienceDirect. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). The private PDF path was verified, but no usable PDF text-extraction tooling was available and raw byte/string inspection did not expose reliable body text, so detailed CasCor-family comparison claims remain cautious pending full-text or human review.",
     "review": "reviews/prechelt-1997-cascor-family.md"
+  },
+  {
+    "id": "marsland-2002-grows-when-required",
+    "title": "A self-organising network that grows when required",
+    "authors": [
+      "Stephen Marsland",
+      "Jonathan Shapiro",
+      "Ulrich Nehmzow"
+    ],
+    "year": 2002,
+    "venue": "Bibliographic details pending verification",
+    "families": [
+      "growing-when-required",
+      "self-organising-networks",
+      "constructive-learning"
+    ],
+    "themes": [
+      "constructive-learning",
+      "growth-trigger",
+      "capacity-control",
+      "topology-constraints"
+    ],
+    "status": "discovered",
+    "importance": "notable",
+    "summary": "Bundle-backed candidate on a self-organising network that grows when required. An exact private-library filename match is verified, while venue, DOI, and detailed growth mechanics remain pending a focused metadata and full-text review.",
+    "growth_mechanism": "Deferred for review: the title and existing bundle role indicate conditional growth in a self-organising network, but this sync records only asset-backed candidate metadata and does not assert the novelty test, insertion rule, or adaptation equations.",
+    "what_grows": [
+      "self-organising-network-structure"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "unsupervised",
+      "self-organising-learning"
+    ],
+    "links": {
+      "paper": "",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "weekly-bundle-sync-2026-07-20"
+    ],
+    "related": [
+      "lightheart-2018-constructive-spiking-thesis"
+    ],
+    "notes": "Added as conservative candidate metadata during the weekly bundle-aware library-sync job after an exact local filename match in pdfs/Constructive. The file exists and is 1,297,945 bytes. No web metadata search was performed within this run's three-search cap, so venue, DOI, access status, detailed mechanism claims, and review promotion remain pending."
   }
 ]

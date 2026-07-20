@@ -302,5 +302,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing Kasabov2013 review and asset bookkeeping rather than promoting a duplicate paper. Crossref verified Neural Networks 41:188-201, May 2013 print publication, and the four authors; DOI resolution returned HTTP 200 at Elsevier PII S0893608012003139; the private PDF path was verified under pdfs/Constructive_Spiking with a PDF-1.7 header and size 1,322,170 bytes. Semantic Scholar returned HTTP 429 and `pdftotext` was unavailable, so no new full-text mechanism claims or extracted text were committed."
+  },
+  {
+    "id": "weekly-bundle-sync-2026-07-20",
+    "source": "bundle-aware-library-sync",
+    "date": "2026-07-20",
+    "description": "Weekly bundle-aware discovery and private-library sync for existing review bundles.",
+    "query": "Ran scripts/check_missing_library_assets.py, then used three focused local filename searches for Fritzke1995 and Marsland2002 within the existing growing-topology-and-neural-gas bundle.",
+    "added": [
+      "marsland-2002-grows-when-required"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Added one conservative discovered candidate record for Marsland, Shapiro, and Nehmzow 2002 with a matching private PDF asset record; no broad library ingest was performed. The exact Marsland title matched a 1,297,945-byte private PDF. Fritzke1995 was deferred in notes only: the filename search found Fritzke papers on Growing Cell Structures and incremental RBF networks, but no clear match for the bundle anchor A growing neural gas network learns topologies. No unknown paper ID was added to rejected or needs_triage."
   }
 ]

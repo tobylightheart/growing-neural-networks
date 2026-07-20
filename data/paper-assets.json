@@ -202,5 +202,17 @@
     "source_url": "https://doi.org/10.1016/s0893-6080(96)00115-3",
     "last_checked": "2026-07-14",
     "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, title, author, Neural Networks 10(5):885-896, and July 1997 print publication metadata; DOI landing redirects to Elsevier/ScienceDirect. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
+  },
+  {
+    "paper_id": "marsland-2002-grows-when-required",
+    "pdf_status": "collected",
+    "text_status": "missing",
+    "access": "unknown",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Marsland S, Shapiro J, Nehmzow U (2002) - A self-organising network that grows when required.pdf",
+    "text_local_path": "../growing-neural-networks-library/text/marsland-2002-grows-when-required.md",
+    "source_url": "",
+    "last_checked": "2026-07-20",
+    "notes": "Exact private local PDF filename verified by the weekly bundle-aware discovery/library-sync job; stat reported 1,297,945 bytes. No public review, extracted text, or verified public source URL was added in this conservative candidate pass."
   }
 ]

@@ -213,11 +213,12 @@
           "citation_key": "",
           "title": "A self-organising network that grows when required",
           "role": "anchor",
-          "asset_status": "available-in-library"
+          "asset_status": "existing-paper"
         }
       ],
       "next_actions": [
-        "Promote Fritzke1995 when the loop needs a non-spiking topology-growth branch."
+        "Marsland2002 now has a conservative discovered record with a verified private PDF path; verify DOI/venue metadata and draft its review when the loop needs a non-spiking topology-growth branch.",
+        "Fritzke1995 remains a bundle gap: the focused filename check found other Fritzke assets but no clear match for A growing neural gas network learns topologies, so do not attach a mismatched PDF."
       ],
       "planned_outputs": [
         "topology-growth taxonomy note",

@@ -291,5 +291,16 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing Wysoski2010 review and asset bookkeeping rather than promoting a new paper. Crossref verified Neural Networks 23(7):819-835 and September 2010 print publication metadata; DOI resolution reached Elsevier linkinghub/S0893608010000924; the private PDF path was verified under pdfs/Constructive_Spiking with a PDF-1.4 header and size 2,360,988 bytes. Semantic Scholar returned HTTP 429. `pdftotext` and Python PDF extraction libraries were unavailable, and local byte/metadata checks did not expose reliable body text, so no extracted full text was committed."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-20-kasabov-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-20",
+    "description": "Daily bundle-first review improvement for the active evolving-spiking-networks bundle, rechecking Kasabov2013 dynamic eSNN/deSNN metadata and the private PDF asset after Schliebs2013 and Wysoski2010 were improved.",
+    "query": "data/review-bundles.json evolving-spiking-networks; Crossref DOI 10.1016/j.neunet.2012.11.014; Semantic Scholar DOI lookup attempted but rate-limited; DOI/Elsevier landing check; local private PDF filename/header/size check; pdftotext availability check",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing Kasabov2013 review and asset bookkeeping rather than promoting a duplicate paper. Crossref verified Neural Networks 41:188-201, May 2013 print publication, and the four authors; DOI resolution returned HTTP 200 at Elsevier PII S0893608012003139; the private PDF path was verified under pdfs/Constructive_Spiking with a PDF-1.7 header and size 1,322,170 bytes. Semantic Scholar returned HTTP 429 and `pdftotext` was unavailable, so no new full-text mechanism claims or extracted text were committed."
   }
 ]

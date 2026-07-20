@@ -682,7 +682,7 @@
       "lightheart-2018-constructive-spiking-thesis",
       "wang-2014-adaptive-structure-snn"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-09 verified DOI, journal, volume/pages, authors, Semantic Scholar DOI metadata, a private PDF path, and embedded PDF metadata. Local Python PDF text-extraction libraries were unavailable and raw strings exposed only metadata/keywords, so mechanism details remain cautious pending full-text or human review.",
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-09 verified DOI, journal, volume/pages, authors, Semantic Scholar DOI metadata, a private PDF path, and embedded PDF metadata. Rechecked on 2026-07-20: Crossref still verifies Neural Networks 41:188-201, the four authors, and May 2013 print publication; DOI resolution reaches Elsevier PII S0893608012003139; and the private PDF remains present with a PDF-1.7 header and size 1,322,170 bytes. Semantic Scholar returned HTTP 429 and `pdftotext` remains unavailable, so exact dynamic-synapse, creation, adaptation, encoding, and experiment claims remain pending reliable full-text or human review.",
     "review": "reviews/kasabov-2013-dynamic-evolving-spiking.md"
   },
   {

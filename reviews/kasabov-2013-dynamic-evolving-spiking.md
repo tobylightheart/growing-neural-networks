@@ -6,7 +6,7 @@
 
 Automated bundle-first draft for the `evolving-spiking-networks` bundle. It was selected because the bundle is the current urgent/active review branch, the Schliebs2013 survey and Wysoski2010 application anchor already have public automated drafts, and the bundle plan explicitly named Kasabov2013 as the next dynamic eSNN/deSNN detail anchor before Wang2014.
 
-This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1016/j.neunet.2012.11.014`, Semantic Scholar DOI metadata, a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`, and local PDF embedded metadata visible through string inspection. The cron environment did not have usable Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, or `fitz` were unavailable), and raw `strings` inspection exposed only bibliographic/keyword metadata rather than reliable body text. Treat this as a cautious reading guide, not a full close reading of the article.
+This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1016/j.neunet.2012.11.014`, a prior successful Semantic Scholar DOI metadata check, a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`, and local PDF embedded metadata visible through string inspection. A bounded recheck on 2026-07-20 confirmed the Crossref record, DOI/Elsevier route, and private file again; Semantic Scholar returned HTTP 429, `pdftotext` was unavailable, and prior local extraction checks exposed only bibliographic/keyword metadata rather than reliable body text. Treat this as a cautious reading guide, not a full close reading of the article.
 
 ## One-sentence summary
 
@@ -24,7 +24,9 @@ For the public literature review, this paper should be used to focus the next sy
 - DOI: `10.1016/j.neunet.2012.11.014`.
 - Crossref records print publication in May 2013 and a DOI landing URL at `https://doi.org/10.1016/j.neunet.2012.11.014`.
 - Semantic Scholar DOI metadata matched the title, year, venue, DOI, PubMed identifier, and author list, and returned paper ID `337878293b38b0db01f32a444b4dc072f0c6fbb8`.
-- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`.
+- On 2026-07-20, Crossref again returned the matching title, four authors, *Neural Networks* volume 41, pages 188-201, and May 2013 print date; the DOI returned HTTP 200 after resolving to Elsevier PII `S0893608012003139`.
+- The 2026-07-20 Semantic Scholar retry returned HTTP 429, so the earlier successful metadata result was retained rather than silently replaced.
+- The private library PDF path was reverified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`; the file is 1,322,170 bytes and begins with a PDF-1.7 header.
 - Local PDF embedded metadata exposed the same DOI, title, author list, and keyword/subject terms including spatio-temporal pattern recognition, spiking neural networks, dynamic synapses, evolving connectionist systems, rank-order coding, spike-time-based learning, moving-object recognition, and EEG pattern recognition. The PDF and extracted full text were not copied into Git.
 
 ## Core idea for the review graph
@@ -50,6 +52,10 @@ However, this automated draft should not be cited for unresolved details such as
 - whether the method should be described as eSNN, deSNN, STDC, or a combination without qualification.
 
 Those claims need reliable full-text review.
+
+## Bounded improvement note (2026-07-20)
+
+This pass improves provenance rather than claiming new algorithm details. It confirms that the public bibliographic record, DOI route, and private asset still agree, while making the extraction limitation current. The next close-reading pass should begin with the method's distinction among dynamic synapses, evolving network structure, rank-order encoding, and spike-time-based learning; none of those relationships is inferred here from title or keyword metadata alone.
 
 ## Relationship to neighboring bundle papers
 

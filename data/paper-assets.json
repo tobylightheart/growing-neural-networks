@@ -152,8 +152,8 @@
     "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive_Spiking/Kasabov N, Dhoble K, Nuntalid N and Indiveri G (2013) - Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition.pdf",
     "text_local_path": "../growing-neural-networks-library/text/kasabov-2013-dynamic-evolving-spiking.md",
     "source_url": "https://doi.org/10.1016/j.neunet.2012.11.014",
-    "last_checked": "2026-07-09",
-    "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, Neural Networks volume/pages, publication month, and authors; Semantic Scholar DOI metadata matched the record; local PDF embedded metadata includes matching DOI/title/authors and keywords. Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) were unavailable in cron and raw strings exposed only metadata/keywords, so no extracted text was committed and the review remains a cautious reading guide."
+    "last_checked": "2026-07-20",
+    "notes": "Private local PDF path verified during bundle-first review drafting and rechecked during the 2026-07-20 eSNN improvement pass. Crossref verifies DOI, Neural Networks 41:188-201, May 2013 print publication, and the four authors; DOI resolution returned HTTP 200 at Elsevier PII S0893608012003139. The private file exists under Constructive_Spiking with a PDF-1.7 header and size 1,322,170 bytes. Semantic Scholar DOI lookup returned HTTP 429, `pdftotext` remains unavailable, and the prior local extraction checks exposed only metadata/keywords rather than reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
   },
   {
     "paper_id": "wang-2014-adaptive-structure-snn",

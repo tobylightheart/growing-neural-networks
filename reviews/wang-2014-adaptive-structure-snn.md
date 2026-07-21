@@ -4,9 +4,9 @@
 
 ## Review status
 
-Automated bundle-first draft for the `evolving-spiking-networks` bundle. It was selected because the bundle is the current urgent/active review branch, the STDP six-anchor milestone is complete, and the bundle plan explicitly named Wang2014 as the next adaptive-structure supervised spiking-network anchor after Schliebs2013, Wysoski2010, and Kasabov2013.
+Automated bundle-first draft for the `evolving-spiking-networks` bundle, improved on 2026-07-21. It was selected because the bundle remains the current urgent/active review branch, its first five-paper sequence is already drafted, and the bundle plan explicitly called for improving another existing eSNN anchor after the Schliebs2013, Wysoski2010, and Kasabov2013 rechecks.
 
-This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1016/j.neucom.2014.04.017`, Semantic Scholar DOI metadata, a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`, DOI landing-page redirect checks, and local PDF embedded metadata visible through byte/string inspection. The cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), so this is a cautious reading guide rather than a full close reading of the article.
+This draft is grounded in the existing bundle metadata, a 2026-07-21 Crossref DOI recheck, a successful Semantic Scholar DOI recheck, a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`, a DOI/Elsevier redirect check, and local PDF header/size/embedded-marker checks. The cron environment still did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), so this remains a cautious reading guide rather than a full close reading of the article.
 
 ## One-sentence summary
 
@@ -30,8 +30,9 @@ This automated pass can safely identify Wang2014 as an adaptive-structure superv
 - DOI: `10.1016/j.neucom.2014.04.017`.
 - Crossref records publication in November 2014 and a DOI landing URL at `https://doi.org/10.1016/j.neucom.2014.04.017`.
 - Semantic Scholar DOI metadata matched the title, year, venue, DOI, DBLP key `journals/ijon/WangBMM14`, and paper ID `85f7fca6b83e730585228b3ffe8a6da0e182f869`; its abstract field was publisher-elided, but it returned a TLDR about one-pass training and comparable classification accuracy.
+- On 2026-07-21, Semantic Scholar also reported 109 citations, 4 influential citations, and closed open-access-PDF status. These are volatile index metadata, not evidence for algorithm mechanics or paper quality.
 - The DOI landing check redirected through Elsevier/ScienceDirect for PII `S0925231214005785`.
-- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`.
+- The private library PDF path was reverified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`; the file is 1,333,327 bytes and begins with a PDF-1.7 header.
 - Local PDF embedded metadata exposed the same DOI, title, authors, journal, volume, page range, cover date, and keywords: spiking neurons, online learning, neuronal pruning, supervised learning, unsupervised learning, and radial basis functions. The PDF and extracted full text were not copied into Git.
 
 ## Core idea for the review graph

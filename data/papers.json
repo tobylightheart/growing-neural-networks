@@ -735,7 +735,7 @@
       "lightheart-2018-constructive-spiking-thesis",
       "wysoski-2010-evolving-spiking-audiovisual"
     ],
-    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-10 verified DOI, Neurocomputing volume/pages/date, authors, Semantic Scholar DOI metadata/TLDR, a private PDF path, DOI landing redirect, and embedded PDF metadata/keywords. No usable PDF text-extraction tooling was available in cron, so mechanism details remain cautious pending full-text or human review.",
+    "notes": "Added as conservative metadata during the weekly bundle-aware library-sync job after a focused local library filename match in pdfs/Constructive_Spiking. Automated review draft on 2026-07-10 verified DOI, Neurocomputing volume/pages/date, authors, Semantic Scholar DOI metadata/TLDR, a private PDF path, DOI landing redirect, and embedded PDF metadata/keywords. Rechecked on 2026-07-21: Crossref still verifies Neurocomputing 144:526-536, the four authors, and November 2014 print publication; Semantic Scholar now returns paperId 85f7fca6b83e730585228b3ffe8a6da0e182f869, citation-count fields, a TLDR, and closed-access status; DOI resolution reaches Elsevier PII S0925231214005785; and the private PDF remains present with a PDF-1.7 header and size 1,333,327 bytes. No usable PDF text-extraction tooling was available, so exact adaptive-structure, pruning, learning-rule, and experiment claims remain pending reliable full-text or human review.",
     "review": "reviews/wang-2014-adaptive-structure-snn.md"
   },
   {

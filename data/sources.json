@@ -315,5 +315,16 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Added one conservative discovered candidate record for Marsland, Shapiro, and Nehmzow 2002 with a matching private PDF asset record; no broad library ingest was performed. The exact Marsland title matched a 1,297,945-byte private PDF. Fritzke1995 was deferred in notes only: the filename search found Fritzke papers on Growing Cell Structures and incremental RBF networks, but no clear match for the bundle anchor A growing neural gas network learns topologies. No unknown paper ID was added to rejected or needs_triage."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-21-wang-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-21",
+    "description": "Daily bundle-first review improvement for the active evolving-spiking-networks bundle, rechecking Wang2014 adaptive-structure SNN metadata and the private PDF asset after Schliebs2013, Wysoski2010, and Kasabov2013 were improved.",
+    "query": "data/review-bundles.json evolving-spiking-networks; Crossref DOI 10.1016/j.neucom.2014.04.017; Semantic Scholar DOI lookup; DOI/Elsevier landing check; local private PDF filename/header/size/embedded-marker check; PDF extraction-tooling check",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing Wang2014 review and asset bookkeeping rather than promoting a duplicate paper. Crossref verified Neurocomputing 144:526-536, November 2014 print publication, and the four authors; Semantic Scholar returned the matching paper ID, citation-count fields, TLDR, and closed-access status while eliding the publisher abstract; DOI resolution returned HTTP 200 at Elsevier PII S0925231214005785; and the private PDF was verified under pdfs/Constructive_Spiking with a PDF-1.7 header and size 1,333,327 bytes. `pdftotext` and Python PDF extraction libraries were unavailable, so no new full-text mechanism claims or extracted text were committed."
   }
 ]

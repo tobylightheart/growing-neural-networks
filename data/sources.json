@@ -326,5 +326,16 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing Wang2014 review and asset bookkeeping rather than promoting a duplicate paper. Crossref verified Neurocomputing 144:526-536, November 2014 print publication, and the four authors; Semantic Scholar returned the matching paper ID, citation-count fields, TLDR, and closed-access status while eliding the publisher abstract; DOI resolution returned HTTP 200 at Elsevier PII S0925231214005785; and the private PDF was verified under pdfs/Constructive_Spiking with a PDF-1.7 header and size 1,333,327 bytes. `pdftotext` and Python PDF extraction libraries were unavailable, so no new full-text mechanism claims or extracted text were committed."
+  },
+  {
+    "id": "evolving-spiking-bundle-2026-07-22-roy-improvement",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-22",
+    "description": "Daily bundle-first review improvement for the active evolving-spiking-networks bundle, rechecking the shared Roy2017 structural-plasticity bridge after Schliebs2013, Wysoski2010, Kasabov2013, and Wang2014 were improved.",
+    "query": "data/review-bundles.json evolving-spiking-networks and structural-plasticity-and-binary-synapses; Crossref DOI 10.1109/TNNLS.2016.2582517; Semantic Scholar DOI lookup attempted but rate-limited; DOI/IEEE Xplore route check; local private PDF filename/header/size/embedded-marker check; PDF extraction-tooling check",
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Improved the existing shared Roy2017 review and asset bookkeeping rather than promoting a duplicate paper. Crossref verified IEEE TNNLS 28(4):900-910, April 2017 print publication, and both authors; DOI resolution reached IEEE Xplore document 7508492 with HTTP 202; and the private PDF was verified under pdfs/Constructive_Spiking with a PDF-1.4 header and size 1,880,136 bytes. Semantic Scholar returned HTTP 429, and command-line/Python PDF extraction tooling was unavailable; raw byte checks exposed no DOI/title/body-text markers, so no new full-text mechanism claims or extracted text were committed."
   }
 ]

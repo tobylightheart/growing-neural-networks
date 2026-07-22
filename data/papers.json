@@ -789,7 +789,7 @@
       "kasabov-2013-dynamic-evolving-spiking",
       "lightheart-2018-constructive-spiking-thesis"
     ],
-    "notes": "Drafted as the shared Roy2017 bridge between the active evolving-spiking-networks bundle and the structural-plasticity-and-binary-synapses bundle. Crossref verified DOI, title, authors, IEEE TNNLS volume/issue/pages, and publication date; DOI landing redirected to IEEE Xplore document 7508492; the private PDF path was verified. Semantic Scholar lookup returned HTTP 429. No usable PDF text-extraction tooling was available in cron, so detailed structural-plasticity mechanism claims remain cautious pending full-text or human review.",
+    "notes": "Drafted as the shared Roy2017 bridge between the active evolving-spiking-networks bundle and the structural-plasticity-and-binary-synapses bundle. Crossref verified DOI, title, authors, IEEE TNNLS volume/issue/pages, and publication date; DOI landing redirected to IEEE Xplore document 7508492; the private PDF path was verified. Rechecked on 2026-07-22: Crossref still verifies IEEE TNNLS 28(4):900-910, April 2017 print publication, and both authors; DOI resolution reaches IEEE Xplore document 7508492 with HTTP 202; and the private PDF remains present with a PDF-1.4 header and size 1,880,136 bytes. Semantic Scholar returned HTTP 429, and no usable PDF text-extraction tooling was available, so exact creation, deletion, rewiring, adaptation, datasets, and result claims remain pending reliable full-text or human review.",
     "review": "reviews/roy-2017-online-structural-plasticity-snn.md"
   },
   {

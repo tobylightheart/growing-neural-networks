@@ -4,9 +4,9 @@
 
 ## Review status
 
-Automated bundle-first draft for the `evolving-spiking-networks` bundle, coordinated with `structural-plasticity-and-binary-synapses`. It was selected because the active eSNN bundle's next action explicitly named Roy2017 as the bridge paper after Schliebs2013, Wysoski2010, Kasabov2013, and Wang2014, and the same paper appears in the structural-plasticity bundle. This review uses one shared paper record rather than duplicating the anchor across bundles.
+Automated bundle-first draft for the `evolving-spiking-networks` bundle, coordinated with `structural-plasticity-and-binary-synapses`. It was selected for bounded improvement on 2026-07-22 because the urgent/active eSNN bundle's next action explicitly named Roy2017 after the Schliebs2013, Wysoski2010, Kasabov2013, and Wang2014 rechecks, and the same paper appears in the structural-plasticity bundle. This review uses one shared paper record rather than duplicating the anchor across bundles.
 
-This draft is grounded in the existing bundle metadata, Crossref metadata for DOI `10.1109/TNNLS.2016.2582517`, a DOI landing-page redirect to IEEE Xplore, and a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`. Semantic Scholar metadata lookup was attempted but rate-limited. The cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), and byte/string inspection exposed no reliable body text, so this is a cautious reading guide rather than a full close reading of the article.
+This draft is grounded in the existing bundle metadata, a 2026-07-22 Crossref recheck for DOI `10.1109/TNNLS.2016.2582517`, a DOI route reaching IEEE Xplore document `7508492` with HTTP 202, and a verified private PDF path under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`. Semantic Scholar metadata lookup was attempted but remained rate-limited (HTTP 429). The private file is a 1,880,136-byte PDF-1.4 document, but the cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `mutool`, `pdfinfo`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz` were unavailable), and byte checks exposed no DOI, title, or reliable body-text markers. This therefore remains a cautious reading guide rather than a full close reading of the article; no PDF or extracted full text is committed.
 
 ## One-sentence summary
 
@@ -26,9 +26,10 @@ For now, the public site can safely use Roy2017 as a bridge record showing that 
 - Crossref indexes the article as Subhrajit Roy and Arindam Basu, "An Online Unsupervised Structural Plasticity Algorithm for Spiking Neural Networks", *IEEE Transactions on Neural Networks and Learning Systems* 28(4):900-910, 2017.
 - DOI: `10.1109/TNNLS.2016.2582517`.
 - Crossref records April 2017 publication metadata and the DOI landing URL at `https://doi.org/10.1109/tnnls.2016.2582517`.
-- The DOI landing check redirected to IEEE Xplore document `7508492`.
-- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`; the PDF and any extracted text were not copied into Git.
-- Semantic Scholar search was attempted during this cron run but returned HTTP 429, so no Semantic Scholar facts are used in this draft.
+- On 2026-07-22, Crossref again returned the matching title, both authors, journal, volume, issue, pages, and April 2017 print date.
+- The DOI route reached IEEE Xplore document `7508492` with HTTP 202.
+- The private library PDF path was verified under `../growing-neural-networks-library/pdfs/Constructive_Spiking/`; its size and PDF-1.4 header were checked, but the PDF and any extracted text were not copied into Git.
+- Semantic Scholar lookup returned HTTP 429 during this improvement run, so no Semantic Scholar facts are used in this draft.
 
 ## Core idea for the review graph
 

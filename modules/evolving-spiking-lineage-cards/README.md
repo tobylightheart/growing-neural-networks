@@ -17,6 +17,8 @@ This module intentionally separates safe bundle-level claims from pending method
 
 The thesis comparison-axis selector is a guardrail, not a source of new mechanism claims. It lets readers test whether `parameter-calculation`, `local-performance-trigger`, and `pruning-and-merging` are directly supported by the public thesis review, present only as cautious lineage context, or still pending for each eSNN paper card.
 
+The source-boundary check turns the completed five-anchor review pass into one small teaching decision: the reviews support Roy2017's shared bridge role, but they do not verify exact thresholds across the lineage or let thesis vocabulary stand in for later papers' method mechanics.
+
 ## Static pattern
 
 Files are plain static assets:

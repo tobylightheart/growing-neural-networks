@@ -121,6 +121,27 @@ const cards = [
   }
 ];
 
+const boundaryClaims = [
+  {
+    id: 'shared-bridge',
+    label: 'Roy2017 can serve as one shared structural-plasticity bridge record.',
+    ready: true,
+    feedback: 'Ready. The active bundle and public review identify Roy2017 as a shared bridge; this is a lineage and bookkeeping claim, not an assertion about its update mechanics.'
+  },
+  {
+    id: 'exact-thresholds',
+    label: 'The five review drafts verify exact neuron-creation and pruning thresholds across the lineage.',
+    ready: false,
+    feedback: 'Hold back. Bibliographic metadata and cautious reading guides do not verify exact creation, pruning, rewiring, or adaptation thresholds.'
+  },
+  {
+    id: 'taxonomy-proves-mechanics',
+    label: 'Lightheart2018 taxonomy terms verify the later papers’ parameter calculations and local triggers.',
+    ready: false,
+    feedback: 'Hold back. The thesis review supplies comparison vocabulary, but it cannot substitute for source-specific full-text or human review of later methods.'
+  }
+];
+
 const state = { selected: cards[0].id, selectedAxis: claimAxes[0].id };
 const canvas = document.querySelector('#lineage-canvas');
 const ctx = canvas.getContext('2d');
@@ -133,6 +154,8 @@ const reviewLink = document.querySelector('#review-link');
 const readinessGrid = document.querySelector('#readiness-grid');
 const axisButtons = document.querySelector('#axis-buttons');
 const axisNote = document.querySelector('#axis-note');
+const boundaryOptions = document.querySelector('#boundary-options');
+const boundaryFeedback = document.querySelector('#boundary-feedback');
 
 function activeCard() {
   return cards.find(card => card.id === state.selected) || cards[0];
@@ -265,6 +288,20 @@ function renderReadiness() {
       <p><strong>Pending:</strong> ${card.caution}</p>
     </article>`).join('');
 }
+function renderBoundaryCheck() {
+  boundaryOptions.innerHTML = boundaryClaims.map(claim => `
+    <button type="button" class="boundary-option" data-claim="${claim.id}">${claim.label}</button>`).join('');
+  boundaryOptions.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+      const claim = boundaryClaims.find(item => item.id === button.dataset.claim);
+      boundaryOptions.querySelectorAll('button').forEach(option => {
+        option.classList.toggle('selected', option === button);
+      });
+      boundaryFeedback.className = `boundary-feedback ${claim.ready ? 'ready' : 'pending'}`;
+      boundaryFeedback.textContent = claim.feedback;
+    });
+  });
+}
 function render() {
   const card = activeCard();
   const axis = activeAxis();
@@ -287,6 +324,7 @@ function render() {
 function init() {
   renderButtons();
   renderAxes();
+  renderBoundaryCheck();
   renderReadiness();
   render();
 }

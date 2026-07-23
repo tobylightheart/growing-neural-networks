@@ -125,6 +125,10 @@ That framing keeps the bundle cautious. The currently drafted Masquelier2008, Ma
 
 Two constraints from the thesis source should shape future module or exercise work. First, Chapter 6 explicitly notes that its reproduced one-pattern setting does not test automatic network-size selection, because the number of hidden patterns is known in advance. Second, high presynaptic spike rates can make a proxy neuron fire indiscriminately, so proxy-triggered construction needs to be shown as a parameter-estimation scaffold with failure modes, not as a magic detector. A future timing-window exercise should therefore let learners compare predefined-neuron STDP selectivity with constructed-neuron initialization, while labelling automatic capacity control as an open question for the later competitive/multiple-pattern chapter.
 
+### Evaluation lens: detector quality is not capacity choice
+
+Chapter 6's data-collection section suggests a compact teaching lens for that comparison: track whether pattern presentations receive a response, whether spikes also occur outside the pattern, and how soon the first within-pattern response arrives. These correspond to hit coverage, false alarms, and response latency. They are useful observables for comparing predefined and constructed detectors, but they do not by themselves show that a constructive rule selected the right number of neurons. The public Masquelier2008 review supports onset-selective hidden-pattern detection, while the thesis supplies this cautious constructed-versus-predefined evaluation framing; exact thresholds and comparative outcomes remain thesis-specific results pending human review.
+
 ## Open verification notes
 
 This draft is based primarily on the thesis abstract plus Chapter 2, Chapter 3, and a selective Chapter 6 pass over `06_hidden_spike_pattern/hidden_spike_pattern_detection.tex`. It is intended as a synthesis scaffold for the web book, not a human-reviewed final interpretation. Before marking it reviewed, check:

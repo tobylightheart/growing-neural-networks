@@ -1,5 +1,8 @@
 # Growing Neural Networks Lab
 
+Agent work starts with `AGENTS.md` and `TASKS.md`; project-specific execution
+guidance lives under `docs/agent/` rather than in a Hermes project skill.
+
 A companion lab for the [Growing Neural Networks](../growing-neural-networks/) literature garden.
 
 The literature garden explains papers, historical context, taxonomies, and synthesis. This lab keeps the runnable side small, inspectable, and testable: pure-Python implementations, browser playgrounds, and tiny experiments that demonstrate mechanisms rather than claiming full paper reproduction.

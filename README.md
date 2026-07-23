@@ -90,4 +90,7 @@ These are intentionally only a starting point. The next research workflow should
 
 See `LITERATURE_REVIEW_ROADMAP.md` for the broader incremental plan.
 
-For recurring autonomous work, see `docs/cron-workflow.md` and `docs/compressed-cron-design.md`. The active prompt library for scheduled jobs is the Hermes skill `growing-neural-networks-cron`.
+For agent work, start with `AGENTS.md`, `TASKS.md`, and the detailed guidance
+under `docs/agent/`. The older `docs/cron-workflow.md` and
+`docs/compressed-cron-design.md` remain as historical scheduling records;
+portfolio-generated task-cycle slots supersede their project-specific prompts.

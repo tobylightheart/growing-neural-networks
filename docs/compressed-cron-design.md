@@ -1,5 +1,9 @@
 # Compressed Cron Design
 
+> **Historical design:** these fixed-purpose jobs are paused and superseded by
+> portfolio-generated, expiring task-cycle slots. Current project instructions
+> live in `AGENTS.md` and `docs/agent/`.
+
 This is the proposed fast schedule for the constructive/growing neural networks interactive literature-review site.
 
 The prompts live in the Hermes skill:

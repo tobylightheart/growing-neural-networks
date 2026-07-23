@@ -40,7 +40,8 @@
       "seed-bibliography"
     ],
     "related": [
-      "fahlman-1990-cascade-correlation"
+      "fahlman-1990-cascade-correlation",
+      "marsland-2002-grows-when-required"
     ],
     "notes": "Seed bibliography item verified against Crossref for the Connection Science article. Semantic Scholar also indexes a 1989 IJCNN version with DOI 10.1109/IJCNN.1989.118509. Automated review draft improved with Crossref API, DOI landing page, Semantic Scholar metadata, targeted web search, and a verified private PDF path. On 2026-07-15, lightweight PDF byte/Flate-string inspection supported cautious notes that DNC adds hidden nodes one at a time, uses flattening of the average squared-error curve as the addition trigger, and resumes regular backpropagation after node growth; exact formulae, parameter definitions, and experiment conclusions still need human full-text verification. Synthesis note: post-growth stabilization remains a comparison axis, but this pass found no evidence that DNC freezes installed features in the Cascade-Correlation sense."
   },
@@ -92,7 +93,8 @@
     ],
     "related": [
       "ash-1989-dynamic-node-construction",
-      "giles-1995-recurrent-cascade-correlation-limitations"
+      "giles-1995-recurrent-cascade-correlation-limitations",
+      "marsland-2002-grows-when-required"
     ],
     "notes": "Primary anchor paper for early site demos. Proceedings/Semantic Scholar index it under NeurIPS 1989, while this repository keeps the established 1990 ID pending a human bibliographic cleanup pass. On 2026-07-16, the private library PDF path was verified under pdfs/Constructive and the asset record was updated from located to collected; extraction tooling was still unavailable, and embedded PDF metadata was generic conversion metadata rather than article-specific bibliographic evidence."
   },
@@ -936,7 +938,9 @@
       "growing-topology-bundle-2026-07-23-marsland-draft"
     ],
     "related": [
-      "lightheart-2018-constructive-spiking-thesis"
+      "lightheart-2018-constructive-spiking-thesis",
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation"
     ],
     "notes": "Added as conservative candidate metadata during the weekly bundle-aware library-sync job after an exact local filename match in pdfs/Constructive. Promoted to an automated review draft on 2026-07-23: Crossref verified DOI, title, three authors, Neural Networks 15(8-9):1041-1058, and October 2002 print metadata; PubMed record 12416693 independently matched the citation and supplied the indexed abstract; DOI resolution reached Elsevier PII S0893608002000783. The private PDF remains verified with a PDF-1.3 header and size 1,297,945 bytes. Semantic Scholar was rate-limited and no usable PDF extraction tooling was available, so exact method criteria, equations, adaptation rules, datasets, and quantitative results remain pending reliable full-text or human review.",
     "review": "reviews/marsland-2002-grows-when-required.md"

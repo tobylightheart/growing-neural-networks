@@ -44,6 +44,8 @@ eSNN synthesis guardrail: Schliebs2013 is enough for a cautious `evolving-spikin
 
 Classic constructive synthesis axis: compare these papers by the **decision signal for adding capacity** and the **stabilization promise after growth**, not by unverified formulae. Public review drafts support the cautious contrast that Ash1989/DNC adds hidden nodes during backpropagation when an error curve flattens, Fahlman1990/Cascade-Correlation uses residual-error correlation and freezes installed input weights, Platt1991 adds a resource-allocation/function-interpolation branch whose exact novelty test still needs close review, and Prechelt1997 is a family-level CasCor survey anchor whose variant and benchmark details remain pending. This is the safe connective tissue for the `dnc-vs-cascor-growth-1` exercise and for future classic-bundle module cards.
 
+Topology-growth synthesis axis: use **what structure grows**, **learning setting**, and **publicly supported growth signal** to connect the active branch to the classic foundation without treating all constructive methods as variants of one algorithm. Marsland2002 is an unsupervised self-organising/topology-growth anchor whose indexed abstract supports adding nodes when the current network does not sufficiently match an input. Ash1989 and Fahlman1990 are supervised hidden-unit-growth contrasts, using a flattening error curve and residual-error correlation respectively in their public review drafts. These records now link to one another in metadata; exact GWR mismatch measures, thresholds, insertion/update rules, and quantitative comparisons remain pending human/full-text review.
+
 ## Bundle list
 
 ### 1. STDP, hidden spike patterns, and constructive synapse initialization

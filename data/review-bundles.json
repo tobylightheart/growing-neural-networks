@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-07-22",
+  "updated": "2026-07-23",
   "purpose": "Bundle-first review plan for maturing the constructive/growing neural networks literature review without bulk-ingesting the private PDF library.",
   "status_values": [
     "active",
@@ -84,12 +84,12 @@
     {
       "id": "evolving-spiking-networks",
       "title": "Evolving spiking networks and spike-timing-dependent construction",
-      "priority": "urgent",
-      "status": "active",
+      "priority": "high",
+      "status": "seeded",
       "thesis_anchors": [
         "Chapter 2 literature review: spike-timing-dependent construction and evolving SNNs"
       ],
-      "rationale": "This bundle has completed its first public eSNN/deSNN/STDC review sequence, but the records and private assets are ready for bounded review-improvement work. It is the active branch again for cautious full-text/metadata improvements and synthesis preparation, not for duplicate promotions.",
+      "rationale": "This bundle completed both its first public eSNN/deSNN/STDC review sequence and the bounded five-anchor metadata/private-asset improvement pass through Roy2017. Keep it warm for cautious lineage synthesis and future human/full-text follow-up rather than automatically cycling the same anchors again.",
       "anchor_papers": [
         {
           "paper_id": "schliebs-2013-evolving-spiking-survey",
@@ -135,7 +135,7 @@
         "Kasabov2013 was rechecked on 2026-07-20: Crossref still verifies Neural Networks 41:188-201 and May 2013 print publication, the DOI route reaches Elsevier PII S0893608012003139, and the private PDF remains verified with a PDF-1.7 header and size 1,322,170 bytes; Semantic Scholar was rate-limited and exact deSNN mechanics remain a human/full-text task.",
         "Wang2014 was rechecked on 2026-07-21: Crossref still verifies Neurocomputing 144:526-536 and November 2014 print publication, Semantic Scholar now returns the matching paper ID, citation-count fields, TLDR, and closed-access status, the DOI route reaches Elsevier PII S0925231214005785, and the private PDF remains verified with a PDF-1.7 header and size 1,333,327 bytes; exact adaptive-structure and pruning mechanics remain a human/full-text task because extraction tooling is unavailable.",
         "Roy2017 was rechecked on 2026-07-22: Crossref still verifies IEEE TNNLS 28(4):900-910 and April 2017 print publication, the DOI route reaches IEEE Xplore document 7508492 with HTTP 202, and the private PDF remains verified with a PDF-1.4 header and size 1,880,136 bytes; Semantic Scholar remains rate-limited and exact structural-update mechanics remain a human/full-text task because extraction tooling is unavailable.",
-        "The five-anchor bounded metadata/private-asset improvement sequence is now complete through Roy2017. Prepare the cautious eSNN-to-structural-plasticity lineage synthesis; the next bundle-priority review should decide the following paper branch from concrete ready assets rather than automatically cycling these anchors again.",
+        "The five-anchor bounded metadata/private-asset improvement sequence is complete through Roy2017. Prepare the cautious eSNN-to-structural-plasticity lineage synthesis while daily paper work branches to growing-topology-and-neural-gas; do not automatically cycle these anchors again.",
         "Thesis-derived comparison axis for bounded synthesis: Chapter 2 frames eSNN-style construction as calculating candidate-neuron parameters from the current input before deciding whether the candidate is novel enough to add or close enough to merge with an existing neuron; use this as a cautious public bridge to `parameter-calculation`, `local-performance-trigger`, and `pruning-and-merging`, not as a substitute for full-text method claims about later eSNN derivatives."
       ],
       "planned_outputs": [
@@ -196,12 +196,12 @@
     {
       "id": "growing-topology-and-neural-gas",
       "title": "Growing topology and neural gas methods",
-      "priority": "medium",
-      "status": "planned",
+      "priority": "urgent",
+      "status": "active",
       "thesis_anchors": [
         "Chapter 2 broader constructive/growing taxonomy"
       ],
-      "rationale": "This bundle separates supervised hidden-unit growth from topology/prototype growth, making the site's taxonomy clearer.",
+      "rationale": "This bundle is the next ready paper branch after the bounded eSNN improvement sequence: Marsland2002 has a collected private asset and an existing discovered record, so the public review can now expand from supervised hidden-unit growth into topology/prototype growth without speculative library ingest.",
       "anchor_papers": [
         {
           "paper_id": "fritzke-1995-growing-neural-gas",
@@ -219,7 +219,8 @@
         }
       ],
       "next_actions": [
-        "Marsland2002 now has a conservative discovered record with a verified private PDF path; verify DOI/venue metadata and draft its review when the loop needs a non-spiking topology-growth branch.",
+        "Marsland2002 now has a public automated review draft grounded in Crossref, PubMed metadata/abstract, the DOI route, and the verified private PDF path; use it cautiously as the grows-when-required topology-growth anchor while exact equations, thresholds, and experiment details remain pending human/full-text review.",
+        "Prepare a bounded topology-growth comparison between Marsland2002 and the existing site's supervised hidden-unit-growth branches before promoting another paper.",
         "Fritzke1995 remains a bundle gap: the focused filename check found other Fritzke assets but no clear match for A growing neural gas network learns topologies, so do not attach a mismatched PDF."
       ],
       "planned_outputs": [

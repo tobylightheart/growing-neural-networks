@@ -206,13 +206,13 @@
   {
     "paper_id": "marsland-2002-grows-when-required",
     "pdf_status": "collected",
-    "text_status": "missing",
-    "access": "unknown",
+    "text_status": "extraction-failed",
+    "access": "publisher-gated",
     "local_private_only": true,
     "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Marsland S, Shapiro J, Nehmzow U (2002) - A self-organising network that grows when required.pdf",
     "text_local_path": "../growing-neural-networks-library/text/marsland-2002-grows-when-required.md",
-    "source_url": "",
-    "last_checked": "2026-07-20",
-    "notes": "Exact private local PDF filename verified by the weekly bundle-aware discovery/library-sync job; stat reported 1,297,945 bytes. No public review, extracted text, or verified public source URL was added in this conservative candidate pass."
+    "source_url": "https://doi.org/10.1016/S0893-6080(02)00078-3",
+    "last_checked": "2026-07-23",
+    "notes": "Private local PDF path reverified during the bundle-first Marsland2002 review draft; the file exists under pdfs/Constructive with a PDF-1.3 header and size 1,297,945 bytes. Crossref and PubMed verify the citation, and DOI resolution reached Elsevier PII S0893608002000783. Semantic Scholar returned HTTP 429. Command-line extractors (`pdftotext`, `mutool`, and `pdfinfo`) and Python PDF libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) were unavailable; limited Flate/string inspection did not recover reliable body text, so no extracted text was committed."
   }
 ]

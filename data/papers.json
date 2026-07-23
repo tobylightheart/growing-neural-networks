@@ -901,7 +901,7 @@
       "Ulrich Nehmzow"
     ],
     "year": 2002,
-    "venue": "Bibliographic details pending verification",
+    "venue": "Neural Networks 15(8-9):1041-1058",
     "families": [
       "growing-when-required",
       "self-organising-networks",
@@ -913,10 +913,10 @@
       "capacity-control",
       "topology-constraints"
     ],
-    "status": "discovered",
+    "status": "review-draft",
     "importance": "notable",
-    "summary": "Bundle-backed candidate on a self-organising network that grows when required. An exact private-library filename match is verified, while venue, DOI, and detailed growth mechanics remain pending a focused metadata and full-text review.",
-    "growth_mechanism": "Deferred for review: the title and existing bundle role indicate conditional growth in a self-organising network, but this sync records only asset-backed candidate metadata and does not assert the novelty test, insertion rule, or adaptation equations.",
+    "summary": "Introduces a self-organising network that can add nodes when its current representation does not sufficiently match an input, with growth intended to respond quickly to new data and stop once the data distribution is represented; exact criteria and equations remain pending full-text or human review.",
+    "growth_mechanism": "PubMed's indexed abstract says nodes are added whenever the network in its current state does not sufficiently match the input, rather than only on a fixed iteration schedule. The exact mismatch measure, insertion threshold, node initialization, habituation/adaptation rules, and update equations are not asserted in this automated draft.",
     "what_grows": [
       "self-organising-network-structure"
     ],
@@ -926,17 +926,19 @@
       "self-organising-learning"
     ],
     "links": {
-      "paper": "",
-      "doi": "",
+      "paper": "https://doi.org/10.1016/S0893-6080(02)00078-3",
+      "doi": "10.1016/S0893-6080(02)00078-3",
       "semantic_scholar": "",
       "pdf": ""
     },
     "discovered_via": [
-      "weekly-bundle-sync-2026-07-20"
+      "weekly-bundle-sync-2026-07-20",
+      "growing-topology-bundle-2026-07-23-marsland-draft"
     ],
     "related": [
       "lightheart-2018-constructive-spiking-thesis"
     ],
-    "notes": "Added as conservative candidate metadata during the weekly bundle-aware library-sync job after an exact local filename match in pdfs/Constructive. The file exists and is 1,297,945 bytes. No web metadata search was performed within this run's three-search cap, so venue, DOI, access status, detailed mechanism claims, and review promotion remain pending."
+    "notes": "Added as conservative candidate metadata during the weekly bundle-aware library-sync job after an exact local filename match in pdfs/Constructive. Promoted to an automated review draft on 2026-07-23: Crossref verified DOI, title, three authors, Neural Networks 15(8-9):1041-1058, and October 2002 print metadata; PubMed record 12416693 independently matched the citation and supplied the indexed abstract; DOI resolution reached Elsevier PII S0893608002000783. The private PDF remains verified with a PDF-1.3 header and size 1,297,945 bytes. Semantic Scholar was rate-limited and no usable PDF extraction tooling was available, so exact method criteria, equations, adaptation rules, datasets, and quantitative results remain pending reliable full-text or human review.",
+    "review": "reviews/marsland-2002-grows-when-required.md"
   }
 ]

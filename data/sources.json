@@ -337,5 +337,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Improved the existing shared Roy2017 review and asset bookkeeping rather than promoting a duplicate paper. Crossref verified IEEE TNNLS 28(4):900-910, April 2017 print publication, and both authors; DOI resolution reached IEEE Xplore document 7508492 with HTTP 202; and the private PDF was verified under pdfs/Constructive_Spiking with a PDF-1.4 header and size 1,880,136 bytes. Semantic Scholar returned HTTP 429, and command-line/Python PDF extraction tooling was unavailable; raw byte checks exposed no DOI/title/body-text markers, so no new full-text mechanism claims or extracted text were committed."
+  },
+  {
+    "id": "growing-topology-bundle-2026-07-23-marsland-draft",
+    "source": "bundle-first-cron-review",
+    "date": "2026-07-23",
+    "description": "Daily bundle-first review draft for the newly active growing-topology-and-neural-gas bundle after the eSNN branch completed its bounded five-anchor improvement sequence.",
+    "query": "data/review-bundles.json growing-topology-and-neural-gas; Crossref exact-title and DOI 10.1016/S0893-6080(02)00078-3; PubMed record 12416693 metadata and indexed abstract; Semantic Scholar title lookup attempted but rate-limited; DOI/Elsevier route check; local private PDF filename/header/size check; PDF extraction-tooling and limited Flate/string checks",
+    "added": [
+      "marsland-2002-grows-when-required"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Promoted the existing discovered Marsland2002 record to a public automated review draft as the first paper action in the active topology-growth branch. Crossref verified Neural Networks 15(8-9):1041-1058, October 2002 print metadata, the three authors, and DOI; PubMed independently matched record 12416693 and supplied the indexed abstract; DOI resolution reached Elsevier PII S0893608002000783. The private PDF was verified under pdfs/Constructive with a PDF-1.3 header and size 1,297,945 bytes. Semantic Scholar returned HTTP 429 and no usable local text-extraction tooling was available, so exact method equations, thresholds, update rules, datasets, and quantitative claims remain pending reliable full-text or human review."
   }
 ]

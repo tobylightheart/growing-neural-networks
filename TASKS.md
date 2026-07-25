@@ -11,9 +11,9 @@
 
 ## Current focus
 
-Use interactive portfolio planning and the project review/bundle records to
-file the next bounded tasks. Do not let unattended agents invent new research
-priorities.
+Complete GNN-2 to expose the existing runnable Cascade-Correlation trace from
+the review-backed walkthrough. This is a reciprocal-navigation slice, not a new
+research priority or algorithm claim.
 
 ## Queue
 

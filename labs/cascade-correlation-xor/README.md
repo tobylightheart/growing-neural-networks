@@ -25,4 +25,8 @@ python3 tests/test_xor.py
 
 ## Companion context
 
-For paper context and historical synthesis, use the main `growing-neural-networks` literature garden. This lab intentionally keeps the literature section short and focuses on runnable mechanics.
+This lab asks an explanatory question: **what changes when a stalled fixed linear readout gains one selected, frozen hidden feature?** Its comparison baseline is the XOR linear readout already present in the committed trace.
+
+For broader context, use the literature garden's [algorithm overview](https://tobylightheart.github.io/growing-neural-networks/pages/algorithms.html) and [Cascade-Correlation Growth Walkthrough](https://tobylightheart.github.io/growing-neural-networks/modules/cascade-correlation-growth/). The walkthrough links back to this runnable trace.
+
+The integration is explanatory rather than a reproduction claim: this deterministic lab is a toy mechanism trace, not a full reproduction of Fahlman & Lebiere (1990). It keeps the literature note short and focuses on the existing runnable mechanics.

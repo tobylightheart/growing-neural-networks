@@ -6,8 +6,9 @@
 
 ## Current focus
 
-The first portfolio-cycle pilot completed `GNL-1`. No project task is currently
-queued; use portfolio planning to select and file the next bounded lab task.
+Complete `GNL-3` after sibling task `GNN-2` lands, making the existing
+Cascade-Correlation review–lab seam reciprocal without changing the mechanism
+or trace.
 
 The repository task-ID prefix is `GNL`.
 

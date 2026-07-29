@@ -6,9 +6,10 @@
 
 ## Current focus
 
-Complete `GNL-3` after sibling task `GNN-2` lands, making the existing
-Cascade-Correlation review–lab seam reciprocal without changing the mechanism
-or trace.
+No task is currently queued. `GNL-3` completed the lab-to-review half of the
+reciprocal Cascade-Correlation path without changing the mechanism or trace.
+Treat this repository and the literature review as one portfolio attention lane;
+wait for a consolidated research-direction decision before adding experiments.
 
 The repository task-ID prefix is `GNL`.
 

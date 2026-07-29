@@ -11,9 +11,10 @@
 
 ## Current focus
 
-Complete GNN-2 to expose the existing runnable Cascade-Correlation trace from
-the review-backed walkthrough. This is a reciprocal-navigation slice, not a new
-research priority or algorithm claim.
+No task is currently queued. GNN-2 completed the review-to-lab half of the
+reciprocal Cascade-Correlation path. The review and lab now form one portfolio
+attention lane; wait for a consolidated research-direction decision rather than
+creating routine follow-up work.
 
 ## Queue
 

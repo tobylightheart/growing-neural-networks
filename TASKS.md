@@ -11,11 +11,10 @@
 
 ## Current focus
 
-GNN-3 is the approved next bounded research slice: verify the core Growing When
-Required mechanism seam against the matching private Marsland2002 source and
-record supported and unresolved cells in a source-verification worksheet. It
-must not change public review status, implement a lab, or infer claims that need
-human interpretation.
+No task is currently queued. GNN-3 completed the bounded private-source
+verification of the core Growing When Required mechanism seam. Its worksheet
+remains an automated, not-human-reviewed aid; promoting its findings into the
+public Marsland review requires a later human review decision.
 
 ## Queue
 

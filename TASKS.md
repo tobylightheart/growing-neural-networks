@@ -11,10 +11,11 @@
 
 ## Current focus
 
-No task is currently queued. GNN-2 completed the review-to-lab half of the
-reciprocal Cascade-Correlation path. The review and lab now form one portfolio
-attention lane; wait for a consolidated research-direction decision rather than
-creating routine follow-up work.
+GNN-3 is the approved next bounded research slice: verify the core Growing When
+Required mechanism seam against the matching private Marsland2002 source and
+record supported and unresolved cells in a source-verification worksheet. It
+must not change public review status, implement a lab, or infer claims that need
+human interpretation.
 
 ## Queue
 

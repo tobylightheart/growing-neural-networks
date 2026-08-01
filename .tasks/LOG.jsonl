@@ -1,4 +1,4 @@
 {"id":"GNL-1","status":"completed","priority":"high","blocked_by":[],"task_file":"GNL-1-perceptron-trace-lab.md","commit":"07dafd8310fe953faae6a5fbb9620b9def4e151c","created_at":"2026-07-23T23:33:50+09:30","completed_at":"2026-07-23T23:40:07+09:30"}
 {"id":"GNL-2","status":"completed","priority":"high","blocked_by":[],"task_file":"GNL-2-strategic-progress-audit.md","commit":"ebcbc21b6e12ba21b055ac33bb21b6636cdd3fd4","created_at":"2026-07-24T22:44:18+09:30","completed_at":"2026-07-25T01:33:08+00:00"}
 {"id":"GNL-3","status":"completed","priority":"high","blocked_by":[],"task_file":"GNL-3-render-garden-context.md","commit":"ff657f48e1cbdaad5d70734ab56cc9e8dfd482da","created_at":"2026-07-25T23:23:48+09:30","completed_at":"2026-07-25T17:32:18+00:00"}
-{"id":"GNL-4","status":"pending","priority":"high","blocked_by":[],"task_file":"GNL-4-minimal-deterministic-gwr-trace.md","commit":null,"created_at":"2026-08-01T21:36:34+09:30","completed_at":null}
+{"id":"GNL-4","status":"in_progress","priority":"high","blocked_by":[],"task_file":"GNL-4-minimal-deterministic-gwr-trace.md","commit":null,"created_at":"2026-08-01T21:36:34+09:30","completed_at":null}

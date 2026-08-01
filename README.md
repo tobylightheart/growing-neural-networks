@@ -28,6 +28,7 @@ This project should not do:
 
 - `labs/cascade-correlation-xor/` — a minimal cascade-correlation-style XOR experiment with a pure-Python script and static browser explainer.
 - `labs/perceptron-and/` — a deterministic fixed-capacity baseline showing sample-by-sample perceptron updates on AND.
+- `labs/gwr-deterministic-trace/` — a fixed-input Grow When Required mechanism slice with independent oracle checkpoints for adaptation, insertion, resumed growth, and topology cleanup.
 
 ## Validate
 

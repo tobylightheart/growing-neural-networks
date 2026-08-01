@@ -33,5 +33,22 @@
       "toy-mechanism",
       "not-a-full-paper-reproduction"
     ]
+  },
+  {
+    "id": "gwr-deterministic-trace",
+    "title": "Deterministic Grow When Required trace",
+    "status": "available",
+    "algorithm_id": "grow-when-required",
+    "summary": "A fixed-input GWR mechanism trace separating adaptation, insertion, resumed growth, and topology cleanup.",
+    "entry": "labs/gwr-deterministic-trace/index.html",
+    "script": "labs/gwr-deterministic-trace/gwr_deterministic_trace.py",
+    "tests": ["labs/gwr-deterministic-trace/tests/test_gwr.py"],
+    "main_garden_links": [
+      "../growing-neural-networks/reviews/marsland-2002-grows-when-required.md"
+    ],
+    "claims": [
+      "toy-mechanism",
+      "not-a-full-paper-reproduction"
+    ]
   }
 ]

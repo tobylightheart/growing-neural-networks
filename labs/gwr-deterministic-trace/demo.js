@@ -19,6 +19,7 @@ winner / neighbor habituation factors: ${policy.winner_habituation_factor} / ${p
 maximum edge age: ${policy.maximum_edge_age}
 tie breaking: ${policy.tie_breaking}
 rounding: ${policy.round_digits} decimal places
+rounding scope: ${policy.rounding_scope}
 status: ${policy.parameter_status}`;
 
   document.getElementById('steps').innerHTML = result.step_trace.map(row => {

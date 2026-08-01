@@ -28,3 +28,7 @@
 
 - A standalone oracle task — superseded by the approved combined implementation-and-oracle slice.
 - Immediate parameter visualization — it would expand a deliberately pinned teaching trace before its explanatory value has been reviewed.
+
+### Drive-by cleanup landed
+
+- A post-implementation review found that activity was rounded before threshold comparison. The follow-up fix keeps raw activity for branch selection, rounds only serialized values, and adds a near-threshold regression test.

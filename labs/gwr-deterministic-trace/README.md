@@ -24,7 +24,8 @@ multiplicative habituation factors, tie-break, and six-decimal rounding are
 explicit **demo choices**, not universal GWR defaults. In particular, the
 multiplicative firing decrease keeps the source-supported distinction between
 faster winner and slower neighbor habituation, but does not claim to reproduce
-the paper's experimental habituation constants.
+the paper's experimental habituation constants. Six-decimal rounding applies to
+recorded trace values only; branch selection compares the unrounded activity.
 
 ## Run
 

@@ -138,6 +138,25 @@ def test_adaptation_scales_winner_and_neighbor_by_their_own_firing() -> None:
     assert state["edges"] == {(0, 1): 1}
 
 
+def test_branch_uses_unrounded_activity_at_the_threshold_boundary() -> None:
+    policy = demo_policy()
+    distance = -math.log(0.4999996)
+    state = {
+        "nodes": {
+            0: {"weight": [0.0], "firing": 0.25},
+            1: {"weight": [10.0], "firing": 0.25},
+        },
+        "edges": {},
+        "next_node_id": 2,
+    }
+
+    event = step(state, [distance], policy, iteration=1)
+
+    assert event["activity"] == 0.5
+    assert event["insertion_test"]["activity_below_threshold"] is True
+    assert event["branch"] == "insert"
+
+
 def test_demo_is_repeatable_and_reports_policy_boundaries() -> None:
     first = run_experiment()
     second = run_experiment()
@@ -160,5 +179,6 @@ if __name__ == "__main__":
     test_demo_trace_matches_independent_oracle()
     test_insertion_uses_midpoint_without_adapting_existing_weights()
     test_adaptation_scales_winner_and_neighbor_by_their_own_firing()
+    test_branch_uses_unrounded_activity_at_the_threshold_boundary()
     test_demo_is_repeatable_and_reports_policy_boundaries()
     print("deterministic GWR trace tests passed")

@@ -56,6 +56,7 @@ def demo_policy() -> dict[str, Any]:
         ),
         "tie_breaking": "lowest node id wins equal-distance comparisons",
         "round_digits": ROUND_DIGITS,
+        "rounding_scope": "serialized trace values only; branch comparisons use unrounded activity",
         "input_order": [[0.0], [0.0], [4.0], [4.0], [4.0], [5.0], [3.0]],
         "initial_nodes": [
             {"id": 0, "weight": [0.0], "firing": 1.0},
@@ -129,9 +130,10 @@ def step(
     winner_runner_edge = edge_key(winner, runner_up)
     state["edges"][winner_runner_edge] = 0
 
-    activity = rounded(math.exp(-winner_distance))
+    raw_activity = math.exp(-winner_distance)
+    activity = rounded(raw_activity)
     should_insert = (
-        activity < policy["activity_threshold"]
+        raw_activity < policy["activity_threshold"]
         and winner_firing_before < policy["firing_threshold"]
     )
     inserted_node = None
@@ -207,7 +209,7 @@ def step(
         "activity": activity,
         "winner_firing_before": winner_firing_before,
         "insertion_test": {
-            "activity_below_threshold": activity < policy["activity_threshold"],
+            "activity_below_threshold": raw_activity < policy["activity_threshold"],
             "winner_firing_below_threshold": winner_firing_before < policy["firing_threshold"],
         },
         "branch": branch,

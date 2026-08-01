@@ -19,6 +19,7 @@
     "edge_age_order": "create or reset winner-runner edge, take branch, age winner edges, habituate winner and current neighbors, then delete old edges and isolated nodes",
     "tie_breaking": "lowest node id wins equal-distance comparisons",
     "round_digits": 6,
+    "rounding_scope": "serialized trace values only; branch comparisons use unrounded activity",
     "input_order": [
       [
         0.0

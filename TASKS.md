@@ -6,9 +6,9 @@
 
 ## Current focus
 
-`GNL-4` is the approved next slice: pair a minimal deterministic Grow When
-Required implementation with independently specified trace checkpoints. Keep it
-an inspectable toy mechanism rather than a paper reproduction, parameter-default
+No task is currently queued. `GNL-4` added a minimal deterministic Grow When
+Required mechanism slice with independently specified trace checkpoints. It
+remains an inspectable toy rather than a paper reproduction, parameter-default
 recommendation, or public-review update.
 
 The repository task-ID prefix is `GNL`.

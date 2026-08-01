@@ -6,10 +6,10 @@
 
 ## Current focus
 
-No task is currently queued. `GNL-3` completed the lab-to-review half of the
-reciprocal Cascade-Correlation path without changing the mechanism or trace.
-Treat this repository and the literature review as one portfolio attention lane;
-wait for a consolidated research-direction decision before adding experiments.
+`GNL-4` is the approved next slice: pair a minimal deterministic Grow When
+Required implementation with independently specified trace checkpoints. Keep it
+an inspectable toy mechanism rather than a paper reproduction, parameter-default
+recommendation, or public-review update.
 
 The repository task-ID prefix is `GNL`.
 

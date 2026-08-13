@@ -1,0 +1,8 @@
+Constructive XOR trace
+hidden units: 1
+tolerance: 0.100
+0 xor 0 = 0.011445 (target 0)
+0 xor 1 = 0.968560 (target 1)
+1 xor 0 = 0.968532 (target 1)
+1 xor 1 = 0.039386 (target 0)
+PASS: all XOR outputs are within tolerance

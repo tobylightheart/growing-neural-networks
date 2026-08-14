@@ -1,0 +1,54 @@
+[
+  {
+    "id": "cascade-correlation-xor",
+    "title": "Cascade-Correlation on XOR",
+    "status": "available",
+    "algorithm_id": "cascade-correlation",
+    "summary": "A tiny pure-Python and browser-readable lab showing how adding one residual-correlated hidden feature can solve XOR.",
+    "entry": "labs/cascade-correlation-xor/index.html",
+    "script": "labs/cascade-correlation-xor/cascade_correlation_xor.py",
+    "tests": ["labs/cascade-correlation-xor/tests/test_xor.py"],
+    "main_garden_links": [
+      "pages/algorithms.html",
+      "modules/cascade-correlation-growth/index.html"
+    ],
+    "claims": [
+      "toy-mechanism",
+      "not-a-full-paper-reproduction"
+    ]
+  },
+  {
+    "id": "perceptron-and",
+    "title": "Perceptron on AND",
+    "status": "available",
+    "algorithm_id": "perceptron",
+    "summary": "A deterministic pure-Python trace of perceptron updates on a linearly separable AND truth table.",
+    "entry": "labs/perceptron-and/index.html",
+    "script": "labs/perceptron-and/perceptron_and.py",
+    "tests": ["labs/perceptron-and/tests/test_perceptron.py"],
+    "main_garden_links": [
+      "pages/algorithms.html"
+    ],
+    "claims": [
+      "toy-mechanism",
+      "not-a-full-paper-reproduction"
+    ]
+  },
+  {
+    "id": "gwr-deterministic-trace",
+    "title": "Deterministic Grow When Required trace",
+    "status": "available",
+    "algorithm_id": "grow-when-required",
+    "summary": "A fixed-input GWR mechanism trace separating adaptation, insertion, resumed growth, and topology cleanup.",
+    "entry": "labs/gwr-deterministic-trace/index.html",
+    "script": "labs/gwr-deterministic-trace/gwr_deterministic_trace.py",
+    "tests": ["labs/gwr-deterministic-trace/tests/test_gwr.py"],
+    "main_garden_links": [
+      "reviews/marsland-2002-grows-when-required.md"
+    ],
+    "claims": [
+      "toy-mechanism",
+      "not-a-full-paper-reproduction"
+    ]
+  }
+]

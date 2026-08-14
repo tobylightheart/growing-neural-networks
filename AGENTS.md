@@ -1,8 +1,8 @@
 # Agent instructions
 
 This repository is the authoritative execution environment for the Growing
-Neural Networks literature garden. Do not depend on a project-specific Hermes
-skill.
+Neural Networks literature garden **and its runnable lab**. Do not depend on a
+project-specific Hermes skill.
 
 ## Start every work session
 
@@ -16,11 +16,19 @@ skill.
 ## Repository remit
 
 This is an interactive, static HTML/JS/CSS literature review of constructive
-and growing neural networks. It owns paper records, reviews, bibliographic
-provenance, review bundles, synthesis, taxonomies, and review-backed teaching
-artifacts. Runnable mechanism experiments belong in the sibling
-`growing-neural-networks-lab` repository; cross-repository work must be split
-into separate tasks and commits.
+and growing neural networks with an integrated, dependency-light lab. It owns:
+
+- paper records, reviews, bibliographic provenance, review bundles, synthesis,
+  taxonomies, and review-backed teaching artifacts;
+- tiny datasets, runnable mechanisms, deterministic traces, browser
+  demonstrations, tests, and validators under `labs/` and `data/experiments.json`.
+
+Keep runnable experiments small enough to inspect in one sitting. Prefer pure
+Python and static browser demos; do not add NumPy, PyTorch, TensorFlow, or a
+build step without an explicit project decision. Every available lab must have
+a direct test, deterministic output where practical, a committed trace when it
+is rendered by the browser, and a clear toy-mechanism/non-reproduction claim
+boundary.
 
 Keep PDFs and extracted full text outside Git under the private sibling library.
 Never bulk-ingest that library. Automated reviews must say that they are drafts
@@ -29,14 +37,17 @@ equation, and result claims requiring reliable full text or human review.
 
 ## Project guidance
 
-- `docs/agent/maintenance-playbook.md` — detailed bundle-first review,
-  synthesis, module/exercise, source-check, and bookkeeping workflows.
+- `docs/agent/maintenance-playbook.md` — bundle-first review, synthesis,
+  module/exercise, source-check, and bookkeeping workflows.
+- `docs/agent/maintenance.md` — runnable-lab and deterministic-trace workflow.
 - `docs/agent/module-exercise-artifact-notes.md` — conservative static artifact
   pattern and DNC/Cascade-Correlation claim boundary.
 - `docs/agent/classic-constructive-prechelt-pattern.md` — private-PDF and
   publisher-gated review pattern.
 - `docs/pdf-library-review-plan.md` — current bundle priorities and next actions.
 - `docs/paper-library.md` — private-library conventions.
+- `docs/remit.md` and `docs/roadmap.md` — historical lab direction, now applied
+  inside this repository.
 - `docs/cron-workflow.md` and `docs/compressed-cron-design.md` are historical
   scheduling records; portfolio-generated task-cycle slots supersede their job
   recommendations.
@@ -51,14 +62,19 @@ Run the checks relevant to changed files, including:
 ```bash
 python3 scripts/growing-neural-networks-cron/validate_data.py
 python3 scripts/check_missing_library_assets.py
+python3 scripts/validate_lab.py
 python3 -m json.tool <changed-json>
 node --check <changed-javascript>
 git diff --check
 ```
 
+`validate_lab.py` executes every declared experiment script and test, checks
+metadata and local routes, and requires committed trace snapshots to match fresh
+output. Its checks apply to every available experiment in this repository.
+
 When routes change, serve the repository locally and smoke-test the changed
-HTML, JS, CSS, JSON, and review routes. Prefer a Python `ThreadingHTTPServer`
-bound to port `0` when a deterministic free port is needed.
+HTML, JS, CSS, JSON, review, and lab routes. Prefer a Python
+`ThreadingHTTPServer` bound to port `0` when a deterministic free port is needed.
 
 ## Unattended execution
 

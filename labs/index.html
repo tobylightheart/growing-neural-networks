@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Labs · Growing Neural Networks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow"><a href="../">Growing Neural Networks</a></p>
+    <h1>Runnable labs</h1>
+    <p class="lede">Small, inspectable implementations and static experiments for constructive, growing, pruning, and plastic neural-network mechanisms.</p>
+
+    <section class="card">
+      <h2>Available labs</h2>
+      <article class="lab-link">
+        <h3><a href="cascade-correlation-xor/">Cascade-Correlation on XOR</a></h3>
+        <p>A minimal demonstration of growing one residual-correlated hidden feature to solve XOR.</p>
+      </article>
+      <article class="lab-link">
+        <h3><a href="perceptron-and/">Perceptron on AND</a></h3>
+        <p>A deterministic fixed-capacity baseline tracing every perceptron update on a linearly separable truth table.</p>
+      </article>
+      <article class="lab-link">
+        <h3><a href="gwr-deterministic-trace/">Deterministic Grow When Required trace</a></h3>
+        <p>A fixed-input topology trace separating adaptation, insertion, resumed growth, edge aging, and isolated-node cleanup.</p>
+      </article>
+    </section>
+
+    <section class="card subtle">
+      <h2>Design principles</h2>
+      <ul>
+        <li>No heavy ML frameworks or build step by default.</li>
+        <li>Each lab runs locally and is readable in one sitting.</li>
+        <li>Claims stay modest unless tests and sources support more.</li>
+        <li>Repository-local links connect execution to literature context.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

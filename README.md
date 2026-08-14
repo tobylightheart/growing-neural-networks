@@ -1,96 +1,89 @@
 # Growing Neural Networks
 
-An interactive literature review of constructive and growing neural networks.
+An interactive literature review and runnable lab for constructive and growing
+neural networks.
 
-The project is pivoting from a pure implementation repository into a static, GitHub Pages-compatible site: structured paper metadata, public Markdown reviews, algorithm/concept pages, and future interactive modules and exercises. Downloadable Python scripts remain welcome, but they support the review rather than defining the whole interface.
+The GitHub Pages site combines structured paper metadata, public Markdown
+reviews, algorithm and concept pages, interactive modules, exercises, and small
+inspectable experiments. The former companion lab was merged into this
+repository with its history preserved; this repository and its existing Pages
+URL are now the primary home for both explanation and execution.
 
-## Current status
+## Repository map
 
-A first static-site skeleton is in place:
+- `index.html` and `pages/` — the primary static literature-garden site.
+- `data/catalog.json`, `data/papers.json`, and `reviews/` — bibliography and
+  public review drafts.
+- `modules/` and `exercises/` — interactive teaching artifacts.
+- `labs/` — pure-Python mechanisms, deterministic traces, direct tests, and
+  static browser demonstrations.
+- `data/experiments.json` and `data/lab-algorithms.json` — runnable-lab
+  registries, kept separate from the review-oriented `data/algorithms.json`.
+- `scripts/validate_lab.py` — executes every declared lab script and test and
+  checks that committed trace snapshots match fresh output.
+- `cascade_correlation/` — the repaired historical Python entry points.
 
-- `index.html` — landing page.
-- `pages/` — papers, reviews, timeline, algorithms, concepts, modules, exercises, reading queue, and scripts pages.
-- `data/catalog.json` — manifest that lets paper data split into multiple files later.
-- `data/papers.json` — initial seed bibliography.
-- `data/paper-assets.json` — tracked inventory of local/private PDF and extracted-text status.
-- `reviews/` — public Markdown paper reviews rendered through `pages/review.html`.
-- `modules/` — future home for standalone interactive visualizations and playgrounds.
-- `scripts/validate_data.py` — standard-library data integrity checker.
-
-The old exploratory Python attempts are still preserved in `cascade_correlation/`.
+The lab's claim boundary remains deliberately modest: these are educational toy
+mechanisms unless a lab explicitly demonstrates a fuller paper reproduction.
+Dependencies stay light and there is no site build step.
 
 ## Preview locally
 
-Because the site uses `fetch()` to load JSON and Markdown files, serve it over a local HTTP server rather than opening files directly:
+Because the site uses `fetch()` to load JSON and Markdown files, serve it over a
+local HTTP server rather than opening files directly:
 
 ```bash
 cd /workspace/growing-neural-networks
 python3 -m http.server 8000
 ```
 
-Then open:
+Then open `http://localhost:8000/`. The runnable experiments are under
+`http://localhost:8000/labs/`; for example:
 
-```text
-http://localhost:8000/
-```
+- `/labs/cascade-correlation-xor/`
+- `/labs/perceptron-and/`
+- `/labs/gwr-deterministic-trace/`
 
-## Validate data
+## Validate
 
 ```bash
 cd /workspace/growing-neural-networks
-python3 scripts/validate_data.py
+python3 scripts/growing-neural-networks-cron/validate_data.py
+python3 scripts/check_missing_library_assets.py
+python3 scripts/validate_lab.py
 ```
 
-The validator checks unique paper IDs, review-file links, related-paper IDs, theme references, source provenance, module references, and exercise references.
+The review validator checks unique paper IDs, review-file links, related-paper
+IDs, themes, source provenance, modules, and exercises. The lab validator checks
+all available experiments across the same repository: metadata, local routes,
+runnable JSON output, direct tests, and exact trace snapshots.
 
 ## Data model
 
-The site loads `data/catalog.json` first. Today it points at one paper file:
+The site loads `data/catalog.json` first. Review-facing algorithm records remain
+in `data/algorithms.json`; the merged lab's smaller execution catalogue is
+`data/lab-algorithms.json`. Keeping the two schemas named explicitly resolves
+the only data-file collision without weakening either contract.
 
-```json
-{
-  "papers": ["data/papers.json"]
-}
-```
-
-Later this can become multiple chunks without changing the site UI:
-
-```json
-{
-  "papers": [
-    "data/papers/foundations.json",
-    "data/papers/cascade-correlation.json",
-    "data/papers/dynamic-node-construction.json"
-  ]
-}
-```
-
-Long-form review text lives in Markdown files under `reviews/`, while `data/papers.json` keeps machine-readable metadata for search, timelines, filters, and cross-links.
+Long-form review text lives in Markdown files under `reviews/`, while
+`data/papers.json` keeps machine-readable metadata for search, timelines,
+filters, and cross-links.
 
 ## Local paper library
 
-PDFs and extracted full-text files should stay outside Git by default. The recommended local/private asset store is a sibling directory:
+PDFs and extracted full-text files stay outside Git by default. The recommended
+local/private asset store is:
 
 ```text
 /workspace/growing-neural-networks-library/
 ```
 
-The tracked inventory is `data/paper-assets.json`; see `docs/paper-library.md` for the convention, status fields, and cloud-sync notes.
+The tracked inventory is `data/paper-assets.json`; see
+`docs/paper-library.md` for conventions and status fields.
 
-## Seed references
+## Agent work
 
-Initial seed papers:
-
-- Timothy Ash, *Dynamic Node Construction for the Backpropagation Algorithm* (1989).
-- Scott E. Fahlman and Christian Lebiere, *The Cascade-Correlation Learning Architecture* (1990).
-
-These are intentionally only a starting point. The next research workflow should verify metadata, add links/DOIs where available, and expand by citation trails and keyword searches. An earlier unverified seed entry was removed after provenance checks failed to support it as a real technical report.
-
-## Roadmap
-
-See `LITERATURE_REVIEW_ROADMAP.md` for the broader incremental plan.
-
-For agent work, start with `AGENTS.md`, `TASKS.md`, and the detailed guidance
-under `docs/agent/`. The older `docs/cron-workflow.md` and
-`docs/compressed-cron-design.md` remain as historical scheduling records;
-portfolio-generated task-cycle slots supersede their project-specific prompts.
+Start with `AGENTS.md`, `TASKS.md`, and the detailed guidance under
+`docs/agent/`. The former lab's task history is retained as
+`.tasks/LAB_LOG.jsonl` plus its `GNL-*` debriefs; new work uses this repository's
+normal task queue.

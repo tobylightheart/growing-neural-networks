@@ -1,0 +1,22 @@
+{
+  "id": "gwr-deterministic-trace",
+  "title": "Deterministic Grow When Required trace",
+  "algorithm_id": "grow-when-required",
+  "status": "available",
+  "summary": "A fixed-input GWR mechanism trace separating adaptation, insertion, resumed growth, and topology cleanup.",
+  "learning_objectives": [
+    "Follow the two-part activity and firing test that chooses adaptation or insertion.",
+    "Inspect midpoint node initialization and competitive-Hebbian edge rewiring.",
+    "Distinguish paused growth from termination and observe later growth resumption.",
+    "See an over-age edge and its isolated node removed from the topology."
+  ],
+  "limitations": [
+    "This is a toy mechanism demonstration, not a reproduction of the paper's experiments.",
+    "Thresholds, learning rates, habituation factors, edge age, inputs, tie-breaking, and rounding are pinned demo choices rather than universal GWR defaults.",
+    "The pedagogical multiplicative habituation policy preserves role ordering but does not reproduce the paper's experimental habituation constants.",
+    "The one-dimensional fixed sequence is designed for trace readability, not benchmark evidence or generalization claims."
+  ],
+  "artifacts": {
+    "trace": "trace.json"
+  }
+}

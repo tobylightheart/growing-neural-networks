@@ -26,6 +26,7 @@ build/
 # Local generated outputs
 .tmp/
 reports/
+.tasks/.lock
 
 # Private paper assets; track data/paper-assets.json instead
 .paper-library/

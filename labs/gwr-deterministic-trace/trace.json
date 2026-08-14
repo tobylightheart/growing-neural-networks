@@ -1,0 +1,927 @@
+{
+  "algorithm": "grow-when-required",
+  "claim_scope": [
+    "toy-mechanism",
+    "not-a-full-paper-reproduction"
+  ],
+  "explanatory_question": "How do match quality and habituation choose between adaptation and insertion, and how can growth resume after represented inputs stop triggering it?",
+  "policy": {
+    "activity": "exp(-euclidean_distance)",
+    "activity_threshold": 0.5,
+    "firing_threshold": 0.3,
+    "winner_learning_rate": 0.4,
+    "neighbor_learning_rate": 0.1,
+    "winner_habituation_factor": 0.5,
+    "neighbor_habituation_factor": 0.8,
+    "habituation_treatment": "pedagogical multiplicative decrease; preserves faster winner than neighbor habituation but does not claim the paper's experimental constants",
+    "new_node_firing": 1.0,
+    "maximum_edge_age": 2,
+    "edge_age_order": "create or reset winner-runner edge, take branch, age winner edges, habituate winner and current neighbors, then delete old edges and isolated nodes",
+    "tie_breaking": "lowest node id wins equal-distance comparisons",
+    "round_digits": 6,
+    "rounding_scope": "serialized trace values only; branch comparisons use unrounded activity",
+    "input_order": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ],
+      [
+        4.0
+      ],
+      [
+        4.0
+      ],
+      [
+        4.0
+      ],
+      [
+        5.0
+      ],
+      [
+        3.0
+      ]
+    ],
+    "initial_nodes": [
+      {
+        "id": 0,
+        "weight": [
+          0.0
+        ],
+        "firing": 1.0
+      },
+      {
+        "id": 1,
+        "weight": [
+          10.0
+        ],
+        "firing": 1.0
+      }
+    ],
+    "parameter_status": "pinned demo choices, not universal GWR defaults"
+  },
+  "initial_state": {
+    "nodes": [
+      {
+        "id": 0,
+        "weight": [
+          0.0
+        ],
+        "firing": 1.0
+      },
+      {
+        "id": 1,
+        "weight": [
+          10.0
+        ],
+        "firing": 1.0
+      }
+    ],
+    "edges": []
+  },
+  "step_trace": [
+    {
+      "iteration": 1,
+      "input": [
+        0.0
+      ],
+      "winner": 0,
+      "runner_up": 1,
+      "winner_distance": 0.0,
+      "activity": 1.0,
+      "winner_firing_before": 1.0,
+      "insertion_test": {
+        "activity_below_threshold": false,
+        "winner_firing_below_threshold": false
+      },
+      "branch": "adapt",
+      "inserted_node": null,
+      "weight_changes": [
+        {
+          "node": 0,
+          "before": [
+            0.0
+          ],
+          "after": [
+            0.0
+          ]
+        },
+        {
+          "node": 1,
+          "before": [
+            10.0
+          ],
+          "after": [
+            9.0
+          ]
+        }
+      ],
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0
+            ],
+            "firing": 1.0
+          },
+          {
+            "id": 1,
+            "weight": [
+              10.0
+            ],
+            "firing": 1.0
+          }
+        ],
+        "edges": []
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0
+            ],
+            "firing": 0.5
+          },
+          {
+            "id": 1,
+            "weight": [
+              9.0
+            ],
+            "firing": 0.8
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 1
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 2,
+      "input": [
+        0.0
+      ],
+      "winner": 0,
+      "runner_up": 1,
+      "winner_distance": 0.0,
+      "activity": 1.0,
+      "winner_firing_before": 0.5,
+      "insertion_test": {
+        "activity_below_threshold": false,
+        "winner_firing_below_threshold": false
+      },
+      "branch": "adapt",
+      "inserted_node": null,
+      "weight_changes": [
+        {
+          "node": 0,
+          "before": [
+            0.0
+          ],
+          "after": [
+            0.0
+          ]
+        },
+        {
+          "node": 1,
+          "before": [
+            9.0
+          ],
+          "after": [
+            8.28
+          ]
+        }
+      ],
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0
+            ],
+            "firing": 0.5
+          },
+          {
+            "id": 1,
+            "weight": [
+              9.0
+            ],
+            "firing": 0.8
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 1
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0
+            ],
+            "firing": 0.25
+          },
+          {
+            "id": 1,
+            "weight": [
+              8.28
+            ],
+            "firing": 0.64
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 1
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 3,
+      "input": [
+        4.0
+      ],
+      "winner": 0,
+      "runner_up": 1,
+      "winner_distance": 4.0,
+      "activity": 0.018316,
+      "winner_firing_before": 0.25,
+      "insertion_test": {
+        "activity_below_threshold": true,
+        "winner_firing_below_threshold": true
+      },
+      "branch": "insert",
+      "inserted_node": 2,
+      "weight_changes": [],
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0
+            ],
+            "firing": 0.25
+          },
+          {
+            "id": 1,
+            "weight": [
+              8.28
+            ],
+            "firing": 0.64
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 1
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0
+            ],
+            "firing": 0.125
+          },
+          {
+            "id": 1,
+            "weight": [
+              8.28
+            ],
+            "firing": 0.64
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.0
+            ],
+            "firing": 0.8
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 4,
+      "input": [
+        4.0
+      ],
+      "winner": 2,
+      "runner_up": 0,
+      "winner_distance": 2.0,
+      "activity": 0.135335,
+      "winner_firing_before": 0.8,
+      "insertion_test": {
+        "activity_below_threshold": true,
+        "winner_firing_below_threshold": false
+      },
+      "branch": "adapt",
+      "inserted_node": null,
+      "weight_changes": [
+        {
+          "node": 2,
+          "before": [
+            2.0
+          ],
+          "after": [
+            2.64
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.0
+          ],
+          "after": [
+            0.05
+          ]
+        },
+        {
+          "node": 1,
+          "before": [
+            8.28
+          ],
+          "after": [
+            8.00608
+          ]
+        }
+      ],
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0
+            ],
+            "firing": 0.125
+          },
+          {
+            "id": 1,
+            "weight": [
+              8.28
+            ],
+            "firing": 0.64
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.0
+            ],
+            "firing": 0.8
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.05
+            ],
+            "firing": 0.1
+          },
+          {
+            "id": 1,
+            "weight": [
+              8.00608
+            ],
+            "firing": 0.512
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.64
+            ],
+            "firing": 0.4
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 1
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 5,
+      "input": [
+        4.0
+      ],
+      "winner": 2,
+      "runner_up": 0,
+      "winner_distance": 1.36,
+      "activity": 0.256661,
+      "winner_firing_before": 0.4,
+      "insertion_test": {
+        "activity_below_threshold": true,
+        "winner_firing_below_threshold": false
+      },
+      "branch": "adapt",
+      "inserted_node": null,
+      "weight_changes": [
+        {
+          "node": 2,
+          "before": [
+            2.64
+          ],
+          "after": [
+            2.8576
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.05
+          ],
+          "after": [
+            0.0895
+          ]
+        },
+        {
+          "node": 1,
+          "before": [
+            8.00608
+          ],
+          "after": [
+            7.800969
+          ]
+        }
+      ],
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.05
+            ],
+            "firing": 0.1
+          },
+          {
+            "id": 1,
+            "weight": [
+              8.00608
+            ],
+            "firing": 0.512
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.64
+            ],
+            "firing": 0.4
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 1
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0895
+            ],
+            "firing": 0.08
+          },
+          {
+            "id": 1,
+            "weight": [
+              7.800969
+            ],
+            "firing": 0.4096
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.8576
+            ],
+            "firing": 0.2
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 2
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 6,
+      "input": [
+        5.0
+      ],
+      "winner": 2,
+      "runner_up": 1,
+      "winner_distance": 2.1424,
+      "activity": 0.117373,
+      "winner_firing_before": 0.2,
+      "insertion_test": {
+        "activity_below_threshold": true,
+        "winner_firing_below_threshold": true
+      },
+      "branch": "insert",
+      "inserted_node": 3,
+      "weight_changes": [],
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0895
+            ],
+            "firing": 0.08
+          },
+          {
+            "id": 1,
+            "weight": [
+              7.800969
+            ],
+            "firing": 0.4096
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.8576
+            ],
+            "firing": 0.2
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 2
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0895
+            ],
+            "firing": 0.064
+          },
+          {
+            "id": 1,
+            "weight": [
+              7.800969
+            ],
+            "firing": 0.4096
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.8576
+            ],
+            "firing": 0.1
+          },
+          {
+            "id": 3,
+            "weight": [
+              3.9288
+            ],
+            "firing": 0.8
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 2
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 1
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 7,
+      "input": [
+        3.0
+      ],
+      "winner": 2,
+      "runner_up": 3,
+      "winner_distance": 0.1424,
+      "activity": 0.867274,
+      "winner_firing_before": 0.1,
+      "insertion_test": {
+        "activity_below_threshold": false,
+        "winner_firing_below_threshold": true
+      },
+      "branch": "adapt",
+      "inserted_node": null,
+      "weight_changes": [
+        {
+          "node": 2,
+          "before": [
+            2.8576
+          ],
+          "after": [
+            2.863296
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.0895
+          ],
+          "after": [
+            0.108127
+          ]
+        },
+        {
+          "node": 3,
+          "before": [
+            3.9288
+          ],
+          "after": [
+            3.854496
+          ]
+        }
+      ],
+      "deleted_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "deleted_nodes": [
+        0
+      ],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "weight": [
+              0.0895
+            ],
+            "firing": 0.064
+          },
+          {
+            "id": 1,
+            "weight": [
+              7.800969
+            ],
+            "firing": 0.4096
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.8576
+            ],
+            "firing": 0.1
+          },
+          {
+            "id": 3,
+            "weight": [
+              3.9288
+            ],
+            "firing": 0.8
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 2
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 1
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 1,
+            "weight": [
+              7.800969
+            ],
+            "firing": 0.4096
+          },
+          {
+            "id": 2,
+            "weight": [
+              2.863296
+            ],
+            "firing": 0.05
+          },
+          {
+            "id": 3,
+            "weight": [
+              3.854496
+            ],
+            "firing": 0.64
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 1
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "inputs_seen": 7,
+    "insertions": 2,
+    "adaptations": 5,
+    "growth_resumed": true,
+    "final_node_count": 3,
+    "final_edge_count": 2
+  },
+  "final_state": {
+    "nodes": [
+      {
+        "id": 1,
+        "weight": [
+          7.800969
+        ],
+        "firing": 0.4096
+      },
+      {
+        "id": 2,
+        "weight": [
+          2.863296
+        ],
+        "firing": 0.05
+      },
+      {
+        "id": 3,
+        "weight": [
+          3.854496
+        ],
+        "firing": 0.64
+      }
+    ],
+    "edges": [
+      {
+        "nodes": [
+          1,
+          3
+        ],
+        "age": 0
+      },
+      {
+        "nodes": [
+          2,
+          3
+        ],
+        "age": 1
+      }
+    ]
+  }
+}

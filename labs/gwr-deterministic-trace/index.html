@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deterministic Grow When Required trace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="lab">
+    <nav><a href="../../index.html">← Lab home</a></nav>
+    <p class="eyebrow">Topology-growth mechanism trace</p>
+    <h1>Grow When Required, one step at a time</h1>
+    <p class="lede">A fixed input sequence makes GWR's adaptation, insertion, resumed growth, edge aging, and node deletion visible without a framework or random state.</p>
+
+    <section class="panel warning">
+      <strong>Scope:</strong> this is a toy mechanism, not a reproduction of the paper's experiments. Every numerical parameter is a pinned demonstration choice, not a universal GWR default.
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Explanatory question</h2>
+        <p id="question">Loading trace…</p>
+      </div>
+      <div class="panel">
+        <h2>Run summary</h2>
+        <pre id="summary">Loading trace…</pre>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Pinned demo policy</h2>
+      <p>The algorithmic branch structure follows the reviewed mechanism. These concrete settings make one replayable teaching trace.</p>
+      <pre id="policy">Loading trace…</pre>
+    </section>
+
+    <section class="panel">
+      <h2>Step trace</h2>
+      <p>An insertion requires both threshold tests. An adaptation row can therefore have low activity while a still-active winner is trained instead of causing immediate growth.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>step</th><th>input</th><th>winner / runner</th><th>activity</th><th>firing before</th><th>tests</th><th>branch</th><th>nodes / edges after</th><th>cleanup</th></tr></thead>
+          <tbody id="steps"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Final nodes</h2>
+        <pre id="nodes">Loading trace…</pre>
+      </div>
+      <div class="panel">
+        <h2>Final edges</h2>
+        <pre id="edges">Loading trace…</pre>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Why there is an oracle</h2>
+      <p>The direct test contains independently calculated checkpoints for selected activities, weights, firing values, edges, and deletion. The committed trace separately has to match the Python script exactly, so the generated snapshot is not the only judge of its generator.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Context and downloads</h2>
+      <p><a href="../../reviews/marsland-2002-grows-when-required.md">Marsland GWR review draft</a> · <a href="gwr_deterministic_trace.py">Pure-Python script</a> · <a href="trace.json">Trace JSON</a> · <a href="README.md">Lab README</a> · <a href="experiment.json">Metadata</a></p>
+    </section>
+  </main>
+  <script src="demo.js"></script>
+</body>
+</html>

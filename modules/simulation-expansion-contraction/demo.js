@@ -11,6 +11,20 @@ const initialComponents = [
 let components = structuredClone(initialComponents);
 let selectedId = 'D';
 
+function calculateDisruption(component) { return component.activity * component.connections; }
+function assessTransfer(component, tolerance) {
+  const score = calculateDisruption(component);
+  if (score <= tolerance * 0.45) return 'low';
+  if (score <= tolerance) return 'borderline';
+  return 'high';
+}
+function transferComponent(items, componentId, nextSet) {
+  return items.map(component => component.id === componentId ? { ...component, set: nextSet } : { ...component });
+}
+if (typeof module !== 'undefined') module.exports = { calculateDisruption, assessTransfer, transferComponent };
+
+if (typeof document !== 'undefined') {
+
 const canvas = document.querySelector('#sets-canvas');
 const ctx = canvas.getContext('2d');
 const candidateSelect = document.querySelector('#candidate');
@@ -246,3 +260,4 @@ canvas.addEventListener('click', event => {
 });
 
 render();
+}

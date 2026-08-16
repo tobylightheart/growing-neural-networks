@@ -89,6 +89,15 @@ const algorithms = [
 ];
 
 const state = { lens: 'when', algorithm: algorithms[0].id };
+function describeMechanism(algorithmId, lensId) {
+  const algorithm = algorithms.find(item => item.id === algorithmId);
+  const lens = lenses[lensId];
+  if (!algorithm || !lens) return null;
+  return { algorithm: algorithm.name, lens: lens.label, description: algorithm[lensId] };
+}
+if (typeof module !== 'undefined') module.exports = { describeMechanism };
+
+if (typeof document !== 'undefined') {
 const canvas = document.querySelector('#taxonomy-canvas');
 const ctx = canvas.getContext('2d');
 const lensName = document.querySelector('#lens-name');
@@ -241,3 +250,4 @@ function init() {
   renderControls();
 }
 init();
+}

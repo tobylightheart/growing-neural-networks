@@ -26,6 +26,28 @@ const candidates = [
   }
 ];
 
+function mechanismCorrelation(a, b) {
+  const average = values => values.reduce((total, value) => total + value, 0) / values.length;
+  const ma = average(a), mb = average(b);
+  let numerator = 0, da = 0, db = 0;
+  for (let i = 0; i < a.length; i++) {
+    const xa = a[i] - ma, xb = b[i] - mb;
+    numerator += xa * xb;
+    da += xa * xa;
+    db += xb * xb;
+  }
+  const denom = Math.sqrt(da * db);
+  return denom < 1e-9 ? 0 : numerator / denom;
+}
+function rankCandidates(candidateItems, dataRows) {
+  const residuals = dataRows.map(row => row.target - row.output);
+  return candidateItems
+    .map(candidate => ({ ...candidate, score: Math.abs(mechanismCorrelation(candidate.activations, residuals)) }))
+    .sort((a, b) => b.score - a.score);
+}
+if (typeof module !== 'undefined') module.exports = { mechanismCorrelation, rankCandidates };
+
+if (typeof document !== 'undefined') {
 const residualRows = document.querySelector('#residual-rows');
 const options = document.querySelector('#candidate-options');
 const feedback = document.querySelector('#feedback');
@@ -208,3 +230,4 @@ renderOptions();
 draw();
 checkButton.addEventListener('click', checkAnswer);
 resetButton.addEventListener('click', resetAnswer);
+}

@@ -28,6 +28,20 @@ const baseCandidates = [
 ];
 const residualPattern = [-0.45, 0.55, 0.5, -0.48];
 
+function candidateCorrelations(difficultyValue) {
+  const stretch = 0.72 + Number(difficultyValue) * 0.42;
+  return baseCandidates.map(candidate => ({
+    ...candidate,
+    corr: Math.max(-0.98, Math.min(0.98, candidate.base * stretch))
+  }));
+}
+function selectWinner(items) {
+  return items.reduce((best, item) => Math.abs(item.corr) > Math.abs(best.corr) ? item : best, items[0]);
+}
+if (typeof module !== 'undefined') module.exports = { candidateCorrelations, selectWinner };
+
+if (typeof document !== 'undefined') {
+
 const state = { phase: 0 };
 const canvas = document.querySelector('#growth-canvas');
 const ctx = canvas.getContext('2d');
@@ -225,3 +239,4 @@ document.querySelector('#next-step').addEventListener('click', () => {
 });
 difficulty.addEventListener('input', render);
 render();
+}

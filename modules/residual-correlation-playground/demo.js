@@ -6,6 +6,27 @@ const data = [
   { x: [1, 1], target: 0, output: 0.42 }
 ].map(row => ({ ...row, residual: row.target - row.output }));
 
+function mechanismMean(values) { return values.reduce((a, b) => a + b, 0) / values.length; }
+function mechanismCorrelation(a, b) {
+  const ma = mechanismMean(a), mb = mechanismMean(b);
+  let numerator = 0, da = 0, db = 0;
+  for (let i = 0; i < a.length; i++) {
+    const xa = a[i] - ma;
+    const xb = b[i] - mb;
+    numerator += xa * xb;
+    da += xa * xa;
+    db += xb * xb;
+  }
+  const denom = Math.sqrt(da * db);
+  return denom < 1e-9 ? 0 : numerator / denom;
+}
+function candidateActivations(rows, { w1, w2, bias }) {
+  return rows.map(row => Math.tanh(w1 * row.x[0] + w2 * row.x[1] + bias));
+}
+if (typeof module !== 'undefined') module.exports = { mechanismCorrelation, candidateActivations };
+
+if (typeof document !== 'undefined') {
+
 const sliders = {
   w1: document.querySelector('#w1'),
   w2: document.querySelector('#w2'),
@@ -165,3 +186,4 @@ document.querySelectorAll('[data-preset]').forEach(button => button.addEventList
 }));
 Object.values(sliders).forEach(slider => slider.addEventListener('input', render));
 render();
+}

@@ -143,6 +143,15 @@ const boundaryClaims = [
 ];
 
 const state = { selected: cards[0].id, selectedAxis: claimAxes[0].id };
+function claimStatus(cardId, axisId) {
+  const card = cards.find(item => item.id === cardId);
+  const axis = claimAxes.find(item => item.id === axisId);
+  if (!card || !axis) return null;
+  return { card: card.title, axis: axis.label, status: axis.statuses[card.id] };
+}
+if (typeof module !== 'undefined') module.exports = { claimStatus };
+
+if (typeof document !== 'undefined') {
 const canvas = document.querySelector('#lineage-canvas');
 const ctx = canvas.getContext('2d');
 const roleName = document.querySelector('#role-name');
@@ -329,3 +338,4 @@ function init() {
   render();
 }
 init();
+}

@@ -87,6 +87,18 @@ const state = {
   times: [...scenarios[0].times]
 };
 
+function timingUpdate(deltaT) {
+  if (deltaT < 0) return aPlus * Math.exp(deltaT / tauPlus);
+  if (deltaT > 0) return -aMinus * Math.exp(-deltaT / tauMinus);
+  return 0;
+}
+function selectivityScore(times) {
+  return times.reduce((sum, time) => sum + timingUpdate(time), 0);
+}
+if (typeof module !== 'undefined') module.exports = { timingUpdate, selectivityScore };
+
+if (typeof document !== 'undefined') {
+
 const scenarioRow = document.querySelector('#scenario-row');
 const sliderHost = document.querySelector('#slider-host');
 const scoreEl = document.querySelector('#selectivity-score');
@@ -312,3 +324,4 @@ renderClaimChecks();
 update();
 document.querySelector('#check-answer').addEventListener('click', checkInterpretation);
 document.querySelector('#reset-answer').addEventListener('click', reset);
+}

@@ -80,6 +80,12 @@ const sourceBoundaries = [
   }
 ];
 
+function gradeClaims(answers) {
+  return claims.reduce((total, claim) => total + (answers[claim.id] === claim.answer ? 1 : 0), 0);
+}
+if (typeof module !== 'undefined') module.exports = { gradeClaims };
+
+if (typeof document !== 'undefined') {
 const score = document.querySelector('#score');
 const scoreNote = document.querySelector('#score-note');
 const claimList = document.querySelector('#claim-list');
@@ -274,3 +280,4 @@ checkButton.addEventListener('click', checkAnswers);
 hintButton.addEventListener('click', showHints);
 resetButton.addEventListener('click', resetAnswers);
 document.querySelectorAll('select[data-answer-for]').forEach(select => select.addEventListener('change', () => updateScore(false)));
+}

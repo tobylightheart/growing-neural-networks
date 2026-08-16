@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  examples-and-demos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate Python lab examples and committed traces
+        run: python3 scripts/validate_lab.py
+      - name: Run historical Cascade-Correlation examples
+        run: |
+          for script in \
+            cascade_correlation/cascade_correlation.py \
+            cascade_correlation/final.py \
+            cascade_correlation/final_simple.py \
+            cascade_correlation/test_simple.py \
+            cascade_correlation/test_xor.py \
+            cascade_correlation/test_xor_clean.py \
+            cascade_correlation/test_xor_simple.py; do
+            python3 "$script" > /dev/null
+          done
+      - name: Test browser demo mechanisms without a DOM
+        run: node --test tests/browser_demos.test.js

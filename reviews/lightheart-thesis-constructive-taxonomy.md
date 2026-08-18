@@ -6,6 +6,17 @@ Toby Asher Lightheart's thesis, *Constructive Spiking Neural Networks for Simula
 
 The current web book begins with classic constructive neural-network methods such as Dynamic Node Creation and Cascade-Correlation. Those methods mostly sit in a supervised-learning tradition: start with too little capacity, monitor training behaviour, add units or modules, and continue. The thesis extends the same family of questions into spiking simulations, where the timing of events, local component behaviour, and biological-plausibility constraints become part of the constructive mechanism.
 
+## Prior implementation source: `csnn-stdp`
+
+The public [`csnn-stdp` repository](https://github.com/tobylightheart/csnn-stdp) is Toby Lightheart's own 2018 implementation work accompanying this constructive-spiking programme. It is source material for this review, not an unrelated reproduction: the repository history is authored under Toby's name, and its MATLAB README says the simulations and figures were presented in his PhD thesis. Links below are pinned to commit [`229e8fe`](https://github.com/tobylightheart/csnn-stdp/commit/229e8fe13c7ba22852185bc81ad93a42c0a6f15e) so the reviewed source does not drift.
+
+Two artifacts make the thesis-to-code connection concrete:
+
+- the [neuron-construction notebook](https://github.com/tobylightheart/csnn-stdp/blob/229e8fe13c7ba22852185bc81ad93a42c0a6f15e/Jupyter-Notebooks/neuron_construction_stdp_convergence.ipynb) compares a fixed population trained with STDP against neurons constructed with synaptic weights chosen from predicted STDP convergence; its construction pass starts from zero simulated postsynaptic neurons, cancels redundant constructions after nearby postsynaptic spikes, and prunes neurons that fail an early activity criterion;
+- the [MATLAB STDC/STDP comparison](https://github.com/tobylightheart/csnn-stdp/tree/229e8fe13c7ba22852185bc81ad93a42c0a6f15e/MATLAB/stdc-stdp-comparison-low-noise) contains the thesis simulation code for comparing ordinary STDP with spike-triggered construction that estimates STDP.
+
+This provenance is stronger than treating the repository as third-party corroboration, but it is not independent replication. The code supports reading the thesis as implemented prior work by the review's author; the notebook's reported outcomes and the MATLAB simulations still need a fresh reproducibility pass before they are presented here as verified results.
+
 ## Why the thesis matters for this review
 
 Chapter 2 argues that constructive neural-network research is fragmented by terminology. Similar structural changes appear under names such as constructive neural networks, growing neural networks, evolving connectionist systems, structural plasticity, adaptive structure, and pruning. The thesis proposes a broader vocabulary that is useful for this web book:

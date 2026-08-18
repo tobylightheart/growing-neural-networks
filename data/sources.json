@@ -41,6 +41,17 @@
     "notes": "Source repository: /workspace/thesis-constructive-spiking/; public GitHub repository https://github.com/tobylightheart/thesis-constructive-spiking. Integrate selectively as public synthesis notes, themes, paper records, and modules rather than wholesale chapter conversion."
   },
   {
+    "id": "lightheart-csnn-stdp-implementation",
+    "source": "public-author-implementation-repository",
+    "date": "2026-08-19",
+    "description": "Toby Lightheart's own 2018 csnn-stdp implementation work, used as provenance-linked source material for the constructive-spiking thesis review.",
+    "query": null,
+    "added": [],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "Source repository: /workspace/csnn-stdp/; public GitHub repository https://github.com/tobylightheart/csnn-stdp. Review links are pinned to commit 229e8fe13c7ba22852185bc81ad93a42c0a6f15e. The repository is prior work by the review's author, not independent replication; reported simulation outcomes remain subject to a fresh reproducibility pass."
+  },
+  {
     "id": "stdp-hidden-pattern-bundle-2026-06-29",
     "source": "bundle-first-cron-review",
     "date": "2026-06-29",

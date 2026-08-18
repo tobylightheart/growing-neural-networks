@@ -213,7 +213,7 @@
       "fahlman-1990-cascade-correlation",
       "giles-1995-recurrent-cascade-correlation-limitations"
     ],
-    "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion. Includes a selective Stage 4 integration note on simulation expansion/contraction and plausible-effects constraints. Synthesis note: linked to post-growth stabilization through the thesis-derived plausible-effects constraint for simulation expansion/contraction."
+    "notes": "Thesis source is public and maintained in a sibling repository. This web-book record points to a selective Chapter 2 taxonomy synthesis, not a verbatim thesis conversion. Toby Lightheart's own 2018 csnn-stdp repository is also cited as provenance-linked prior implementation work, explicitly not as independent replication. Includes a selective Stage 4 integration note on simulation expansion/contraction and plausible-effects constraints. Synthesis note: linked to post-growth stabilization through the thesis-derived plausible-effects constraint for simulation expansion/contraction."
   },
   {
     "id": "masquelier-2008-repeating-patterns-stdp",

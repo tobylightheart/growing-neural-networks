@@ -19,5 +19,12 @@
     "main_garden_algorithm_id": "grow-when-required",
     "summary": "An unsupervised topology-growth method that combines match activity and node habituation to choose between adaptation and insertion.",
     "lab_ids": ["gwr-deterministic-trace"]
+  },
+  {
+    "id": "dynamic-node-construction",
+    "name": "Dynamic Node Construction",
+    "main_garden_algorithm_id": "dynamic-node-construction",
+    "summary": "A constructive backpropagation method that adds a hidden node when normalized average-error improvement falls below a trigger slope.",
+    "lab_ids": ["dynamic-node-construction-xor"]
   }
 ]

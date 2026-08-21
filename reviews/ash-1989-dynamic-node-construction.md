@@ -4,7 +4,17 @@
 
 ## Review status
 
-Improved automated review draft based on Crossref metadata for the journal article, the DOI/Taylor & Francis landing page, Semantic Scholar metadata for the IJCNN-indexed version, and a verified private local PDF at `../growing-neural-networks-library/pdfs/Constructive/Ash T (1989) - Dynamic Node Creation in Backpropagation Networks.pdf`. The cron environment still lacks `pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, and `fitz`, so this pass used a lightweight byte/Flate-string inspection of the private PDF rather than committing extracted full text. Treat the algorithm details below as automated full-text notes that still need human verification against the PDF.
+Improved automated review draft based on Crossref metadata, the DOI/Taylor & Francis landing page, Semantic Scholar metadata for the IJCNN-indexed version, and a close automated reading of the verified private journal PDF at `../growing-neural-networks-library/pdfs/Constructive/Ash T (1989) - Dynamic Node Creation in Backpropagation Networks.pdf`. On 2026-08-22 the full text and page image were inspected with independent PDF extractors; the page image was needed because Equation (2)'s glyphs are absent from the text layer. The mechanism details below are now bounded by the primary source, but this remains an automated draft that has **not been human-reviewed**.
+
+## 2026-08-22 close-read findings
+
+The close read resolves the three implementation seams needed by the runnable vertical slice:
+
+1. **Trigger slope.** Table I defines `a_t` as average squared error per output node at trial `t`, `t0` as the last node-addition trial (initially zero), `w` as the back-history width, and `A_T` as the trigger slope. Equations (2) and (3) add a node when `(a[t-w] - a[t]) / a[t0] < A_T` and `t - w >= t0`. The first term is the error drop over the last `w` trials normalized by error at the current topology's start; the second prevents the window crossing a topology change. The paper used `A_T = 0.05` and `w = 1000` complete training-set sweeps for most reported runs.
+2. **Insertion initialization.** The new hidden node receives complete connections from the inputs and to every output. The implementation section says **all weights** were initialized to small random values from `-0.1666` to `+0.1666`; the results section explains that the new node initially neither helps nor hinders because its connecting weights are small relative to active existing weights. The paper does not specify a random-number generator or a distinct insertion stream, so deterministic reproductions must choose and disclose one.
+3. **Post-insertion training.** DNC does not freeze the old network. The paper rejects freezing existing dimensions as restricting the reachable weight space, states that regular backpropagation takes place after a node is grown, and says normal BP fine-tuning can continue after node growth is disabled. The source therefore supports updating old and new weights with ordinary backpropagation after insertion.
+
+The paper separately disables growth when both average and worst-case squared errors meet user cutoffs, `a_t <= C_a` and `m_t <= C_m`. Its reported values were `0.001` and `0.01`. These are growth cutoffs, not a claim that every modern reproduction should treat the training set as a generalization estimate; Ash explicitly recommends a separate test set for non-exhaustive problems.
 
 ## One-sentence summary
 
@@ -27,7 +37,7 @@ The private-PDF inspection supports a more precise, but still human-check-needed
 3. **Post-growth training:** the inspected text says that after a new node is grown, regular backpropagation training takes place until the desired mapping is learned or another node needs to be added.
 4. **Stopping rule:** the abstract and model text frame stopping in terms of reaching the desired approximation accuracy / target problem solution, with reported cutoffs for average and maximum squared error in the experiments.
 
-Because this was not a clean text extraction or human close reading, the public draft can state these as inspected-PDF notes, but exact formulas, parameter definitions, and benchmark conclusions should still be checked by a human reader before being used in teaching copy.
+These statements now come from a close automated reading of the primary PDF. Exact benchmark conclusions and the page-image reading of Equation (2) should still be checked by a human before being treated as reviewed teaching copy.
 
 ## What grows
 
@@ -42,7 +52,7 @@ No freezing mechanism is verified in the inspected PDF snippets. The text explic
 - **Hidden-unit growth:** DNC directly belongs to the family of algorithms that add hidden capacity during training.
 - **Capacity control:** It reduces dependence on a hand-selected hidden-layer size by making node count adaptive.
 - **Backpropagation:** Unlike constructive methods that replace backpropagation with a separate feature search, DNC is explicitly attached to backpropagation networks.
-- **Growth trigger:** The inspected PDF supports a plateau/flatness trigger on the average squared-error curve, with a trigger-slope quantity controlling when a new node is added. Exact formula and parameter handling still need human verification.
+- **Growth trigger:** The primary PDF defines the normalized plateau trigger as `(a[t-w] - a[t]) / a[t0] < A_T`, guarded by `t - w >= t0`; the page-image reading remains not human-reviewed.
 - **Historical foundations:** Published in 1989, it sits just before the Cascade-Correlation paper and helps define the early constructive-learning context.
 
 ## Relationship to Cascade-Correlation
@@ -76,10 +86,9 @@ The sources above support the bibliographic record and a cautious mechanism sket
 
 ## Open questions for human review
 
-- What is the exact trigger-slope formula for detecting average squared-error flattening, and how are `w`, `AT`, and the error cutoffs used in the implementation?
+- Confirm the automated page-image reading of Equation (2), especially its subscripts, directly against page 368.
 - How broadly does the one-hidden-layer / one-starting-node setup apply beyond the reported experiments?
-- After a node is added, are any existing weights constrained in ways not visible from the inspected snippets, or does ordinary backpropagation update the whole network?
-- How are newly inserted node weights initialized?
+- What random-number generator and exact draw order did Ash's C simulator use for initial and newly inserted weights?
 - Which benchmark problems are reported, and what does "solution" mean in the paper's experiments?
 - How directly did later constructive algorithms cite the journal article versus the IJCNN version?
 - Does the journal article differ materially from the IJCNN paper indexed by Semantic Scholar?

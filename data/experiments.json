@@ -50,5 +50,24 @@
       "toy-mechanism",
       "not-a-full-paper-reproduction"
     ]
+  },
+  {
+    "id": "dynamic-node-construction-xor",
+    "title": "Dynamic Node Construction on XOR",
+    "status": "available",
+    "algorithm_id": "dynamic-node-construction",
+    "summary": "A deterministic paper-faithful vertical slice exposing Ash's normalized plateau trigger, one-node insertion, and continued backpropagation.",
+    "entry": "labs/dynamic-node-construction-xor/index.html",
+    "script": "labs/dynamic-node-construction-xor/dnc.py",
+    "tests": ["labs/dynamic-node-construction-xor/tests/test_dnc.py"],
+    "main_garden_links": [
+      "reviews/ash-1989-dynamic-node-construction.md"
+    ],
+    "claims": [
+      "toy-mechanism",
+      "not-a-full-paper-reproduction",
+      "paper-faithful-vertical-slice",
+      "not-human-reviewed"
+    ]
   }
 ]

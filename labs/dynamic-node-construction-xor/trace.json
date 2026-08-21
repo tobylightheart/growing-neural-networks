@@ -1,0 +1,550 @@
+{
+  "question": "What changes when Ash's error-curve plateau trigger adds one hidden node?",
+  "review_status": "not human-reviewed",
+  "dnc": {
+    "algorithm": "dynamic-node-construction",
+    "review_status": "automated reproduction; not human-reviewed",
+    "source_formula": "(a[t-window] - a[t]) / a[topology_start] < trigger_threshold, with t-window >= topology_start",
+    "policy": {
+      "dataset_order": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "seed": 1989,
+      "learning_rate": 0.5,
+      "momentum": 0.9,
+      "initial_weight_range": [
+        -0.1666,
+        0.1666
+      ],
+      "window": 250,
+      "trigger_threshold": 0.002,
+      "average_cutoff": 0.002,
+      "maximum_cutoff": 0.01,
+      "max_insertions": 1
+    },
+    "initial_parameters": {
+      "hidden": [
+        [
+          -0.164297671166,
+          0.06276015861,
+          0.068068576266
+        ]
+      ],
+      "output": [
+        -0.068832891606,
+        0.161756628432
+      ]
+    },
+    "insertion": {
+      "trial": 686,
+      "normalized_drop": 0.001998044348,
+      "threshold": 0.002,
+      "window": 250,
+      "initialized_weights": {
+        "incoming": [
+          0.106198211089,
+          0.058770859466,
+          0.122709762819
+        ],
+        "outgoing": -0.052586135196
+      },
+      "before": {
+        "average_squared_error": 0.167258314981,
+        "outputs": [
+          0.024606268516,
+          0.670987208045,
+          0.670972880318,
+          0.672249602987
+        ]
+      },
+      "immediately_after": {
+        "average_squared_error": 0.16716063188,
+        "outputs": [
+          0.023945354331,
+          0.664626648627,
+          0.664474646284,
+          0.665594921652
+        ]
+      }
+    },
+    "summary": {
+      "trials": 912,
+      "insertions": 1,
+      "final_width": 2,
+      "average_squared_error": 0.001999959852,
+      "maximum_squared_error": 0.003337231044,
+      "outputs": [
+        0.033720967672,
+        0.958029912093,
+        0.957999804458,
+        0.057768772224
+      ],
+      "learned": true
+    },
+    "curve": [
+      {
+        "trial": 0,
+        "average_squared_error": 0.251006096233,
+        "width": 1
+      },
+      {
+        "trial": 25,
+        "average_squared_error": 0.250089045728,
+        "width": 1
+      },
+      {
+        "trial": 50,
+        "average_squared_error": 0.250048813148,
+        "width": 1
+      },
+      {
+        "trial": 75,
+        "average_squared_error": 0.249903123658,
+        "width": 1
+      },
+      {
+        "trial": 100,
+        "average_squared_error": 0.24887792912,
+        "width": 1
+      },
+      {
+        "trial": 125,
+        "average_squared_error": 0.237169900471,
+        "width": 1
+      },
+      {
+        "trial": 150,
+        "average_squared_error": 0.189800246574,
+        "width": 1
+      },
+      {
+        "trial": 175,
+        "average_squared_error": 0.175627807981,
+        "width": 1
+      },
+      {
+        "trial": 200,
+        "average_squared_error": 0.172053587135,
+        "width": 1
+      },
+      {
+        "trial": 225,
+        "average_squared_error": 0.170495012459,
+        "width": 1
+      },
+      {
+        "trial": 250,
+        "average_squared_error": 0.169628680775,
+        "width": 1
+      },
+      {
+        "trial": 275,
+        "average_squared_error": 0.169079040479,
+        "width": 1
+      },
+      {
+        "trial": 300,
+        "average_squared_error": 0.168700001487,
+        "width": 1
+      },
+      {
+        "trial": 325,
+        "average_squared_error": 0.168423154319,
+        "width": 1
+      },
+      {
+        "trial": 350,
+        "average_squared_error": 0.168212268878,
+        "width": 1
+      },
+      {
+        "trial": 375,
+        "average_squared_error": 0.168046390948,
+        "width": 1
+      },
+      {
+        "trial": 400,
+        "average_squared_error": 0.167912570462,
+        "width": 1
+      },
+      {
+        "trial": 425,
+        "average_squared_error": 0.167802378473,
+        "width": 1
+      },
+      {
+        "trial": 450,
+        "average_squared_error": 0.167710095478,
+        "width": 1
+      },
+      {
+        "trial": 475,
+        "average_squared_error": 0.167631705385,
+        "width": 1
+      },
+      {
+        "trial": 500,
+        "average_squared_error": 0.167564306295,
+        "width": 1
+      },
+      {
+        "trial": 525,
+        "average_squared_error": 0.167505749775,
+        "width": 1
+      },
+      {
+        "trial": 550,
+        "average_squared_error": 0.16745441161,
+        "width": 1
+      },
+      {
+        "trial": 575,
+        "average_squared_error": 0.167409041366,
+        "width": 1
+      },
+      {
+        "trial": 600,
+        "average_squared_error": 0.167368660889,
+        "width": 1
+      },
+      {
+        "trial": 625,
+        "average_squared_error": 0.167332494142,
+        "width": 1
+      },
+      {
+        "trial": 650,
+        "average_squared_error": 0.167299917647,
+        "width": 1
+      },
+      {
+        "trial": 675,
+        "average_squared_error": 0.167270424819,
+        "width": 1
+      },
+      {
+        "trial": 686,
+        "average_squared_error": 0.16716063188,
+        "width": 2
+      },
+      {
+        "trial": 700,
+        "average_squared_error": 0.1672587703,
+        "width": 2
+      },
+      {
+        "trial": 725,
+        "average_squared_error": 0.167140896364,
+        "width": 2
+      },
+      {
+        "trial": 750,
+        "average_squared_error": 0.157884266546,
+        "width": 2
+      },
+      {
+        "trial": 775,
+        "average_squared_error": 0.067113325746,
+        "width": 2
+      },
+      {
+        "trial": 800,
+        "average_squared_error": 0.012378055556,
+        "width": 2
+      },
+      {
+        "trial": 825,
+        "average_squared_error": 0.005895830757,
+        "width": 2
+      },
+      {
+        "trial": 850,
+        "average_squared_error": 0.00380782641,
+        "width": 2
+      },
+      {
+        "trial": 875,
+        "average_squared_error": 0.002796930415,
+        "width": 2
+      },
+      {
+        "trial": 900,
+        "average_squared_error": 0.002204575592,
+        "width": 2
+      },
+      {
+        "trial": 912,
+        "average_squared_error": 0.001999959852,
+        "width": 2
+      }
+    ],
+    "final_parameters": {
+      "hidden": [
+        [
+          -7.963949468907,
+          -7.975998232581,
+          2.448370628618
+        ],
+        [
+          -3.887730491755,
+          -3.887385730177,
+          5.626438656312
+        ]
+      ],
+      "output": [
+        -8.343702197833,
+        7.978362511889,
+        -3.62516959026
+      ]
+    }
+  },
+  "fixed_width_baseline": {
+    "algorithm": "fixed-width-backpropagation",
+    "review_status": "automated comparison; not human-reviewed",
+    "policy": {
+      "width": 2,
+      "trials": 912,
+      "seed": 1989,
+      "learning_rate": 0.5,
+      "momentum": 0.9
+    },
+    "summary": {
+      "trials": 912,
+      "final_width": 2,
+      "average_squared_error": 0.000388284988,
+      "maximum_squared_error": 0.000541120274,
+      "outputs": [
+        0.017615896125,
+        0.981272025819,
+        0.981265997141,
+        0.023261992053
+      ]
+    },
+    "curve": [
+      {
+        "trial": 0,
+        "average_squared_error": 0.250600590033,
+        "width": 2
+      },
+      {
+        "trial": 25,
+        "average_squared_error": 0.25012483604,
+        "width": 2
+      },
+      {
+        "trial": 50,
+        "average_squared_error": 0.250071080084,
+        "width": 2
+      },
+      {
+        "trial": 75,
+        "average_squared_error": 0.249911684857,
+        "width": 2
+      },
+      {
+        "trial": 100,
+        "average_squared_error": 0.248965120493,
+        "width": 2
+      },
+      {
+        "trial": 125,
+        "average_squared_error": 0.23927196366,
+        "width": 2
+      },
+      {
+        "trial": 150,
+        "average_squared_error": 0.192201164215,
+        "width": 2
+      },
+      {
+        "trial": 175,
+        "average_squared_error": 0.167766400383,
+        "width": 2
+      },
+      {
+        "trial": 200,
+        "average_squared_error": 0.098739806953,
+        "width": 2
+      },
+      {
+        "trial": 225,
+        "average_squared_error": 0.018208795769,
+        "width": 2
+      },
+      {
+        "trial": 250,
+        "average_squared_error": 0.007793111596,
+        "width": 2
+      },
+      {
+        "trial": 275,
+        "average_squared_error": 0.004802879392,
+        "width": 2
+      },
+      {
+        "trial": 300,
+        "average_squared_error": 0.003430714693,
+        "width": 2
+      },
+      {
+        "trial": 325,
+        "average_squared_error": 0.002652529337,
+        "width": 2
+      },
+      {
+        "trial": 350,
+        "average_squared_error": 0.002154465834,
+        "width": 2
+      },
+      {
+        "trial": 375,
+        "average_squared_error": 0.001809689286,
+        "width": 2
+      },
+      {
+        "trial": 400,
+        "average_squared_error": 0.001557528461,
+        "width": 2
+      },
+      {
+        "trial": 425,
+        "average_squared_error": 0.001365438019,
+        "width": 2
+      },
+      {
+        "trial": 450,
+        "average_squared_error": 0.001214443733,
+        "width": 2
+      },
+      {
+        "trial": 475,
+        "average_squared_error": 0.001092759259,
+        "width": 2
+      },
+      {
+        "trial": 500,
+        "average_squared_error": 0.000992688113,
+        "width": 2
+      },
+      {
+        "trial": 525,
+        "average_squared_error": 0.000908997227,
+        "width": 2
+      },
+      {
+        "trial": 550,
+        "average_squared_error": 0.000838007708,
+        "width": 2
+      },
+      {
+        "trial": 575,
+        "average_squared_error": 0.000777059703,
+        "width": 2
+      },
+      {
+        "trial": 600,
+        "average_squared_error": 0.000724183614,
+        "width": 2
+      },
+      {
+        "trial": 625,
+        "average_squared_error": 0.000677890588,
+        "width": 2
+      },
+      {
+        "trial": 650,
+        "average_squared_error": 0.000637034782,
+        "width": 2
+      },
+      {
+        "trial": 675,
+        "average_squared_error": 0.000600720291,
+        "width": 2
+      },
+      {
+        "trial": 700,
+        "average_squared_error": 0.000568236759,
+        "width": 2
+      },
+      {
+        "trial": 725,
+        "average_squared_error": 0.000539013869,
+        "width": 2
+      },
+      {
+        "trial": 750,
+        "average_squared_error": 0.00051258857,
+        "width": 2
+      },
+      {
+        "trial": 775,
+        "average_squared_error": 0.000488581078,
+        "width": 2
+      },
+      {
+        "trial": 800,
+        "average_squared_error": 0.000466677022,
+        "width": 2
+      },
+      {
+        "trial": 825,
+        "average_squared_error": 0.000446613995,
+        "width": 2
+      },
+      {
+        "trial": 850,
+        "average_squared_error": 0.000428171274,
+        "width": 2
+      },
+      {
+        "trial": 875,
+        "average_squared_error": 0.000411161886,
+        "width": 2
+      },
+      {
+        "trial": 900,
+        "average_squared_error": 0.000395426421,
+        "width": 2
+      },
+      {
+        "trial": 912,
+        "average_squared_error": 0.000388284988,
+        "width": 2
+      }
+    ],
+    "final_parameters": {
+      "hidden": [
+        [
+          -6.474744646061,
+          -6.47898387724,
+          2.635495883087
+        ],
+        [
+          -4.68814502075,
+          -4.688790371888,
+          6.972202644088
+        ]
+      ],
+      "output": [
+        -9.710272139204,
+        9.578886062615,
+        -4.530328611526
+      ]
+    }
+  }
+}

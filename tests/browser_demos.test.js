@@ -10,6 +10,7 @@ const comparison = require('../exercises/dnc-vs-cascor-growth-1/demo.js');
 const stdp = require('../exercises/stdp-timing-window-selectivity-1/demo.js');
 const stabilization = require('../exercises/post-growth-stabilization-compare-1/demo.js');
 const intuition = require('../exercises/residual-correlation-intuition-1/demo.js');
+const dnc = require('../labs/dynamic-node-construction-xor/demo.js');
 
 test('lineage resolves a source-specific claim status', () => {
   const status = lineage.claimStatus('lightheart', 'parameter-calculation');
@@ -71,4 +72,15 @@ test('residual intuition ranks the XOR-like candidate first', () => {
     { id: 'flat', activations: [0.08, 0.13, 0.11, 0.09] }
   ];
   assert.equal(intuition.rankCandidates(candidates, rows)[0].id, 'ridge');
+});
+
+test('DNC browser mechanism reproduces the exact plateau and insertion trace', () => {
+  const result = dnc.runExperiment();
+  assert.equal(result.dnc.insertion.trial, 686);
+  assert.equal(result.dnc.insertion.normalized_drop, 0.001998044348);
+  assert.deepEqual(result.dnc.summary.outputs, [
+    0.033720967672, 0.958029912093, 0.957999804458, 0.057768772224
+  ]);
+  assert.equal(result.dnc.summary.insertions, 1);
+  assert.equal(result.fixed_width_baseline.summary.final_width, 2);
 });

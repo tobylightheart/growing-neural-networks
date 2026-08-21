@@ -1,0 +1,23 @@
+{
+  "id": "dynamic-node-construction-xor",
+  "title": "Dynamic Node Construction on XOR",
+  "algorithm_id": "dynamic-node-construction",
+  "status": "available",
+  "summary": "A deterministic paper-faithful vertical slice exposing Ash's normalized plateau trigger, one-node insertion, and continued backpropagation.",
+  "learning_objectives": [
+    "Calculate the normalized error drop that triggers node insertion.",
+    "Observe small-weight insertion without resetting the trained network.",
+    "Compare continued ordinary backpropagation with a fixed two-node baseline.",
+    "Vary the plateau window and threshold and inspect their effect on growth."
+  ],
+  "limitations": [
+    "This is an automated, not-human-reviewed vertical slice, not a reproduction of all experiments in Ash (1989).",
+    "XOR is paper-listed, but the deterministic LCG, fixed example order, 250-sweep window, 0.002 trigger threshold, one-insertion cap, and trace rounding are explicit reproduction choices.",
+    "The paper reports a 1000-sweep window and 0.05 trigger threshold for most experiments; those settings are exposed as context but shortened here to keep the browser run immediate.",
+    "The paper says all new weights are small random values but does not specify a fresh-node-only random sequence; this implementation continues one documented LCG stream.",
+    "The fixed-width comparator matches Ash's same-final-topology comparison in shape and training rule, but does not claim statistical equivalence from one deterministic run."
+  ],
+  "artifacts": {
+    "trace": "trace.json"
+  }
+}

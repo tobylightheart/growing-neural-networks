@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic Node Construction on XOR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="lab">
+    <nav><a href="../">← Lab home</a></nav>
+    <p class="eyebrow">Paper-faithful constructive backpropagation slice</p>
+    <h1>Watch an error plateau create one hidden node</h1>
+    <p class="lede">Start with one logistic hidden node, measure Ash's normalized error-curve slope, insert one small-weight node, then continue ordinary backpropagation beside a fixed-width baseline.</p>
+
+    <section class="panel warning">
+      <strong>Not human-reviewed.</strong> This is an automated vertical-slice reproduction, not a reproduction of every Ash (1989) experiment. The source boundary and deviations are explicit below.
+    </section>
+
+    <section class="panel">
+      <form id="controls" class="controls">
+        <label>Plateau window (sweeps)<input id="window" type="number" min="25" max="2000" step="25" value="250"></label>
+        <label>Trigger threshold A<sub>T</sub><input id="threshold" type="number" min="0" max="0.1" step="0.0005" value="0.002"></label>
+        <button type="submit">Run deterministic comparison</button>
+      </form>
+      <p class="formula"><code>(a[t-w] − a[t]) / a[t₀] &lt; A<sub>T</sub></code>, only when <code>t − w ≥ t₀</code></p>
+    </section>
+
+    <section class="panel">
+      <h2>Average squared error (log scale)</h2>
+      <p><span class="key dnc-key"></span>DNC, starts at width 1 · <span class="key baseline-key"></span>fixed width 2 · <span class="key insertion-key"></span>insertion</p>
+      <svg id="plot" viewBox="0 0 820 360" role="img" aria-label="DNC and fixed-width error curves"></svg>
+    </section>
+
+    <section class="grid">
+      <article class="panel"><h2>Result</h2><pre id="summary">Running…</pre></article>
+      <article class="panel"><h2>Trigger trace</h2><p id="trigger">Running…</p></article>
+    </section>
+
+    <section class="panel">
+      <h2>What is source-grounded?</h2>
+      <p>Ash specifies the normalized plateau formula, topology-window guard, logistic units, one-node start in the experiments, complete connections for the new node, small random weights in <code>[-0.1666, 0.1666]</code>, and continued ordinary backpropagation. The fixed order, deterministic LCG, one-insertion cap, default 250-sweep window, and 0.002 threshold are explicit reproduction choices.</p>
+      <p>The paper's reported defaults were a 1000-sweep window and 0.05 trigger slope. Try them here, but do not interpret one deterministic XOR trajectory as benchmark evidence.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Inspect the record</h2>
+      <p><a href="README.md">Source notes and deviations</a> · <a href="../../reviews/ash-1989-dynamic-node-construction.md">Ash review draft</a> · <a href="dnc.py">Python reproduction</a> · <a href="trace.json">Exact default trace</a> · <a href="experiment.json">Metadata</a></p>
+    </section>
+  </main>
+  <script src="demo.js"></script>
+</body>
+</html>

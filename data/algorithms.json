@@ -19,7 +19,7 @@
     "id": "dynamic-node-construction",
     "name": "Dynamic Node Construction",
     "family": "constructive backpropagation",
-    "summary": "Expands a backpropagation network by adding hidden nodes during training when additional capacity is needed; the exact post-insertion stabilization rule remains a human-review question in the current draft.",
+    "summary": "Expands a backpropagation network when normalized error progress over the current topology flattens, then continues ordinary backpropagation over old and new weights; the close read remains not human-reviewed.",
     "themes": [
       "hidden-unit-growth",
       "capacity-control",
@@ -29,6 +29,22 @@
     ],
     "papers": [
       "ash-1989-dynamic-node-construction"
+    ]
+  },
+  {
+    "id": "resource-allocating-network",
+    "name": "Resource-Allocating Network",
+    "family": "constructive function interpolation",
+    "summary": "Allocates a local unit only when an input is beyond the current distance scale and its output error exceeds desired accuracy; otherwise it refines output weights, offset, and centers.",
+    "themes": [
+      "constructive-learning",
+      "hidden-unit-growth",
+      "growth-trigger",
+      "capacity-control",
+      "post-growth-stabilization"
+    ],
+    "papers": [
+      "platt-1991-resource-allocating-network"
     ]
   },
   {

@@ -11,6 +11,7 @@ const stdp = require('../exercises/stdp-timing-window-selectivity-1/demo.js');
 const stabilization = require('../exercises/post-growth-stabilization-compare-1/demo.js');
 const intuition = require('../exercises/residual-correlation-intuition-1/demo.js');
 const dnc = require('../labs/dynamic-node-construction-xor/demo.js');
+const capacitySignals = require('../modules/capacity-growth-signals/demo.js');
 
 test('lineage resolves a source-specific claim status', () => {
   const status = lineage.claimStatus('lightheart', 'parameter-calculation');
@@ -45,6 +46,19 @@ test('residual playground calculates activations and correlation', () => {
 
 test('DNC/CasCor exercise grades mechanism distinctions', () => {
   assert.equal(comparison.gradeClaims({ 'candidate-correlation': 'cascor', 'freeze-inputs': 'cascor' }), 2);
+});
+
+test('capacity-growth comparison keeps the three triggers distinct', () => {
+  assert.deepEqual(capacitySignals.evaluateSignals({
+    dnc: { normalizedDrop: 0.02, threshold: 0.05, windowReady: true },
+    cascor: { outputStalled: false, residualRemains: true, bestCorrelation: 0.9 },
+    ran: { distance: 0.7, epsilon: 0.5, error: 0.1, delta: 0.2 }
+  }), { dnc: true, cascor: false, ran: false });
+  assert.deepEqual(capacitySignals.evaluateSignals({
+    dnc: { normalizedDrop: 0.08, threshold: 0.05, windowReady: true },
+    cascor: { outputStalled: true, residualRemains: true, bestCorrelation: 0.7 },
+    ran: { distance: 0.7, epsilon: 0.5, error: 0.3, delta: 0.2 }
+  }), { dnc: false, cascor: true, ran: true });
 });
 
 test('STDP timing rewards predictive spikes and penalizes late spikes', () => {

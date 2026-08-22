@@ -6,7 +6,14 @@
 
 Automated bundle-first draft for the `classic-constructive-foundations` bundle. It was selected after the eSNN active branch completed its planned first-anchor review sequence and the bundle plan explicitly allowed daily review work to branch back to the high-priority classic constructive foundations.
 
-This draft is grounded in the existing bundle metadata, Crossref title/DOI metadata for DOI `10.1162/neco.1991.3.2.213`, Semantic Scholar DOI metadata, and a verified local private PDF path under `../growing-neural-networks-library/pdfs/Constructive/`. Rechecked on 2026-07-17: the cron environment did not have usable PDF text-extraction tooling (`pdftotext`, `pypdf`, `PyPDF2`, `pdfminer`, or `fitz` were unavailable), and the local PDF appears to be TeX/Ghostscript/DVI-derived with no recoverable body text from lightweight byte/string inspection, so this remains a cautious reading guide rather than a full close reading of the article.
+This draft is grounded in the existing bundle metadata, Crossref title/DOI metadata for DOI `10.1162/neco.1991.3.2.213`, Semantic Scholar DOI metadata, and the verified private PDF at `../growing-neural-networks-library/pdfs/Constructive/Platt J (1991) - A Resource-Allocating Network for Function Interpolation.pdf`. On 2026-08-23, an automated close read used `pypdf` against that PDF. Its custom font encoding produces damaged typography and control characters in extracted equations, but the surrounding prose, equation numbering, and pseudocode consistently expose the mechanism below. These findings remain **not human-reviewed**, and the mathematical symbols should be checked against page images before formal reuse.
+
+## 2026-08-23 close-read findings
+
+1. **Two-part growth signal.** Equations (2.7) and (2.8) call an input-output pair novel only when the input is farther than the current distance scale `ε(t)` from the nearest stored center **and** output error exceeds desired accuracy `δ`. The paper says both gates are needed for compactness: distance alone allocates instead of correcting small errors, while error alone can allocate fine-scale units for coarse features.
+2. **Coarse-to-fine distance schedule.** Equation (2.9) decays `ε(t)` from `ε_max` toward `ε_min`. The prose describes this as first creating a coarse representation, then refining it with narrower units, and eventually stopping allocation when the learned function meets the desired accuracy and length scale.
+3. **Allocation initialization.** Equations (2.4)–(2.6) center the new local unit on the current input, initialize its output-side weight to the current residual so the network immediately corrects that sample, and set width proportional to nearest-center distance (with a first-unit special case in the pseudocode).
+4. **Training when allocation does not happen.** Equations (2.11) and (2.12) apply Widrow-Hoff LMS updates to output weights and the offset and move local-unit centers by gradient descent. Existing units are therefore adapted rather than frozen; their locality is the stated protection against a new unit interfering broadly with earlier ones.
 
 ## One-sentence summary
 
@@ -33,9 +40,9 @@ That makes it useful for three site-level comparisons:
 
 ## Core idea for the review graph
 
-Use Platt1991 as a classic constructive-foundation anchor for resource allocation. The metadata-supported public claim is modest: the paper belongs in the classic constructive lineage because it is a resource-allocating network paper for function interpolation. The Semantic Scholar TLDR supports a cautious reading-guide claim that unusual patterns can trigger allocation of a new computational unit.
+Use Platt1991 as a classic constructive-foundation anchor for resource allocation. The primary-PDF close read supports a more specific claim: RAN allocates a local unit when a presented pair is both spatially novel at the current resolution and inaccurately predicted. When either novelty gate fails, it adapts existing output parameters and local centers instead of allocating.
 
-This draft should not yet be cited for exact implementation details such as the mathematical form of the novelty criterion, the shape or parameters of allocated units, the interpolation update equations, stopping conditions, pruning behavior, or benchmark claims. Those details require reliable full-text extraction or human review.
+The decision logic, initialization roles, and adaptation/freeze contrast are supported by the automated close read, but exact symbol typography, experimental parameter values, benchmark conclusions, and any claim of paper-faithful reproduction still require page-image or human verification. No pruning or merging mechanism was identified in the inspected algorithm section.
 
 ## Relationship to neighboring bundle papers
 
@@ -46,8 +53,7 @@ This draft should not yet be cited for exact implementation details such as the 
 
 ## Open questions for human review
 
-- What exact signal defines an "unusual" pattern in the resource-allocation rule?
-- What computational unit is allocated, and what parameters are initialized or adapted?
-- Does the method include pruning, merging, or capacity-control steps, or only growth?
+- Confirm the extracted symbols and inequalities in equations (2.4)–(2.12) against the page images.
+- Does any section outside the inspected algorithm text introduce deletion, merging, or other capacity control beyond stopping allocation?
 - How does the paper compare learning speed and synapse count with backpropagation networks?
 - Which later constructive algorithms inherit or revise Platt's resource-allocation framing?

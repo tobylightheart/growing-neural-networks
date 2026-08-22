@@ -140,5 +140,37 @@
       "Reject source-boundary claims that turn metadata, titles, or thesis vocabulary into verified method mechanics."
     ],
     "entry": "modules/evolving-spiking-lineage-cards/index.html"
+  },
+  {
+    "id": "capacity-growth-signals",
+    "title": "What Counts as Evidence for More Capacity?",
+    "type": "mechanism-comparison",
+    "status": "available",
+    "summary": "Probe the distinct capacity-growth signals in Dynamic Node Creation, Cascade-Correlation, and Platt's Resource-Allocating Network without collapsing their training or stabilization rules.",
+    "concepts": [
+      "constructive-learning",
+      "hidden-unit-growth",
+      "growth-trigger",
+      "candidate-unit-training",
+      "residual-error-correlation",
+      "post-growth-stabilization",
+      "capacity-control"
+    ],
+    "papers": [
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation",
+      "platt-1991-resource-allocating-network"
+    ],
+    "algorithms": [
+      "dynamic-node-construction",
+      "cascade-correlation",
+      "resource-allocating-network"
+    ],
+    "learning_goals": [
+      "Distinguish a global training plateau from candidate usefulness and local novelty.",
+      "Explain why Cascade-Correlation's correlation score selects a feature rather than acting alone as the need-for-growth signal.",
+      "Compare continued backpropagation, frozen installed features, and local allocation followed by LMS/center adaptation."
+    ],
+    "entry": "modules/capacity-growth-signals/index.html"
   }
 ]

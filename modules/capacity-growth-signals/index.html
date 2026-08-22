@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Counts as Evidence for More Capacity? · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar">
+    <a href="../../pages/modules.html">← Modules</a>
+    <a href="#sources">Sources &amp; limits</a>
+  </header>
+
+  <main class="module-page">
+    <section class="module-hero">
+      <div>
+        <p class="kicker">Classic constructive foundations · interactive comparison</p>
+        <h1>What counts as evidence for more capacity?</h1>
+        <p>Three early constructive algorithms can all add a unit, but they do not diagnose the same failure. Adjust each evidence probe to see whether growth follows—and what training does next.</p>
+      </div>
+      <aside class="review-status">
+        <strong>Not human-reviewed</strong>
+        <span>Automated close readings; inspect the linked source notes before reusing details.</span>
+      </aside>
+    </section>
+
+    <section class="signal-grid" aria-label="Capacity growth signal probes">
+      <article class="signal-card" data-method="dnc">
+        <p class="method-tag">DNC · global history</p>
+        <h2>Error progress has flattened</h2>
+        <p>Ash compares the recent drop in average squared error with error at the start of the current topology. A sufficiently small normalized drop, after a complete back-history window, triggers one hidden node.</p>
+        <label>Normalized error drop <output id="dnc-drop-value">0.020</output>
+          <input id="dnc-drop" type="range" min="0" max="0.10" step="0.005" value="0.02">
+        </label>
+        <p class="threshold">Grow when drop &lt; <strong>0.050</strong> and the window does not cross an insertion.</p>
+        <div class="decision" id="dnc-decision" aria-live="polite"></div>
+        <details><summary>What happens after insertion?</summary><p>The new hidden node connects to inputs and outputs; ordinary backpropagation continues over old and new weights. DNC explicitly does <em>not</em> freeze the old network.</p></details>
+        <a class="try-link" href="../../labs/dynamic-node-construction-xor/">Run the paper-grounded DNC XOR slice →</a>
+      </article>
+
+      <article class="signal-card" data-method="cascor">
+        <p class="method-tag">Cascade-Correlation · stalled fit + feature search</p>
+        <h2>The current outputs have stopped improving</h2>
+        <p>Output-weight training first reaches its stopping criterion while error remains. That opens a candidate phase; residual correlation then answers <em>which feature to install</em>, not by itself whether the current network needs capacity.</p>
+        <label>Best absolute candidate correlation <output id="cascor-score-value">0.78</output>
+          <input id="cascor-score" type="range" min="0" max="1" step="0.01" value="0.78">
+        </label>
+        <label class="check"><input id="cascor-stalled" type="checkbox" checked> Output training has stalled with residual error</label>
+        <div class="decision" id="cascor-decision" aria-live="polite"></div>
+        <details><summary>What happens after installation?</summary><p>The winning candidate's incoming weights freeze permanently. Output-side weights remain trainable, and later candidates may use earlier hidden units as inputs.</p></details>
+        <a class="try-link" href="../../labs/cascade-correlation-xor/">Run the deterministic Cascade-Correlation XOR trace →</a>
+      </article>
+
+      <article class="signal-card" data-method="ran">
+        <p class="method-tag">RAN · local novelty</p>
+        <h2>This input is both far away and badly predicted</h2>
+        <p>Platt's two-part novelty test asks whether the input lies beyond the current distance scale and whether output error exceeds desired accuracy. Both conditions are required.</p>
+        <label>Distance to nearest center <output id="ran-distance-value">0.70</output>
+          <input id="ran-distance" type="range" min="0" max="1" step="0.01" value="0.70">
+        </label>
+        <label>Output error <output id="ran-error-value">0.30</output>
+          <input id="ran-error" type="range" min="0" max="1" step="0.01" value="0.30">
+        </label>
+        <p class="threshold">Grow when distance &gt; <strong>ε(t) = 0.50</strong> and error &gt; <strong>δ = 0.20</strong>.</p>
+        <div class="decision" id="ran-decision" aria-live="polite"></div>
+        <details><summary>What happens after allocation?</summary><p>A local unit is centered on the input, its output weight is initialized to the residual, and its width depends on nearest-center distance. When no unit is allocated, LMS updates output weights and offset while gradient descent moves centers.</p></details>
+        <a class="try-link" href="../../pages/review.html?id=platt-1991-resource-allocating-network">Open the Platt review →</a>
+      </article>
+    </section>
+
+    <section class="panel synthesis">
+      <h2>Do not collapse the three signals</h2>
+      <div class="comparison-row">
+        <div><strong>DNC</strong><span>Has global learning progress flattened?</span></div>
+        <div><strong>CasCor</strong><span>Has current fitting stalled, and which candidate explains the residual?</span></div>
+        <div><strong>RAN</strong><span>Is this particular input locally novel <em>and</em> inaccurate?</span></div>
+      </div>
+      <p id="summary-line" class="summary-line" aria-live="polite"></p>
+    </section>
+
+    <section class="panel sources" id="sources">
+      <h2>Sources, limits, and reproduction boundaries</h2>
+      <div class="source-grid">
+        <article><h3>Ash 1989 · DNC</h3><p>The normalized plateau formula, insertion initialization range, and continued-backpropagation mechanism come from an automated inspection of the verified private journal PDF, including a page-image check where equation glyphs were absent from its text layer. The runnable XOR artifact fixes an RNG, narrows the schedule, and is a paper-faithful vertical slice—not a full benchmark reproduction.</p><a href="../../pages/review.html?id=ash-1989-dynamic-node-construction">Review and open questions</a></article>
+        <article><h3>Fahlman &amp; Lebiere · CasCor</h3><p>The public proceedings PDF and review support alternating output/candidate phases, residual-correlation training, installation, and frozen incoming weights. The linked XOR lab is deliberately a deterministic toy mechanism, not a reproduction of the paper's optimizer, candidate pool, or experiments.</p><a href="../../pages/review.html?id=fahlman-1990-cascade-correlation">Review and open questions</a></article>
+        <article><h3>Platt 1991 · RAN</h3><p>An automated close read of the verified private PDF supports equations 2.7–2.12 and the pseudocode: the two-part novelty condition, local-unit initialization, LMS updates, and center adjustment. Extraction has damaged typography, so symbols and equations still require human checking; this module visualizes the decision logic, not a runnable RAN reproduction.</p><a href="../../pages/review.html?id=platt-1991-resource-allocating-network">Review and open questions</a></article>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.module-topbar'));
+  </script>
+</body>
+</html>

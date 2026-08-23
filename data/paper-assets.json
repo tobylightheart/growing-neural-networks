@@ -204,6 +204,18 @@
     "notes": "Private local PDF path verified during bundle-first review drafting. Crossref verifies DOI, title, author, Neural Networks 10(5):885-896, and July 1997 print publication metadata; DOI landing redirects to Elsevier/ScienceDirect. Semantic Scholar lookup was attempted but rate-limited (HTTP 429). Python PDF text-extraction libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) and `pdftotext` were unavailable in cron, and byte/string inspection did not expose reliable body text, so no extracted text was committed and the review remains a cautious reading guide."
   },
   {
+    "paper_id": "fritzke-1995-growing-neural-gas",
+    "pdf_status": "collected",
+    "text_status": "extraction-failed",
+    "access": "unknown",
+    "local_private_only": true,
+    "pdf_local_path": "../growing-neural-networks-library/pdfs/Constructive/Fritzke B (1995) - A Growing Neural Gas Network Learns Topologies.ps",
+    "text_local_path": "",
+    "source_url": "",
+    "last_checked": "2026-08-24",
+    "notes": "Exact-title eight-page PostScript source verified at 721,014 bytes with SHA-256 826bdc0bd45c8da30a237d52845835bae291d9a6b0adece022222dea372c376d. This resolves the bundle's contradictory available/gap status and is distinct from the Fritzke 1994 PDFs found by the earlier scan. No PostScript renderer or ps2ascii was available; custom literal-string extraction recovered coherent section 3 prose and steps 0-10 but damaged typography and was not retained."
+  },
+  {
     "paper_id": "marsland-2002-grows-when-required",
     "pdf_status": "collected",
     "text_status": "extraction-failed",

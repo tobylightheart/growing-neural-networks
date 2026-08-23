@@ -11,6 +11,7 @@
     "See an over-age edge and its isolated node removed from the topology."
   ],
   "limitations": [
+    "Not human-reviewed; this is an automated source-grounded teaching artifact.",
     "This is a toy mechanism demonstration, not a reproduction of the paper's experiments.",
     "Thresholds, learning rates, habituation factors, edge age, inputs, tie-breaking, and rounding are pinned demo choices rather than universal GWR defaults.",
     "The pedagogical multiplicative habituation policy preserves role ordering but does not reproduce the paper's experimental habituation constants.",

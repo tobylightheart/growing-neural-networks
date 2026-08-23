@@ -1,0 +1,1903 @@
+{
+  "algorithm": "growing-neural-gas",
+  "claim_scope": [
+    "toy-mechanism",
+    "paper-grounded-update-order",
+    "not-a-full-paper-reproduction",
+    "not-human-reviewed"
+  ],
+  "explanatory_question": "How do moving prototypes, competitive-Hebbian edges, local edge aging, and periodic error-driven insertion jointly grow a 2-D topology?",
+  "policy": {
+    "winner_rate": 0.2,
+    "neighbor_rate": 0.05,
+    "maximum_edge_age": 2,
+    "insertion_interval": 4,
+    "insertion_error_reduction": 0.5,
+    "global_error_decay": 0.9,
+    "round_digits": 6,
+    "tie_breaking": "lowest node id wins equal values",
+    "initial_nodes": [
+      {
+        "id": 0,
+        "position": [
+          0.1,
+          0.2
+        ]
+      },
+      {
+        "id": 1,
+        "position": [
+          0.9,
+          0.2
+        ]
+      }
+    ],
+    "input_order": [
+      [
+        0.15,
+        0.8
+      ],
+      [
+        0.85,
+        0.8
+      ],
+      [
+        0.2,
+        0.75
+      ],
+      [
+        0.8,
+        0.75
+      ],
+      [
+        0.5,
+        0.9
+      ],
+      [
+        0.18,
+        0.72
+      ],
+      [
+        0.82,
+        0.72
+      ],
+      [
+        0.5,
+        0.85
+      ],
+      [
+        0.12,
+        0.78
+      ],
+      [
+        0.88,
+        0.78
+      ],
+      [
+        0.5,
+        0.82
+      ],
+      [
+        0.22,
+        0.7
+      ]
+    ],
+    "parameter_status": "pinned demo choices, not Fritzke's experimental defaults"
+  },
+  "initial_state": {
+    "nodes": [
+      {
+        "id": 0,
+        "position": [
+          0.1,
+          0.2
+        ],
+        "error": 0.0
+      },
+      {
+        "id": 1,
+        "position": [
+          0.9,
+          0.2
+        ],
+        "error": 0.0
+      }
+    ],
+    "edges": []
+  },
+  "step_trace": [
+    {
+      "iteration": 1,
+      "input": [
+        0.15,
+        0.8
+      ],
+      "winner": 0,
+      "runner_up": 1,
+      "winner_distance_squared": 0.3625,
+      "aged_edges": [],
+      "moved_prototypes": [
+        {
+          "node": 0,
+          "before": [
+            0.1,
+            0.2
+          ],
+          "after": [
+            0.11,
+            0.32
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.1,
+              0.2
+            ],
+            "error": 0.0
+          },
+          {
+            "id": 1,
+            "position": [
+              0.9,
+              0.2
+            ],
+            "error": 0.0
+          }
+        ],
+        "edges": []
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.11,
+              0.32
+            ],
+            "error": 0.32625
+          },
+          {
+            "id": 1,
+            "position": [
+              0.9,
+              0.2
+            ],
+            "error": 0.0
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 2,
+      "input": [
+        0.85,
+        0.8
+      ],
+      "winner": 1,
+      "runner_up": 0,
+      "winner_distance_squared": 0.3625,
+      "aged_edges": [
+        {
+          "nodes": [
+            0,
+            1
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 1,
+          "before": [
+            0.9,
+            0.2
+          ],
+          "after": [
+            0.89,
+            0.32
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.11,
+            0.32
+          ],
+          "after": [
+            0.147,
+            0.344
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.11,
+              0.32
+            ],
+            "error": 0.32625
+          },
+          {
+            "id": 1,
+            "position": [
+              0.9,
+              0.2
+            ],
+            "error": 0.0
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.147,
+              0.344
+            ],
+            "error": 0.293625
+          },
+          {
+            "id": 1,
+            "position": [
+              0.89,
+              0.32
+            ],
+            "error": 0.32625
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 3,
+      "input": [
+        0.2,
+        0.75
+      ],
+      "winner": 0,
+      "runner_up": 1,
+      "winner_distance_squared": 0.167645,
+      "aged_edges": [
+        {
+          "nodes": [
+            0,
+            1
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 0,
+          "before": [
+            0.147,
+            0.344
+          ],
+          "after": [
+            0.1576,
+            0.4252
+          ]
+        },
+        {
+          "node": 1,
+          "before": [
+            0.89,
+            0.32
+          ],
+          "after": [
+            0.8555,
+            0.3415
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.147,
+              0.344
+            ],
+            "error": 0.293625
+          },
+          {
+            "id": 1,
+            "position": [
+              0.89,
+              0.32
+            ],
+            "error": 0.32625
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.1576,
+              0.4252
+            ],
+            "error": 0.415143
+          },
+          {
+            "id": 1,
+            "position": [
+              0.8555,
+              0.3415
+            ],
+            "error": 0.293625
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 4,
+      "input": [
+        0.8,
+        0.75
+      ],
+      "winner": 1,
+      "runner_up": 0,
+      "winner_distance_squared": 0.169952,
+      "aged_edges": [
+        {
+          "nodes": [
+            0,
+            1
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 1,
+          "before": [
+            0.8555,
+            0.3415
+          ],
+          "after": [
+            0.8444,
+            0.4232
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.1576,
+            0.4252
+          ],
+          "after": [
+            0.18972,
+            0.44144
+          ]
+        }
+      ],
+      "inserted": {
+        "node": 2,
+        "between": [
+          1,
+          0
+        ],
+        "position": [
+          0.51706,
+          0.43232
+        ]
+      },
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.1576,
+              0.4252
+            ],
+            "error": 0.415143
+          },
+          {
+            "id": 1,
+            "position": [
+              0.8555,
+              0.3415
+            ],
+            "error": 0.293625
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              1
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.18972,
+              0.44144
+            ],
+            "error": 0.186814
+          },
+          {
+            "id": 1,
+            "position": [
+              0.8444,
+              0.4232
+            ],
+            "error": 0.20861
+          },
+          {
+            "id": 2,
+            "position": [
+              0.51706,
+              0.43232
+            ],
+            "error": 0.20861
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 5,
+      "input": [
+        0.5,
+        0.9
+      ],
+      "winner": 2,
+      "runner_up": 0,
+      "winner_distance_squared": 0.219016,
+      "aged_edges": [
+        {
+          "nodes": [
+            1,
+            2
+          ],
+          "age": 1
+        },
+        {
+          "nodes": [
+            0,
+            2
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 2,
+          "before": [
+            0.51706,
+            0.43232
+          ],
+          "after": [
+            0.513648,
+            0.525856
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.18972,
+            0.44144
+          ],
+          "after": [
+            0.205234,
+            0.464368
+          ]
+        },
+        {
+          "node": 1,
+          "before": [
+            0.8444,
+            0.4232
+          ],
+          "after": [
+            0.82718,
+            0.44704
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.18972,
+              0.44144
+            ],
+            "error": 0.186814
+          },
+          {
+            "id": 1,
+            "position": [
+              0.8444,
+              0.4232
+            ],
+            "error": 0.20861
+          },
+          {
+            "id": 2,
+            "position": [
+              0.51706,
+              0.43232
+            ],
+            "error": 0.20861
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.205234,
+              0.464368
+            ],
+            "error": 0.168133
+          },
+          {
+            "id": 1,
+            "position": [
+              0.82718,
+              0.44704
+            ],
+            "error": 0.187749
+          },
+          {
+            "id": 2,
+            "position": [
+              0.513648,
+              0.525856
+            ],
+            "error": 0.384863
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 1
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 6,
+      "input": [
+        0.18,
+        0.72
+      ],
+      "winner": 0,
+      "runner_up": 2,
+      "winner_distance_squared": 0.065984,
+      "aged_edges": [
+        {
+          "nodes": [
+            0,
+            2
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 0,
+          "before": [
+            0.205234,
+            0.464368
+          ],
+          "after": [
+            0.200187,
+            0.515494
+          ]
+        },
+        {
+          "node": 2,
+          "before": [
+            0.513648,
+            0.525856
+          ],
+          "after": [
+            0.496966,
+            0.535563
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.205234,
+              0.464368
+            ],
+            "error": 0.168133
+          },
+          {
+            "id": 1,
+            "position": [
+              0.82718,
+              0.44704
+            ],
+            "error": 0.187749
+          },
+          {
+            "id": 2,
+            "position": [
+              0.513648,
+              0.525856
+            ],
+            "error": 0.384863
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 1
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.200187,
+              0.515494
+            ],
+            "error": 0.210705
+          },
+          {
+            "id": 1,
+            "position": [
+              0.82718,
+              0.44704
+            ],
+            "error": 0.168974
+          },
+          {
+            "id": 2,
+            "position": [
+              0.496966,
+              0.535563
+            ],
+            "error": 0.346377
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 1
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 7,
+      "input": [
+        0.82,
+        0.72
+      ],
+      "winner": 1,
+      "runner_up": 2,
+      "winner_distance_squared": 0.074559,
+      "aged_edges": [
+        {
+          "nodes": [
+            1,
+            2
+          ],
+          "age": 2
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 1,
+          "before": [
+            0.82718,
+            0.44704
+          ],
+          "after": [
+            0.825744,
+            0.501632
+          ]
+        },
+        {
+          "node": 2,
+          "before": [
+            0.496966,
+            0.535563
+          ],
+          "after": [
+            0.513118,
+            0.544785
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.200187,
+              0.515494
+            ],
+            "error": 0.210705
+          },
+          {
+            "id": 1,
+            "position": [
+              0.82718,
+              0.44704
+            ],
+            "error": 0.168974
+          },
+          {
+            "id": 2,
+            "position": [
+              0.496966,
+              0.535563
+            ],
+            "error": 0.346377
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 1
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.200187,
+              0.515494
+            ],
+            "error": 0.189635
+          },
+          {
+            "id": 1,
+            "position": [
+              0.825744,
+              0.501632
+            ],
+            "error": 0.21918
+          },
+          {
+            "id": 2,
+            "position": [
+              0.513118,
+              0.544785
+            ],
+            "error": 0.311739
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 8,
+      "input": [
+        0.5,
+        0.85
+      ],
+      "winner": 2,
+      "runner_up": 0,
+      "winner_distance_squared": 0.093328,
+      "aged_edges": [
+        {
+          "nodes": [
+            1,
+            2
+          ],
+          "age": 1
+        },
+        {
+          "nodes": [
+            0,
+            2
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 2,
+          "before": [
+            0.513118,
+            0.544785
+          ],
+          "after": [
+            0.510494,
+            0.605828
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.200187,
+            0.515494
+          ],
+          "after": [
+            0.215178,
+            0.532219
+          ]
+        },
+        {
+          "node": 1,
+          "before": [
+            0.825744,
+            0.501632
+          ],
+          "after": [
+            0.809457,
+            0.51905
+          ]
+        }
+      ],
+      "inserted": {
+        "node": 3,
+        "between": [
+          2,
+          1
+        ],
+        "position": [
+          0.659976,
+          0.562439
+        ]
+      },
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.200187,
+              0.515494
+            ],
+            "error": 0.189635
+          },
+          {
+            "id": 1,
+            "position": [
+              0.825744,
+              0.501632
+            ],
+            "error": 0.21918
+          },
+          {
+            "id": 2,
+            "position": [
+              0.513118,
+              0.544785
+            ],
+            "error": 0.311739
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              2
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.215178,
+              0.532219
+            ],
+            "error": 0.170672
+          },
+          {
+            "id": 1,
+            "position": [
+              0.809457,
+              0.51905
+            ],
+            "error": 0.098631
+          },
+          {
+            "id": 2,
+            "position": [
+              0.510494,
+              0.605828
+            ],
+            "error": 0.182281
+          },
+          {
+            "id": 3,
+            "position": [
+              0.659976,
+              0.562439
+            ],
+            "error": 0.182281
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 9,
+      "input": [
+        0.12,
+        0.78
+      ],
+      "winner": 0,
+      "runner_up": 2,
+      "winner_distance_squared": 0.070454,
+      "aged_edges": [
+        {
+          "nodes": [
+            0,
+            2
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 0,
+          "before": [
+            0.215178,
+            0.532219
+          ],
+          "after": [
+            0.196142,
+            0.581775
+          ]
+        },
+        {
+          "node": 2,
+          "before": [
+            0.510494,
+            0.605828
+          ],
+          "after": [
+            0.490969,
+            0.614537
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.215178,
+              0.532219
+            ],
+            "error": 0.170672
+          },
+          {
+            "id": 1,
+            "position": [
+              0.809457,
+              0.51905
+            ],
+            "error": 0.098631
+          },
+          {
+            "id": 2,
+            "position": [
+              0.510494,
+              0.605828
+            ],
+            "error": 0.182281
+          },
+          {
+            "id": 3,
+            "position": [
+              0.659976,
+              0.562439
+            ],
+            "error": 0.182281
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.196142,
+              0.581775
+            ],
+            "error": 0.217013
+          },
+          {
+            "id": 1,
+            "position": [
+              0.809457,
+              0.51905
+            ],
+            "error": 0.088768
+          },
+          {
+            "id": 2,
+            "position": [
+              0.490969,
+              0.614537
+            ],
+            "error": 0.164053
+          },
+          {
+            "id": 3,
+            "position": [
+              0.659976,
+              0.562439
+            ],
+            "error": 0.164053
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 10,
+      "input": [
+        0.88,
+        0.78
+      ],
+      "winner": 1,
+      "runner_up": 3,
+      "winner_distance_squared": 0.073071,
+      "aged_edges": [
+        {
+          "nodes": [
+            1,
+            3
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 1,
+          "before": [
+            0.809457,
+            0.51905
+          ],
+          "after": [
+            0.823566,
+            0.57124
+          ]
+        },
+        {
+          "node": 3,
+          "before": [
+            0.659976,
+            0.562439
+          ],
+          "after": [
+            0.670977,
+            0.573317
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.196142,
+              0.581775
+            ],
+            "error": 0.217013
+          },
+          {
+            "id": 1,
+            "position": [
+              0.809457,
+              0.51905
+            ],
+            "error": 0.088768
+          },
+          {
+            "id": 2,
+            "position": [
+              0.490969,
+              0.614537
+            ],
+            "error": 0.164053
+          },
+          {
+            "id": 3,
+            "position": [
+              0.659976,
+              0.562439
+            ],
+            "error": 0.164053
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.196142,
+              0.581775
+            ],
+            "error": 0.195312
+          },
+          {
+            "id": 1,
+            "position": [
+              0.823566,
+              0.57124
+            ],
+            "error": 0.145655
+          },
+          {
+            "id": 2,
+            "position": [
+              0.490969,
+              0.614537
+            ],
+            "error": 0.147648
+          },
+          {
+            "id": 3,
+            "position": [
+              0.670977,
+              0.573317
+            ],
+            "error": 0.147648
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 11,
+      "input": [
+        0.5,
+        0.82
+      ],
+      "winner": 2,
+      "runner_up": 3,
+      "winner_distance_squared": 0.042297,
+      "aged_edges": [
+        {
+          "nodes": [
+            0,
+            2
+          ],
+          "age": 1
+        },
+        {
+          "nodes": [
+            2,
+            3
+          ],
+          "age": 1
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 2,
+          "before": [
+            0.490969,
+            0.614537
+          ],
+          "after": [
+            0.492775,
+            0.65563
+          ]
+        },
+        {
+          "node": 0,
+          "before": [
+            0.196142,
+            0.581775
+          ],
+          "after": [
+            0.211335,
+            0.593686
+          ]
+        },
+        {
+          "node": 3,
+          "before": [
+            0.670977,
+            0.573317
+          ],
+          "after": [
+            0.662428,
+            0.585651
+          ]
+        }
+      ],
+      "inserted": null,
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.196142,
+              0.581775
+            ],
+            "error": 0.195312
+          },
+          {
+            "id": 1,
+            "position": [
+              0.823566,
+              0.57124
+            ],
+            "error": 0.145655
+          },
+          {
+            "id": 2,
+            "position": [
+              0.490969,
+              0.614537
+            ],
+            "error": 0.147648
+          },
+          {
+            "id": 3,
+            "position": [
+              0.670977,
+              0.573317
+            ],
+            "error": 0.147648
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.211335,
+              0.593686
+            ],
+            "error": 0.175781
+          },
+          {
+            "id": 1,
+            "position": [
+              0.823566,
+              0.57124
+            ],
+            "error": 0.131089
+          },
+          {
+            "id": 2,
+            "position": [
+              0.492775,
+              0.65563
+            ],
+            "error": 0.170951
+          },
+          {
+            "id": 3,
+            "position": [
+              0.662428,
+              0.585651
+            ],
+            "error": 0.132883
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      }
+    },
+    {
+      "iteration": 12,
+      "input": [
+        0.22,
+        0.7
+      ],
+      "winner": 0,
+      "runner_up": 2,
+      "winner_distance_squared": 0.011378,
+      "aged_edges": [
+        {
+          "nodes": [
+            0,
+            2
+          ],
+          "age": 2
+        }
+      ],
+      "moved_prototypes": [
+        {
+          "node": 0,
+          "before": [
+            0.211335,
+            0.593686
+          ],
+          "after": [
+            0.213068,
+            0.614949
+          ]
+        },
+        {
+          "node": 2,
+          "before": [
+            0.492775,
+            0.65563
+          ],
+          "after": [
+            0.479136,
+            0.657849
+          ]
+        }
+      ],
+      "inserted": {
+        "node": 4,
+        "between": [
+          0,
+          2
+        ],
+        "position": [
+          0.346102,
+          0.636399
+        ]
+      },
+      "deleted_edges": [],
+      "deleted_nodes": [],
+      "state_before": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.211335,
+              0.593686
+            ],
+            "error": 0.175781
+          },
+          {
+            "id": 1,
+            "position": [
+              0.823566,
+              0.57124
+            ],
+            "error": 0.131089
+          },
+          {
+            "id": 2,
+            "position": [
+              0.492775,
+              0.65563
+            ],
+            "error": 0.170951
+          },
+          {
+            "id": 3,
+            "position": [
+              0.662428,
+              0.585651
+            ],
+            "error": 0.132883
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              2
+            ],
+            "age": 1
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          }
+        ]
+      },
+      "state_after": {
+        "nodes": [
+          {
+            "id": 0,
+            "position": [
+              0.213068,
+              0.614949
+            ],
+            "error": 0.084221
+          },
+          {
+            "id": 1,
+            "position": [
+              0.823566,
+              0.57124
+            ],
+            "error": 0.11798
+          },
+          {
+            "id": 2,
+            "position": [
+              0.479136,
+              0.657849
+            ],
+            "error": 0.076927
+          },
+          {
+            "id": 3,
+            "position": [
+              0.662428,
+              0.585651
+            ],
+            "error": 0.119595
+          },
+          {
+            "id": 4,
+            "position": [
+              0.346102,
+              0.636399
+            ],
+            "error": 0.084221
+          }
+        ],
+        "edges": [
+          {
+            "nodes": [
+              0,
+              4
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              1,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              3
+            ],
+            "age": 0
+          },
+          {
+            "nodes": [
+              2,
+              4
+            ],
+            "age": 0
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "inputs_seen": 12,
+    "insertions": 3,
+    "prototype_moves": 26,
+    "edge_age_events": 14,
+    "edge_deletions": 0,
+    "final_node_count": 5,
+    "final_edge_count": 4
+  },
+  "final_state": {
+    "nodes": [
+      {
+        "id": 0,
+        "position": [
+          0.213068,
+          0.614949
+        ],
+        "error": 0.084221
+      },
+      {
+        "id": 1,
+        "position": [
+          0.823566,
+          0.57124
+        ],
+        "error": 0.11798
+      },
+      {
+        "id": 2,
+        "position": [
+          0.479136,
+          0.657849
+        ],
+        "error": 0.076927
+      },
+      {
+        "id": 3,
+        "position": [
+          0.662428,
+          0.585651
+        ],
+        "error": 0.119595
+      },
+      {
+        "id": 4,
+        "position": [
+          0.346102,
+          0.636399
+        ],
+        "error": 0.084221
+      }
+    ],
+    "edges": [
+      {
+        "nodes": [
+          0,
+          4
+        ],
+        "age": 0
+      },
+      {
+        "nodes": [
+          1,
+          3
+        ],
+        "age": 0
+      },
+      {
+        "nodes": [
+          2,
+          3
+        ],
+        "age": 0
+      },
+      {
+        "nodes": [
+          2,
+          4
+        ],
+        "age": 0
+      }
+    ]
+  }
+}

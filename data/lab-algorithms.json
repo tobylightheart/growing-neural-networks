@@ -14,6 +14,13 @@
     "lab_ids": ["perceptron-and"]
   },
   {
+    "id": "growing-neural-gas",
+    "name": "Growing Neural Gas",
+    "main_garden_algorithm_id": "growing-neural-gas",
+    "summary": "An unsupervised topology learner with moving prototypes, competitive-Hebbian edges, local edge aging, and periodic error-driven insertion.",
+    "lab_ids": ["gng-topology-growth"]
+  },
+  {
     "id": "grow-when-required",
     "name": "Grow When Required",
     "main_garden_algorithm_id": "grow-when-required",

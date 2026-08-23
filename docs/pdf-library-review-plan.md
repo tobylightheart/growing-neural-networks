@@ -23,7 +23,7 @@ Why this first:
 - The first six-anchor STDP review milestone is complete, so that bundle should stay warm for bounded synthesis and exercises rather than continue to monopolize daily review work.
 - The classic constructive branch has now completed its current four-anchor draft/improvement pass: Ash1989, Fahlman1990, Platt1991, and Prechelt1997 all have public automated drafts or checked review improvements with verified private PDF paths. Keep it high and seeded as a grounding branch for cautious synthesis and the planned DNC-vs-Cascade-Correlation/resource-allocation comparison.
 - The eSNN branch drafted its planned first sequence through Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and Roy2017, then completed one bounded metadata/private-asset recheck for each anchor. Keep it high and seeded for cautious lineage synthesis and future human/full-text work rather than automatically cycling the same anchors again.
-- The growing-topology branch now has concrete ready evidence: Marsland2002 had an existing discovered paper record and a verified collected private PDF. Its 2026-07-23 review draft opens the next coherent branch from supervised hidden-unit growth into topology/prototype growth; Fritzke1995 remains an asset gap and should not be attached to a mismatched PDF.
+- The growing-topology branch now has both anchors: Marsland2002 has a verified private PDF, and Fritzke1995 is reconciled to the exact-title eight-page PostScript now in the private library. Automated mechanism worksheets and linked deterministic traces remain explicitly not human-reviewed; the Fritzke text extraction is typography-damaged and equations still need visual/human checking.
 
 The completed STDP promotion sequence was:
 

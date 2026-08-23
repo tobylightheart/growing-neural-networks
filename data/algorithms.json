@@ -16,6 +16,38 @@
     ]
   },
   {
+    "id": "growing-neural-gas",
+    "name": "Growing Neural Gas",
+    "family": "unsupervised topology and prototype growth",
+    "summary": "Moves input-space prototypes, maintains competitive-Hebbian edges with local aging, and periodically inserts a prototype in the graph region with greatest accumulated squared-distance error; source-grounded details remain not human-reviewed.",
+    "themes": [
+      "constructive-learning",
+      "incremental-structure",
+      "topology-constraints",
+      "growth-trigger",
+      "capacity-control"
+    ],
+    "papers": [
+      "fritzke-1995-growing-neural-gas"
+    ]
+  },
+  {
+    "id": "grow-when-required",
+    "name": "Grow When Required",
+    "family": "unsupervised topology and prototype growth",
+    "summary": "Uses match activity and winner habituation to choose immediate prototype insertion or continued winner-and-neighbor adaptation while maintaining an aged neighborhood graph; source-grounded details remain not human-reviewed.",
+    "themes": [
+      "constructive-learning",
+      "incremental-structure",
+      "topology-constraints",
+      "growth-trigger",
+      "capacity-control"
+    ],
+    "papers": [
+      "marsland-2002-grows-when-required"
+    ]
+  },
+  {
     "id": "dynamic-node-construction",
     "name": "Dynamic Node Construction",
     "family": "constructive backpropagation",

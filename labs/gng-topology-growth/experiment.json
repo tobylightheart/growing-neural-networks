@@ -1,0 +1,20 @@
+{
+  "id": "gng-topology-growth",
+  "title": "Growing Neural Gas topology growth",
+  "algorithm_id": "growing-neural-gas",
+  "status": "available",
+  "summary": "A deterministic 2-D trace of prototype movement, competitive-Hebbian edges, local edge aging, and periodic error-driven insertion.",
+  "learning_objectives": [
+    "Follow winner and topological-neighbor prototype movement in two dimensions.",
+    "See edge age increment before the winner/runner edge is created or reset.",
+    "Inspect periodic insertion between the largest-error prototype and its largest-error neighbor.",
+    "Distinguish GNG from GWR and topology/prototype growth from hidden-feature growth."
+  ],
+  "limitations": [
+    "Not human-reviewed; this is an automated source-grounded teaching artifact.",
+    "It follows Fritzke's section 3 update order but does not reproduce the paper's datasets, parameters, random sampling, figures, or reported results.",
+    "Initial prototypes, finite input order, rates, insertion interval, edge-age limit, error factors, tie-breaking, and rounding are pinned demonstration choices.",
+    "The private source is an eight-page PostScript proceedings file; text extraction was custom and typography-damaged, so equations and symbols need human checking."
+  ],
+  "artifacts": {"trace": "trace.json"}
+}

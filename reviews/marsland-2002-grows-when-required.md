@@ -55,7 +55,7 @@ This outline does **not** establish the implementation details. In particular, t
 
 ## Relationship to neighboring papers
 
-- **Fritzke 1995 / Growing Neural Gas:** the indexed abstract names GNG as a comparison point, but the bundle's Fritzke1995 PDF remains unresolved and no mismatched private file should be attached.
+- **Fritzke 1995 / Growing Neural Gas:** the exact-title private source is now reconciled as an eight-page PostScript file, distinct from the mismatched Fritzke 1994 PDFs found earlier. Its automated source worksheet supports the periodic accumulated-error insertion contrast with GWR's activity-plus-habituation gate, but remains not human-reviewed and typography-limited.
 - **Ash 1989 / Dynamic Node Creation:** both concern conditional node growth, but Ash1989 is a supervised backpropagation branch while Marsland2002 is a self-organising topology/prototype branch.
 - **Fahlman and Lebiere / Cascade-Correlation:** Cascade-Correlation recruits candidates using residual-error correlation; Marsland2002 should not be described with that supervised candidate-training mechanism.
 - **Lightheart 2018 thesis taxonomy:** provides broader constructive-learning vocabulary for comparing what grows and what signal triggers growth.

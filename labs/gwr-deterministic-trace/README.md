@@ -6,6 +6,9 @@ network adapting represented inputs, inserting a midpoint node when both match
 activity and winner firing are low, pausing growth while a new node adapts,
 resuming insertion later, and deleting an over-age edge plus its isolated node.
 
+> **Not human-reviewed.** The mechanism boundary comes from an automated close
+> read and remains subject to human source checking.
+
 ## Scope
 
 This is a **toy mechanism**, not a full reproduction of Marsland, Shapiro, and
@@ -54,3 +57,5 @@ committed `trace.json` to exactly match current script output.
 - Iteration 7 adapts, expires an old edge, and removes the newly isolated node 0.
 
 For literature context, see the garden's [Marsland GWR review draft](../../reviews/marsland-2002-grows-when-required.md). The lab's claim boundary remains narrower than a paper reproduction or benchmark result.
+
+For the structural distinction, open [GNG, GWR, and hidden-feature growth](../../modules/topology-growth-comparison/).

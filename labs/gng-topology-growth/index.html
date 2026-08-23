@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Growing Neural Gas topology growth</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="lab">
+    <nav><a href="../">← Lab home</a> · <a href="../../modules/topology-growth-comparison/">Compare GNG, GWR, and hidden-feature growth</a></nav>
+    <p class="eyebrow">Deterministic 2-D mechanism trace</p>
+    <h1>Growing Neural Gas, one topology at a time</h1>
+    <p class="lede">Move the step control to see prototypes approach fixed samples, edges age and reset, and error-driven insertions split busy regions.</p>
+    <section class="panel warning"><strong>Not human-reviewed.</strong> Paper-grounded update order; pinned teaching inputs and parameters; not a reproduction of Fritzke's experiments or results.</section>
+
+    <section class="viewer panel">
+      <div>
+        <label for="step">Trace step <output id="step-value">0</output></label>
+        <input id="step" type="range" min="0" max="12" value="0">
+        <div class="buttons"><button id="previous">Previous</button><button id="next">Next</button></div>
+        <p id="event">Loading trace…</p>
+        <pre id="detail">Loading trace…</pre>
+      </div>
+      <svg id="plot" viewBox="0 0 600 440" role="img" aria-label="Two-dimensional Growing Neural Gas prototype graph"></svg>
+    </section>
+
+    <section class="grid">
+      <article class="panel"><h2>What moves?</h2><p>The winner and its current graph neighbors move toward each input. The trace records every before/after prototype position.</p></article>
+      <article class="panel"><h2>What grows?</h2><p>Every fourth input, a new prototype is inserted halfway between the largest-error node and its largest-error graph neighbor; their old edge is replaced.</p></article>
+      <article class="panel"><h2>What ages?</h2><p>Edges incident to the winner age first. The winner–runner edge is then created or reset to zero; over-age edges would be removed.</p></article>
+    </section>
+
+    <section class="panel"><h2>Source, trace, and exact checks</h2><p><a href="../../docs/reviews/gng-mechanism-source-verification.md">Source-verification worksheet</a> · <a href="gng_topology_growth.py">Python</a> · <a href="trace.json">trace.json</a> · <a href="README.md">limitations</a> · <a href="tests/test_gng.py">exact tests</a></p></section>
+  </main>
+  <script src="demo.js"></script>
+</body>
+</html>

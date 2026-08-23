@@ -895,6 +895,56 @@
     "review": "reviews/prechelt-1997-cascor-family.md"
   },
   {
+    "id": "fritzke-1995-growing-neural-gas",
+    "title": "A Growing Neural Gas Network Learns Topologies",
+    "authors": [
+      "Bernd Fritzke"
+    ],
+    "year": 1995,
+    "venue": "Advances in Neural Information Processing Systems 7",
+    "families": [
+      "growing-neural-gas",
+      "self-organising-networks",
+      "constructive-learning"
+    ],
+    "themes": [
+      "constructive-learning",
+      "growth-trigger",
+      "capacity-control",
+      "topology-constraints"
+    ],
+    "status": "review-draft",
+    "importance": "foundational",
+    "summary": "Introduces Growing Neural Gas: moving input-space prototypes, competitive-Hebbian edges with local aging, and periodic insertion directed by accumulated squared-distance error.",
+    "growth_mechanism": "Every lambda inputs, insert halfway between the maximum-error prototype and its maximum-error graph neighbor; winner error accumulates squared input distance while prototypes and topology adapt on every sample.",
+    "what_grows": [
+      "input-space-prototypes",
+      "neighborhood-topology"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "unsupervised",
+      "self-organising-learning"
+    ],
+    "links": {
+      "paper": "",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "growing-topology-gng-source-reconciliation-2026-08-24"
+    ],
+    "related": [
+      "marsland-2002-grows-when-required",
+      "lightheart-2018-constructive-spiking-thesis",
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation"
+    ],
+    "notes": "The exact-title eight-page PostScript source is present in the private library (721,014 bytes; SHA-256 826bdc0bd45c8da30a237d52845835bae291d9a6b0adece022222dea372c376d), resolving the contradictory available/gap bundle status. A custom literal-string extraction recovered coherent section 3 prose and steps 0-10, but TeX/dvips typography is damaged; equations, symbols, experimental parameters, and results remain pending visual/human review. The linked deterministic trace uses paper-grounded update order with pinned teaching choices and is not a reproduction.",
+    "review": "reviews/fritzke-1995-growing-neural-gas.md"
+  },
+  {
     "id": "marsland-2002-grows-when-required",
     "title": "A self-organising network that grows when required",
     "authors": [

@@ -172,5 +172,37 @@
       "Compare continued backpropagation, frozen installed features, and local allocation followed by LMS/center adaptation."
     ],
     "entry": "modules/capacity-growth-signals/index.html"
+  },
+  {
+    "id": "topology-growth-comparison",
+    "title": "GNG, GWR, and Hidden-Feature Growth",
+    "type": "mechanism-comparison",
+    "status": "available",
+    "summary": "Separate periodic error-driven GNG insertion, activity-and-habituation-gated GWR insertion, and supervised hidden-feature growth.",
+    "concepts": [
+      "incremental-structure",
+      "topology-constraints",
+      "capacity-control",
+      "growth-trigger",
+      "hidden-unit-growth"
+    ],
+    "papers": [
+      "fritzke-1995-growing-neural-gas",
+      "marsland-2002-grows-when-required",
+      "ash-1989-dynamic-node-construction",
+      "fahlman-1990-cascade-correlation"
+    ],
+    "algorithms": [
+      "growing-neural-gas",
+      "grow-when-required",
+      "dynamic-node-construction",
+      "cascade-correlation"
+    ],
+    "learning_goals": [
+      "Distinguish periodic accumulated-error growth in GNG from immediate two-threshold growth in GWR.",
+      "Separate input-space prototype and topology growth from supervised hidden-feature growth.",
+      "Connect each comparison claim to a runnable trace or source-boundary note."
+    ],
+    "entry": "modules/topology-growth-comparison/index.html"
   }
 ]

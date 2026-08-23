@@ -361,5 +361,18 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "Promoted the existing discovered Marsland2002 record to a public automated review draft as the first paper action in the active topology-growth branch. Crossref verified Neural Networks 15(8-9):1041-1058, October 2002 print metadata, the three authors, and DOI; PubMed independently matched record 12416693 and supplied the indexed abstract; DOI resolution reached Elsevier PII S0893608002000783. The private PDF was verified under pdfs/Constructive with a PDF-1.3 header and size 1,297,945 bytes. Semantic Scholar returned HTTP 429 and no usable local text-extraction tooling was available, so exact method equations, thresholds, update rules, datasets, and quantitative claims remain pending reliable full-text or human review."
+  },
+  {
+    "id": "growing-topology-gng-source-reconciliation-2026-08-24",
+    "source": "goal-cycle-private-library-verification",
+    "date": "2026-08-24",
+    "description": "Reconciled the Fritzke1995 bundle asset contradiction and performed a bounded mechanism inspection for the deterministic GNG teaching trace.",
+    "query": "Exact-title filename search in the existing growing-topology bundle; PostScript file identity, DSC page markers, SHA-256, and bounded literal-string extraction of section 3 steps 0-10.",
+    "added": [
+      "fritzke-1995-growing-neural-gas"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "The private library now contains the exact-title eight-page Fritzke 1995 PostScript source, distinct from the Fritzke 1994 PDFs found by the earlier scan. No PostScript renderer or ps2ascii was available; custom literal-string extraction recovered coherent prose and the numbered algorithm but damaged typography. The automated review, source worksheet, and deterministic trace are explicitly not human-reviewed and make no paper-result claim."
   }
 ]

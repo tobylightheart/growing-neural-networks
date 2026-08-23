@@ -48,7 +48,28 @@
     ],
     "claims": [
       "toy-mechanism",
-      "not-a-full-paper-reproduction"
+      "not-a-full-paper-reproduction",
+      "not-human-reviewed"
+    ]
+  },
+  {
+    "id": "gng-topology-growth",
+    "title": "Growing Neural Gas topology growth",
+    "status": "available",
+    "algorithm_id": "growing-neural-gas",
+    "summary": "A deterministic 2-D trace of prototype movement, competitive-Hebbian edges, local edge aging, and periodic error-driven insertion.",
+    "entry": "labs/gng-topology-growth/index.html",
+    "script": "labs/gng-topology-growth/gng_topology_growth.py",
+    "tests": ["labs/gng-topology-growth/tests/test_gng.py"],
+    "main_garden_links": [
+      "modules/topology-growth-comparison/index.html",
+      "docs/reviews/gng-mechanism-source-verification.md"
+    ],
+    "claims": [
+      "toy-mechanism",
+      "not-a-full-paper-reproduction",
+      "paper-grounded-update-order",
+      "not-human-reviewed"
     ]
   },
   {

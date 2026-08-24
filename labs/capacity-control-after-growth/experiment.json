@@ -1,0 +1,23 @@
+{
+  "id": "capacity-control-after-growth",
+  "title": "Capacity control after growth",
+  "algorithm_id": "dynamic-node-construction",
+  "status": "available",
+  "summary": "A deterministic XOR checkpoint comparing freeze, fine-tune, and prune policies after one hidden-unit insertion.",
+  "learning_objectives": [
+    "Compare three post-insertion policies from the same grown-network checkpoint.",
+    "Distinguish preserving established features from fine-tuning the full network.",
+    "Observe that deleting capacity can worsen fit even when a curvature-inspired proxy ranks the deletion first.",
+    "Treat growth and pruning as capacity-control choices rather than assuming that more neurons are always better."
+  ],
+  "limitations": [
+    "Automated teaching artifact; not human-reviewed.",
+    "The XOR schedule and group proxy are pinned demonstration choices, not paper reproductions.",
+    "The pruning proxy is OBD-inspired but omits the full parameter Hessian; it is neither OBD nor OBS.",
+    "Reed's survey PDF is image-only in the local extraction path, so it grounds the survey role rather than mechanism details.",
+    "The cited GPSNN uses spiking neurons, latency, dominance, and a two-stage procedure; this sigmoid XOR network does not reproduce it."
+  ],
+  "artifacts": {
+    "trace": "trace.json"
+  }
+}

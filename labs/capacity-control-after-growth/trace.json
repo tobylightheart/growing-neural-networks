@@ -1,0 +1,176 @@
+{
+  "question": "What does the network retain after one hidden-unit insertion under freeze, fine-tune, and prune policies?",
+  "review_status": "automated teaching artifact; not human-reviewed",
+  "claim_boundary": "Deterministic XOR comparison, not a reproduction of Reed, OBD, OBS, or GPSNN.",
+  "schedule": {
+    "seed": 1989,
+    "pre_insertion_sweeps": 600,
+    "post_insertion_sweeps": 400,
+    "post_prune_recovery_sweeps": 100,
+    "learning_rate": 0.5,
+    "momentum": 0.9
+  },
+  "growth_checkpoint": {
+    "before_insertion": {
+      "width": 1,
+      "average_squared_error": 0.167368660889,
+      "maximum_squared_error": 0.452011441136,
+      "outputs": [
+        0.027062388792,
+        0.670819402337,
+        0.670802546096,
+        0.672317961337
+      ]
+    },
+    "inserted_parameters": {
+      "incoming": [
+        0.106198211089,
+        0.058770859466,
+        0.122709762819
+      ],
+      "outgoing": -0.052586135196
+    },
+    "immediately_after_insertion": {
+      "width": 2,
+      "average_squared_error": 0.167270965933,
+      "maximum_squared_error": 0.443108531171,
+      "outputs": [
+        0.026337285545,
+        0.664457221125,
+        0.664302631083,
+        0.665663977673
+      ]
+    }
+  },
+  "policies": {
+    "freeze": {
+      "rule": "Keep the established hidden feature's incoming weights fixed; train the new feature and all output weights.",
+      "established_feature_changed": false,
+      "result": {
+        "width": 2,
+        "average_squared_error": 0.00131608319,
+        "maximum_squared_error": 0.001443773611,
+        "outputs": [
+          0.037997021083,
+          0.965015237089,
+          0.96500856691,
+          0.037043557117
+        ]
+      },
+      "parameters": {
+        "hidden": [
+          [
+            -7.516705208825,
+            -7.527883312687,
+            0.663539887045
+          ],
+          [
+            -4.36428116262,
+            -4.364180703884,
+            6.677758794515
+          ]
+        ],
+        "output": [
+          -11.051529810556,
+          8.27456385435,
+          -4.201053496225
+        ]
+      }
+    },
+    "fine_tune": {
+      "rule": "Continue ordinary backpropagation through established and inserted features.",
+      "established_feature_changed": true,
+      "result": {
+        "width": 2,
+        "average_squared_error": 0.000851859382,
+        "maximum_squared_error": 0.001328274399,
+        "outputs": [
+          0.023730982637,
+          0.97247438893,
+          0.97246194763,
+          0.036445499023
+        ]
+      },
+      "parameters": {
+        "hidden": [
+          [
+            -7.852813539176,
+            -7.864310072586,
+            2.746737937837
+          ],
+          [
+            -4.240958511611,
+            -4.241113876857,
+            6.213288497641
+          ]
+        ],
+        "output": [
+          -8.929277967021,
+          8.790541167648,
+          -4.098828586147
+        ]
+      }
+    },
+    "prune": {
+      "rule": "Fine-tune, remove the hidden node with the smaller OBD-inspired diagonal group proxy, then run 100 recovery sweeps.",
+      "proxy_name": "0.5 * output_weight^2 * mean((output_derivative * hidden_activation)^2)",
+      "proxy_values": [
+        0.004724603832,
+        0.015940280579
+      ],
+      "removed_node": 0,
+      "before_pruning": {
+        "width": 2,
+        "average_squared_error": 0.000851859382,
+        "maximum_squared_error": 0.001328274399,
+        "outputs": [
+          0.023730982637,
+          0.97247438893,
+          0.97246194763,
+          0.036445499023
+        ]
+      },
+      "immediately_after_pruning": {
+        "width": 1,
+        "average_squared_error": 0.246071391391,
+        "maximum_squared_error": 0.981591096425,
+        "outputs": [
+          0.990752792792,
+          0.973862513902,
+          0.973866241301,
+          0.036446229107
+        ]
+      },
+      "result": {
+        "width": 1,
+        "average_squared_error": 0.173113670964,
+        "maximum_squared_error": 0.491143097436,
+        "outputs": [
+          0.700816022531,
+          0.686248843769,
+          0.686418346035,
+          0.067367237449
+        ]
+      },
+      "parameters": {
+        "hidden": [
+          [
+            -4.605039382586,
+            -4.616591122704,
+            9.212098459464
+          ]
+        ],
+        "output": [
+          6.926450177893,
+          -6.074572109416
+        ]
+      }
+    }
+  },
+  "interpretation": [
+    "Fine-tuning reaches the lowest XOR error here, but retains both hidden units.",
+    "Freezing the established feature preserves it exactly while the inserted feature and output layer adapt; its error is slightly higher in this run.",
+    "The diagonal pruning proxy removes one unit and sharply worsens fit, even after recovery: lower proxy is not proof that deletion is harmless.",
+    "Growth creates an option, not an obligation to keep capacity; pruning creates a capacity bound, not a guarantee of equal performance."
+  ]
+}

@@ -32,6 +32,6 @@
     "name": "Dynamic Node Construction",
     "main_garden_algorithm_id": "dynamic-node-construction",
     "summary": "A constructive backpropagation method that adds a hidden node when normalized average-error improvement falls below a trigger slope.",
-    "lab_ids": ["dynamic-node-construction-xor"]
+    "lab_ids": ["dynamic-node-construction-xor", "capacity-control-after-growth"]
   }
 ]

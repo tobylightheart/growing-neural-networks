@@ -12,6 +12,7 @@ const stabilization = require('../exercises/post-growth-stabilization-compare-1/
 const intuition = require('../exercises/residual-correlation-intuition-1/demo.js');
 const dnc = require('../labs/dynamic-node-construction-xor/demo.js');
 const capacitySignals = require('../modules/capacity-growth-signals/demo.js');
+const capacityControl = require('../labs/capacity-control-after-growth/demo.js');
 
 test('lineage resolves a source-specific claim status', () => {
   const status = lineage.claimStatus('lightheart', 'parameter-calculation');
@@ -59,6 +60,16 @@ test('capacity-growth comparison keeps the three triggers distinct', () => {
     cascor: { outputStalled: true, residualRemains: true, bestCorrelation: 0.7 },
     ran: { distance: 0.7, epsilon: 0.5, error: 0.3, delta: 0.2 }
   }), { dnc: false, cascor: true, ran: true });
+});
+
+test('capacity-control demo reports fit and retained width together', () => {
+  assert.deepEqual(capacityControl.policySummary('prune', {
+    rule: 'remove one', removed_node: 0, proxy_values: [0.1, 0.2],
+    result: { width: 1, average_squared_error: 0.25 }
+  }), {
+    name: 'prune', label: 'Prune after fine-tuning', width: 1, error: 0.25,
+    detail: 'Removed node 0; proxy 0.1 vs 0.2', rule: 'remove one'
+  });
 });
 
 test('STDP timing rewards predictive spikes and penalizes late spikes', () => {

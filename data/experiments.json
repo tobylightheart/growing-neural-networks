@@ -90,5 +90,25 @@
       "paper-faithful-vertical-slice",
       "not-human-reviewed"
     ]
+  },
+  {
+    "id": "capacity-control-after-growth",
+    "title": "Capacity control after growth",
+    "status": "available",
+    "algorithm_id": "dynamic-node-construction",
+    "summary": "A deterministic XOR checkpoint comparing freeze, fine-tune, and prune policies after one hidden-unit insertion.",
+    "entry": "labs/capacity-control-after-growth/index.html",
+    "script": "labs/capacity-control-after-growth/capacity_control.py",
+    "tests": ["labs/capacity-control-after-growth/tests/test_capacity_control.py"],
+    "main_garden_links": [
+      "modules/capacity-growth-signals/index.html",
+      "docs/pdf-library-review-plan.md"
+    ],
+    "claims": [
+      "toy-mechanism",
+      "not-a-full-paper-reproduction",
+      "obd-inspired-proxy-not-obd-or-obs",
+      "not-human-reviewed"
+    ]
   }
 ]

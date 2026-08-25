@@ -1,6 +1,64 @@
 .lineage-hero {
   background: linear-gradient(135deg, rgba(109, 91, 208, 0.13), rgba(184, 92, 56, 0.12));
 }
+.synthesis-panel {
+  margin: 1rem 0;
+  border-top: 6px solid #6d5bd0;
+}
+.synthesis-heading {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1.2fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.synthesis-heading h2,
+.evidence-ledger h3 {
+  margin-top: 0;
+}
+.sequence-grid,
+.setting-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.sequence-grid {
+  padding: 0;
+  list-style: none;
+}
+.sequence-grid li,
+.setting-grid article,
+.evidence-ledger {
+  border: 1px solid var(--border, #ded6c8);
+  border-radius: 16px;
+  padding: 1rem;
+  background: var(--surface, #fffdf8);
+}
+.sequence-grid li {
+  border-top: 4px solid #356859;
+}
+.sequence-grid p,
+.setting-grid p:last-child,
+.evidence-ledger ul {
+  margin-bottom: 0;
+}
+.source-strip {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  background: rgba(53, 104, 89, 0.1);
+}
+.setting-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.setting-grid article:first-child {
+  border-left: 5px solid #4f6f9f;
+}
+.setting-grid article:last-child {
+  border-left: 5px solid #8d4f7d;
+}
+.evidence-ledger li + li {
+  margin-top: 0.45rem;
+}
 .lineage-layout {
   display: grid;
   grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
@@ -159,7 +217,10 @@
 }
 @media (max-width: 840px) {
   .lineage-layout,
-  .readiness-grid {
+  .readiness-grid,
+  .synthesis-heading,
+  .sequence-grid,
+  .setting-grid {
     grid-template-columns: 1fr;
   }
 }

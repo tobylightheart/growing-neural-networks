@@ -19,6 +19,17 @@ The thesis comparison-axis selector is a guardrail, not a source of new mechanis
 
 The source-boundary check turns the completed five-anchor review pass into one small teaching decision: the reviews support Roy2017's shared bridge role, but they do not verify exact thresholds across the lineage or let thesis vocabulary stand in for later papers' method mechanics.
 
+## Five-draft synthesis
+
+The route now makes the bounded synthesis explicit rather than leaving it implicit in the cards:
+
+1. the public thesis taxonomy supplies the base eSNN sequence: calculate a candidate neuron's weight vector and threshold from the current input's spike order, compare it with same-class neurons, then merge a sufficiently similar candidate or add a novel one;
+2. Schliebs2013, Wysoski2010, and Kasabov2013 place that sequence in the survey, application, and dynamic-eSNN/deSNN lineage;
+3. Wang2014 identifies a supervised adaptive-structure continuation, while Roy2017 identifies a distinct online unsupervised structural-plasticity branch; and
+4. every mechanism detail not supported by the five automated drafts stays visibly open, especially later variants' parameter formulas, similarity thresholds, merge updates, pruning criteria, candidate-performance rules, and rewiring steps.
+
+The synthesis and module are explicitly **not human-reviewed**. Each branch links to its public review draft, while the base sequence links to the thesis review and the exact Chapter 2 source passage.
+
 ## Static pattern
 
 Files are plain static assets:

@@ -3,7 +3,7 @@
   "title": "Evolving Spiking Lineage Cards",
   "type": "paper-card-bridge",
   "status": "available",
-  "summary": "Sort cautious paper cards and complete a source-boundary check for the active eSNN bundle, moving from thesis-taxonomy vocabulary through lineage, application, method-placeholder, adaptive-structure, and structural-plasticity bridge roles without overclaiming unreviewed algorithm details.",
+  "summary": "Read a source-linked, not-human-reviewed synthesis of base eSNN candidate calculation and novelty/merge decisions, then use cautious paper cards to separate supervised adaptive-structure and unsupervised structural-plasticity branches without overclaiming later mechanism details.",
   "concepts": [
     "spiking-neural-networks",
     "spike-timing-dependent-construction",
@@ -26,6 +26,8 @@
     "constructive-spiking-taxonomy"
   ],
   "learning_goals": [
+    "Trace the base eSNN order from current-input spike ranks to candidate parameters and then a same-class novelty/merge decision.",
+    "Separate supervised class-labelled eSNN/adaptive-structure work from Roy2017's unsupervised structural-plasticity branch.",
     "Separate reviewed eSNN lineage context from pending exact growth-rule details.",
     "Connect Schliebs2013, Wysoski2010, Kasabov2013, Wang2014, and the shared Roy2017 bridge to the thesis taxonomy without duplicating paper records.",
     "Use bundle readiness notes to decide which claims are safe for public teaching artifacts.",

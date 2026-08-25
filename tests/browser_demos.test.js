@@ -20,6 +20,15 @@ test('lineage resolves a source-specific claim status', () => {
   assert.match(status.status, /direct vocabulary support/);
 });
 
+test('lineage synthesis preserves the base eSNN decision order and learning boundary', () => {
+  assert.equal(lineage.lineageSynthesis.reviewStatus, 'not human-reviewed');
+  assert.match(lineage.lineageSynthesis.baseEsnnSetting, /supervised/);
+  assert.match(lineage.lineageSynthesis.sequence[0], /current input spike order/);
+  assert.match(lineage.lineageSynthesis.sequence[1], /same-class neurons/);
+  assert.match(lineage.lineageSynthesis.sequence[2], /merge.*otherwise add/);
+  assert.match(lineage.lineageSynthesis.unsupervisedBridge, /separate branch/);
+});
+
 test('simulation transfer changes only the selected set', () => {
   const components = [{ id: 'A', set: 'simulated' }, { id: 'D', set: 'surrounding' }];
   const transferred = simulation.transferComponent(components, 'D', 'simulated');

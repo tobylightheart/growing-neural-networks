@@ -143,13 +143,23 @@ const boundaryClaims = [
 ];
 
 const state = { selected: cards[0].id, selectedAxis: claimAxes[0].id };
+const lineageSynthesis = {
+  reviewStatus: 'not human-reviewed',
+  baseEsnnSetting: 'supervised class-labelled pattern recognition',
+  sequence: [
+    'calculate a candidate weight vector and activation threshold from the current input spike order',
+    'compare the candidate with same-class neurons using minimum weight-vector distance',
+    'merge with the nearest neuron when similar; otherwise add a new output neuron'
+  ],
+  unsupervisedBridge: 'Roy2017 structural plasticity is a separate branch, not the base eSNN add-or-merge loop'
+};
 function claimStatus(cardId, axisId) {
   const card = cards.find(item => item.id === cardId);
   const axis = claimAxes.find(item => item.id === axisId);
   if (!card || !axis) return null;
   return { card: card.title, axis: axis.label, status: axis.statuses[card.id] };
 }
-if (typeof module !== 'undefined') module.exports = { claimStatus };
+if (typeof module !== 'undefined') module.exports = { claimStatus, lineageSynthesis };
 
 if (typeof document !== 'undefined') {
 const canvas = document.querySelector('#lineage-canvas');

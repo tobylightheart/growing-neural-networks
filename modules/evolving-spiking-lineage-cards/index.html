@@ -18,13 +18,64 @@
       <div>
         <p class="kicker">Active bundle paper cards</p>
         <h1>Evolving Spiking Lineage Cards</h1>
-        <p>Use the public thesis-taxonomy review plus five eSNN draft reviews to build a cautious eSNN/STDC lineage map. The goal is not to memorize algorithms; it is to label which claims are ready and which still need full-text or human review.</p>
+        <p><strong>Not human-reviewed.</strong> Use the public thesis-taxonomy review plus five eSNN draft reviews to build a cautious eSNN/STDC lineage map. The goal is not to memorize algorithms; it is to label which claims are ready and which still need full-text or human review.</p>
       </div>
       <aside class="score-card" aria-live="polite">
         <span>selected card role</span>
         <strong id="role-name">Thesis taxonomy bridge</strong>
         <small id="role-summary">Connects eSNN cards to cautious construction vocabulary.</small>
       </aside>
+    </section>
+
+    <section class="panel synthesis-panel" aria-labelledby="synthesis-title">
+      <div class="synthesis-heading">
+        <div>
+          <p class="kicker">Five-draft synthesis · not human-reviewed</p>
+          <h2 id="synthesis-title">One base eSNN sequence, then two different adaptation branches</h2>
+        </div>
+        <p>The mechanism-level sequence below comes from the public thesis taxonomy, which cites the base eSNN literature. The five automated paper drafts establish lineage roles and learning settings; they do not independently verify every later variant's equations or thresholds.</p>
+      </div>
+
+      <ol class="sequence-grid">
+        <li>
+          <strong>1 · Current input → candidate parameters</strong>
+          <p>For each labelled sample, simulate the input, rank interface-neuron spikes by time, then calculate a proposed output neuron's weight vector and activation threshold. Earlier spikes receive larger rank-order factors, so spike timing shapes the candidate before any add/merge decision.</p>
+        </li>
+        <li>
+          <strong>2 · Candidate → novelty test</strong>
+          <p>Compare that candidate with existing neurons for the same class. The thesis pseudocode uses the minimum Euclidean distance between weight vectors as the similarity quantity.</p>
+        </li>
+        <li>
+          <strong>3 · Similar → merge; novel → add</strong>
+          <p>If the nearest same-class neuron is inside the similarity threshold, merge the candidate's weights and threshold into it; otherwise add a new output neuron for the sample's class. Parameter calculation therefore precedes the structural decision.</p>
+        </li>
+      </ol>
+
+      <p class="source-strip"><strong>Mechanism source:</strong> <a href="../../pages/review.html?id=lightheart-2018-constructive-spiking-thesis">thesis-taxonomy review</a> · <a href="https://github.com/tobylightheart/thesis-constructive-spiking/blob/main/02_review_and_analysis/review_and_analysis_of_literature.tex#L331-L369">Chapter 2 source and pseudocode</a></p>
+
+      <div class="setting-grid">
+        <article>
+          <p class="kicker">Supervised branch</p>
+          <h3>Class-labelled construction</h3>
+          <p>The base eSNN sequence is presented for supervised pattern recognition: novelty is checked against neurons belonging to the desired class. <a href="../../pages/review.html?id=wysoski-2010-evolving-spiking-audiovisual">Wysoski2010</a> is the application anchor; <a href="../../pages/review.html?id=kasabov-2013-dynamic-evolving-spiking">Kasabov2013</a> is the dynamic eSNN/deSNN anchor; and <a href="../../pages/review.html?id=wang-2014-adaptive-structure-snn">Wang2014</a> names a supervised adaptive-structure branch. The current drafts do not establish that all three use an identical candidate formula, distance threshold, or merge update.</p>
+        </article>
+        <article>
+          <p class="kicker">Unsupervised branch</p>
+          <h3>Structural plasticity, not unlabelled eSNN</h3>
+          <p><a href="../../pages/review.html?id=roy-2017-online-structural-plasticity-snn">Roy2017</a> explicitly anchors online unsupervised structural plasticity. It belongs in the broader constructive-spiking lineage, but the draft does not justify describing it as the base eSNN novelty/merge loop. Its exact creation, deletion, rewiring, candidate-performance, and threshold rules remain open here.</p>
+        </article>
+      </div>
+
+      <div class="evidence-ledger">
+        <h3>What the five drafts contribute</h3>
+        <ul>
+          <li><a href="../../pages/review.html?id=schliebs-2013-evolving-spiking-survey">Schliebs2013</a>: survey vocabulary and the ECoS/eSNN lineage.</li>
+          <li><a href="../../pages/review.html?id=wysoski-2010-evolving-spiking-audiovisual">Wysoski2010</a>: the base eSNN application anchor used by the thesis mechanism account.</li>
+          <li><a href="../../pages/review.html?id=kasabov-2013-dynamic-evolving-spiking">Kasabov2013</a>: the dynamic eSNN/deSNN continuation, with exact dynamic-synapse and adaptation mechanics still open.</li>
+          <li><a href="../../pages/review.html?id=wang-2014-adaptive-structure-snn">Wang2014</a>: the supervised adaptive-structure continuation, with the roles of pruning, radial-basis structure, and supervision still open.</li>
+          <li><a href="../../pages/review.html?id=roy-2017-online-structural-plasticity-snn">Roy2017</a>: the unsupervised structural-plasticity bridge, not evidence that every branch shares the eSNN add/merge rule.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="lineage-layout">

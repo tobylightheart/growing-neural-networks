@@ -17,10 +17,19 @@ function render(trace) {
       <strong class="metric">average error ${item.error.toFixed(6)}</strong>
       <p>${item.rule}</p><small>${item.detail}</small>
     </article>`).join('');
-  const logs = summaries.map(item => -Math.log10(item.error));
-  const max = Math.max(...logs);
+  // Bar length is -log10(error), so a LONGER bar means a LOWER error. That
+  // inversion is deliberate — a linear error scale would render the two
+  // sub-0.002 policies as invisible slivers next to pruning's 0.173 — but it
+  // has to be stated, in the heading, the hint and the ARIA label. It was not,
+  // and a rendered screenshot showed the chart reading as the exact opposite of
+  // the result: the worst policy had the shortest bar under a heading that said
+  // "Error". Found 2026-08-26, the first time the page was looked at.
+  // Clamped at 0 because -log10 goes negative for error >= 1, which would
+  // produce a negative width rather than an empty bar.
+  const scores = summaries.map(item => Math.max(0, -Math.log10(item.error)));
+  const max = Math.max(...scores);
   document.getElementById('bars').innerHTML = summaries.map((item, index) => `
-    <div class="bar-row"><span>${item.label}</span><div class="track"><i class="${item.name}" style="width:${(logs[index] / max) * 100}%"></i></div><strong>${item.error.toFixed(6)}</strong></div>`).join('');
+    <div class="bar-row"><span>${item.label} · width ${item.width}</span><div class="track"><i class="${item.name}" style="width:${max > 0 ? (scores[index] / max) * 100 : 0}%"></i></div><strong>${item.error.toFixed(6)}</strong></div>`).join('');
   document.getElementById('interpretation').innerHTML = trace.interpretation.map(line => `<li>${line}</li>`).join('');
 }
 

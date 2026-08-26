@@ -17,9 +17,9 @@
     <section class="cards" id="policy-cards" aria-live="polite"><p>Loading trace…</p></section>
 
     <section class="panel">
-      <h2>Error and retained width</h2>
-      <div id="bars" class="bars" role="img" aria-label="Policy error comparison"></div>
-      <p class="hint">Bars use a logarithmic error scale so the two low-error policies remain visible beside pruning.</p>
+      <h2>Fit quality and retained width &mdash; longer bars mean lower error</h2>
+      <div id="bars" class="bars" role="img" aria-label="Policy comparison: bar length is inverse log error, so longer bars mean lower error. Freeze established feature, width 2, error 0.001316. Fine-tune all features, width 2, error 0.000852. Prune after fine-tuning, width 1, error 0.173114."></div>
+      <p class="hint"><strong>Longer is better.</strong> Bar length is the negative log of the error, not the error itself, so the two sub-0.002 policies stay visible beside pruning&rsquo;s 0.173 instead of collapsing into slivers. The printed number beside each bar is the error itself.</p>
     </section>
 
     <section class="panel interpretation">

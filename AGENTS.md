@@ -9,7 +9,7 @@ project-specific Hermes skill.
 1. Run `git status --short --branch`. Stop rather than overwrite unrelated or
    likely user work.
 2. Read `TASKS.md`, then `.tasks/LOG.jsonl`, then the selected task file.
-3. Follow the generic `task-cycle` skill for task selection, state changes,
+3. Follow the generic `work-cycle` skill for task selection, state changes,
    debriefs, and commits.
 4. Read only the project documents relevant to the selected task.
 
@@ -49,7 +49,7 @@ equation, and result claims requiring reliable full text or human review.
 - `docs/remit.md` and `docs/roadmap.md` — historical lab direction, now applied
   inside this repository.
 - `docs/cron-workflow.md` and `docs/compressed-cron-design.md` are historical
-  scheduling records; portfolio-generated task-cycle slots supersede their job
+  scheduling records; portfolio `work-cycle` execution supersedes their job
   recommendations.
 
 Current priorities belong in project data and task records, not in `AGENTS.md`.

@@ -1,7 +1,7 @@
 # Tasks
 
 > Read this file at the start of every session, then consult
-> `.tasks/LOG.jsonl`. Follow the generic `task-cycle` skill.
+> `.tasks/LOG.jsonl`. Follow the generic `work-cycle` skill.
 
 ## Project
 

@@ -2,7 +2,7 @@
 
 > **Historical design:** retained for provenance. Current unattended work is
 > allocated by `/workspace/project-portfolio` and enters this repository through
-> `task-cycle`; `AGENTS.md` and `docs/agent/` now hold project instructions.
+> `work-cycle`; `AGENTS.md` and `docs/agent/` now hold project instructions.
 
 This document proposes a repeatable Hermes cron workflow for maturing the constructive / growing neural networks literature-review website.
 

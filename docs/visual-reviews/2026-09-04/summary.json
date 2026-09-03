@@ -1,0 +1,396 @@
+{
+  "routes": 28,
+  "viewport_captures_generated": 56,
+  "capture_retention": "transient; no screenshots committed",
+  "errors": [],
+  "overflow": [
+    {
+      "route": "/labs/cascade-correlation-xor/",
+      "viewport": "narrow",
+      "bodyWidth": 705,
+      "width": 390,
+      "clipped": []
+    },
+    {
+      "route": "/modules/cascade-correlation-growth/",
+      "viewport": "narrow",
+      "bodyWidth": 489,
+      "width": 390,
+      "clipped": []
+    },
+    {
+      "route": "/modules/constructive-taxonomy/",
+      "viewport": "narrow",
+      "bodyWidth": 665,
+      "width": 390,
+      "clipped": []
+    },
+    {
+      "route": "/modules/residual-correlation-playground/",
+      "viewport": "narrow",
+      "bodyWidth": 493,
+      "width": 390,
+      "clipped": []
+    },
+    {
+      "route": "/modules/simulation-expansion-contraction/",
+      "viewport": "narrow",
+      "bodyWidth": 716,
+      "width": 390,
+      "clipped": []
+    },
+    {
+      "route": "/modules/topology-growth-comparison/",
+      "viewport": "narrow",
+      "bodyWidth": 509,
+      "width": 390,
+      "clipped": []
+    },
+    {
+      "route": "/exercises/dnc-vs-cascor-growth-1/",
+      "viewport": "narrow",
+      "bodyWidth": 474,
+      "width": 390,
+      "clipped": []
+    }
+  ],
+  "broken_images": [],
+  "console": [
+    {
+      "route": "/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474221552
+        }
+      ]
+    },
+    {
+      "route": "/pages/algorithms.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474222963
+        }
+      ]
+    },
+    {
+      "route": "/pages/concepts.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474224350
+        }
+      ]
+    },
+    {
+      "route": "/pages/exercises.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474225814
+        }
+      ]
+    },
+    {
+      "route": "/pages/modules.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474227239
+        }
+      ]
+    },
+    {
+      "route": "/pages/papers.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474228216
+        }
+      ]
+    },
+    {
+      "route": "/pages/reading-queue.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474230059
+        }
+      ]
+    },
+    {
+      "route": "/pages/review.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474231452
+        }
+      ]
+    },
+    {
+      "route": "/pages/scripts.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474232858
+        }
+      ]
+    },
+    {
+      "route": "/pages/timeline.html",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474234223
+        }
+      ]
+    },
+    {
+      "route": "/labs/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474235605
+        }
+      ]
+    },
+    {
+      "route": "/labs/perceptron-and/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474236925
+        }
+      ]
+    },
+    {
+      "route": "/labs/cascade-correlation-xor/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474238393
+        }
+      ]
+    },
+    {
+      "route": "/labs/dynamic-node-construction-xor/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474239760
+        }
+      ]
+    },
+    {
+      "route": "/labs/gng-topology-growth/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474241153
+        }
+      ]
+    },
+    {
+      "route": "/labs/gwr-deterministic-trace/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474242505
+        }
+      ]
+    },
+    {
+      "route": "/labs/capacity-control-after-growth/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474243880
+        }
+      ]
+    },
+    {
+      "route": "/modules/capacity-growth-signals/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474245255
+        }
+      ]
+    },
+    {
+      "route": "/modules/cascade-correlation-growth/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474246760
+        }
+      ]
+    },
+    {
+      "route": "/modules/constructive-taxonomy/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474248214
+        }
+      ]
+    },
+    {
+      "route": "/modules/evolving-spiking-lineage-cards/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474249668
+        }
+      ]
+    },
+    {
+      "route": "/modules/residual-correlation-playground/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474251146
+        }
+      ]
+    },
+    {
+      "route": "/modules/simulation-expansion-contraction/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474252573
+        }
+      ]
+    },
+    {
+      "route": "/modules/topology-growth-comparison/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474254006
+        }
+      ]
+    },
+    {
+      "route": "/exercises/dnc-vs-cascor-growth-1/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474255428
+        }
+      ]
+    },
+    {
+      "route": "/exercises/post-growth-stabilization-compare-1/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474256856
+        }
+      ]
+    },
+    {
+      "route": "/exercises/residual-correlation-intuition-1/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474258276
+        }
+      ]
+    },
+    {
+      "route": "/exercises/stdp-timing-window-selectivity-1/",
+      "viewport": "wide",
+      "logs": [
+        {
+          "level": "SEVERE",
+          "message": "http://127.0.0.1:35411/favicon.ico - Failed to load resource: the server responded with a status of 404 (File not found)",
+          "source": "network",
+          "timestamp": 1788474259705
+        }
+      ]
+    }
+  ]
+}

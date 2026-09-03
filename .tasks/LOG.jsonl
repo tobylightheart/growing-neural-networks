@@ -2,3 +2,4 @@
 {"id":"GNN-2","status":"completed","priority":"high","blocked_by":[],"task_file":"GNN-2-runnable-cascade-trace-link.md","commit":"c9b57a59ee42b29ac47eeef03ec7f560edebd8b6","created_at":"2026-07-25T23:23:48+09:30","completed_at":"2026-07-25T15:32:06+00:00"}
 {"id":"GNN-3","status":"completed","priority":"high","blocked_by":[],"task_file":"GNN-3-gwr-mechanism-source-verification.md","commit":"7cee613171d0769f952f48c9b11e5643f6fa3a07","created_at":"2026-07-31T12:55:52+00:00","completed_at":"2026-07-31T13:11:00+00:00"}
 {"id":"GNN-4","status":"pending","blocked_by":[],"task_file":"GNN-4-contain-narrow-overflow-and-favicon.md","commit":null,"created_at":"2026-09-04T07:57:16+09:30","completed_at":null}
+{"id":"GNN-5","status":"pending","blocked_by":[],"task_file":"GNN-5-canonical-review-caveat.md","commit":null,"created_at":"2026-09-04T07:57:16+09:30","completed_at":null}

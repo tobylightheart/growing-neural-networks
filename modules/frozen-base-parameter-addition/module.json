@@ -1,0 +1,32 @@
+{
+  "id": "frozen-base-parameter-addition",
+  "title": "Where Do the New Parameters Live?",
+  "type": "mechanism-comparison",
+  "status": "available",
+  "summary": "Compare bottleneck adapters, LoRA, and Mixture of LoRA Experts by where each puts its new parameters, what removing them costs, and what stays frozen.",
+  "concepts": [
+    "parameter-efficient-adaptation",
+    "low-rank-adaptation",
+    "expert-gating",
+    "frozen-features",
+    "modular-composition",
+    "incremental-structure",
+    "parameter-calculation"
+  ],
+  "papers": [
+    "houlsby-2019-parameter-efficient-adapters",
+    "hu-2021-lora-low-rank-adaptation",
+    "wu-2024-mixture-of-lora-experts"
+  ],
+  "algorithms": [
+    "bottleneck-adapter",
+    "lora-low-rank-adaptation",
+    "mixture-of-lora-experts"
+  ],
+  "learning_goals": [
+    "Distinguish adding new layers inside a block from adding a low-rank delta to a matrix that already exists.",
+    "State what removal costs in each case, and why a merged LoRA is subtracted rather than deleted.",
+    "Explain why MoLE adds no capacity at all: the experts are already trained, and only the gate is learned."
+  ],
+  "entry": "modules/frozen-base-parameter-addition/index.html"
+}

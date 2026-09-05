@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where Do the New Parameters Live? · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar">
+    <a href="../../pages/modules.html">← Modules</a>
+    <a href="#sources">Sources &amp; limits</a>
+  </header>
+
+  <main class="module-page">
+    <section class="module-hero">
+      <div>
+        <p class="kicker">Frozen-base parameter addition · interactive comparison</p>
+        <h1>Where do the new parameters live?</h1>
+        <p>Adapters, LoRA and MoLE all add a small number of trainable parameters to a large model that stays frozen. They do not put them in the same place — and that choice, not the parameter count, decides what removal costs and what inference costs.</p>
+      </div>
+      <aside class="review-status">
+        <strong>Not human-reviewed</strong>
+        <span>Automated readings of the public arXiv and ar5iv sources; check the linked review drafts before reusing details.</span>
+      </aside>
+    </section>
+
+    <section class="site-grid" aria-label="Where each method places its new parameters">
+      <article class="site-card" data-method="adapter">
+        <p class="method-tag">Adapters · Houlsby et al. 2019</p>
+        <h2>New layers inside the block</h2>
+        <p>Two adapters per Transformer layer: one after the attention output projection, one after the feed-forward sub-layer, each placed before the block's skip connection is added back. Each is a down-projection to <em>m</em>, a nonlinearity, an up-projection to <em>d</em>, with its own internal skip connection.</p>
+        <p class="formula">Added per layer: <strong>(2md + d + m) × 2</strong></p>
+        <p class="cost">This configuration: <strong id="adapter-cost">—</strong> parameters</p>
+        <details><summary>What stays frozen, and what does not?</summary><p>The pre-trained Transformer weights are fixed. The paper also trains new layer-normalization parameters per task and the final classification layer, so the trainable set is slightly larger than the adapters alone. Near-zero initialization makes each adapter an <em>approximate</em> identity at step one.</p></details>
+        <a class="try-link" href="../../pages/review.html?id=houlsby-2019-parameter-efficient-adapters">Read the adapter review draft →</a>
+      </article>
+
+      <article class="site-card" data-method="lora">
+        <p class="method-tag">LoRA · Hu et al. 2021</p>
+        <h2>A low-rank delta on a matrix that already exists</h2>
+        <p>No new layer. For a frozen matrix <em>W₀</em>, the forward pass becomes <em>h = W₀x + BAx</em> with <em>B</em> of shape <em>d×r</em> and <em>A</em> of shape <em>r×k</em>. <em>B</em> starts at exactly zero, so training begins from the base function rather than near it. The paper adapts <em>W<sub>q</sub></em> and <em>W<sub>v</sub></em> and freezes the MLP modules.</p>
+        <p class="formula">Added per adapted matrix: <strong>r(d + k)</strong></p>
+        <p class="cost">This configuration: <strong id="lora-cost">—</strong> parameters</p>
+        <details><summary>What stays frozen, and what does not?</summary><p>The pre-trained weights are frozen; only <em>A</em> and <em>B</em> move, scaled by <em>α/r</em>. Because the delta has the shape of the weight it modifies, it can be folded in as <em>W = W₀ + BA</em> before serving — which is why the paper claims no additional inference latency, in contrast to adapters' extra sequential layers.</p></details>
+        <a class="try-link" href="../../pages/review.html?id=hu-2021-lora-low-rank-adaptation">Read the LoRA review draft →</a>
+      </article>
+
+      <article class="site-card" data-method="mole">
+        <p class="method-tag">MoLE · Wu et al. 2024</p>
+        <h2>A gate over modules that already exist</h2>
+        <p>Nothing new is added to the network's capacity. Each layer of each already-trained LoRA is treated as a distinct expert, and a learnable gating function inside each layer produces softmax weights over their outputs. Hierarchical control comes from a balancing loss plus a domain-specific loss.</p>
+        <p class="formula">Added: <strong>the gating function only</strong></p>
+        <p class="cost">This configuration: <strong id="mole-cost">—</strong></p>
+        <details><summary>What stays frozen, and what does not?</summary><p>Both the pre-trained model and every trained LoRA are frozen; only the gate's parameters are optimized. The gate's own parameter count depends on the number of experts and the layer width, and the reviewed text does not state a formula — so this module reports it as not stated rather than guessing.</p></details>
+        <a class="try-link" href="../../pages/review.html?id=wu-2024-mixture-of-lora-experts">Read the MoLE review draft →</a>
+      </article>
+    </section>
+
+    <section class="panel controls" aria-label="Parameter cost controls">
+      <h2>Cost of the addition</h2>
+      <div class="control-row">
+        <label>Model width <em>d</em> <output id="model-width-value">768</output>
+          <input id="model-width" type="range" min="128" max="4096" step="64" value="768">
+        </label>
+        <label>Adapter bottleneck <em>m</em> <output id="adapter-bottleneck-value">64</output>
+          <input id="adapter-bottleneck" type="range" min="8" max="256" step="8" value="64">
+        </label>
+        <label>LoRA rank <em>r</em> <output id="lora-rank-value">8</output>
+          <input id="lora-rank" type="range" min="1" max="64" step="1" value="8">
+        </label>
+        <label>Layers <output id="layer-count-value">12</output>
+          <input id="layer-count" type="range" min="1" max="48" step="1" value="12">
+        </label>
+      </div>
+      <p id="cost-line" class="summary-line" aria-live="polite"></p>
+      <p class="caveat">Both counts assume the papers' own configurations: two adapters per layer, and LoRA on two attention matrices per layer with <em>k = d</em>. They are the papers' formulas applied to your sliders, not a measurement of any model.</p>
+    </section>
+
+    <section class="panel gate" aria-label="MoLE gate and branch masking">
+      <h2>Composition without addition</h2>
+      <p>MoLE's gate weights the trained LoRAs it is given. At inference, an unwanted branch can be masked out and the remaining weights redistributed proportionally — no retraining, and nothing unfrozen.</p>
+      <div class="expert-list">
+        <div class="expert" data-expert="style">
+          <p class="expert-name">LoRA A · style</p>
+          <label>Gate logit <output>1.20</output>
+            <input type="range" min="-3" max="3" step="0.1" value="1.2">
+          </label>
+          <label class="check"><input type="checkbox" checked> Active at inference</label>
+          <div class="weight-bar"><span></span></div>
+          <p class="weight-value">—</p>
+        </div>
+        <div class="expert" data-expert="domain">
+          <p class="expert-name">LoRA B · domain</p>
+          <label>Gate logit <output>0.40</output>
+            <input type="range" min="-3" max="3" step="0.1" value="0.4">
+          </label>
+          <label class="check"><input type="checkbox" checked> Active at inference</label>
+          <div class="weight-bar"><span></span></div>
+          <p class="weight-value">—</p>
+        </div>
+        <div class="expert" data-expert="task">
+          <p class="expert-name">LoRA C · task</p>
+          <label>Gate logit <output>-0.30</output>
+            <input type="range" min="-3" max="3" step="0.1" value="-0.3">
+          </label>
+          <label class="check"><input type="checkbox" checked> Active at inference</label>
+          <div class="weight-bar"><span></span></div>
+          <p class="weight-value">—</p>
+        </div>
+      </div>
+      <p id="gate-line" class="summary-line" aria-live="polite"></p>
+    </section>
+
+    <section class="panel synthesis">
+      <h2>Three questions the parameter count does not answer</h2>
+      <div class="comparison-row">
+        <div><strong>Where do they live?</strong><span>Adapters: new layers inside the block. LoRA: a delta on an existing matrix. MoLE: nowhere new — a gate over modules already trained.</span></div>
+        <div><strong>What does removal cost?</strong><span>Adapters: delete the module and the original block is back exactly. LoRA: drop the delta if unmerged, or subtract <em>BA</em> if merged. MoLE: mask the branch and renormalize.</span></div>
+        <div><strong>What stays frozen?</strong><span>Adapters and LoRA: the pre-trained weights. MoLE: the pre-trained weights <em>and</em> every LoRA — only the gate is trained.</span></div>
+      </div>
+      <p class="summary-line">The lineage question this raises for the rest of the book: classic constructive learning grew the architecture and had to protect what it had already learned. Two of these three methods protect everything and add beside it, and the third adds nothing at all.</p>
+    </section>
+
+    <section class="panel sources" id="sources">
+      <h2>Sources, limits, and claim boundaries</h2>
+      <div class="source-grid">
+        <article><h3>Houlsby et al. 2019 · adapters</h3><p>Placement, bottleneck shape, the <em>2md+d+m</em> cost, the per-task layer-norm parameters and the near-zero initialization are quoted from the paper's architecture section as rendered by ar5iv, read on 2026-09-05. Performance figures come from the abstract. No inference-latency measurement from this paper has been read.</p><a href="../../pages/review.html?id=houlsby-2019-parameter-efficient-adapters">Review and open questions</a></article>
+        <article><h3>Hu et al. 2021 · LoRA</h3><p>The <em>W₀ + BA</em> parameterization, zero initialization of <em>B</em>, the <em>α/r</em> scaling, the Wq/Wv scope, merging and the task-switching subtraction are quoted from the method section. The rank-deficiency investigation was not read, so nothing here rests on it.</p><a href="../../pages/review.html?id=hu-2021-lora-low-rank-adaptation">Review and open questions</a></article>
+        <article><h3>Wu et al. 2024 · MoLE</h3><p>Expert granularity, the per-layer learnable gate, the balancing and domain-specific losses, the frozen-LoRA training setup and inference masking are quoted from the method and analysis sections. The gate's parameter count is deliberately reported as not stated; no experimental result of the paper is asserted beyond its abstract.</p><a href="../../pages/review.html?id=wu-2024-mixture-of-lora-experts">Review and open questions</a></article>
+      </div>
+      <p class="caveat">This module is a comparison of mechanisms as documented, not a reproduction: nothing here trains, measures or benchmarks any of the three methods.</p>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.module-topbar'));
+  </script>
+</body>
+</html>

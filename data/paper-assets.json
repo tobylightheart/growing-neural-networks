@@ -226,5 +226,35 @@
     "source_url": "https://doi.org/10.1016/S0893-6080(02)00078-3",
     "last_checked": "2026-07-23",
     "notes": "Private local PDF path reverified during the bundle-first Marsland2002 review draft; the file exists under pdfs/Constructive with a PDF-1.3 header and size 1,297,945 bytes. Crossref and PubMed verify the citation, and DOI resolution reached Elsevier PII S0893608002000783. Semantic Scholar returned HTTP 429. Command-line extractors (`pdftotext`, `mutool`, and `pdfinfo`) and Python PDF libraries (`pypdf`, `PyPDF2`, `pdfminer`, and `fitz`) were unavailable; limited Flate/string inspection did not recover reliable body text, so no extracted text was committed."
+  },
+  {
+    "paper_id": "houlsby-2019-parameter-efficient-adapters",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/1902.00751",
+    "last_checked": "2026-09-05",
+    "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "hu-2021-lora-low-rank-adaptation",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/2106.09685",
+    "last_checked": "2026-09-05",
+    "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "wu-2024-mixture-of-lora-experts",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/2404.13628",
+    "last_checked": "2026-09-05",
+    "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
   }
 ]

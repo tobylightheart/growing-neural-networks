@@ -374,5 +374,20 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "The private library now contains the exact-title eight-page Fritzke 1995 PostScript source, distinct from the Fritzke 1994 PDFs found by the earlier scan. No PostScript renderer or ps2ascii was available; custom literal-string extraction recovered coherent prose and the numbered algorithm but damaged typography. The automated review, source worksheet, and deterministic trace are explicitly not human-reviewed and make no paper-result claim."
+  },
+  {
+    "id": "frozen-base-parameter-addition-2026-09-05",
+    "source": "portfolio-goal-G-027",
+    "date": "2026-09-05",
+    "description": "Added the three frozen-base parameter-addition anchors named in portfolio goal G-027 so the book can compare where new parameters live in modern Transformer adaptation.",
+    "query": "arXiv identifiers supplied by the goal: 1902.00751, 2106.09685, 2404.13628. Metadata read from the public arXiv abstract pages; mechanism detail read from the ar5iv HTML renderings.",
+    "added": [
+      "houlsby-2019-parameter-efficient-adapters",
+      "hu-2021-lora-low-rank-adaptation",
+      "wu-2024-mixture-of-lora-experts"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "No PDFs or extracted full text were collected; these are open-access arXiv papers read online. All three reviews and the module built on them are automated drafts and not human-reviewed."
   }
 ]

@@ -188,5 +188,51 @@
       "caporale-2008-stdp-hebbian-learning-rule",
       "morrison-2008-phenomenological-synaptic-plasticity"
     ]
+  },
+  {
+    "id": "bottleneck-adapter",
+    "name": "Bottleneck adapter",
+    "family": "frozen-base parameter addition",
+    "summary": "Adds a small down-project/nonlinearity/up-project module with an internal skip connection twice per Transformer layer, trains it plus new layer-norm parameters, and leaves the pre-trained weights fixed; details are automated readings and not human-reviewed.",
+    "themes": [
+      "parameter-efficient-adaptation",
+      "frozen-features",
+      "modular-composition",
+      "incremental-structure",
+      "parameter-calculation"
+    ],
+    "papers": [
+      "houlsby-2019-parameter-efficient-adapters"
+    ]
+  },
+  {
+    "id": "lora-low-rank-adaptation",
+    "name": "LoRA (low-rank adaptation)",
+    "family": "frozen-base parameter addition",
+    "summary": "Learns a rank-r product BA as the update to a frozen weight matrix, initializing B at zero so training starts from the base function, and can merge the delta into the weights so inference costs nothing extra; details are automated readings and not human-reviewed.",
+    "themes": [
+      "parameter-efficient-adaptation",
+      "low-rank-adaptation",
+      "frozen-features",
+      "parameter-calculation"
+    ],
+    "papers": [
+      "hu-2021-lora-low-rank-adaptation"
+    ]
+  },
+  {
+    "id": "mixture-of-lora-experts",
+    "name": "Mixture of LoRA Experts (MoLE)",
+    "family": "composition of frozen modules",
+    "summary": "Treats each layer of each trained LoRA as an expert and learns only a per-layer gating function over them, keeping the base model and every LoRA frozen and allowing branches to be masked out at inference; details are automated readings and not human-reviewed.",
+    "themes": [
+      "parameter-efficient-adaptation",
+      "expert-gating",
+      "modular-composition",
+      "frozen-features"
+    ],
+    "papers": [
+      "wu-2024-mixture-of-lora-experts"
+    ]
   }
 ]

@@ -994,5 +994,174 @@
     ],
     "notes": "Added as conservative candidate metadata during the weekly bundle-aware library-sync job after an exact local filename match in pdfs/Constructive. Promoted to an automated review draft on 2026-07-23: Crossref verified DOI, title, three authors, Neural Networks 15(8-9):1041-1058, and October 2002 print metadata; PubMed record 12416693 independently matched the citation and supplied the indexed abstract; DOI resolution reached Elsevier PII S0893608002000783. The private PDF remains verified with a PDF-1.3 header and size 1,297,945 bytes. Semantic Scholar was rate-limited and no usable PDF extraction tooling was available, so exact method criteria, equations, adaptation rules, datasets, and quantitative results remain pending reliable full-text or human review.",
     "review": "reviews/marsland-2002-grows-when-required.md"
+  },
+  {
+    "id": "houlsby-2019-parameter-efficient-adapters",
+    "title": "Parameter-Efficient Transfer Learning for NLP",
+    "authors": [
+      "Neil Houlsby",
+      "Andrei Giurgiu",
+      "Stanislaw Jastrzebski",
+      "Bruna Morrone",
+      "Quentin de Laroussilhe",
+      "Andrea Gesmundo",
+      "Mona Attariyan",
+      "Sylvain Gelly"
+    ],
+    "year": 2019,
+    "venue": "arXiv:1902.00751 (v1 2019-02-02, v2 2019-06-13)",
+    "families": [
+      "frozen-base-parameter-addition",
+      "transformer-adaptation"
+    ],
+    "themes": [
+      "parameter-efficient-adaptation",
+      "frozen-features",
+      "modular-composition",
+      "incremental-structure",
+      "parameter-calculation"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Introduces bottleneck adapter modules: small down-project/nonlinearity/up-project blocks inserted twice per Transformer layer, trained per task while the original network stays fixed.",
+    "growth_mechanism": "New layers are added inside each Transformer block — after the multi-head-attention output projection and after the feed-forward sub-layer — each projecting d features down to m, applying a nonlinearity, projecting back to d, with an internal skip connection; 2md+d+m parameters per adapter. Near-zero initialization makes each adapter an approximate identity at the start of training.",
+    "what_grows": [
+      "in-block-adapter-layers"
+    ],
+    "what_freezes": [
+      "pre-trained-transformer-weights"
+    ],
+    "learning_setting": [
+      "supervised",
+      "transfer-learning",
+      "multi-task"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/1902.00751",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/1902.00751"
+    },
+    "discovered_via": [
+      "frozen-base-parameter-addition-2026-09-05"
+    ],
+    "related": [
+      "fahlman-1990-cascade-correlation",
+      "platt-1991-resource-allocating-network",
+      "hu-2021-lora-low-rank-adaptation",
+      "wu-2024-mixture-of-lora-experts"
+    ],
+    "notes": "Bibliographic fields and mechanism quotes were read from the public arXiv abstract page and the ar5iv HTML rendering of the paper on 2026-09-05. No PDF or extracted text was copied into Git. Not human-reviewed.",
+    "review": "reviews/houlsby-2019-parameter-efficient-adapters.md"
+  },
+  {
+    "id": "hu-2021-lora-low-rank-adaptation",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors": [
+      "Edward J. Hu",
+      "Yelong Shen",
+      "Phillip Wallis",
+      "Zeyuan Allen-Zhu",
+      "Yuanzhi Li",
+      "Shean Wang",
+      "Lu Wang",
+      "Weizhu Chen"
+    ],
+    "year": 2021,
+    "venue": "arXiv:2106.09685 (v1 2021-06-17, v2 2021-10-16)",
+    "families": [
+      "frozen-base-parameter-addition",
+      "transformer-adaptation"
+    ],
+    "themes": [
+      "parameter-efficient-adaptation",
+      "low-rank-adaptation",
+      "frozen-features",
+      "parameter-calculation"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Freezes the pre-trained weights and learns a low-rank update BA alongside each adapted matrix, so the trainable parameter count drops sharply and the delta can be merged back into the base weights before inference.",
+    "growth_mechanism": "For a frozen weight matrix W0, the forward pass becomes h = W0x + BAx with B in R^{d x r}, A in R^{r x k} and r much smaller than min(d,k); A is initialized from a random Gaussian and B is initialized to zero, so the delta starts at exactly zero, and the delta output is scaled by alpha/r. In the paper's Transformer experiments only attention weights are adapted (Wq and Wv), with MLP modules frozen.",
+    "what_grows": [
+      "low-rank-deltas-on-existing-matrices"
+    ],
+    "what_freezes": [
+      "pre-trained-transformer-weights"
+    ],
+    "learning_setting": [
+      "supervised",
+      "transfer-learning",
+      "language-model-adaptation"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2106.09685",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/2106.09685"
+    },
+    "discovered_via": [
+      "frozen-base-parameter-addition-2026-09-05"
+    ],
+    "related": [
+      "houlsby-2019-parameter-efficient-adapters",
+      "wu-2024-mixture-of-lora-experts",
+      "fahlman-1990-cascade-correlation"
+    ],
+    "notes": "Bibliographic fields and mechanism quotes were read from the public arXiv abstract page and the ar5iv HTML rendering on 2026-09-05. No PDF or extracted text was copied into Git. Not human-reviewed.",
+    "review": "reviews/hu-2021-lora-low-rank-adaptation.md"
+  },
+  {
+    "id": "wu-2024-mixture-of-lora-experts",
+    "title": "Mixture of LoRA Experts",
+    "authors": [
+      "Xun Wu",
+      "Shaohan Huang",
+      "Furu Wei"
+    ],
+    "year": 2024,
+    "venue": "arXiv:2404.13628 (2024-04-21)",
+    "families": [
+      "frozen-base-parameter-addition",
+      "module-composition"
+    ],
+    "themes": [
+      "parameter-efficient-adaptation",
+      "low-rank-adaptation",
+      "expert-gating",
+      "modular-composition",
+      "frozen-features"
+    ],
+    "status": "review-draft",
+    "importance": "notable",
+    "summary": "Composes several already-trained LoRAs by learning a gating function over them instead of arithmetically merging them, keeping both the base model and every LoRA frozen.",
+    "growth_mechanism": "Each layer of each trained LoRA is treated as a distinct expert, and a learnable gating function inside each layer produces softmax weights over the concatenated expert outputs. Two losses give the hierarchical control: a balancing loss that is minimized under balanced dispatching, and a domain-specific loss. Only the gating parameters are optimized; all trained LoRAs and the pre-trained model are frozen. At inference, undesired LoRAs can be masked out and the remaining gate weights renormalized proportionally.",
+    "what_grows": [
+      "gating-parameters-over-existing-loras"
+    ],
+    "what_freezes": [
+      "pre-trained-model-weights",
+      "trained-lora-weights"
+    ],
+    "learning_setting": [
+      "supervised",
+      "composition-of-trained-modules",
+      "nlp-and-vision-language"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2404.13628",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/2404.13628"
+    },
+    "discovered_via": [
+      "frozen-base-parameter-addition-2026-09-05"
+    ],
+    "related": [
+      "hu-2021-lora-low-rank-adaptation",
+      "houlsby-2019-parameter-efficient-adapters"
+    ],
+    "notes": "Bibliographic fields and mechanism quotes were read from the public arXiv abstract page and the ar5iv HTML rendering on 2026-09-05. No PDF or extracted text was copied into Git. Not human-reviewed.",
+    "review": "reviews/wu-2024-mixture-of-lora-experts.md"
   }
 ]

@@ -13,6 +13,7 @@ const intuition = require('../exercises/residual-correlation-intuition-1/demo.js
 const dnc = require('../labs/dynamic-node-construction-xor/demo.js');
 const capacitySignals = require('../modules/capacity-growth-signals/demo.js');
 const capacityControl = require('../labs/capacity-control-after-growth/demo.js');
+const frozenBase = require('../modules/frozen-base-parameter-addition/demo.js');
 
 test('lineage resolves a source-specific claim status', () => {
   const status = lineage.claimStatus('lightheart', 'parameter-calculation');
@@ -117,4 +118,36 @@ test('DNC browser mechanism reproduces the exact plateau and insertion trace', (
   ]);
   assert.equal(result.dnc.summary.insertions, 1);
   assert.equal(result.fixed_width_baseline.summary.final_width, 2);
+});
+
+test('frozen-base module keeps the three parameter sites distinct', () => {
+  assert.equal(frozenBase.parameterSite('adapter'), 'new layers inside the block');
+  assert.equal(frozenBase.parameterSite('lora'), 'low-rank delta on an existing matrix');
+  assert.equal(frozenBase.parameterSite('mole'), 'gate over modules that already exist');
+  assert.deepEqual(frozenBase.frozenComponents('mole'), ['pre-trained model weights', 'every trained LoRA']);
+});
+
+test('frozen-base costs follow each paper\'s own formula, and MoLE reports none', () => {
+  // Houlsby et al.: 2md + d + m per adapter, two adapters per Transformer layer.
+  assert.equal(frozenBase.adapterParameters({ d: 768, m: 64 }), 198272);
+  // Hu et al.: r(d + k) per adapted matrix; the paper adapts Wq and Wv.
+  assert.equal(frozenBase.loraParameters({ d: 768, r: 8 }), 24576);
+  assert.equal(frozenBase.moleAddedParameters(), null);
+  const rows = frozenBase.compareMethods({ d: 768, m: 64, r: 8, layers: 12 });
+  assert.deepEqual(rows.map(row => row.addedParameters), [2379264, 294912, null]);
+});
+
+test('frozen-base removal costs differ by where the parameters were put', () => {
+  assert.equal(frozenBase.removalCost('adapter').kind, 'delete-module');
+  assert.equal(frozenBase.removalCost('lora').kind, 'subtract-delta');
+  assert.equal(frozenBase.removalCost('mole').kind, 'mask-and-renormalize');
+});
+
+test('MoLE gate masks a branch and redistributes the rest proportionally', () => {
+  const open = frozenBase.gateWeights([1, 1, 0]);
+  assert.equal(open[0], open[1]);
+  assert.ok(open[2] < open[0]);
+  const masked = frozenBase.gateWeights([1, 1, 0], [true, true, false]);
+  assert.deepEqual(masked, [0.5, 0.5, 0]);
+  assert.equal(masked.reduce((sum, value) => sum + value, 0), 1);
 });

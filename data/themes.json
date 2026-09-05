@@ -113,5 +113,20 @@
     "id": "synaptic-selectivity",
     "name": "Synaptic selectivity",
     "description": "Learning processes that make a neuron or fixed pool of neurons more selective by strengthening predictive afferents, without necessarily adding new neurons."
+  },
+  {
+    "id": "parameter-efficient-adaptation",
+    "name": "Parameter-efficient adaptation",
+    "description": "Adapting a large pre-trained model to a task by training a small set of new parameters while the original weights stay fixed."
+  },
+  {
+    "id": "low-rank-adaptation",
+    "name": "Low-rank adaptation",
+    "description": "Representing the change to an existing weight matrix as a trainable product of two much smaller matrices."
+  },
+  {
+    "id": "expert-gating",
+    "name": "Expert gating",
+    "description": "Combining several independently trained modules through a learned gate instead of merging them into one set of weights."
   }
 ]

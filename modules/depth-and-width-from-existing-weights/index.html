@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Depth and Width from Existing Weights · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar">
+    <a href="../../pages/modules.html">← Modules</a>
+    <a href="#sources">Sources &amp; limits</a>
+  </header>
+
+  <main class="module-page">
+    <section class="module-hero">
+      <div>
+        <p class="kicker">Growth from trained weights · interactive comparison</p>
+        <h1>Depth and width from existing weights</h1>
+        <p>Three ways to build a bigger network out of one you already trained. One guarantees the function survives the operation, one deliberately does not, and one never touches the old network at all. The difference is not size — it is what the old weights are allowed to become.</p>
+      </div>
+      <aside class="review-status">
+        <strong>Not human-reviewed</strong>
+        <span>Automated readings of the public arXiv and ar5iv sources; check the linked review drafts before reusing details.</span>
+      </aside>
+    </section>
+
+    <section class="panel exact" aria-label="Net2WiderNet function preservation">
+      <p class="method-tag">Net2Net · Chen, Goodfellow &amp; Shlens 2016 · function-preserving expansion</p>
+      <h2>Widen a layer without changing what it computes</h2>
+      <p>The two-unit hidden layer below is widened to three by copying unit 1 under the mapping <code>g = [0, 1, 0]</code>. Net2WiderNet then divides each copied unit's outgoing weight by its replication count, "so all the units have the exactly the same value as the unit in the original net". Turn that division off and watch the guarantee go.</p>
+      <div class="control-row">
+        <label>Input x₁ <output id="input-x1-value">1.00</output>
+          <input id="input-x1" type="range" min="-3" max="3" step="0.05" value="1">
+        </label>
+        <label>Input x₂ <output id="input-x2-value">0.00</output>
+          <input id="input-x2" type="range" min="-3" max="3" step="0.05" value="0">
+        </label>
+        <label>Noise on the copied column <output id="copy-noise-value">0.000</output>
+          <input id="copy-noise" type="range" min="0" max="0.2" step="0.005" value="0">
+        </label>
+        <label class="check"><input id="normalize-outgoing" type="checkbox" checked> Divide outgoing weights by the replication count</label>
+      </div>
+      <div class="outputs">
+        <div><span>Original 2-unit net</span><strong id="base-output">—</strong></div>
+        <div><span>Widened 3-unit net</span><strong id="wide-output">—</strong></div>
+      </div>
+      <div class="verdict" id="widen-verdict" aria-live="polite"></div>
+      <details><summary>And depth?</summary><p>Net2DeeperNet inserts a layer initialized to the identity, "but remains free to learn to take on any value later". It works only where the activation satisfies <em>φ(Iφ(v)) = φ(v)</em> — true for the rectified linear activation used here, and, the paper states, not possible for the logistic sigmoid. The exported <code>net2Deeper</code> in this module's <code>demo.js</code> does exactly that, and the test suite checks the deepened network's output is unchanged.</p></details>
+      <p class="caveat">The paper adds noise to every copy but the first on purpose: identical copies would move together forever, so the student is made "only approximately the same function as the teacher" in exchange for being able to use its new capacity.</p>
+    </section>
+
+    <section class="panel retrained" aria-label="G_stack depthwise stacking">
+      <p class="method-tag">G_stack · Du et al. 2024 · re-trained expansion</p>
+      <h2>Stack a trained model on itself, then keep training</h2>
+      <p>The same paper's taxonomy has four atomic operators — duplicate (<code>G_direct</code>), learn a mapping (<code>G_learn</code>), zero (<code>G_zero</code>), random (<code>G_random</code>) — each depthwise or widthwise. <code>G_stack</code> is depthwise duplication: the target is <em>M∘M∘⋯∘M</em>, g times, where <em>M</em> is a small base model trained on <em>d</em> tokens.</p>
+      <div class="control-row">
+        <label>Base model layers <output id="base-layers-value">6</output>
+          <input id="base-layers" type="range" min="1" max="24" step="1" value="6">
+        </label>
+        <label>Growth factor g <output id="growth-factor-value">4</output>
+          <input id="growth-factor" type="range" min="1" max="8" step="1" value="4">
+        </label>
+      </div>
+      <div class="outputs">
+        <div><span>Grown depth</span><strong id="stack-depth">—</strong></div>
+        <div><span>Function preserved?</span><strong>No — and it is not meant to be</strong></div>
+      </div>
+      <p id="stack-advice" class="summary-line" aria-live="polite"></p>
+      <p class="caveat">Nothing is frozen after growth: the grown model is pre-trained further, and the paper's claim is a cheaper path to a given loss, not an unchanged function. The paper's fitted equation for <em>when</em> to grow rendered ambiguously in the source read here, so this module asserts no growth-timing formula.</p>
+    </section>
+
+    <section class="panel frozen" aria-label="Progressive neural networks">
+      <p class="method-tag">Progressive networks · Rusu et al. 2016 · frozen columns with lateral reuse</p>
+      <h2>Never expand the old network — read it</h2>
+      <p>A new task gets a new randomly initialized column. Every earlier column is frozen, and each layer of the new column reads the corresponding layer of every earlier column through lateral connections: <em>h<sub>i</sub><sup>(k)</sup> = f(W<sub>i</sub><sup>(k)</sup> h<sub>i-1</sub><sup>(k)</sup> + Σ<sub>j&lt;k</sub> U<sub>i</sub><sup>(k:j)</sup> h<sub>i-1</sub><sup>(j)</sup>)</em>.</p>
+      <div class="control-row">
+        <label>Task columns <output id="task-columns-value">3</output>
+          <input id="task-columns" type="range" min="1" max="10" step="1" value="3">
+        </label>
+      </div>
+      <div class="outputs">
+        <div><span>Lateral connection blocks per layer</span><strong id="lateral-blocks">—</strong></div>
+        <div><span>Earlier tasks disturbed</span><strong>None, by construction</strong></div>
+      </div>
+      <p id="column-line" class="summary-line" aria-live="polite"></p>
+      <p class="caveat">The paper's own reason: "because also the parameters {Θ(j); j&lt;k} are kept frozen … there is no interference between tasks and hence no catastrophic forgetting". Its own stated downside: the parameter count grows with the number of tasks. Both belong in the same sentence.</p>
+    </section>
+
+    <section class="panel synthesis">
+      <h2>Three different promises</h2>
+      <div class="comparison-row">
+        <div><strong>Net2Net — preserved at the instant</strong><span>The bigger network computes exactly the old function the moment it is built; afterwards everything trains, and noise on the copies is added so the new capacity can diverge.</span></div>
+        <div><strong>G_stack — re-trained</strong><span>The trained weights are carried forward as an initialization, not as a function. Duplication preserves nothing; the payoff is measured in pre-training compute.</span></div>
+        <div><strong>Progressive — preserved permanently</strong><span>Old columns are constants for the optimizer, so every earlier task keeps its exact function forever. Reuse is one-directional and paid for in parameters.</span></div>
+      </div>
+      <p class="summary-line">Function preservation is not one property. Net2Net preserves the current function for an instant; progressive networks preserve every old task's function permanently and refuse to grow the old network at all; G_stack preserves nothing and says so.</p>
+    </section>
+
+    <section class="panel lineage">
+      <h2>The pre-transformer lineage</h2>
+      <p>These three did not invent the questions. Two existing modules in this book hold the earlier form of each:</p>
+      <ul>
+        <li><a href="../topology-growth-comparison/">Topology growth comparison</a> — Growing Neural Gas and Grow When Required insert units into a structure that keeps adapting, which is expansion without any preservation guarantee: the ancestor of the <code>G_stack</code> position.</li>
+        <li><a href="../capacity-growth-signals/">What counts as evidence for more capacity?</a> — Dynamic Node Creation, Cascade-Correlation and the Resource-Allocating Network answer <em>when</em> to grow. Cascade-Correlation's frozen installed inputs are the ancestor of the progressive-network column, at the scale of one unit rather than one network.</li>
+        <li><a href="../frozen-base-parameter-addition/">Where do the new parameters live?</a> — adapters, LoRA and MoLE take the freezing idea to its modern conclusion: freeze everything trained and add beside it.</li>
+      </ul>
+      <p class="caveat">The through-line is narrow and worth stating precisely: the old work asked <em>when</em> to add capacity and mostly kept training everything; the modern work asks <em>what the addition is initialized from</em> and <em>what it is forbidden to disturb</em>.</p>
+    </section>
+
+    <section class="panel sources" id="sources">
+      <h2>Sources, limits, and claim boundaries</h2>
+      <div class="source-grid">
+        <article><h3>Chen et al. 2016 · Net2Net</h3><p>The random mapping with replacement, division by the replication factor, the deliberate noise on copies, identity-initialized deepening and the <em>φ(Iφ(v)) = φ(v)</em> constraint are quoted from the method section as rendered by ar5iv, read on 2026-09-05. The ImageNet results are from the abstract; no experiment of the paper is reproduced here.</p><a href="../../pages/review.html?id=chen-2016-net2net">Review and open questions</a></article>
+        <article><h3>Du et al. 2024 · G_stack</h3><p>The four operators, the two directions, the <em>M∘M∘⋯∘M</em> definition and the growth factor between 2 and 4 are quoted from the paper. The fitted growth-timing equation is deliberately not asserted: it rendered ambiguously in the read source, and a wrong formula on this page would be worse than a gap.</p><a href="../../pages/review.html?id=du-2024-stacking-your-transformers">Review and open questions</a></article>
+        <article><h3>Rusu et al. 2016 · progressive networks</h3><p>The per-task column, the lateral-connection equation, the learned scalar on the adapter path, the frozen-parameters argument against catastrophic forgetting and the parameter-growth downside are quoted from the paper. The exact parameter-growth expression is stated only qualitatively here.</p><a href="../../pages/review.html?id=rusu-2016-progressive-neural-networks">Review and open questions</a></article>
+      </div>
+      <p class="caveat">The Net2WiderNet demonstration is a real function-preservation check on a two-unit toy network with rectified linear units, computed live in your browser and asserted in the repository's test suite. Everything else on this page is documented mechanism, not reproduction: nothing here trains or benchmarks any of the three methods.</p>
+    </section>
+  </main>
+
+  <script type="module" src="./demo.js"></script>
+  <script type="module">
+    import { initThemeToggle } from '../../assets/js/theme.js';
+    initThemeToggle(document.querySelector('.module-topbar'));
+  </script>
+</body>
+</html>

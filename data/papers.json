@@ -1163,5 +1163,173 @@
     ],
     "notes": "Bibliographic fields and mechanism quotes were read from the public arXiv abstract page and the ar5iv HTML rendering on 2026-09-05. No PDF or extracted text was copied into Git. Not human-reviewed.",
     "review": "reviews/wu-2024-mixture-of-lora-experts.md"
+  },
+  {
+    "id": "chen-2016-net2net",
+    "title": "Net2Net: Accelerating Learning via Knowledge Transfer",
+    "authors": [
+      "Tianqi Chen",
+      "Ian Goodfellow",
+      "Jonathon Shlens"
+    ],
+    "year": 2016,
+    "venue": "ICLR 2016; arXiv:1511.05641 (v1 2015-11-18, v4 2016-04-23)",
+    "families": [
+      "function-preserving-growth",
+      "knowledge-transfer"
+    ],
+    "themes": [
+      "function-preserving-expansion",
+      "hidden-unit-growth",
+      "incremental-structure",
+      "parameter-calculation",
+      "capacity-control"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Transfers a trained network into a wider or deeper one by function-preserving transformations, so the larger student begins from exactly the teacher's function instead of from scratch.",
+    "growth_mechanism": "Net2WiderNet replicates existing units under a random mapping chosen with replacement and divides each replicated unit's outgoing weights by its replication count, so every unit keeps the value it had in the original net; small noise is added to all but the first copy so the copies can diverge. Net2DeeperNet replaces a layer with two by initializing the inserted matrix to the identity, which is valid only when the activation satisfies phi(I phi(v)) = phi(v) — true for the rectified linear activation and, the paper states, not possible for the logistic sigmoid.",
+    "what_grows": [
+      "layer-width",
+      "network-depth"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "supervised",
+      "knowledge-transfer",
+      "image-classification"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/1511.05641",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/1511.05641"
+    },
+    "discovered_via": [
+      "depth-and-width-expansion-2026-09-05"
+    ],
+    "related": [
+      "fahlman-1990-cascade-correlation",
+      "ash-1989-dynamic-node-construction",
+      "du-2024-stacking-your-transformers",
+      "rusu-2016-progressive-neural-networks"
+    ],
+    "notes": "Bibliographic fields and mechanism quotes were read from the public arXiv abstract page and the ar5iv HTML rendering on 2026-09-05. No PDF or extracted text was copied into Git. Not human-reviewed.",
+    "review": "reviews/chen-2016-net2net.md"
+  },
+  {
+    "id": "du-2024-stacking-your-transformers",
+    "title": "Stacking Your Transformers: A Closer Look at Model Growth for Efficient LLM Pre-Training",
+    "authors": [
+      "Wenyu Du",
+      "Tongxu Luo",
+      "Zihan Qiu",
+      "Zeyu Huang",
+      "Yikang Shen",
+      "Reynold Cheng",
+      "Yike Guo",
+      "Jie Fu"
+    ],
+    "year": 2024,
+    "venue": "NeurIPS 2024 (Spotlight); arXiv:2405.15319 (v1 2024-05-24, v2 2024-10-22)",
+    "families": [
+      "model-growth",
+      "efficient-pre-training"
+    ],
+    "themes": [
+      "incremental-structure",
+      "capacity-control",
+      "parameter-calculation",
+      "hidden-unit-growth"
+    ],
+    "status": "review-draft",
+    "importance": "notable",
+    "summary": "Summarizes model growth into four atomic operators across depthwise and widthwise directions, and reports that depthwise duplication of a trained small model — G_stack — accelerates LLM pre-training against strong baselines.",
+    "growth_mechanism": "Four atomic operators: G_direct duplicates layers depthwise or splits neurons widthwise, G_learn generates the new parameters through a learnable mapping from the existing ones, G_zero sets them to zero, and G_random initializes them randomly. G_stack is the depthwise G_direct: the small base model M, trained on d tokens, is composed with itself g times to initialize the target model, which is then pre-trained further. The reported optimal growth factor lies between 2 and 4, with the experiments fixing g = 4.",
+    "what_grows": [
+      "network-depth",
+      "layer-width"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "self-supervised",
+      "language-model-pre-training"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2405.15319",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/2405.15319"
+    },
+    "discovered_via": [
+      "depth-and-width-expansion-2026-09-05"
+    ],
+    "related": [
+      "chen-2016-net2net",
+      "rusu-2016-progressive-neural-networks",
+      "houlsby-2019-parameter-efficient-adapters"
+    ],
+    "notes": "Read from the public arXiv abstract page for v2 and the ar5iv HTML rendering on 2026-09-05. The paper's fitted growth-timing equation was rendered ambiguously in that source and is deliberately not asserted anywhere in this repository. Not human-reviewed.",
+    "review": "reviews/du-2024-stacking-your-transformers.md"
+  },
+  {
+    "id": "rusu-2016-progressive-neural-networks",
+    "title": "Progressive Neural Networks",
+    "authors": [
+      "Andrei A. Rusu",
+      "Neil C. Rabinowitz",
+      "Guillaume Desjardins",
+      "Hubert Soyer",
+      "James Kirkpatrick",
+      "Koray Kavukcuoglu",
+      "Razvan Pascanu",
+      "Raia Hadsell"
+    ],
+    "year": 2016,
+    "venue": "arXiv:1606.04671 (2016)",
+    "families": [
+      "frozen-column-growth",
+      "continual-learning"
+    ],
+    "themes": [
+      "frozen-features",
+      "modular-composition",
+      "incremental-structure",
+      "capacity-control",
+      "function-preserving-expansion"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Adds one randomly initialized column per task while freezing every earlier column, connecting them by lateral connections so new tasks reuse old features without being able to overwrite them.",
+    "growth_mechanism": "Column k computes h_i^(k) = f(W_i^(k) h_{i-1}^(k) + sum_{j<k} U_i^(k:j) h_{i-1}^(j)), so each layer reads the corresponding layer of every earlier column through lateral connections; an adapter variant inserts a projection and a learned scalar initialized to a small random value. Earlier columns' parameters are constants for the optimizer, which the paper gives as the reason there is no interference between tasks and hence no catastrophic forgetting. The stated downside is growth in the number of parameters with the number of tasks.",
+    "what_grows": [
+      "task-columns",
+      "lateral-connections"
+    ],
+    "what_freezes": [
+      "all-parameters-of-earlier-columns"
+    ],
+    "learning_setting": [
+      "reinforcement-learning",
+      "continual-learning",
+      "transfer-learning"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/1606.04671",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/1606.04671"
+    },
+    "discovered_via": [
+      "depth-and-width-expansion-2026-09-05"
+    ],
+    "related": [
+      "chen-2016-net2net",
+      "du-2024-stacking-your-transformers",
+      "fahlman-1990-cascade-correlation",
+      "houlsby-2019-parameter-efficient-adapters"
+    ],
+    "notes": "Bibliographic fields and mechanism quotes were read from the public arXiv abstract page and the ar5iv HTML rendering on 2026-09-05. No PDF or extracted text was copied into Git. Not human-reviewed.",
+    "review": "reviews/rusu-2016-progressive-neural-networks.md"
   }
 ]

@@ -128,5 +128,10 @@
     "id": "expert-gating",
     "name": "Expert gating",
     "description": "Combining several independently trained modules through a learned gate instead of merging them into one set of weights."
+  },
+  {
+    "id": "function-preserving-expansion",
+    "name": "Function-preserving expansion",
+    "description": "Growing a network so that, at the moment of growth, it computes exactly the function the smaller network computed."
   }
 ]

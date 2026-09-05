@@ -389,5 +389,20 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "No PDFs or extracted full text were collected; these are open-access arXiv papers read online. All three reviews and the module built on them are automated drafts and not human-reviewed."
+  },
+  {
+    "id": "depth-and-width-expansion-2026-09-05",
+    "source": "portfolio-goal-G-028",
+    "date": "2026-09-05",
+    "description": "Added the three depth-and-width expansion anchors named in portfolio goal G-028, so the book can separate function-preserving expansion from re-trained expansion and from frozen-column growth.",
+    "query": "arXiv identifiers supplied by the goal: 2405.15319v2, 1511.05641, 1606.04671. Metadata read from the public arXiv abstract pages; mechanism detail read from the ar5iv HTML renderings.",
+    "added": [
+      "chen-2016-net2net",
+      "du-2024-stacking-your-transformers",
+      "rusu-2016-progressive-neural-networks"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "No PDFs or extracted full text were collected. The G_stack paper's fitted growth-timing equation was ambiguously rendered in the read source and is deliberately not asserted. All three reviews and the module built on them are automated drafts and not human-reviewed."
   }
 ]

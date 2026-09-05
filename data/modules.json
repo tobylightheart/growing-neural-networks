@@ -238,5 +238,37 @@
       "Explain why MoLE adds no capacity at all: the experts are already trained, and only the gate is learned."
     ],
     "entry": "modules/frozen-base-parameter-addition/index.html"
+  },
+  {
+    "id": "depth-and-width-from-existing-weights",
+    "title": "Depth and Width from Existing Weights",
+    "type": "mechanism-comparison",
+    "status": "available",
+    "summary": "Compare Net2Net's function-preserving expansion, G_stack's re-trained depthwise stacking, and progressive networks' frozen columns with lateral reuse — including a live function-preservation check.",
+    "concepts": [
+      "function-preserving-expansion",
+      "hidden-unit-growth",
+      "incremental-structure",
+      "frozen-features",
+      "modular-composition",
+      "capacity-control",
+      "parameter-calculation"
+    ],
+    "papers": [
+      "chen-2016-net2net",
+      "du-2024-stacking-your-transformers",
+      "rusu-2016-progressive-neural-networks"
+    ],
+    "algorithms": [
+      "net2net",
+      "g-stack-depthwise-stacking",
+      "progressive-neural-networks"
+    ],
+    "learning_goals": [
+      "Distinguish expansion that preserves the function at the instant of growth from expansion that only carries the weights forward as an initialization.",
+      "Explain why Net2WiderNet divides outgoing weights by the replication count, and why it then adds noise anyway.",
+      "State what progressive networks buy by freezing every earlier column, and what they pay for it."
+    ],
+    "entry": "modules/depth-and-width-from-existing-weights/index.html"
   }
 ]

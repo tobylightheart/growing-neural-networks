@@ -14,6 +14,7 @@ const dnc = require('../labs/dynamic-node-construction-xor/demo.js');
 const capacitySignals = require('../modules/capacity-growth-signals/demo.js');
 const capacityControl = require('../labs/capacity-control-after-growth/demo.js');
 const frozenBase = require('../modules/frozen-base-parameter-addition/demo.js');
+const expansion = require('../modules/depth-and-width-from-existing-weights/demo.js');
 
 test('lineage resolves a source-specific claim status', () => {
   const status = lineage.claimStatus('lightheart', 'parameter-calculation');
@@ -150,4 +151,45 @@ test('MoLE gate masks a branch and redistributes the rest proportionally', () =>
   const masked = frozenBase.gateWeights([1, 1, 0], [true, true, false]);
   assert.deepEqual(masked, [0.5, 0.5, 0]);
   assert.equal(masked.reduce((sum, value) => sum + value, 0), 1);
+});
+
+test('Net2WiderNet preserves the function only when outgoing weights are divided', () => {
+  const net = { layers: [[{ w: [1, -2], b: 0.5 }, { w: [0.5, 1], b: -0.25 }]], out: { w: [1.5, -0.5], b: 0.1 } };
+  const widened = expansion.net2Wider(net, [0, 1, 0]);
+  assert.equal(widened.layers[0].length, 3);
+  [[1, 0], [0.3, 0.7], [-1, 2], [2, -3]].forEach(x => {
+    assert.equal(expansion.forward(widened, x), expansion.forward(net, x));
+  });
+  const unnormalized = expansion.net2Wider(net, [0, 1, 0], { normalize: false });
+  assert.notEqual(expansion.forward(unnormalized, [1, 0]), expansion.forward(net, [1, 0]));
+  // The paper adds noise to all but the first copy on purpose.
+  const noisy = expansion.net2Wider(net, [0, 1, 0], { noise: 0.05 });
+  assert.notEqual(expansion.forward(noisy, [1, 0]), expansion.forward(net, [1, 0]));
+});
+
+test('Net2DeeperNet inserts an identity layer, and only where the activation allows it', () => {
+  const net = { layers: [[{ w: [1, -2], b: 0.5 }, { w: [0.5, 1], b: -0.25 }]], out: { w: [1.5, -0.5], b: 0.1 } };
+  const deeper = expansion.net2Deeper(net);
+  assert.equal(deeper.layers.length, 2);
+  [[1, 0], [-1, 2], [2, -3]].forEach(x => {
+    assert.equal(expansion.forward(deeper, x), expansion.forward(net, x));
+  });
+  assert.equal(expansion.activationSupportsDeepening('relu'), true);
+  assert.equal(expansion.activationSupportsDeepening('sigmoid'), false);
+});
+
+test('expansion profiles separate preserved, re-trained, and frozen-column growth', () => {
+  assert.equal(expansion.expansionProfile('net2net').functionPreserving, true);
+  assert.equal(expansion.expansionProfile('g-stack').functionPreserving, false);
+  assert.deepEqual(expansion.expansionProfile('progressive').frozen, ['all parameters of every earlier column']);
+  assert.equal(expansion.expansionProfile('net2net').frozen.length, 0);
+  assert.match(expansion.expansionProfile('progressive').preservedOn, /every earlier task/);
+});
+
+test('G_stack depth and progressive-network lateral cost follow their papers', () => {
+  assert.equal(expansion.stackDepth({ baseLayers: 6, growthFactor: 4 }), 24);
+  assert.equal(expansion.growthFactorAdvised(4), true);
+  assert.equal(expansion.growthFactorAdvised(6), false);
+  assert.equal(expansion.lateralBlocks(1), 0);
+  assert.equal(expansion.lateralBlocks(4), 6);
 });

@@ -234,5 +234,49 @@
     "papers": [
       "wu-2024-mixture-of-lora-experts"
     ]
+  },
+  {
+    "id": "net2net",
+    "name": "Net2Net",
+    "family": "function-preserving expansion",
+    "summary": "Widens a layer by replicating units and dividing their outgoing weights by the replication count, and deepens a network by inserting an identity-initialized layer, so the larger network starts from exactly the smaller one's function; details are automated readings and not human-reviewed.",
+    "themes": [
+      "function-preserving-expansion",
+      "hidden-unit-growth",
+      "incremental-structure",
+      "parameter-calculation"
+    ],
+    "papers": [
+      "chen-2016-net2net"
+    ]
+  },
+  {
+    "id": "g-stack-depthwise-stacking",
+    "name": "G_stack depthwise stacking",
+    "family": "re-trained expansion",
+    "summary": "Initializes a deep model by composing a trained small model with itself g times and then continues pre-training; duplication carries the learned weights forward but preserves no function, and the reported optimal g lies between 2 and 4. Automated reading, not human-reviewed.",
+    "themes": [
+      "incremental-structure",
+      "capacity-control",
+      "parameter-calculation"
+    ],
+    "papers": [
+      "du-2024-stacking-your-transformers"
+    ]
+  },
+  {
+    "id": "progressive-neural-networks",
+    "name": "Progressive neural networks",
+    "family": "frozen-column growth",
+    "summary": "Adds a new column per task with lateral connections into every earlier column, freezing all earlier parameters so old tasks cannot be disturbed, at the cost of parameters that grow with the number of tasks; automated reading, not human-reviewed.",
+    "themes": [
+      "frozen-features",
+      "modular-composition",
+      "incremental-structure",
+      "capacity-control"
+    ],
+    "papers": [
+      "rusu-2016-progressive-neural-networks"
+    ]
   }
 ]

@@ -256,5 +256,35 @@
     "source_url": "https://arxiv.org/abs/2404.13628",
     "last_checked": "2026-09-05",
     "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "chen-2016-net2net",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/1511.05641",
+    "last_checked": "2026-09-05",
+    "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "du-2024-stacking-your-transformers",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/2405.15319",
+    "last_checked": "2026-09-05",
+    "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "rusu-2016-progressive-neural-networks",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/1606.04671",
+    "last_checked": "2026-09-05",
+    "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
   }
 ]

@@ -286,5 +286,45 @@
     "source_url": "https://arxiv.org/abs/1606.04671",
     "last_checked": "2026-09-05",
     "notes": "Open-access arXiv paper. The review draft is grounded in the public abstract page and the ar5iv HTML rendering, so no private-library PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "lample-2019-large-memory-layers",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/1907.05242",
+    "last_checked": "2026-09-06",
+    "notes": "Open-access paper read through public arXiv metadata and ar5iv HTML; no private PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "berges-2024-memory-layers-at-scale",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/2412.09764",
+    "last_checked": "2026-09-06",
+    "notes": "Open-access paper read through public arXiv metadata and ar5iv HTML; no private PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "lin-2025-sparse-memory-finetuning",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://arxiv.org/abs/2510.15103",
+    "last_checked": "2026-09-06",
+    "notes": "Open-access paper read through public arXiv metadata and ar5iv HTML; no private PDF or extracted text is required or committed."
+  },
+  {
+    "paper_id": "templeton-2024-scaling-monosemanticity",
+    "pdf_status": "not-needed",
+    "text_status": "not-needed",
+    "access": "open",
+    "local_private_only": true,
+    "source_url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/",
+    "last_checked": "2026-09-06",
+    "notes": "Open public Transformer Circuits article; no private PDF or extracted text is required or committed."
   }
 ]

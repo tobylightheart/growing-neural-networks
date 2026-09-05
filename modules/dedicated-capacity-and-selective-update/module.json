@@ -1,0 +1,32 @@
+{
+  "id": "dedicated-capacity-and-selective-update",
+  "title": "Capacity You Can Write, Directions You Can Read",
+  "type": "mechanism-comparison",
+  "status": "available",
+  "summary": "Follow product-key memory from billion-parameter capacity through 128B scaling and sparse slot updates, then contrast it with an SAE read-out that diagnoses and steers an existing model without enlarging that model.",
+  "concepts": [
+    "capacity-control",
+    "incremental-structure",
+    "parameter-calculation",
+    "frozen-features",
+    "modular-composition"
+  ],
+  "papers": [
+    "lample-2019-large-memory-layers",
+    "berges-2024-memory-layers-at-scale",
+    "lin-2025-sparse-memory-finetuning",
+    "templeton-2024-scaling-monosemanticity"
+  ],
+  "algorithms": [
+    "product-key-memory",
+    "scaled-memory-layers",
+    "sparse-memory-finetuning",
+    "sparse-autoencoder-readout"
+  ],
+  "learning_goals": [
+    "Explain how sparse lookup makes a very large learned value table usable without activating all of its capacity.",
+    "Distinguish adding writable model parameters from fitting an auxiliary read-out over activations that already exist.",
+    "State sparse memory finetuning's low-interference result as this paper's measured claim, not as a guarantee of sparse updates."
+  ],
+  "entry": "modules/dedicated-capacity-and-selective-update/index.html"
+}

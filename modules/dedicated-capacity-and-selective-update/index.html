@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capacity You Can Write, Directions You Can Read · Growing Neural Networks</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="module-topbar"><a href="../../pages/modules.html">← Modules</a><a href="#sources">Sources &amp; limits</a></header>
+  <main class="module-page">
+    <section class="module-hero">
+      <div><p class="kicker">Dedicated capacity · selective update · sparse read-out</p><h1>Capacity you can write, directions you can read</h1><p>Two sparse mechanisms can look alike while doing opposite jobs. Memory layers add a large bank of trainable values to the model. A sparse autoencoder reads an existing activation through a learned dictionary. One enlarges what can be stored; the other gives coordinates for inspecting and steering what is already there.</p></div>
+      <aside class="review-status"><strong>Not human-reviewed</strong><span>Automated readings of three public arXiv full texts and the Transformer Circuits article. Reported experiments remain the authors' results.</span></aside>
+    </section>
+
+    <section class="lineage" aria-label="Capacity and read-out lineage">
+      <article class="panel step"><p class="method-tag">Lample et al. 2019</p><span class="axis">adds capacity</span><h2>A huge table, a tiny active set</h2><p>Two sub-key sets implicitly define their product. A query finds exact top-k product keys; their scores weight a small set of learned value vectors. The values carry the bulk of up to a billion reported parameters, while only selected slots update for an input.</p><a href="../../pages/review.html?id=lample-2019-large-memory-layers">Review draft →</a></article>
+      <article class="panel step"><p class="method-tag">Berges et al. 2024</p><span class="axis">scales capacity</span><h2>128B memory parameters</h2><p>The later system replaces selected FFNs with memory, shares the pool across layers, shards value dimensions across GPUs, and optimizes the bandwidth-bound lookup. Its abstract reports 128B memory parameters trained over one trillion tokens with base models up to 8B.</p><a href="../../pages/review.html?id=berges-2024-memory-layers-at-scale">Review draft →</a></article>
+      <article class="panel step update"><p class="method-tag">Lin et al. 2025</p><span class="axis">selects writes</span><h2>Update the least-general slots</h2><p>Batch-specific memory accesses are ranked against background usage by TF–IDF. Only top-t values receive gradients; all accessed values still contribute to the forward pass. The rest of the memory and model stay frozen.</p><a href="../../pages/review.html?id=lin-2025-sparse-memory-finetuning">Review draft →</a></article>
+      <article class="panel step readout"><p class="method-tag">Templeton et al. 2024</p><span class="axis">adds a read-out</span><h2>Features are coordinates, not new storage</h2><p>An SAE encoder maps an existing activation into sparse feature coefficients; its decoder reconstructs the activation from learned directions. Clamping a feature can steer behavior, but the auxiliary SAE neither inserts that feature into Claude nor adds writable base-model memory.</p><a href="../../pages/review.html?id=templeton-2024-scaling-monosemanticity">Review draft →</a></article>
+    </section>
+
+    <section class="panel" aria-label="Sparse memory update selector">
+      <h2>Which memory slots get a gradient?</h2>
+      <p>Move the access counts. A slot scores highly when this batch uses it often and the 1,000-batch background uses it rarely. This is the paper's ranking equation on four toy slots—not a finetuning reproduction.</p>
+      <label>Top <em>t</em> slots to update <output id="top-t-value">2</output><input id="top-t" type="range" min="1" max="4" value="2"></label>
+      <div class="slot-grid">
+        <article class="slot" data-slot="slot-A"><h3>slot-A · new fact</h3><label>Batch accesses<input data-kind="batch" type="range" min="0" max="100" value="70"><output>70</output></label><label>Background batches using it<input data-kind="background" type="range" min="0" max="1000" value="10"><output>10</output></label><p>score <strong class="score">—</strong><br><span class="state">—</span></p></article>
+        <article class="slot" data-slot="slot-B"><h3>slot-B · syntax-like</h3><label>Batch accesses<input data-kind="batch" type="range" min="0" max="100" value="70"><output>70</output></label><label>Background batches using it<input data-kind="background" type="range" min="0" max="1000" value="900"><output>900</output></label><p>score <strong class="score">—</strong><br><span class="state">—</span></p></article>
+        <article class="slot" data-slot="slot-C"><h3>slot-C · specific</h3><label>Batch accesses<input data-kind="batch" type="range" min="0" max="100" value="35"><output>35</output></label><label>Background batches using it<input data-kind="background" type="range" min="0" max="1000" value="5"><output>5</output></label><p>score <strong class="score">—</strong><br><span class="state">—</span></p></article>
+        <article class="slot" data-slot="slot-D"><h3>slot-D · idle</h3><label>Batch accesses<input data-kind="batch" type="range" min="0" max="100" value="5"><output>5</output></label><label>Background batches using it<input data-kind="background" type="range" min="0" max="1000" value="2"><output>2</output></label><p>score <strong class="score">—</strong><br><span class="state">—</span></p></article>
+      </div>
+      <p id="selection-line" class="summary-line" aria-live="polite"></p>
+      <p class="caveat"><strong>Paper result, not ours:</strong> under the authors' QA experiment and optimizer choices, NaturalQuestions F1 fell 89% after full finetuning, 71% with LoRA, and 11% with sparse memory finetuning at the same reported level of new-knowledge acquisition. That is evidence for this setup, not a general minimal-interference guarantee.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Do not confuse the two sparse spaces</h2>
+      <div class="comparison-row"><div><strong>Memory slot</strong><span>A parameter row inside the language model. Retrieval uses its learned key; updating its value changes model storage.</span></div><div><strong>SAE feature</strong><span>A coordinate in an auxiliary reconstruction of model activity. Its decoder direction is a read-out learned from activations.</span></div><div><strong>Steering</strong><span>Clamping the read-out coordinate intervenes in a forward pass. It demonstrates causal influence; it does not establish that the SAE added capacity.</span></div></div>
+    </section>
+
+    <section class="panel source-grid" id="sources">
+      <article><h3>Lample et al. 2019</h3><p>Product-key lookup, sparse weighted values, selected-slot updates, and the billion-parameter result were read from arXiv v2 via ar5iv.</p></article>
+      <article><h3>Berges et al. 2024</h3><p>Shared memory, parallel value shards, bandwidth-bound kernels, the 128B scale, and sparse/dense complementarity were read from arXiv v2 via ar5iv.</p></article>
+      <article><h3>Lin et al. 2025</h3><p>The TF–IDF equation, stopped-gradient policy, experiment setup, and forgetting figures were read from arXiv v1 via ar5iv.</p></article>
+      <article><h3>Templeton et al. 2024</h3><p>The SAE encoder/decoder, sparse feature interpretation, steering intervention, and methodological caveats were read from the public Transformer Circuits article.</p></article>
+    </section>
+    <p class="caveat">No model is trained here. The selector is a deterministic teaching mechanism; all empirical claims stay attributed to their source.</p>
+  </main>
+  <script type="module" src="./demo.js"></script>
+  <script type="module">import { initThemeToggle } from '../../assets/js/theme.js'; initThemeToggle(document.querySelector('.module-topbar'));</script>
+</body>
+</html>

@@ -15,6 +15,7 @@ const capacitySignals = require('../modules/capacity-growth-signals/demo.js');
 const capacityControl = require('../labs/capacity-control-after-growth/demo.js');
 const frozenBase = require('../modules/frozen-base-parameter-addition/demo.js');
 const expansion = require('../modules/depth-and-width-from-existing-weights/demo.js');
+const dedicatedCapacity = require('../modules/dedicated-capacity-and-selective-update/demo.js');
 
 test('lineage resolves a source-specific claim status', () => {
   const status = lineage.claimStatus('lightheart', 'parameter-calculation');
@@ -192,4 +193,25 @@ test('G_stack depth and progressive-network lateral cost follow their papers', (
   assert.equal(expansion.growthFactorAdvised(6), false);
   assert.equal(expansion.lateralBlocks(1), 0);
   assert.equal(expansion.lateralBlocks(4), 6);
+});
+
+test('dedicated capacity is distinct from an SAE read-out', () => {
+  assert.equal(dedicatedCapacity.surfaceProfile('product-key-memory').axis, 'capacity');
+  assert.equal(dedicatedCapacity.surfaceProfile('product-key-memory').writesBase, true);
+  assert.equal(dedicatedCapacity.surfaceProfile('sparse-memory-finetuning').axis, 'selective-update');
+  assert.equal(dedicatedCapacity.surfaceProfile('sae-readout').axis, 'read-out');
+  assert.equal(dedicatedCapacity.surfaceProfile('sae-readout').writesBase, false);
+});
+
+test('sparse-memory TF-IDF favors batch-specific slots and selects only top-t', () => {
+  const slots = [
+    { id: 'specific', batchCount: 70, backgroundDocumentFrequency: 10 },
+    { id: 'general', batchCount: 70, backgroundDocumentFrequency: 900 },
+    { id: 'rare', batchCount: 35, backgroundDocumentFrequency: 5 }
+  ];
+  const ranked = dedicatedCapacity.rankMemorySlots(slots, 1000, 1);
+  assert.equal(ranked.find(slot => slot.id === 'specific').selected, true);
+  assert.equal(ranked.find(slot => slot.id === 'general').selected, false);
+  assert.ok(ranked.find(slot => slot.id === 'specific').score > ranked.find(slot => slot.id === 'general').score);
+  assert.equal(ranked.filter(slot => slot.selected).length, 1);
 });

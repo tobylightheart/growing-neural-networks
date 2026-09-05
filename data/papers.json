@@ -1331,5 +1331,231 @@
     ],
     "notes": "Bibliographic fields and mechanism quotes were read from the public arXiv abstract page and the ar5iv HTML rendering on 2026-09-05. No PDF or extracted text was copied into Git. Not human-reviewed.",
     "review": "reviews/rusu-2016-progressive-neural-networks.md"
+  },
+  {
+    "id": "lample-2019-large-memory-layers",
+    "title": "Large Memory Layers with Product Keys",
+    "authors": [
+      "Guillaume Lample",
+      "Alexandre Sablayrolles",
+      "Marc'Aurelio Ranzato",
+      "Ludovic Denoyer",
+      "Hervé Jégou"
+    ],
+    "year": 2019,
+    "venue": "NeurIPS 2019; arXiv:1907.05242v2",
+    "families": [
+      "dedicated-memory-capacity",
+      "sparse-conditional-computation"
+    ],
+    "themes": [
+      "capacity-control",
+      "incremental-structure",
+      "parameter-calculation"
+    ],
+    "status": "review-draft",
+    "importance": "canonical",
+    "summary": "Adds a trainable key–value memory whose product-key structure supports exact sparse lookup into up to a billion reported parameters with little compute overhead.",
+    "growth_mechanism": "Two learned sub-key sets implicitly define their Cartesian product. A query is split, the best sub-keys generate exact top-k product-key candidates, and a softmax-weighted sum reads the associated learned values. The values carry most parameters; all memory parameters are trainable, but only selected slots update for an input.",
+    "what_grows": [
+      "trainable-key-value-memory-slots"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "self-supervised",
+      "language-modeling",
+      "sparse-conditional-computation"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/1907.05242",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/1907.05242"
+    },
+    "discovered_via": [
+      "dedicated-capacity-selective-update-2026-09-06"
+    ],
+    "related": [
+      "berges-2024-memory-layers-at-scale",
+      "lin-2025-sparse-memory-finetuning"
+    ],
+    "notes": "Metadata read from arXiv and mechanism detail from the public ar5iv v2 rendering on 2026-09-06. Reported billion-parameter and performance claims are the paper’s, not reproduced here. Not human-reviewed.",
+    "review": "reviews/lample-2019-large-memory-layers.md"
+  },
+  {
+    "id": "berges-2024-memory-layers-at-scale",
+    "title": "Memory Layers at Scale",
+    "authors": [
+      "Vincent-Pierre Berges",
+      "Barlas Oğuz",
+      "Daniel Haziza",
+      "Wen-tau Yih",
+      "Luke Zettlemoyer",
+      "Gargi Ghosh"
+    ],
+    "year": 2024,
+    "venue": "arXiv:2412.09764v2 (2024)",
+    "families": [
+      "dedicated-memory-capacity",
+      "scaled-sparse-memory"
+    ],
+    "themes": [
+      "capacity-control",
+      "incremental-structure",
+      "modular-composition"
+    ],
+    "status": "review-draft",
+    "importance": "notable",
+    "summary": "Scales sparse trainable memory to a reported 128B parameters with shared pools, parallel value shards, and bandwidth-oriented kernels.",
+    "growth_mechanism": "Selected Transformer FFNs are replaced by top-k key–value memory lookups. Product keys make retrieval tractable; value embeddings are sharded across GPUs; one pool can be shared across several memory layers. The paper reports sparse memory and dense FFNs as complementary rather than replacing every dense layer.",
+    "what_grows": [
+      "shared-trainable-memory-pool"
+    ],
+    "what_freezes": [],
+    "learning_setting": [
+      "self-supervised",
+      "language-model-pre-training",
+      "factual-recall"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2412.09764",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/2412.09764"
+    },
+    "discovered_via": [
+      "dedicated-capacity-selective-update-2026-09-06"
+    ],
+    "related": [
+      "lample-2019-large-memory-layers",
+      "lin-2025-sparse-memory-finetuning"
+    ],
+    "notes": "Metadata read from arXiv and mechanism detail from the public ar5iv v2 rendering on 2026-09-06. The 128B scale and benchmark results are attributed to the paper and not reproduced. Not human-reviewed.",
+    "review": "reviews/berges-2024-memory-layers-at-scale.md"
+  },
+  {
+    "id": "lin-2025-sparse-memory-finetuning",
+    "title": "Continual Learning via Sparse Memory Finetuning",
+    "authors": [
+      "Jessy Lin",
+      "Luke Zettlemoyer",
+      "Gargi Ghosh",
+      "Wen-Tau Yih",
+      "Aram Markosyan",
+      "Vincent-Pierre Berges",
+      "Barlas Oğuz"
+    ],
+    "year": 2025,
+    "venue": "arXiv:2510.15103v1 (2025)",
+    "families": [
+      "selective-memory-update",
+      "continual-learning"
+    ],
+    "themes": [
+      "frozen-features",
+      "parameter-calculation",
+      "capacity-control"
+    ],
+    "status": "review-draft",
+    "importance": "notable",
+    "summary": "Ranks accessed memory slots against background usage and updates only the top-t values, with the paper reporting much less forgetting than full finetuning or LoRA on its QA setup.",
+    "growth_mechanism": "For each batch, memory-slot access frequency is multiplied by an inverse background-batch frequency. Only the top-t value rows receive gradients; every accessed slot still contributes to the forward pass, while the rest of memory and model remain frozen. This selectively writes existing dedicated capacity rather than adding capacity per update.",
+    "what_grows": [],
+    "what_freezes": [
+      "base-model-weights",
+      "all-unselected-memory-values"
+    ],
+    "learning_setting": [
+      "continual-learning",
+      "question-answering",
+      "sparse-parameter-update"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2510.15103",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": "https://arxiv.org/pdf/2510.15103"
+    },
+    "discovered_via": [
+      "dedicated-capacity-selective-update-2026-09-06"
+    ],
+    "related": [
+      "berges-2024-memory-layers-at-scale",
+      "hu-2021-lora-low-rank-adaptation"
+    ],
+    "notes": "Metadata, TF–IDF ranking, stopped-gradient policy, setup, and reported forgetting figures read from arXiv and the public ar5iv v1 rendering on 2026-09-06. Minimal interference is the paper’s empirical claim, not ours. Not human-reviewed.",
+    "review": "reviews/lin-2025-sparse-memory-finetuning.md"
+  },
+  {
+    "id": "templeton-2024-scaling-monosemanticity",
+    "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+    "authors": [
+      "Adly Templeton",
+      "Tom Conerly",
+      "Jonathan Marcus",
+      "Jack Lindsey",
+      "Trenton Bricken",
+      "Brian Chen",
+      "Adam Pearce",
+      "Craig Citro",
+      "Emmanuel Ameisen",
+      "Andy Jones",
+      "Hoagy Cunningham",
+      "Nicholas L Turner",
+      "Callum McDougall",
+      "Monte MacDiarmid",
+      "Alex Tamkin",
+      "Esin Durmus",
+      "Tristan Hume",
+      "Francesco Mosconi",
+      "C. Daniel Freeman",
+      "Theodore R. Sumers",
+      "Edward Rees",
+      "Joshua Batson",
+      "Adam Jermyn",
+      "Shan Carter",
+      "Chris Olah",
+      "Tom Henighan"
+    ],
+    "year": 2024,
+    "venue": "Transformer Circuits (2024-05-21)",
+    "families": [
+      "sparse-autoencoder-interpretability",
+      "activation-steering"
+    ],
+    "themes": [
+      "frozen-features",
+      "modular-composition",
+      "parameter-calculation"
+    ],
+    "status": "review-draft",
+    "importance": "notable",
+    "summary": "Fits a sparse autoencoder over Claude 3 Sonnet activations to recover interpretable feature directions and uses feature clamping to test and steer their causal influence.",
+    "growth_mechanism": "An auxiliary encoder maps existing model activations into a wider ReLU feature layer; a decoder reconstructs the activations while an L1 penalty encourages sparse coefficients. The decoder directions form an approximate read-out of existing activity. Clamping a coefficient intervenes during a forward pass, but the SAE does not add writable capacity to the base model.",
+    "what_grows": [
+      "auxiliary-sae-dictionary"
+    ],
+    "what_freezes": [
+      "base-language-model-weights"
+    ],
+    "learning_setting": [
+      "dictionary-learning",
+      "mechanistic-interpretability",
+      "activation-steering"
+    ],
+    "links": {
+      "paper": "https://transformer-circuits.pub/2024/scaling-monosemanticity/",
+      "doi": "",
+      "semantic_scholar": "",
+      "pdf": ""
+    },
+    "discovered_via": [
+      "dedicated-capacity-selective-update-2026-09-06"
+    ],
+    "related": [
+      "berges-2024-memory-layers-at-scale"
+    ],
+    "notes": "Authors, SAE method, feature-steering account, and caveats read from the public Transformer Circuits article on 2026-09-06. No SAE or steering result is reproduced. Not human-reviewed.",
+    "review": "reviews/templeton-2024-scaling-monosemanticity.md"
   }
 ]

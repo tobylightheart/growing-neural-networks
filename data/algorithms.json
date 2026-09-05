@@ -278,5 +278,61 @@
     "papers": [
       "rusu-2016-progressive-neural-networks"
     ]
+  },
+  {
+    "id": "product-key-memory",
+    "name": "Product-key memory",
+    "family": "dedicated sparse memory",
+    "summary": "Uses two learned sub-key sets to retrieve a sparse weighted set of learned value rows from a very large implicit key space; automated reading, not human-reviewed.",
+    "themes": [
+      "capacity-control",
+      "incremental-structure",
+      "parameter-calculation"
+    ],
+    "papers": [
+      "lample-2019-large-memory-layers"
+    ]
+  },
+  {
+    "id": "scaled-memory-layers",
+    "name": "Scaled memory layers",
+    "family": "dedicated sparse memory",
+    "summary": "Shares and parallelizes sparse key–value memory so dedicated capacity reaches a reported 128B parameters without activating the whole table; automated reading, not human-reviewed.",
+    "themes": [
+      "capacity-control",
+      "incremental-structure",
+      "modular-composition"
+    ],
+    "papers": [
+      "berges-2024-memory-layers-at-scale"
+    ]
+  },
+  {
+    "id": "sparse-memory-finetuning",
+    "name": "Sparse memory finetuning",
+    "family": "selective parameter update",
+    "summary": "Ranks memory accesses against background usage and enables gradients only for top-t value slots; reduced interference is the paper’s reported result, not a guarantee. Automated reading, not human-reviewed.",
+    "themes": [
+      "frozen-features",
+      "parameter-calculation",
+      "capacity-control"
+    ],
+    "papers": [
+      "lin-2025-sparse-memory-finetuning"
+    ]
+  },
+  {
+    "id": "sparse-autoencoder-readout",
+    "name": "Sparse autoencoder read-out",
+    "family": "activation dictionary learning",
+    "summary": "Fits an auxiliary sparse feature dictionary over existing model activations and can clamp feature coordinates for steering; it reads and intervenes on existing activity rather than adding base-model capacity. Automated reading, not human-reviewed.",
+    "themes": [
+      "frozen-features",
+      "modular-composition",
+      "parameter-calculation"
+    ],
+    "papers": [
+      "templeton-2024-scaling-monosemanticity"
+    ]
   }
 ]

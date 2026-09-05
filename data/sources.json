@@ -404,5 +404,21 @@
     "needs_triage": [],
     "rejected": [],
     "notes": "No PDFs or extracted full text were collected. The G_stack paper's fitted growth-timing equation was ambiguously rendered in the read source and is deliberately not asserted. All three reviews and the module built on them are automated drafts and not human-reviewed."
+  },
+  {
+    "id": "dedicated-capacity-selective-update-2026-09-06",
+    "source": "portfolio-goal-G-029",
+    "date": "2026-09-06",
+    "description": "Added the memory-capacity, scaled-memory, sparse-update, and SAE-read-out anchors named in portfolio goal G-029.",
+    "query": "Goal-supplied arXiv identifiers 1907.05242, 2412.09764, 2510.15103 and transformer-circuits.pub/2024/scaling-monosemanticity. Bibliographic metadata read from public arXiv records or the article; mechanism details read from ar5iv full-text renderings and the public article.",
+    "added": [
+      "lample-2019-large-memory-layers",
+      "berges-2024-memory-layers-at-scale",
+      "lin-2025-sparse-memory-finetuning",
+      "templeton-2024-scaling-monosemanticity"
+    ],
+    "needs_triage": [],
+    "rejected": [],
+    "notes": "No PDFs or extracted full text were collected. The module implements only the sparse-memory TF–IDF slot ranking as an inspectable teaching calculation; it does not train memory layers or an SAE. All reviews and public copy are automated drafts and not human-reviewed."
   }
 ]
